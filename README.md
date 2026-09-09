@@ -2,6 +2,8 @@
 
 **服装订单与跨境履约 Agent 研究** · Independent research project by Zhenkai Zhang (Ken)
 
+**Version frozen: `v1.0.0-research` (2026-09-10).** Further optimization is paused. See the [version record](docs/VERSION_FREEZE.md) and [completed offline audit-failure inventory](reports/APPAREL_AUDIT_FAILURE_CLOSEOUT.md).
+
 An evidence-oriented research workbench for checking apparel orders and revising cross-border transport proposals. Models interpret requests and choose tools; deterministic code checks SKU attributes, inventory, brand and region rules, minimum order quantities, budget, deadlines and proposal state. Changes to explicit customer requirements require a separate confirmation.
 
 The project compares a single agent, a coordinator with specialists, and on-demand delegation under the same business rules. It includes public-product retrieval, GPU reranking, a 100-model API selection study, persistent tool traces and versioned simulated proposals.

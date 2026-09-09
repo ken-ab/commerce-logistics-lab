@@ -1,0 +1,921 @@
+{
+  "recorded_at": "2026-09-09T19:10:35.200510+00:00",
+  "scope": "Offline structural inspection of the same 38 failed audits among 144 existing runs. No semantic rejudgment.",
+  "original_totals_unchanged": {
+    "runs": 144,
+    "audited": 105,
+    "audit_failed": 38,
+    "not_assessable": 1
+  },
+  "original_report_failure_split": {
+    "schema_or_audit_failure": 26,
+    "transport_failure": 6,
+    "raw_output_save_failure": 6
+  },
+  "corrected_failure_split": {
+    "schema_failure": 25,
+    "transport_failure_or_attempt_allowance_exhausted": 7,
+    "raw_output_save_failure": 6
+  },
+  "classification_correction": {
+    "id": "RL-01-1-v6_coordinator",
+    "reason": "Registered total transport-attempt allowance exhausted was missed by the old substring classifier."
+  },
+  "saved_raw_outputs": 25,
+  "strict_schema_passes_among_saved_failures": 0,
+  "schema_validation_error_counts": {
+    "string_too_long": 27
+  },
+  "explanation_character_range": [
+    81,
+    6058
+  ],
+  "structural_check_failures": {
+    "exact_segment_coverage": [
+      "RL-09-1-v6_single",
+      "RL-02-0-v5_on_demand",
+      "RL-01-1-v5_on_demand",
+      "RL-08-0-v5_coordinator",
+      "RL-10-1-v5_single"
+    ],
+    "existing_evidence_ids": [],
+    "supported_claims_have_references": []
+  },
+  "rows": [
+    {
+      "id": "RL-09-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        211,
+        2033,
+        411,
+        270
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": false,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-02-0-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        121,
+        1374,
+        312,
+        140
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": false,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-02-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        96,
+        3297,
+        192
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-01-0-v5_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        265,
+        748,
+        261
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-01-0-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        314,
+        1416
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-01-1-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        181,
+        1635,
+        285,
+        311
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": false,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-01-1-v6_coordinator",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-08-1-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        },
+        {
+          "location": [
+            "claims",
+            3,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        134,
+        751,
+        185,
+        887,
+        157
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-08-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        194,
+        1118,
+        228
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-11-1-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        81,
+        1030,
+        207,
+        271
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-03-0-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-06-0-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        190,
+        1209
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-06-0-v6_coordinator",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        202,
+        1812,
+        263
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-00-0-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        169,
+        1075,
+        172
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-10-0-v5_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        174,
+        1526
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-10-0-v6_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        168,
+        2727,
+        292,
+        179
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-10-0-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        215,
+        925,
+        293
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-03-1-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            2,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        275,
+        433,
+        731,
+        213
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-03-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        189,
+        1827,
+        189
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-06-1-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "raw_output_save_failure",
+      "raw_available": false
+    },
+    {
+      "id": "RL-06-1-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "raw_output_save_failure",
+      "raw_available": false
+    },
+    {
+      "id": "RL-06-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "raw_output_save_failure",
+      "raw_available": false
+    },
+    {
+      "id": "RL-05-1-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "raw_output_save_failure",
+      "raw_available": false
+    },
+    {
+      "id": "RL-05-1-v5_single",
+      "original_status": "audit_failed",
+      "category": "raw_output_save_failure",
+      "raw_available": false
+    },
+    {
+      "id": "RL-05-1-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "raw_output_save_failure",
+      "raw_available": false
+    },
+    {
+      "id": "RL-05-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-04-1-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-04-1-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-09-0-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-09-0-v6_single",
+      "original_status": "audit_failed",
+      "category": "transport_failure_or_attempt_allowance_exhausted",
+      "raw_available": false
+    },
+    {
+      "id": "RL-00-1-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        156,
+        767
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-00-1-v6_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        195,
+        6058,
+        239
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-08-0-v5_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        173,
+        880,
+        326
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-08-0-v5_coordinator",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        168,
+        873,
+        360,
+        326
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": false,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-08-0-v5_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        },
+        {
+          "location": [
+            "claims",
+            2,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        205,
+        1523,
+        1676,
+        237
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-08-0-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        165,
+        996,
+        183,
+        216
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-10-1-v5_single",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        199,
+        1361,
+        414,
+        327
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": false,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    },
+    {
+      "id": "RL-10-1-v6_on_demand",
+      "original_status": "audit_failed",
+      "category": "schema_failure",
+      "raw_available": true,
+      "strict_schema_passed": false,
+      "validation_errors": [
+        {
+          "location": [
+            "claims",
+            1,
+            "explanation"
+          ],
+          "type": "string_too_long"
+        }
+      ],
+      "explanation_character_lengths": [
+        206,
+        826
+      ],
+      "structural_checks_only": {
+        "exact_segment_coverage": true,
+        "existing_evidence_ids": true,
+        "supported_claims_have_references": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "evaluation/report_judge.py": "1d7bae298e7797469ca569e3f04c30095a5b7c467f1e2392ed54e0bbd76fab40",
+    "evidence/apparel_rationale_account_recovery_v1/summary.json": "cf0722e975a43707dfb0830166f6216c2fb19f8321c476bf62dc14095872ec27",
+    "evidence/apparel_rationale_account_recovery_v1/combined_results.json": "3c8c585aad890901844e3574a1203a853101a84d7a2fd7818ce77552a5ebaf13",
+    "evidence/apparel_rationale_audit_v2/campaign/rows/RL-09-1-v6_single.json": "341fbb9463080adcefbfd6860c267e643f886f7b9952a8923758099f0167c43a",
+    "evidence/apparel_rationale_audit_v2/campaign/raw/RL-09-1-v6_single.json": "0564931463727011eec1382af87ff75b07f33ced00eb2907fd2d2613b8dbbe2c",
+    "evidence/apparel_reliability_study_v1/runs/RL-09-1-v6_single/execution.json": "d5fedf038139cbe01109838f541025770f8d6f2a53ac4a768a3dfe15250eb257",
+    "evidence/apparel_rationale_audit_v2/campaign/rows/RL-02-0-v5_on_demand.json": "c58ea7f8cf7b56f40dd52399c3d1b50d66c7208056672a42de5cb2dd18da138b",
+    "evidence/apparel_rationale_audit_v2/campaign/raw/RL-02-0-v5_on_demand.json": "42c44740e592af990fafab33dab6c24c4760f58cf1eabbaa9fba18858ad564ff",
+    "evidence/apparel_reliability_study_v1/runs/RL-02-0-v5_on_demand/execution.json": "091efc81f9341d8c2b4cd4cf366d7835f625d65dd0225a1a949913fe37e3d3f0",
+    "evidence/apparel_rationale_audit_v2/campaign/rows/RL-02-1-v6_single.json": "cef759c19e8e99ea193484f450f4a2c4b63edc73ea64829288214a4f80d633a9",
+    "evidence/apparel_rationale_audit_v2/campaign/raw/RL-02-1-v6_single.json": "dacb907f7749b4db5df2d42879e152f585cd0cc5e627106b91cbb4404e6f5717",
+    "evidence/apparel_reliability_study_v1/runs/RL-02-1-v6_single/execution.json": "bb847b2ba37793a2032aacf9cb829cad2351414a11518155b56df35f517d4f46",
+    "evidence/apparel_rationale_audit_v2/campaign/rows/RL-01-0-v5_single.json": "500ae89e09a0a692041eedf61adc07aeb7379e506a2506442689e02cb53f2d90",
+    "evidence/apparel_rationale_audit_v2/campaign/raw/RL-01-0-v5_single.json": "f9a61b18219a4d29daefcd164675e50f2e77a156006eee8fba0481324d16b62b",
+    "evidence/apparel_reliability_study_v1/runs/RL-01-0-v5_single/execution.json": "2952c4752456ea2fd8d8a90bd26424ee0f5cc8af9d4a16df14fa4f3a8ba94af2",
+    "evidence/apparel_rationale_audit_v2/campaign/rows/RL-01-0-v5_on_demand.json": "2b998d2a068ad0f4e28b5e2001c886934e2e3a7987e3b5b5820b925c9203d5e0",
+    "evidence/apparel_rationale_audit_v2/campaign/raw/RL-01-0-v5_on_demand.json": "0cedeb787e684cc9e89e480df0c7949c5327649cac15d98281d9fc7feb5c0ad2",
+    "evidence/apparel_reliability_study_v1/runs/RL-01-0-v5_on_demand/execution.json": "9ec66ee0c752abd2a9dcb086d642ecef8f863dfe6012470ac0f0092a74eda4ab",
+    "evidence/apparel_rationale_audit_v2/campaign/rows/RL-01-1-v5_on_demand.json": "0f1801734ddb4ba4d345700c0e0497c605e836cb2ca4f11d05150455fcc88242",
+    "evidence/apparel_rationale_audit_v2/campaign/raw/RL-01-1-v5_on_demand.json": "b472bf379203a74a988b2086809950fd4f4fa45f0cc90910e355a432606de878",
+    "evidence/apparel_reliability_study_v1/runs/RL-01-1-v5_on_demand/execution.json": "7061d14c63bbc72b0bcfcb9f3d77601bc4f0b240cc34cf49179e1c672debe188",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-01-1-v6_coordinator.json": "4758a67bec73ae55369a6c7ff91e76e1bccc0666c43388cc90016ba7b196e8cf",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-08-1-v6_on_demand.json": "8e069435b262d11ab19b2c3554c4edbe33d0e17f45e84b713afbb1b01051408c",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-08-1-v6_on_demand.json": "aa7aafb08e3bfb0c8f8c074629bc5420cb6962da1ab5eb94ae14f3b9169e7e65",
+    "evidence/apparel_reliability_study_v1/runs/RL-08-1-v6_on_demand/execution.json": "8e3d9d706c2e492c7dc479aa0a80b549f56ddbb86f5ce3580c9af0e429758b81",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-08-1-v6_single.json": "29926379f98215c635e77ffa186e225fb8d6a1f9f19d2baf61c974d48f8c2690",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-08-1-v6_single.json": "a599d831151103c1a1305d85a39127ec62b0db932d32e3dbcefd01ca7aef9cfb",
+    "evidence/apparel_reliability_study_v1/runs/RL-08-1-v6_single/execution.json": "cae6aacd25090c99d1fa6ed93208786b52b7422ba3d25863cf27a3ce06164122",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-11-1-v5_coordinator.json": "ab7a01b54edecd454d9553e75f1a107b400d433eeec5edb5c39799039e1de9e9",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-11-1-v5_coordinator.json": "620fc9d9dfefc81a61e2b61073b0f157199bc1a193ad0273dce789df0b0b0fd8",
+    "evidence/apparel_reliability_study_v1/runs/RL-11-1-v5_coordinator/execution.json": "7e9c92d99c36adc367a79ed9a68fb97d13e93320d2dde75a23179b9ee27f1dc8",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-03-0-v6_on_demand.json": "611933d13ac490d6af60ceae3eadd941906de028ce733cd264a3ec511ff2a867",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-06-0-v5_coordinator.json": "505264afaf2c9356095ffe6624361a2a08dbb215340b212ff88c3c4a52e86496",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-06-0-v5_coordinator.json": "a8090e3732846798764f203b044ef07034aa571736e685f2a6e646ac697471a6",
+    "evidence/apparel_reliability_study_v1/runs/RL-06-0-v5_coordinator/execution.json": "e7ffdc6238065a01eaa72c2db21a1572adb1c8960b2866f9ad159d49845af3cd",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-06-0-v6_coordinator.json": "16c9196616a7a916e7d9b47d2533fec16c19a1c115b1e8a8a0fffda70fe6a713",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-06-0-v6_coordinator.json": "f391a2632c844b233c6575c2720013caf90deb8737ddf0127d0c8a0ead5f39be",
+    "evidence/apparel_reliability_study_v1/runs/RL-06-0-v6_coordinator/execution.json": "ec499abc0582f9607fc92363d635d961e16dc060614611a1c1e706a7943060cc",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-00-0-v5_coordinator.json": "4410c60529fe8c5c0f6f34a473c6446aa5b3a42643890a651e8a68a7390cac5d",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-00-0-v5_coordinator.json": "0ed74fe1ccb3f2fbf78f31aa80717826914c1dd48d4fd426132ffb5f89f01792",
+    "evidence/apparel_reliability_study_v1/runs/RL-00-0-v5_coordinator/execution.json": "4feba6c32ce59b0fda2b109d0fd173d25307ed422b5fc757c4bc36dc9468bfd2",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-10-0-v5_single.json": "2d921889890141e898b1adbf881a6a7aec7d0aedb1a865e3f88502c5a389ebc3",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-10-0-v5_single.json": "72bf6227b22655b84278b2d38b50cd40bbf61c3a10667c849654ff681872ae1c",
+    "evidence/apparel_reliability_study_v1/runs/RL-10-0-v5_single/execution.json": "622f890612bc8be81ef3b8f91bdaffe2bad5e910de7f1dbf70cc590ef31baf2a",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-10-0-v6_single.json": "99b4bdcf7630b9e31aa2758c38ba5ddebd2477dc03741bf954713afc41c3368d",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-10-0-v6_single.json": "5e337a91a36ed3377d48c65858eac29cdd035dc00f86046b8afc59352d8c11b0",
+    "evidence/apparel_reliability_study_v1/runs/RL-10-0-v6_single/execution.json": "30a2bdf27059539aea80c29bb2de99bdf85ba21065c471905fe3f6ad288f0517",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-10-0-v6_on_demand.json": "c1df9157adb04fd67333b20a47057389a6936794d67cd98e2e694b7b1aea7ec1",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-10-0-v6_on_demand.json": "65f4349fccada246486c2aae4f68f7b9b31869811050c6f302e5eee971b32131",
+    "evidence/apparel_reliability_study_v1/runs/RL-10-0-v6_on_demand/execution.json": "696b8cc6cc28327c047d84ec7079af6f0e45c58dd3e77c4464b73d8fa227cce8",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-03-1-v5_on_demand.json": "d3368bb9fc0b1bdd95eaa22e15c76e4d2656d36bd060d3095e2ba071d6dd8071",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-03-1-v5_on_demand.json": "f8e11089e1e86e5aafb7598fb5748520c7a7c70adcefb9128bbee1307ae47625",
+    "evidence/apparel_reliability_study_v1/runs/RL-03-1-v5_on_demand/execution.json": "8867aeebdb6c937db19cd055a6172796012ccc4318ef4e7e3380002d2ad39c86",
+    "evidence/apparel_rationale_audit_continuation_v1/rows/RL-03-1-v6_single.json": "b731a17442f6d6cb0bdd4d8d9688915cbbdd595cc297a69996ce76e60b198841",
+    "evidence/apparel_rationale_audit_continuation_v1/raw/RL-03-1-v6_single.json": "0dbd00491efd694b9a76ab7155fa00a02f2d2706ff056087f826e8d065602d24",
+    "evidence/apparel_reliability_study_v1/runs/RL-03-1-v6_single/execution.json": "d76c3e8f3341732aa3c8da020629ddccca1d9541935e1a57b50423257d263528",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-06-1-v5_coordinator.json": "dc21575d835b2f5626cc364463b5074cf5ae7d7fa3e7d2b4af5b9d373b9d83e2",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-06-1-v5_on_demand.json": "a70a9c2ac07b7fd0e06309055d1fa15a43f22029d5aed63ed1efb593ea4212f4",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-06-1-v6_single.json": "88ecf7f4e1887accde43b3d634eb150ec45b18824430e6db0f3a1469690a109b",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-05-1-v6_on_demand.json": "d3a3bb531381bdb2dd1d3a85ecafafd5f2e403dc23985d8efc18c8e346bcbe54",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-05-1-v5_single.json": "663b85f27c4eb83f9034942ec20f350034ec84a8ec729c76b5d8dffef07eb728",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-05-1-v5_coordinator.json": "cc636d65f2faf43677a5e347e823d55414b7355d2baa8c171a0903269643eb57",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-05-1-v6_single.json": "a873d111f47d9f447d1702fe70428fc6e7bce7feb6bc7ae09ba257a6d292a4a2",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-04-1-v5_on_demand.json": "7bf8a40121a4d684c4dc161281e99489f102c942e3b75924927868ab9b665c9b",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-04-1-v5_coordinator.json": "af9eba933d8d31e62b1cbcea363a264146b0a8019e02af69ff8192c9e626aa66",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-09-0-v6_on_demand.json": "2008722ef7339583643bb1cffe77dcf88e5d7b353589091e8d3f907102c16834",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-09-0-v6_single.json": "7b023c7b09e6f24b4ea6fc493a9e402b92974e593cc5a180f73f9a9d0c055623",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-00-1-v6_on_demand.json": "b278a1d3496e7d8d9c0f40b0b4a1a2452e30227bb499b338e3fc45f5c4688ff3",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-00-1-v6_on_demand.json": "8d3dad7b0d9dfc99b176f89ec89498ca8cd797e6e75bd27ba2dffe852545c13b",
+    "evidence/apparel_reliability_study_v1/runs/RL-00-1-v6_on_demand/execution.json": "d26c9e8eec48fbd8f23e4168de2b59db975c7ea045d05fd8957cf4c037fb94d6",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-00-1-v6_single.json": "21ede9dab2b545edb562116d66594d8e9aa6bfb0789d6851ed806a37a26761ee",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-00-1-v6_single.json": "d90b9cbd3562e65604172d594f97ea49a29a8da96b707c0e694850cbdb30cd21",
+    "evidence/apparel_reliability_study_v1/runs/RL-00-1-v6_single/execution.json": "4021af37e4a2c964019235ab7bea074b47f23e19dcfeb8714f122018edcc64d3",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-08-0-v5_on_demand.json": "41d47534362e2a25948e3881cbf69f46741d3ca525ec098398202f67f1f45ee5",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-08-0-v5_on_demand.json": "4e755236d7e8e95145a387ec7b5ca3551e19a657e533cd88af62f9183edddb53",
+    "evidence/apparel_reliability_study_v1/runs/RL-08-0-v5_on_demand/execution.json": "941b36986edb7411f828eac692b7ed66c9d4e427dab8fb24caf1a13a0a4b880d",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-08-0-v5_coordinator.json": "1c8396a781c1a8f6bfd8b2dd25402a1f94e9405e3df7521b744e5c5f25b685c1",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-08-0-v5_coordinator.json": "d310842d35b3639709b23caf087dcc1021e10f001f3caee626f7c36532c00639",
+    "evidence/apparel_reliability_study_v1/runs/RL-08-0-v5_coordinator/execution.json": "f04bcb549e3a71a9d4b6c130daf517eb7fdd6cc44a5c278317dbd60a13fa5f64",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-08-0-v5_single.json": "89d5b1a65b28a2fe651ee4b64dfdac3ff680e1d5607805f8ac46bf72ecdd3459",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-08-0-v5_single.json": "a6346c896d4d830ba1dd9b3de5e681773cf6ffabfa099061c5b314f8860e79d1",
+    "evidence/apparel_reliability_study_v1/runs/RL-08-0-v5_single/execution.json": "251558c35933dca6b545b8ba5642f94889de9575a4e164fa1f2a40be3f8fcbb9",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-08-0-v6_on_demand.json": "2ef7a67bd4537a551366bb177281509987097e85bcfe7cc038f0ab6d883d6675",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-08-0-v6_on_demand.json": "0594957c762bdfccba916c6e063e1c4c3453751a4728f9df69f4031e9e9c985e",
+    "evidence/apparel_reliability_study_v1/runs/RL-08-0-v6_on_demand/execution.json": "30d660a508c063b641bff67b8321392d26c161c82bc06f07f3d79783bedbcbcd",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-10-1-v5_single.json": "4697d684d422a6cf65d9532fe4189ea933f135108625fd3adab11f70e332b28f",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-10-1-v5_single.json": "7c244bf67b1b71e4809184c49aef4b37b25de8d99c6639dbfb85bb098b3d00ec",
+    "evidence/apparel_reliability_study_v1/runs/RL-10-1-v5_single/execution.json": "400797bfeec1fd2b8e26bfc56d86188c848fca91a7f1594babfaac8a0c9f46de",
+    "evidence/apparel_rationale_account_recovery_v1/rows/RL-10-1-v6_on_demand.json": "36153872702f1126d49c39469ac6654c2f4c9da0f3bede1ffda6123b5614423c",
+    "evidence/apparel_rationale_account_recovery_v1/raw/RL-10-1-v6_on_demand.json": "09d318d04cfe26f689a732b25253c0ddfa36dbe8bc50b467f75bc2b7f377b291",
+    "evidence/apparel_reliability_study_v1/runs/RL-10-1-v6_on_demand/execution.json": "72e1539987afd9fbd6c9a4c27a3375808191723619e6a0cd4ba23166f3be599b"
+  },
+  "script_sha256": "a4944fe482f8089c993314df688983b2e743336846fbc6a84df4d63d9044e150",
+  "original_files_unchanged": true,
+  "new_model_calls": 0,
+  "new_business_runs": 0,
+  "new_paid_cny": 0,
+  "limitations": "No trimming, relaxed limits, new labels, restored lost responses or accuracy increase. Syntactic reference existence does not establish semantic support."
+}
