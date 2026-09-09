@@ -1,0 +1,883 @@
+{
+  "checked_at": "2026-09-09T07:47:45.488323+00:00",
+  "passed": true,
+  "analysis_sha256": "6b687428de4bf8c51b8276119085eed647140fc4274eff42cf16985d6a26d8d9",
+  "cases_sha256": "1d3717f6079d8a7344989b44a606bde479b10b2baa8c692a7caf0a2019633c14",
+  "source_files_sha256_verified": 289,
+  "case_rows_verified": 144,
+  "first_finish_message_order_checks": [
+    {
+      "run": "RL-00-0-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 10,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-0-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-00-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-1-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-00-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-1-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 11,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-00-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-0-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-01-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-0-v6_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-1-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-01-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-01-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-01-1-v6_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-01-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-01-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-0-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-02-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-02-0-v6_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-1-v5_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-1-v6_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-02-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-0-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-0-v6_coordinator",
+      "first_finish_model_call": 6,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-03-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-1-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-1-v5_on_demand",
+      "first_finish_model_call": 5,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-03-1-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-03-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-0-v5_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-0-v5_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-04-0-v5_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-0-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-0-v6_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-04-0-v6_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-1-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-1-v5_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-1-v5_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-04-1-v6_coordinator",
+      "first_finish_model_call": 6,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-04-1-v6_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-04-1-v6_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-0-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-0-v5_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-0-v5_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-0-v6_coordinator",
+      "first_finish_model_call": 6,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-0-v6_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-0-v6_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-1-v5_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-1-v5_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-1-v5_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-1-v6_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-1-v6_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-05-1-v6_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-0-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 11,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-06-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-06-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-0-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-06-1-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-06-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-06-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-1-v6_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-06-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-07-0-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-0-v6_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-07-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-07-1-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-07-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-1-v6_coordinator",
+      "first_finish_model_call": 6,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-07-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-0-v5_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-0-v6_coordinator",
+      "first_finish_model_call": 6,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-1-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-1-v6_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-08-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-0-v5_coordinator",
+      "first_finish_model_call": 10,
+      "last_root_model_call": 10,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-09-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-09-0-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-1-v5_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 12,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-09-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-1-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-09-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-09-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-0-v5_coordinator",
+      "first_finish_model_call": 9,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-0-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-0-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-0-v6_coordinator",
+      "first_finish_model_call": 8,
+      "last_root_model_call": 8,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-0-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-0-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-1-v5_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 9,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-10-1-v5_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-10-1-v5_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-1-v6_coordinator",
+      "first_finish_model_call": 7,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-10-1-v6_on_demand",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 6,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-10-1-v6_single",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-0-v5_coordinator",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-11-0-v5_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-11-0-v5_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-0-v6_coordinator",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 5,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-11-0-v6_on_demand",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-0-v6_single",
+      "first_finish_model_call": 1,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-11-1-v5_coordinator",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 7,
+      "first_finish_accepted_by_message_order": false
+    },
+    {
+      "run": "RL-11-1-v5_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-1-v5_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-1-v6_coordinator",
+      "first_finish_model_call": 4,
+      "last_root_model_call": 4,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-1-v6_on_demand",
+      "first_finish_model_call": 3,
+      "last_root_model_call": 3,
+      "first_finish_accepted_by_message_order": true
+    },
+    {
+      "run": "RL-11-1-v6_single",
+      "first_finish_model_call": 2,
+      "last_root_model_call": 2,
+      "first_finish_accepted_by_message_order": true
+    }
+  ],
+  "raw_per_call_estimate_cny": "12.1400160",
+  "rounded_per_call_micro_cny_sum": "12.140315",
+  "accounted_and_reserved_cny": "12.140315",
+  "rounding_difference_cny": "0.0002990",
+  "interpretation": "Per-call rounding explains the difference; neither total is a fresh provider invoice.",
+  "new_model_calls": 0,
+  "new_gpu_calls": 0,
+  "new_business_runs": 0,
+  "new_paid_cny": 0
+}
