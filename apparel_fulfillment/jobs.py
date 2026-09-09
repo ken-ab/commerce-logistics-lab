@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import re
+import sys
 from threading import Lock
 import uuid
 
@@ -12,11 +13,17 @@ from apparel_fulfillment.agent import ApparelAgent, ARMS, MODEL
 from apparel_fulfillment.data import ROOT
 from apparel_fulfillment.orders import OrderError
 from apparel_fulfillment.interactive_state import InteractiveOperationAgent, checked_operation
+from apparel_fulfillment.job_lock import DirectoryRunLock
+from commerce_lab.jobs import process_identity
 from research.provider_gate import ProviderGate, ProviderHeld, guarded_business_client
 
 
+OWNERSHIP = 'directory-lock-v1'
+ACTIVE_ERROR = 'An interactive agent run is already active; wait for its result'
+
+
 class AgentJobs:
-    def __init__(self, store, directory=None, agent_factory=ApparelAgent, *, state_agent_factory=InteractiveOperationAgent, client_factory=None):
+    def __init__(self, store, directory=None, agent_factory=ApparelAgent, *, state_agent_factory=InteractiveOperationAgent, client_factory=None, identity_lookup=process_identity):
         self.store = store
         self.directory = directory or ROOT / 'evidence/apparel_interactive'
         self.directory.mkdir(parents=True, exist_ok=True)
@@ -24,6 +31,7 @@ class AgentJobs:
         self.state_factory = state_agent_factory
         self.gate = ProviderGate(ROOT / 'evidence/provider_availability.sqlite') if agent_factory is ApparelAgent else None
         self.client_factory = client_factory
+        self.identity_lookup = identity_lookup
         self.lock = Lock()
         self.active = None
         self.pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix='apparel-interactive')
@@ -35,9 +43,32 @@ class AgentJobs:
 
     def save(self, value):
         path = self.path(value['job_id'])
-        temporary = path.with_suffix('.tmp')
-        temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2), encoding='utf-8')
-        os.replace(temporary, path)
+        temporary = path.with_name('.' + path.stem + '.' + uuid.uuid4().hex + '.tmp')
+        try:
+            with temporary.open('x', encoding='utf-8') as target:
+                json.dump(value, target, ensure_ascii=False, indent=2)
+            os.replace(temporary, path)
+        finally:
+            temporary.unlink(missing_ok=True)
+
+    def owner_ended(self, record):
+        """Legacy records have no execution lock; unknown liveness must not permit recovery."""
+        pid = record.get('process_id')
+        if type(pid) is not int or pid <= 0:
+            return False
+        if sys.platform != 'win32' and not sys.platform.startswith('linux'):
+            return False  # Existing identity lookup supports Windows and Linux only.
+        current = self.identity_lookup(pid)
+        previous = record.get('process_identity')
+        return current != 'unknown' and (current is None or
+               previous not in (None, 'unknown') and current != previous)
+
+    def recover_record(self, record):
+        # Caller owns the directory lock. A new-protocol running record is now ownerless.
+        if record['status'] == 'running' and (record.get('ownership') == OWNERSHIP or self.owner_ended(record)):
+            record['status'] = 'interrupted'
+            record['notice'] = 'The execution owner ended before saving a terminal result; partial tool traces and budget reservations remain. No automatic retry.'
+            self.save(record)
 
     def start(self, owner, draft_id, task, arm, *, operation=None):
         self.store.view(owner, draft_id)
@@ -46,23 +77,45 @@ class AgentJobs:
         operation = checked_operation(self.store, owner, draft_id, operation)
         with self.lock:
             if self.active is not None:
-                raise OrderError('An interactive agent run is already active; wait for its result')
-            client = self.client_factory() if self.client_factory else guarded_business_client(self.gate) if self.gate else None
-            if client:
+                raise OrderError(ACTIVE_ERROR)
+            execution_lock = DirectoryRunLock(self.directory)
+            if not execution_lock.acquire():
+                raise OrderError(ACTIVE_ERROR)
+            saved = False
+            try:
+                for path in self.directory.glob('AJOB-*.json'):
+                    existing = json.loads(path.read_text(encoding='utf-8'))
+                    self.recover_record(existing)
+                    if existing['status'] == 'running':
+                        raise OrderError(ACTIVE_ERROR + '; a legacy owner is live or cannot be verified')
+                client = self.client_factory() if self.client_factory else guarded_business_client(self.gate) if self.gate else None
+                if client:
+                    try:
+                        client.ensure_available(MODEL)
+                    except ProviderHeld as error:
+                        raise OrderError(str(error)) from None
+                record = {'job_id': 'AJOB-' + uuid.uuid4().hex, 'owner': owner, 'draft_id': draft_id,
+                          'created_at': datetime.now(timezone.utc).isoformat(),
+                          'task': task, 'arm': arm, 'operation': operation,
+                          'status': 'running', 'process_id': os.getpid(), 'ownership': OWNERSHIP}
+                if sys.platform == 'win32' or sys.platform.startswith('linux'):
+                    record['process_identity'] = self.identity_lookup(os.getpid())
+                self.save(record)
+                saved = True
+                self.active = record['job_id']
+                self.pool.submit(self.work, record, client, execution_lock)
+            except BaseException as error:
                 try:
-                    client.ensure_available(MODEL)
-                except ProviderHeld as error:
-                    raise OrderError(str(error)) from None
-            record = {'job_id': 'AJOB-' + uuid.uuid4().hex, 'owner': owner, 'draft_id': draft_id,
-                      'created_at': datetime.now(timezone.utc).isoformat(),
-                      'task': task, 'arm': arm, 'operation': operation,
-                      'status': 'running', 'process_id': os.getpid()}
-            self.active = record['job_id']
-            self.save(record)
-            self.pool.submit(self.work, record, client)
+                    if saved:
+                        record.update(status='failed', error_type=type(error).__name__)
+                        self.save(record)
+                finally:
+                    self.active = None
+                    execution_lock.release()
+                raise
             return {key: record[key] for key in ('job_id', 'draft_id', 'arm', 'operation', 'status')}
 
-    def work(self, record, client=None):
+    def work(self, record, client, execution_lock):
         try:
             options = {'client': client} if client is not None else {}
             factory = self.factory
@@ -77,8 +130,11 @@ class AgentJobs:
             record.update(status='failed', error_type=type(error).__name__)
         finally:
             with self.lock:
-                self.save(record)
-                self.active = None
+                try:
+                    self.save(record)
+                finally:
+                    self.active = None
+                    execution_lock.release()
 
     def latest(self, owner, draft_id):
         self.store.view(owner, draft_id)
@@ -100,10 +156,15 @@ class AgentJobs:
             if not path.exists(): raise OrderError('Unknown interactive job')
             record = json.loads(path.read_text(encoding='utf-8'))
             if record['owner'] != owner: raise OrderError('Unknown interactive job in this session')
-            if record['status'] == 'running' and record['process_id'] != os.getpid():
-                record['status'] = 'interrupted'
-                record['notice'] = 'The service restarted; partial tool traces and budget reservations remain. No automatic retry.'
-                self.save(record)
+            if record['status'] == 'running':
+                execution_lock = DirectoryRunLock(self.directory)
+                if execution_lock.acquire():
+                    try:
+                        # The writer may have completed between our initial read and lock acquisition.
+                        record = json.loads(path.read_text(encoding='utf-8'))
+                        self.recover_record(record)
+                    finally:
+                        execution_lock.release()
         if full:
             return record
         result = record.get('result')

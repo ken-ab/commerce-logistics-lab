@@ -1,0 +1,357 @@
+{
+  "observed_at": "2026-09-09T06:48:49.297384+00:00",
+  "kind": "isolated interactive lifecycle regression, not model evaluation",
+  "platform_tested": "Windows / Python 3.12.14 / pytest 9.1.1",
+  "previous_public_commit": "123a276b2a5c64873af17eb81b19e6dedebc6837",
+  "before_jobs_sha256": "7bed47378776220878fbd958dfd0ce503251602e421085d2d7b8f04dbb0632f5",
+  "source_sha256": {
+    "apparel_fulfillment/jobs.py": "b1ac03fe23cf0abe4a5acafca6820a4df58068fcb11e4e95fc2d850b6ddf0e1a",
+    "apparel_fulfillment/job_lock.py": "c92bc3d2b88846c1f955a7f48ec09debccf4f296277b9de6ef3e64cf82d742fb",
+    "tests/test_apparel_job_ownership.py": "0c77e26a98d19bcd97b9a242f9ac9f1ba4c375472df548cd4ccd79c232bc2dfc"
+  },
+  "runs": [
+    {
+      "phase": "reproduction",
+      "tests": 2,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_reading_another_live_process_does_not_interrupt_its_job",
+          "passed": false
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_two_managers_sharing_a_directory_cannot_run_concurrently",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "phase": "first_fix",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_reading_another_live_process_does_not_interrupt_its_job",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_two_managers_sharing_a_directory_cannot_run_concurrently",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_jobs",
+          "name": "test_interactive_job_lock_ownership_persistence_and_full_records",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_provider_jobs",
+          "name": "test_default_interactive_jobs_use_guard_and_block_before_new_job",
+          "passed": true
+        },
+        {
+          "class": "tests.test_job_recovery",
+          "name": "test_only_jobs_with_verified_dead_or_replaced_owners_are_recovered",
+          "passed": true
+        },
+        {
+          "class": "tests.test_job_recovery",
+          "name": "test_current_process_identity_is_observable_without_signalling_it",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "phase": "lifecycle",
+      "tests": 19,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_reading_another_live_process_does_not_interrupt_its_job",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_two_managers_sharing_a_directory_cannot_run_concurrently",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_crashed_process_releases_lock_and_preserves_interrupted_record",
+          "passed": false
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[same-same-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[same-unknown-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[old-new-process-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[old-None-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[None-live-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[None-None-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[unknown-live-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[unknown-None-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_a_real_live_legacy_owner_is_preserved_until_it_exits",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_submission_failure_is_terminal_and_does_not_wedge_the_directory",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_initial_persistence_failure_releases_lock_without_running",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_terminal_persistence_failure_does_not_leave_a_live_pid_stuck",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_jobs",
+          "name": "test_interactive_job_lock_ownership_persistence_and_full_records",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_provider_jobs",
+          "name": "test_default_interactive_jobs_use_guard_and_block_before_new_job",
+          "passed": true
+        },
+        {
+          "class": "tests.test_job_recovery",
+          "name": "test_only_jobs_with_verified_dead_or_replaced_owners_are_recovered",
+          "passed": true
+        },
+        {
+          "class": "tests.test_job_recovery",
+          "name": "test_current_process_identity_is_observable_without_signalling_it",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "phase": "lifecycle_corrected",
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_reading_another_live_process_does_not_interrupt_its_job",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_two_managers_sharing_a_directory_cannot_run_concurrently",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_crashed_process_releases_lock_and_preserves_interrupted_record",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[same-same-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[same-unknown-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[old-new-process-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[old-None-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[None-live-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[None-None-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[unknown-live-False]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_legacy_identity_recovery_is_conservative[unknown-None-True]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_a_real_live_legacy_owner_is_preserved_until_it_exits",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_submission_failure_is_terminal_and_does_not_wedge_the_directory",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_initial_persistence_failure_releases_lock_without_running",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_job_ownership",
+          "name": "test_terminal_persistence_failure_does_not_leave_a_live_pid_stuck",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_jobs",
+          "name": "test_interactive_job_lock_ownership_persistence_and_full_records",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_provider_jobs",
+          "name": "test_default_interactive_jobs_use_guard_and_block_before_new_job",
+          "passed": true
+        },
+        {
+          "class": "tests.test_job_recovery",
+          "name": "test_only_jobs_with_verified_dead_or_replaced_owners_are_recovered",
+          "passed": true
+        },
+        {
+          "class": "tests.test_job_recovery",
+          "name": "test_current_process_identity_is_observable_without_signalling_it",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "phase": "http_state_integration",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        {
+          "class": "tests.test_apparel_api",
+          "name": "test_session_owner_revision_and_extra_fields",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_api",
+          "name": "test_cancel_revise_confirm_and_export_preserve_versions",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_api",
+          "name": "test_substitution_needs_explicit_approval_and_never_bypasses_rules",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_precheck_rejects_unknown_targets_without_constructing_paid_client",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_new_interactive_path_enforces_read_only_with_actual_state_agent",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_api_validates_operation_and_passes_explicit_contract",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_review_keeps_proposal_identity_and_rejects_another_orders_id",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_proposal_operations_cannot_replace_an_approved_selection[prepare_proposal]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_proposal_operations_cannot_replace_an_approved_selection[review_proposal]",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_preparation_recovers_from_rejected_reselection_without_losing_approval",
+          "passed": true
+        },
+        {
+          "class": "tests.test_apparel_interactive_state",
+          "name": "test_latest_result_endpoint_restores_completed_job_with_order_and_owner_isolation",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "final_unique_focused_checks": 30,
+  "new_lifecycle_cases": 15,
+  "fixture_correction": "Windows venv redirector PID differs from Python worker PID; use the actual interpreter and verify PID before the intentional crash.",
+  "new_paid_model_calls": 0,
+  "new_gpu_inference_calls": 0,
+  "new_real_users": 0,
+  "historical_experiments_changed": false,
+  "production_services_restarted": false,
+  "limitations": [
+    "Cooperating updated processes on a local filesystem only; stop old versions before upgrading.",
+    "Unix locking path was inspected but not executed on this Windows host.",
+    "Unknown legacy owner liveness remains conservative; no automatic retry or rollback."
+  ]
+}

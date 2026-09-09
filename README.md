@@ -16,6 +16,8 @@ The project compares a single agent, a coordinator with specialists, and on-dema
 - Agent policies: single, coordinator/specialist, on-demand. The revised proposal-review policy adds object identity checks, required evidence guidance and a deterministic old/new route comparison.
 - Retrieval: a rebuildable catalogue of 1,814,924 public product records, labelled BM25 fallback, local Qwen reranking and optional API refinement.
 
+Interactive job recovery now preserves live workers across processes and serializes updated workers sharing one local evidence directory. See the [lifecycle fix and 30 focused checks](reports/APPAREL_JOB_OWNERSHIP.md); the historical model results below are unchanged.
+
 ## Measured results
 
 | Study | Scope | Result | Evidence |
