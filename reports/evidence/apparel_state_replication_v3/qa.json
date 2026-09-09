@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "Input/result integrity, citations and accounting; not a new performance oracle",
+  "runs": 144,
+  "model_input_hashes": 617,
+  "citation_paths_checked": 3915,
+  "reported_fact_values_checked": 1178,
+  "unique_ledger_call_ids": 617,
+  "ledger_status_counts": {
+    "settled": 617
+  },
+  "accounted_and_reserved_cny": "5.368717",
+  "registration_sha256": "f4039ac54f29ae5620e9c12e90c9794cacea92c68f12d16e7b34714fee436511",
+  "summary_sha256": "d05575731c5367dd9ba0dec3ba654de0b55d0ae546f78ed9129ffe417a3e0626",
+  "report_source_sha256": "51ab90cba4b8b1cc842893d21efc58e054d015ae32106cf68834c7f78c853222"
+}

@@ -1,0 +1,1707 @@
+{
+  "checked_at": "2026-09-08T21:00:34.254699+00:00",
+  "passed": true,
+  "raw_rows_reconciled": 240,
+  "base_variants_preserved": 37,
+  "total_variants": 277,
+  "audience_unresolved_skus": [
+    "us:B000BTTXC6",
+    "us:B001I38P1E",
+    "us:B006WCLM0W",
+    "us:B014WDMQK2",
+    "us:B01M0LZGKU",
+    "us:B071P2KNDK"
+  ],
+  "normalization_checks": [
+    {
+      "sku": "us:B0007ZGSUE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0009G86JC",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B000BTTXC6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": true
+    },
+    {
+      "sku": "us:B000BWRGMW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B000P55140",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B000P55154",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B001I38P1E",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": true
+    },
+    {
+      "sku": "us:B0050AFXC0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B006WCLM0W",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": true
+    },
+    {
+      "sku": "us:B008AKUOYO",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00AWVY0HQ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00BBW8G5M",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJAEKB0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJAEMZY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJAEY5W",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJAGYRI",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJAH5F8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJB1AXK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBHQLK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBHXHM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBI1GY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBI7JU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBIAS8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBIDOY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBIMHM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBIPFQ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GJBISJE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSID14A",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIDCZI",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIDXUM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIHOQG",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSII5FA",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIXXL6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIZA1M",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIZMLU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSIZSOG",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSJ9P4O",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSJ9WGK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSJA5B6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSV7EHW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00GSV7MEC",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JA83PIC",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JA8FRPG",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4CT4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4D0C",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4D2K",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4DKC",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4IKM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4IKW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4ILQ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4IPW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4NJS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4NV6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4NY8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4OF6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4SZM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4TBA",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4TGK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4Y74",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM4YGK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM540A",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM54B4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM54BY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM54QY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM59RS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM59V4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM59Z0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM5E96",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUM5EFU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMCPHK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMDZNI",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMDZS8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMDZTC",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUME0GE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMEGJ0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMEGVS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMF76G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMF79S",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMF7OI",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFBZI",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFCDY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFCES",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFHU2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFHZW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFI1U",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFMD4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFRKM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMFWDE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMG7N8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMGCJW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMGP6C",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMGP9E",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMGPDK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMGPRQ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMGV1G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMHOO4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JUMICF4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00JWPALUS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00KBIDF5S",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00KBIDJ0E",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00UJ54TAS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00VTV4UO6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00VTV8I2Q",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00VTV8K0G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B00W4ELDWE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B011QQE1HE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WB9G9S",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WBSN4M",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WC5U5G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WC9NZE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WD3N4U",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WDMFA8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014WDMQK2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": true
+    },
+    {
+      "sku": "us:B014WDU9N8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014Y8S3DO",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014Y8TYGO",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B014Y8WH8G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B015P0A590",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B015P0A5A4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B015P0AAFO",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B015P0AF0O",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWXYO2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWY2DY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWY6QM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWYIP6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWYIPG",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWYKIQ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWYQIK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWYTZ0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWZ562",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWZ5C6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWZETU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B018GWZKTO",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XACEA",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XAGIW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XAI7G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XAI8U",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XANN0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XASLM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B0196XASN0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQSMAK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQSML4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQSXX6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQSXZ4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQT1CS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQT5QA",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQT93O",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQTGN2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQTL00",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01DAQTL0U",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTC9O",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTCA8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTCUS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTCVM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTCW6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTCXA",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTCY4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTDGG",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTDHU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTDZM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTDZW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTE1A",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTE1K",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTEMY",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTENI",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTFA0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTGTU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTHJE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTIN4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTINE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTIO8",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTJBU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTJCO",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTK0U",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTK1E",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTK2I",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTK32",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTPNW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01HIUTPPU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01KX0RFR2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LWSW4V4",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LWSW5K2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LWSW6QE",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LX4IU6H",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LX4IU6O",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LY3S18L",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LY3S3B6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LYFEGPG",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LYR6A9Q",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LYR6AFF",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LYX70RX",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LYXATTT",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LZ2WFDA",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LZ8YFCX",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LZEIKO0",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LZWJU55",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LZWJX0G",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01LZWJY00",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01M02421Y",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01M0243Q1",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01M081VCZ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01M0LZGKU",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": true
+    },
+    {
+      "sku": "us:B01M117H1U",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01M117I3X",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B01M1O9QIT",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B06XZMP7DW",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B06XZMP7N9",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B06XZMP8PQ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B06XZMSDR1",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B06Y14GVZJ",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B06Y14VX38",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B071H325HV",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B071KP5N1Z",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B071P2KNDK",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": true
+    },
+    {
+      "sku": "us:B075LF9NH2",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075LF9P2N",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075LGHCDL",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075TMYTPN",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075TNGHWP",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075TNS1RS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075ZWZMTV",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075ZZ7XKD",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B075ZZ7YCL",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BB7XV8B",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BB7Y6Z6",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BB7Y6Z7",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BB7YBCS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BBB61HN",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BBC1M78",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BBC1M79",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BBG8KPS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BBJN7W5",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07BBYSVF1",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07JB8D33F",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07JBLMKV3",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07Q77SDYS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07QBVKX5Y",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07QBVX1WC",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07RWZ1ZTS",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "merchant_simulation",
+      "audience_unresolved": false
+    },
+    {
+      "sku": "us:B07SNGL8JM",
+      "raw_matches_parquet": true,
+      "normalized_record_matches": true,
+      "pack_unit_basis": "explicit_title_pack_count",
+      "audience_unresolved": false
+    }
+  ],
+  "new_model_calls": 0,
+  "new_real_users": 0,
+  "scope": "Exact raw-file equality and deterministic normalization checks; not human semantic verification of every product or current manufacturer stock.",
+  "hashes": {
+    "evidence/apparel_expansion_sources_v1/manifest.json": "a7d4b3987e8d476d46bc3d190bd4d457c61348461358522e0c863d1e5fd3f523",
+    "evidence/apparel_expansion_sources_v1/raw_records.json": "0391f4c91142c1014231d0cb5999809fc6e56c18c6c39bc543fbc470b64bee76",
+    "evidence/apparel_expansion_sources_v1/excluded_records.json": "e87e11ac31f43916058265c8a7b18e7152e1af6e1a89242c635de7ede07a3bfa",
+    "data/apparel_fulfillment_expansion_v1.json": "09ed41394345f015c11dcd9b693d379b5d7e05949b0d199476173b1204bd26e2",
+    "research/apparel_expansion_data.py": "bf7cc3731f614a79d275d288a8a043b8f9c3f5015b151574c172051c05fa3912"
+  }
+}

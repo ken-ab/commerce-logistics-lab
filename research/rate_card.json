@@ -1,0 +1,39 @@
+{
+  "version": "2026-09-07-verified-model-cards-v2",
+  "currency": "CNY",
+  "verified_on": "2026-09-07",
+  "billing_basis": "Conservative list-price estimate; all prompt tokens charged uncached, reasoning included in completion tokens. No explicit caching, images, audio, built-in search or batch services.",
+  "models": {
+    "qwen3.8-max": {
+      "provider": "dashscope",
+      "endpoint_host": "dashscope.aliyuncs.com",
+      "input_per_million": "12",
+      "output_per_million": "36",
+      "source": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
+    },
+    "qwen3.8-flash": {
+      "provider": "dashscope",
+      "endpoint_host": "dashscope.aliyuncs.com",
+      "input_per_million": "0.8",
+      "output_per_million": "2.7",
+      "source": "https://help.aliyun.com/zh/model-studio/qwen3-8-flash"
+    },
+    "gpt-5.6-luna": {
+      "provider": "aihubmix",
+      "endpoint_host": "aihubmix.com",
+      "input_per_million": "1.6",
+      "output_per_million": "9.6",
+      "original_currency": "USD",
+      "original_input_per_million": "0.2",
+      "original_output_per_million": "1.2",
+      "maximum_input_tokens_in_price_tier": 272000,
+      "budget_conversion_cny_per_usd": "8",
+      "conversion_note": "Conservative budgeting convention, not a claimed spot exchange rate or a reconciled top-up invoice; 20 percent total project headroom also retained.",
+      "source": "https://aihubmix.com/model/gpt-5.6-luna",
+      "unit_verification": "Visible model card and public metadata agree on $0.2/M input and $1.2/M output. The generic API reference has a conflicting /1K label; do not use that label."
+    }
+  },
+  "api_contract": "https://help.aliyun.com/zh/model-studio/qwen-api-via-openai-chat-completions",
+  "output_bound": "max_completion_tokens includes reasoning and answer, documented possible excess <=10 tokens; reserve another 32 tokens plus 20 percent contingency.",
+  "unpriced_models": []
+}

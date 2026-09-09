@@ -1,0 +1,14 @@
+[
+  {"id":"urgent_wholesale","description":"60 件 T 恤，7 天内送达","order":{"items":[{"sku":"TEE-BLK-M","quantity":60}],"destination":"DE-DC","deadline_days":7,"budget_usd":300},"expected_status":"planned","expected_cost_usd":249,"expected_days":6},
+  {"id":"relaxed_deadline","description":"相同订单放宽至 30 天","order":{"items":[{"sku":"TEE-BLK-M","quantity":60}],"destination":"DE-DC","deadline_days":30,"budget_usd":300},"expected_status":"planned","expected_cost_usd":111,"expected_days":27},
+  {"id":"air_disruption","description":"空运中断，18 天内可采用铁路","order":{"items":[{"sku":"TEE-BLK-M","quantity":60}],"destination":"DE-DC","deadline_days":18,"budget_usd":300,"blocked_legs":["HK-EU-AIR"]},"expected_status":"planned","expected_cost_usd":122,"expected_days":16},
+  {"id":"budget_conflict","description":"预算不足以满足急单时限","order":{"items":[{"sku":"TEE-BLK-M","quantity":60}],"destination":"DE-DC","deadline_days":7,"budget_usd":100},"expected_status":"infeasible"},
+  {"id":"stockout","description":"请求数量超过任一仓库库存","order":{"items":[{"sku":"TEE-BLK-M","quantity":500}],"destination":"DE-DC","deadline_days":30,"budget_usd":2000},"expected_status":"infeasible"},
+  {"id":"brand_region","description":"模拟品牌未开放该销售目的地","order":{"items":[{"sku":"TEE-BLK-M","quantity":60}],"destination":"US-DC","deadline_days":30,"budget_usd":2000},"expected_status":"rejected"},
+  {"id":"unknown_sku","description":"未知尺码 SKU 必须澄清","order":{"items":[{"sku":"TEE-BLK-XXXL","quantity":60}],"destination":"DE-DC","deadline_days":30,"budget_usd":300},"expected_status":"needs_clarification"},
+  {"id":"missing_destination","description":"缺少目的地","order":{"items":[{"sku":"TEE-BLK-M","quantity":60}],"deadline_days":7,"budget_usd":300},"expected_status":"needs_clarification"},
+  {"id":"minimum_quantity","description":"未达到模拟批发起订量","order":{"items":[{"sku":"TEE-BLK-M","quantity":3}],"destination":"DE-DC","deadline_days":7,"budget_usd":300},"expected_status":"rejected"},
+  {"id":"air_capacity","description":"卫衣重量超过空运运力，其他路线来不及","order":{"items":[{"sku":"HOOD-GRY-M","quantity":60}],"destination":"DE-DC","deadline_days":7,"budget_usd":1000},"expected_status":"infeasible"},
+  {"id":"mixed_variants","description":"两种尺码合并计重并逐 SKU 核对库存","order":{"items":[{"sku":"TEE-BLK-M","quantity":30},{"sku":"TEE-BLK-L","quantity":30}],"destination":"DE-DC","deadline_days":7,"budget_usd":300},"expected_status":"planned","expected_cost_usd":249,"expected_days":6},
+  {"id":"local_hub_stock","description":"小批量订单可直接使用香港仓库存","order":{"items":[{"sku":"TEE-BLK-M","quantity":20}],"destination":"DE-DC","deadline_days":7,"budget_usd":300},"expected_status":"planned","expected_cost_usd":154,"expected_days":5}
+]

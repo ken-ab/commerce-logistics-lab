@@ -1,0 +1,2 @@
+# Preserve exact bytes used by the frozen source and evidence hashes on every OS.
+* -text

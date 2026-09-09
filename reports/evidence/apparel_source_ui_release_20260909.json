@@ -1,0 +1,104 @@
+{
+  "recorded_at": "2026-09-08T20:43:44.429153+00:00",
+  "passed": true,
+  "scope": "Local loopback app activation, offline HTTP job test and unchanged persistent business tables; no external deployment.",
+  "local_app_updated": true,
+  "external_deployment": false,
+  "launcher": "start-apparel.ps1",
+  "module": "delivery_apparel_sources",
+  "listener_pid": 140588,
+  "parent_pid": 138684,
+  "policy": {
+    "policy_version": "apparel-interactive-product-sources-v1",
+    "explicit_operations_only": true,
+    "custom_operation_policy": "existing_custom_workflow",
+    "comparison": {
+      "v4_candidate": {
+        "runs": 24,
+        "passed": 19,
+        "cost_cny": "0.622431",
+        "mean_latency_seconds": 12.084458333333334
+      },
+      "v5_source_review": {
+        "runs": 24,
+        "passed": 24,
+        "cost_cny": "0.695276",
+        "mean_latency_seconds": 12.213
+      }
+    },
+    "report_url": "/apparel-source-research-report",
+    "scope": "24 known-catalogue simulated states per arm; no real merchant success-rate claim.",
+    "active_job_id": null
+  },
+  "previous_and_current_business_tables_equal": true,
+  "business_tables_after": {
+    "metadata": {
+      "rows": 1,
+      "sha256": "25e9799a7c3b7c5605b6619918ef43ecfa46372188cb9002de8139636a6b0878"
+    },
+    "inventory": {
+      "rows": 37,
+      "sha256": "76cec6c4ef39177a086a0fa7d8543c7d832fe7bac8accb720a653b527507fe9a"
+    },
+    "drafts": {
+      "rows": 3,
+      "sha256": "5736445b176776ae3da9d3ac703325cc09ebd4df010850a3a12e443771e3405a"
+    },
+    "approvals": {
+      "rows": 2,
+      "sha256": "8d5fb527bea2f6ee1efa1fa37692565dfa6b09222509ea4d6a96105b9bb4a8ce"
+    },
+    "proposals": {
+      "rows": 5,
+      "sha256": "ba73645b78bab8022753931f84b3c14c1595b43501fa28d54a4341f2fd683628"
+    },
+    "transport_events": {
+      "rows": 2,
+      "sha256": "6d39e617849d72378685177086e162f0826ed7dc92094c4b331154f7aeeb14f9"
+    },
+    "confirmations": {
+      "rows": 1,
+      "sha256": "ca05b5eee3d6df064e2a9ef3af0cd19443992e4cbf3984ff445ec8bd6fd3720f"
+    }
+  },
+  "gpu_health": {
+    "ready": true,
+    "model": "Qwen/Qwen3-Reranker-0.6B",
+    "instruction": "product"
+  },
+  "report_http_matches_file": true,
+  "project_ledger_micro_cny": 316432172,
+  "ledger_rows": 17198,
+  "new_paid_calls_during_ui_activation": 0,
+  "tests": {
+    "source_review_contract": 16,
+    "interactive_adapter": 4,
+    "http_entrypoint": 1,
+    "paid_model_calls": 0,
+    "initial_test_correction": "Interactive coordinator test first used len() on integer delegations; assertion corrected, then all 4 passed. No production change or paid rerun."
+  },
+  "browser": {
+    "url": "http://127.0.0.1:5176/?source-review=1",
+    "browser_id": "2",
+    "tab_id": "1076170121",
+    "verified": true,
+    "marked_deliverable": true,
+    "source_report_link_visible": true,
+    "evidence_method": "Fresh visible AX after query-string navigation loaded new page, original same-URL navigation had retained old content. New source report link and unchanged order/proposal/last-result verified; markDeliverable succeeded.",
+    "proposal_id": "PROP-a31b427e36f5462c80bf5eae8d9a28f2",
+    "proposal_version": 2,
+    "proposal_valid": true,
+    "pending_separate_confirmation": true,
+    "confirmation_clicked": false,
+    "new_model_task_clicked": false,
+    "displayed_model_result_is_prior_run": true
+  },
+  "source_sha256": {
+    "delivery_apparel_sources.py": "da7f1c2d987172c9f8839ad0b6df016a1947e719ae957dea72efa52f3c3bfe62",
+    "start-apparel.ps1": "49f3c5d98c66f6e4748f2d06c0ca91ad8b1e4aa2756b4838382ed47803e895c6",
+    "apparel_fulfillment/interactive_sources.py": "ed7684d8f98d7a4b74549e65713d7e9b489d67d530539e6a967a547b17dba629",
+    "tests/test_delivery_apparel_sources.py": "785370708247bdc4e3fd1846a076ac94091a6dc047037f8470c66c34de3605e2",
+    "tests/test_apparel_interactive_sources.py": "07ee697c919d5f8815bee6739404279b22085fdca7982608c08f484d74b807b5",
+    "research/APPAREL_SOURCE_REVIEW_RESULTS.md": "28945de896ca3ea856010201a8fa92d1e9c20121ed85aa8ccda02e7df22310cd"
+  }
+}

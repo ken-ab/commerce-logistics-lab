@@ -1,0 +1,19 @@
+{
+  "exported_at": "2026-09-09T02:22:58.446644+00:00",
+  "basis": "Existing settled ledger corrections, as used by the frozen budget100_v2 readout; original response bytes unchanged.",
+  "scope": "Only model-selection records missing response usage with an already settled matching ledger row. No full project ledger or account details.",
+  "records": {
+    "6327cc70-2be8-4997-b91b-876e0b3d837c": {
+      "charged_micro_cny": 195142,
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 5650,
+        "prompt_tokens": 1890,
+        "reasoning_tokens": 5616
+      },
+      "model": "kimi-k2.7-code",
+      "original_result": "evidence/model_selection_100/budget100_v2/results/screen/fcab983a97e91c0d/es_38406.json",
+      "original_sha256": "00dcf9847cbba9a0f80957accdc692b6b7896531f6b9b708797814b05beddf26"
+    }
+  }
+}

@@ -1,0 +1,1192 @@
+{
+  "workflow": "Browser shortage, exact substitution approval, propose, flight cancellation, old proposal invalid, revise, confirm",
+  "draft": {
+    "id": "APP-010165d5bd7444ac920511bc9a675485",
+    "owner": "af97c7a3a87444469a4e6f84925f149c",
+    "request": {
+      "lines": [
+        {
+          "brand": "Goodthreads",
+          "category": "t_shirt",
+          "color": "black",
+          "line_id": "1",
+          "quantity": 20,
+          "size": "M",
+          "style_id": "LAB-GT-CREW",
+          "unit": "piece"
+        }
+      ],
+      "needs_shipping": true,
+      "sales_region": "DE",
+      "shipping": {
+        "budget_cents": 20000,
+        "deadline_at": "2026-09-15T06:59:00.000Z",
+        "destination": "DE-DC",
+        "ready_at": "2026-09-09T06:59:00.000Z"
+      },
+      "wholesale": true
+    },
+    "selections": [
+      {
+        "line_id": "1",
+        "sku": "us:B06XWMJ9XF"
+      }
+    ],
+    "revision": 4,
+    "created_at": "2026-09-08T07:00:07.649487Z",
+    "order_check": {
+      "status": "ready",
+      "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+      "dataset_id": "apparel-fulfillment-v1-20260908",
+      "warehouse": "CN-SZ",
+      "issues": [],
+      "lines": [
+        {
+          "line_id": "1",
+          "sku": "us:B06XWMJ9XF",
+          "catalog_units": 20,
+          "pieces": 20,
+          "variant": {
+            "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium",
+            "style_id": "LAB-GT-VNECK",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "M",
+            "audience": "men"
+          },
+          "evidence_ids": [
+            "esci:us:B06XWMJ9XF:brand",
+            "esci:us:B06XWMJ9XF:color",
+            "esci:us:B06XWMJ9XF:id",
+            "esci:us:B06XWMJ9XF:title",
+            "lab-style:LAB-GT-VNECK",
+            "sim-price:us:B06XWMJ9XF",
+            "sim-unit:us:B06XWMJ9XF",
+            "sim-weight:us:B06XWMJ9XF"
+          ],
+          "unit_basis": {
+            "kind": "merchant_simulation",
+            "evidence_id": "sim-unit:us:B06XWMJ9XF"
+          }
+        }
+      ],
+      "quantities_catalog_units": {
+        "us:B06XWMJ9XF": 20
+      },
+      "quantities_pieces": {
+        "us:B06XWMJ9XF": 20
+      },
+      "source_versions": {
+        "us:B06XWMJ9XF": {
+          "variant_version": 1,
+          "stock_version": 2,
+          "rule_version": 1,
+          "available_catalog_units": 25,
+          "evidence_ids": [
+            "sim-brand-policy:Goodthreads",
+            "sim-stock:CN-SZ:us:B06XWMJ9XF"
+          ]
+        }
+      },
+      "substitution_proposals": [
+        {
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "line_id": "1",
+          "sku": "us:B06XWMJ9XF",
+          "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d",
+          "differences": [
+            {
+              "field": "style_id",
+              "requested": "LAB-GT-CREW",
+              "candidate": "LAB-GT-VNECK"
+            }
+          ],
+          "approval_id": "SUB-abd8615ed2a7a30044e8b15d"
+        }
+      ],
+      "needs_shipping": true,
+      "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed."
+    },
+    "proposals": [
+      {
+        "state": "superseded",
+        "created_at": "2026-09-08T07:00:36.257573Z",
+        "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "apparel-fulfillment-v1-20260908",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "esci:us:B06XWMJ9XF:brand",
+                "esci:us:B06XWMJ9XF:color",
+                "esci:us:B06XWMJ9XF:id",
+                "esci:us:B06XWMJ9XF:title",
+                "lab-style:LAB-GT-VNECK",
+                "sim-price:us:B06XWMJ9XF",
+                "sim-unit:us:B06XWMJ9XF",
+                "sim-weight:us:B06XWMJ9XF"
+              ],
+              "line_id": "1",
+              "pieces": 20,
+              "sku": "us:B06XWMJ9XF",
+              "unit_basis": {
+                "evidence_id": "sim-unit:us:B06XWMJ9XF",
+                "kind": "merchant_simulation"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "Goodthreads",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "LAB-GT-VNECK",
+                "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "us:B06XWMJ9XF": 20
+          },
+          "quantities_pieces": {
+            "us:B06XWMJ9XF": 20
+          },
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "source_versions": {
+            "us:B06XWMJ9XF": {
+              "available_catalog_units": 45,
+              "evidence_ids": [
+                "sim-brand-policy:Goodthreads",
+                "sim-stock:CN-SZ:us:B06XWMJ9XF"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+              "differences": [
+                {
+                  "candidate": "LAB-GT-VNECK",
+                  "field": "style_id",
+                  "requested": "LAB-GT-CREW"
+                }
+              ],
+              "line_id": "1",
+              "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+              "sku": "us:B06XWMJ9XF",
+              "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": null,
+        "proposal_id": "PROP-709f240640674a56b877a25e9c3ccb8a",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-11T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "observed_event_ids": [],
+          "planning_at": "2026-09-08T07:00:36.257573Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-09T18:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-09T12:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-09T12:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-09T12:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 301.0
+            },
+            {
+              "arrival_at": "2026-09-10T22:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-10T04:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-10T04:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-10T04:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 600.0
+            },
+            {
+              "arrival_at": "2026-09-11T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-11T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-11T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-11T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 600.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-15T06:59:00.000Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-09T06:59:00.000Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "955c83578cbc364ed29e2931432bc3926c8b7abec00deb61d5fd6166862b8050",
+        "version": 1
+      },
+      {
+        "state": "confirmed",
+        "created_at": "2026-09-08T07:01:42.470782Z",
+        "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "apparel-fulfillment-v1-20260908",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "esci:us:B06XWMJ9XF:brand",
+                "esci:us:B06XWMJ9XF:color",
+                "esci:us:B06XWMJ9XF:id",
+                "esci:us:B06XWMJ9XF:title",
+                "lab-style:LAB-GT-VNECK",
+                "sim-price:us:B06XWMJ9XF",
+                "sim-unit:us:B06XWMJ9XF",
+                "sim-weight:us:B06XWMJ9XF"
+              ],
+              "line_id": "1",
+              "pieces": 20,
+              "sku": "us:B06XWMJ9XF",
+              "unit_basis": {
+                "evidence_id": "sim-unit:us:B06XWMJ9XF",
+                "kind": "merchant_simulation"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "Goodthreads",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "LAB-GT-VNECK",
+                "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "us:B06XWMJ9XF": 20
+          },
+          "quantities_pieces": {
+            "us:B06XWMJ9XF": 20
+          },
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "source_versions": {
+            "us:B06XWMJ9XF": {
+              "available_catalog_units": 45,
+              "evidence_ids": [
+                "sim-brand-policy:Goodthreads",
+                "sim-stock:CN-SZ:us:B06XWMJ9XF"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+              "differences": [
+                {
+                  "candidate": "LAB-GT-VNECK",
+                  "field": "style_id",
+                  "requested": "LAB-GT-CREW"
+                }
+              ],
+              "line_id": "1",
+              "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+              "sku": "us:B06XWMJ9XF",
+              "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": "PROP-709f240640674a56b877a25e9c3ccb8a",
+        "proposal_id": "PROP-43ba5df4cfd74e30945942e128b5b003",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "37b8023f9a6c597a7a111a217ed927a75454bdd673007303e0244de9d30ae223",
+          "observed_event_ids": [
+            "UI-CANCEL-3902e136-6053-481a-bcb8-8894e98cd597"
+          ],
+          "planning_at": "2026-09-08T07:01:42.470782Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-09T18:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-09T12:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-09T12:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-09T12:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 301.0
+            },
+            {
+              "arrival_at": "2026-09-11T10:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-10T16:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-10T16:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 1320.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-15T06:59:00.000Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-09T06:59:00.000Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "955c83578cbc364ed29e2931432bc3926c8b7abec00deb61d5fd6166862b8050",
+        "version": 2
+      }
+    ],
+    "confirmation": {
+      "assessment": {
+        "checked_at": "2026-09-08T07:02:54.459285Z",
+        "proposal_id": "PROP-43ba5df4cfd74e30945942e128b5b003",
+        "route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "valid": true,
+        "version": 2,
+        "violations": []
+      },
+      "confirmation_id": "SIM-APP-75903161e25a4d3c",
+      "confirmed_at": "2026-09-08T07:02:54.459285Z",
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "notice": "Local simulation only; no payment, carrier booking or shipment.",
+      "proposal_id": "PROP-43ba5df4cfd74e30945942e128b5b003",
+      "proposal_version": 2,
+      "quantities_catalog_units": {
+        "us:B06XWMJ9XF": 20
+      },
+      "route": {
+        "arrival_at": "2026-09-12T20:00:00Z",
+        "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+        "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+        "currency": "USD",
+        "events_digest": "37b8023f9a6c597a7a111a217ed927a75454bdd673007303e0244de9d30ae223",
+        "observed_event_ids": [
+          "UI-CANCEL-3902e136-6053-481a-bcb8-8894e98cd597"
+        ],
+        "planning_at": "2026-09-08T07:01:42.470782Z",
+        "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+        "segments": [
+          {
+            "arrival_at": "2026-09-09T18:00:00Z",
+            "cost_cents": 1900,
+            "departure_at": "2026-09-09T12:00:00Z",
+            "destination": "HK-HUB",
+            "event_ids": [],
+            "evidence_id": "sim-leg:SZ-HK-ROAD",
+            "leg_id": "SZ-HK-ROAD",
+            "mode": "road",
+            "nominal_departure": "2026-09-09T12:00:00Z",
+            "origin": "CN-SZ",
+            "service_id": "SZ-HK-ROAD@2026-09-09T12:00:00Z",
+            "transfer_minutes": 0,
+            "wait_minutes": 301.0
+          },
+          {
+            "arrival_at": "2026-09-11T10:00:00Z",
+            "cost_cents": 13200,
+            "departure_at": "2026-09-10T16:00:00Z",
+            "destination": "EU-HUB",
+            "event_ids": [],
+            "evidence_id": "sim-leg:HK-EU-AIR",
+            "leg_id": "HK-EU-AIR",
+            "mode": "air",
+            "nominal_departure": "2026-09-10T16:00:00Z",
+            "origin": "HK-HUB",
+            "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+            "transfer_minutes": 120,
+            "wait_minutes": 1320.0
+          },
+          {
+            "arrival_at": "2026-09-12T20:00:00Z",
+            "cost_cents": 2200,
+            "departure_at": "2026-09-12T08:00:00Z",
+            "destination": "DE-DC",
+            "event_ids": [],
+            "evidence_id": "sim-leg:EU-DE-ROAD",
+            "leg_id": "EU-DE-ROAD",
+            "mode": "road",
+            "nominal_departure": "2026-09-12T08:00:00Z",
+            "origin": "EU-HUB",
+            "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+            "transfer_minutes": 360,
+            "wait_minutes": 1320.0
+          }
+        ],
+        "shipping_constraints": {
+          "budget_cents": 20000,
+          "deadline_at": "2026-09-15T06:59:00.000Z",
+          "destination": "DE-DC",
+          "ready_at": "2026-09-09T06:59:00.000Z"
+        },
+        "status": "planned",
+        "total_cost_cents": 17300,
+        "weight_grams": 4000
+      },
+      "status": "confirmed_simulation"
+    }
+  },
+  "traces": [
+    {
+      "id": 1,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "user",
+      "kind": "order_request",
+      "payload": {
+        "lines": [
+          {
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "line_id": "1",
+            "quantity": 20,
+            "size": "M",
+            "style_id": "LAB-GT-CREW",
+            "unit": "piece"
+          }
+        ],
+        "needs_shipping": true,
+        "sales_region": "DE",
+        "shipping": {
+          "budget_cents": 20000,
+          "deadline_at": "2026-09-15T06:59:00.000Z",
+          "destination": "DE-DC",
+          "ready_at": "2026-09-09T06:59:00.000Z"
+        },
+        "wholesale": true
+      },
+      "created_at": "2026-09-08T07:00:07.650067Z"
+    },
+    {
+      "id": 2,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "operator",
+      "kind": "select_variants",
+      "payload": {
+        "order_check": {
+          "dataset_id": "apparel-fulfillment-v1-20260908",
+          "issues": [
+            {
+              "available_catalog_units": 8,
+              "code": "insufficient_stock",
+              "requested_catalog_units": 20,
+              "severity": "unsatisfied",
+              "sku": "us:B06XWMKR2F"
+            }
+          ],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "esci:us:B06XWMKR2F:brand",
+                "esci:us:B06XWMKR2F:color",
+                "esci:us:B06XWMKR2F:id",
+                "esci:us:B06XWMKR2F:title",
+                "lab-style:LAB-GT-CREW",
+                "sim-price:us:B06XWMKR2F",
+                "sim-unit:us:B06XWMKR2F",
+                "sim-weight:us:B06XWMKR2F"
+              ],
+              "line_id": "1",
+              "pieces": 20,
+              "sku": "us:B06XWMKR2F",
+              "unit_basis": {
+                "evidence_id": "sim-unit:us:B06XWMKR2F",
+                "kind": "merchant_simulation"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "Goodthreads",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "LAB-GT-CREW",
+                "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Medium"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "us:B06XWMKR2F": 20
+          },
+          "quantities_pieces": {
+            "us:B06XWMKR2F": 20
+          },
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "source_versions": {
+            "us:B06XWMKR2F": {
+              "available_catalog_units": 8,
+              "evidence_ids": [
+                "sim-brand-policy:Goodthreads",
+                "sim-stock:CN-SZ:us:B06XWMKR2F"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "unfulfillable",
+          "substitution_proposals": [],
+          "warehouse": "CN-SZ"
+        },
+        "selections": [
+          {
+            "line_id": "1",
+            "sku": "us:B06XWMKR2F"
+          }
+        ]
+      },
+      "created_at": "2026-09-08T07:00:07.662598Z"
+    },
+    {
+      "id": 3,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "operator",
+      "kind": "select_variants",
+      "payload": {
+        "order_check": {
+          "dataset_id": "apparel-fulfillment-v1-20260908",
+          "issues": [
+            {
+              "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+              "code": "substitution_requires_confirmation",
+              "line_id": "1",
+              "severity": "clarify"
+            }
+          ],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "esci:us:B06XWMJ9XF:brand",
+                "esci:us:B06XWMJ9XF:color",
+                "esci:us:B06XWMJ9XF:id",
+                "esci:us:B06XWMJ9XF:title",
+                "lab-style:LAB-GT-VNECK",
+                "sim-price:us:B06XWMJ9XF",
+                "sim-unit:us:B06XWMJ9XF",
+                "sim-weight:us:B06XWMJ9XF"
+              ],
+              "line_id": "1",
+              "pieces": 20,
+              "sku": "us:B06XWMJ9XF",
+              "unit_basis": {
+                "evidence_id": "sim-unit:us:B06XWMJ9XF",
+                "kind": "merchant_simulation"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "Goodthreads",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "LAB-GT-VNECK",
+                "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "us:B06XWMJ9XF": 20
+          },
+          "quantities_pieces": {
+            "us:B06XWMJ9XF": 20
+          },
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "source_versions": {
+            "us:B06XWMJ9XF": {
+              "available_catalog_units": 45,
+              "evidence_ids": [
+                "sim-brand-policy:Goodthreads",
+                "sim-stock:CN-SZ:us:B06XWMJ9XF"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "needs_clarification",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+              "differences": [
+                {
+                  "candidate": "LAB-GT-VNECK",
+                  "field": "style_id",
+                  "requested": "LAB-GT-CREW"
+                }
+              ],
+              "line_id": "1",
+              "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+              "sku": "us:B06XWMJ9XF",
+              "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "selections": [
+          {
+            "line_id": "1",
+            "sku": "us:B06XWMJ9XF"
+          }
+        ]
+      },
+      "created_at": "2026-09-08T07:00:26.223757Z"
+    },
+    {
+      "id": 4,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "user",
+      "kind": "approve_specific_substitution",
+      "payload": {
+        "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+        "differences": [
+          {
+            "candidate": "LAB-GT-VNECK",
+            "field": "style_id",
+            "requested": "LAB-GT-CREW"
+          }
+        ],
+        "line_id": "1",
+        "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+        "sku": "us:B06XWMJ9XF",
+        "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d"
+      },
+      "created_at": "2026-09-08T07:00:33.970088Z"
+    },
+    {
+      "id": 5,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "planner",
+      "kind": "proposal_version",
+      "payload": {
+        "created_at": "2026-09-08T07:00:36.257573Z",
+        "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "apparel-fulfillment-v1-20260908",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "esci:us:B06XWMJ9XF:brand",
+                "esci:us:B06XWMJ9XF:color",
+                "esci:us:B06XWMJ9XF:id",
+                "esci:us:B06XWMJ9XF:title",
+                "lab-style:LAB-GT-VNECK",
+                "sim-price:us:B06XWMJ9XF",
+                "sim-unit:us:B06XWMJ9XF",
+                "sim-weight:us:B06XWMJ9XF"
+              ],
+              "line_id": "1",
+              "pieces": 20,
+              "sku": "us:B06XWMJ9XF",
+              "unit_basis": {
+                "evidence_id": "sim-unit:us:B06XWMJ9XF",
+                "kind": "merchant_simulation"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "Goodthreads",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "LAB-GT-VNECK",
+                "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "us:B06XWMJ9XF": 20
+          },
+          "quantities_pieces": {
+            "us:B06XWMJ9XF": 20
+          },
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "source_versions": {
+            "us:B06XWMJ9XF": {
+              "available_catalog_units": 45,
+              "evidence_ids": [
+                "sim-brand-policy:Goodthreads",
+                "sim-stock:CN-SZ:us:B06XWMJ9XF"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+              "differences": [
+                {
+                  "candidate": "LAB-GT-VNECK",
+                  "field": "style_id",
+                  "requested": "LAB-GT-CREW"
+                }
+              ],
+              "line_id": "1",
+              "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+              "sku": "us:B06XWMJ9XF",
+              "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": null,
+        "proposal_id": "PROP-709f240640674a56b877a25e9c3ccb8a",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-11T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "observed_event_ids": [],
+          "planning_at": "2026-09-08T07:00:36.257573Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-09T18:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-09T12:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-09T12:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-09T12:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 301.0
+            },
+            {
+              "arrival_at": "2026-09-10T22:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-10T04:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-10T04:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-10T04:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 600.0
+            },
+            {
+              "arrival_at": "2026-09-11T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-11T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-11T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-11T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 600.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-15T06:59:00.000Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-09T06:59:00.000Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "955c83578cbc364ed29e2931432bc3926c8b7abec00deb61d5fd6166862b8050",
+        "state": "pending",
+        "version": 1
+      },
+      "created_at": "2026-09-08T07:00:36.262573Z"
+    },
+    {
+      "id": 6,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "planner",
+      "kind": "proposal_version",
+      "payload": {
+        "created_at": "2026-09-08T07:01:42.470782Z",
+        "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "apparel-fulfillment-v1-20260908",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "esci:us:B06XWMJ9XF:brand",
+                "esci:us:B06XWMJ9XF:color",
+                "esci:us:B06XWMJ9XF:id",
+                "esci:us:B06XWMJ9XF:title",
+                "lab-style:LAB-GT-VNECK",
+                "sim-price:us:B06XWMJ9XF",
+                "sim-unit:us:B06XWMJ9XF",
+                "sim-weight:us:B06XWMJ9XF"
+              ],
+              "line_id": "1",
+              "pieces": 20,
+              "sku": "us:B06XWMJ9XF",
+              "unit_basis": {
+                "evidence_id": "sim-unit:us:B06XWMJ9XF",
+                "kind": "merchant_simulation"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "Goodthreads",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "LAB-GT-VNECK",
+                "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "us:B06XWMJ9XF": 20
+          },
+          "quantities_pieces": {
+            "us:B06XWMJ9XF": 20
+          },
+          "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+          "source_versions": {
+            "us:B06XWMJ9XF": {
+              "available_catalog_units": 45,
+              "evidence_ids": [
+                "sim-brand-policy:Goodthreads",
+                "sim-stock:CN-SZ:us:B06XWMJ9XF"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-abd8615ed2a7a30044e8b15d",
+              "differences": [
+                {
+                  "candidate": "LAB-GT-VNECK",
+                  "field": "style_id",
+                  "requested": "LAB-GT-CREW"
+                }
+              ],
+              "line_id": "1",
+              "request_digest": "707fb23bc8d8f96e8c7472f166cc095858f9a32043b928b5891a39f221af57ae",
+              "sku": "us:B06XWMJ9XF",
+              "variant_digest": "5412051a294b2fd6cf6753dd573e55342304785c63fef0d628043c1675c24e2d"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": "PROP-709f240640674a56b877a25e9c3ccb8a",
+        "proposal_id": "PROP-43ba5df4cfd74e30945942e128b5b003",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "37b8023f9a6c597a7a111a217ed927a75454bdd673007303e0244de9d30ae223",
+          "observed_event_ids": [
+            "UI-CANCEL-3902e136-6053-481a-bcb8-8894e98cd597"
+          ],
+          "planning_at": "2026-09-08T07:01:42.470782Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-09T18:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-09T12:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-09T12:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-09T12:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 301.0
+            },
+            {
+              "arrival_at": "2026-09-11T10:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-10T16:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-10T16:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 1320.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-15T06:59:00.000Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-09T06:59:00.000Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "955c83578cbc364ed29e2931432bc3926c8b7abec00deb61d5fd6166862b8050",
+        "state": "pending",
+        "version": 2
+      },
+      "created_at": "2026-09-08T07:01:42.474782Z"
+    },
+    {
+      "id": 7,
+      "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+      "actor": "user",
+      "kind": "confirm_simulation",
+      "payload": {
+        "assessment": {
+          "checked_at": "2026-09-08T07:02:54.459285Z",
+          "proposal_id": "PROP-43ba5df4cfd74e30945942e128b5b003",
+          "route_audit": {
+            "assessed": true,
+            "passed": true,
+            "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+            "violations": []
+          },
+          "valid": true,
+          "version": 2,
+          "violations": []
+        },
+        "confirmation_id": "SIM-APP-75903161e25a4d3c",
+        "confirmed_at": "2026-09-08T07:02:54.459285Z",
+        "draft_id": "APP-010165d5bd7444ac920511bc9a675485",
+        "notice": "Local simulation only; no payment, carrier booking or shipment.",
+        "proposal_id": "PROP-43ba5df4cfd74e30945942e128b5b003",
+        "proposal_version": 2,
+        "quantities_catalog_units": {
+          "us:B06XWMJ9XF": 20
+        },
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "37b8023f9a6c597a7a111a217ed927a75454bdd673007303e0244de9d30ae223",
+          "observed_event_ids": [
+            "UI-CANCEL-3902e136-6053-481a-bcb8-8894e98cd597"
+          ],
+          "planning_at": "2026-09-08T07:01:42.470782Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-09T18:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-09T12:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-09T12:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-09T12:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 301.0
+            },
+            {
+              "arrival_at": "2026-09-11T10:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-10T16:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-10T16:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 1320.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-15T06:59:00.000Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-09T06:59:00.000Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "status": "confirmed_simulation"
+      },
+      "created_at": "2026-09-08T07:02:54.461285Z"
+    }
+  ],
+  "events": [
+    {
+      "delay_minutes": 0,
+      "event_id": "UI-CANCEL-3902e136-6053-481a-bcb8-8894e98cd597",
+      "kind": "cancel",
+      "leg_id": "HK-EU-AIR",
+      "nominal_departure": "2026-09-10T04:00:00Z",
+      "published_at": "2026-09-08T07:01:01.322000Z"
+    }
+  ],
+  "billing": "No paid calls in this workflow",
+  "ui_issue_found": "Legacy base status returned CNY 300; new endpoint will expose current CNY 480 operational cap"
+}

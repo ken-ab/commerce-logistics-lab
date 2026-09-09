@@ -1,0 +1,124 @@
+"""Write a result report only after the complete frozen study passes its audit."""
+from decimal import Decimal
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'research/APPAREL_EXPANSION_RESULTS.md'
+ARMS = ('single', 'coordinator', 'on_demand')
+LABELS = {'single': '单 Agent', 'coordinator': '协调员加专家', 'on_demand': '按需委派'}
+FAMILIES = {
+    'inspect_fields': '指定商品字段', 'inspect_material': '材质与包装', 'two_line_pickup': '两行服装自提',
+    'mixed_pack_shipping': '按包／按件混合运输', 'aggregate_stock': '同 SKU 合计库存',
+    'unspecified_unit': '采购单位不明', 'indivisible_pack': '数量不可整包换算', 'audience_conflict': '人群不符',
+    'category_conflict': '服装类别不符', 'blocked_region': '部分品牌销售区域受限',
+    'mixed_moq': '各 SKU 起订量', 'stage_replacement': '替代商品暂选待批准',
+    'approved_replacement_review': '已批准替代后的提案复核', 'cancelled_multiline': '多行订单班次取消',
+    'delayed_multiline': '多行订单运输延误', 'current_valid': '无关事件下保留有效提案',
+    'future_event': '尚未发布的运输事件', 'capacity_unfulfillable': '容量与交期共同导致无解',
+}
+
+
+def read(name):
+    return json.loads((ROOT / name).read_text(encoding='utf-8'))
+
+
+def money(value):
+    return f'{Decimal(str(value)):.6f}'
+
+
+def percent(numerator, denominator):
+    return f'{numerator / denominator:.2%}' if denominator else '不适用'
+
+
+def main():
+    if OUT.exists():
+        raise FileExistsError('Preserve the finished result report')
+    summary = read('evidence/apparel_expansion_study_v1/summary.json')
+    audit = read('evidence/apparel_expansion_audit_20260909.json')
+    qualitative = read('evidence/apparel_expansion_qualitative_20260909.json')
+    reg = read('evidence/apparel_expansion_study_v1/registration.json')
+    source = read('evidence/apparel_expansion_sources_v1/manifest.json')
+    assert audit['passed'] and sum(g['runs'] for g in summary['groups'].values()) == 216
+    from research.audit_apparel_candidate_validation import sha
+    assert qualitative['reviewed_rationales'] == 18 and not qualitative['preregistered_results_changed']
+    assert all(sha(ROOT / 'evidence/apparel_expansion_study_v1/runs' / (r['case_id'] + '-single') / 'execution.json') == r['execution_sha256'] for r in qualitative['records'])
+    assert all(sha(ROOT / name) == value for name, value in audit['verified_sha256'].items())
+    assert all(sha(ROOT / name) == value for name, value in audit['post_audit_snapshot_sha256'].items())
+    groups = summary['groups']
+    lines = ['# 扩展服装订单与跨境履约：216 次三组对照结果', '',
+        '2026-09-09。本报告记录新的 72 个模拟订单状态，在固定商品资料核验版本上各运行三种策略。所有原始失败保留，未挑选重跑结果。', '',
+        '研究目录由 37 个扩展到 277 个有来源记录的服装变体，新增 240 个。三个策略使用同一业务版本、模型、工具、规则和逐例验收器；每种策略 72 次。这里的通过率是预先登记的业务验收率，不是电商真实用户准确率。', '',
+        '| 执行策略 | 通过数／72 | 验收通过率 | 平均费用（元／尝试） | 平均耗时（秒） | P95（秒） | 有委派的任务 |',
+        '| --- | ---: | ---: | ---: | ---: | ---: | ---: |']
+    for arm in ARMS:
+        g = groups[arm]
+        lines.append(f"| {LABELS[arm]} | {g['passed']}/72 | {percent(g['passed'],72)} | {money(g['mean_cost_cny'])} | {g['mean_latency_seconds']:.3f} | {g['p95_latency_seconds']:.3f} | {g['tasks_with_delegation']}/72 |")
+    best_pass = max(g['passed'] for g in groups.values())
+    tied = [a for a in ARMS if groups[a]['passed'] == best_pass]
+    cheapest = min(tied, key=lambda a: Decimal(groups[a]['cost_cny']))
+    lines += ['', f'按本轮实际结果，在验收通过数最高的策略中，平均费用最低的是 **{LABELS[cheapest]}**。这是结果描述，不是预设的综合评分，也没有据此自动更改工作台。',
+        f"协调员相对单 Agent 的总费用倍数为 {Decimal(groups['coordinator']['cost_cny']) / Decimal(groups['single']['cost_cny']):.3f}，平均耗时倍数为 {groups['coordinator']['mean_latency_seconds'] / groups['single']['mean_latency_seconds']:.3f}。"]
+    if not groups['on_demand']['delegations']:
+        lines += ['按需组在本轮没有实际调用专家。它是“允许按需委派，但实际选择直接处理”的结果，不能把它解释为多 Agent 协作提升，也不能证明其他任务不需要委派。']
+    lines += ['', '## 数据、控制变量与评价范围', '',
+        '公开字段来自项目已保存的 Amazon ESCI 原始 Parquet，固定提交 `7916cdf6ab75a462e77f20ab40428a10923998d5`。在 Champion、Fruit of the Loom、Gildan、Hanes 中各新增 60 个符合标题尺码、非空颜色及服装／包装规则的记录；所有 240 条重新逐行对照原始 Parquet，保留原始行和散列。旧 37 条保持原 JSON 值。',
+        f"筛选共考虑 {source['rows_considered']} 条；新增包含 119 件连帽衫记录、115 件 T 恤记录和 6 件 polo 记录。按人群字段为男士 222、男童 5、女士 3、儿童 4、未知 6。目录偏向男装，不是均衡的服装市场样本。商品记录数也不是售出件数。",
+        '价格、重量、库存、地区限制、起订量和款式分组都是明确标注的研究模拟；显式多件装信息来自标题，未明确包装的单件单位按模拟处理。新增清洗描述最长 830 字符，没有超过旧 1200 字符截断边界，因此本轮不构成长文本截断压力测试。',
+        '这批商品首次进入服装研究目录，但早已在项目完整 ESCI 导入中；不能声称对预训练或整个项目未知。72 个案例由开发者编写，包含明确操作要求；83 个不同初始／查阅／已批准目标 SKU，并非整个目录中的每个 SKU 都被实验覆盖。',
+        '业务固定为 SourceReviewAgent v5，请求模型 gpt-5.6-luna，服务返回的模型别名单独保存在审计中。每任务共用 12 次模型／32 次业务工具上限。每个任务都有一次相同的运行时 read_order，计入工具次数；协调员的其他业务工具由专家调用。按需组须记录依据，但没有强制委派。',
+        '先完成 72 项免费状态／可行性检查和 6 项外部验收回归检查，然后冻结资料、代码、案例、初始 SQLite 和顺序。种子 26090972；六种策略顺序循环，每种策略在先、中、后各 24 次。单进程执行，保留模型随机性；每例每策略只有一条轨迹。', '',
+        '## 调用、费用和失败', '',
+        '| 策略 | 模型调用成功／总数 | 工具成功／总数 | 输入 token | 输出 token | 总费用（元） | 每个通过任务承担费用（元） | 约束违规数 |',
+        '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
+    for arm in ARMS:
+        g = groups[arm]
+        lines.append(f"| {LABELS[arm]} | {g['successful_model_calls']}/{g['model_calls']} | {g['successful_tool_calls']}/{g['tool_calls']} | {g['input_tokens']:,} | {g['output_tokens']:,} | {money(g['cost_cny'])} | {money(g['cost_per_accepted_cny']) if g['cost_per_accepted_cny'] else '不适用'} | {g['violations']} |")
+    lines += ['', '平均费用的分母是全部尝试；每个通过任务承担费用为所有成功与失败尝试的总费用除以通过数。完整耗时包含请求、工具和编排；P95 用 72 个观测的最近秩。没有测量首 token 时间或独立思考耗时，输出 token 已包含服务返回的 reasoning token，不能再加一次。',
+        '工具成功率只统计已进入业务工具的调用；被 schema、角色或提交检查拒绝的请求另有轨迹。HTTP 成功不代表业务完成。约束违规仅指需求、批准、确认和只读状态保护检查，不代表覆盖了任意潜在风险。']
+    failed = [r for r in audit['cases'] if not r['passed']]
+    if failed:
+        lines += ['', '| 未通过案例 | 策略 | 运行状态 | 原始失败项 |', '| --- | --- | --- | --- |']
+        for r in failed:
+            lines.append(f"| {r['case_id']} · {FAMILIES[r['family']]} | {LABELS[r['arm']]} | {r['run_status']} | {', '.join(r['failures'])} |")
+        if any(r['case_id'] == 'EX-15-1' and r['arm'] == 'coordinator' for r in failed):
+            lines += ['', 'EX-15-1 的原始轨迹显示：协调员在首次委派的自由文本里，把已有提案 ID 末尾多写了一个 `5`，物流与服务专家继续使用这个不存在的 ID。原提案实际存在且有效，两个 read_proposal 因对象不存在而失败；后续报告修补没有回到已读订单核对正确 ID，最终耗尽 12 次模型调用。12 次接口请求均成功，故这例属于对象标识传递与恢复失败，不是 AIHubMix 再次欠费。',
+                '后续可另行研究结构化传递当前提案标识，以及读取失败后对照当前对象目录的恢复策略；本轮没有修补或重跑这例，也不能据一个错误类型预告新策略一定提升。']
+        if any(r['case_id'] == 'EX-12-3' and r['arm'] == 'coordinator' for r in failed):
+            lines += ['', 'EX-12-3 的协调员已保留获批商品并生成有效新版提案，11 次业务工具均成功。报告先缺少当前订单状态引用，补齐后又缺少新版到达时间；最后补成 14 条引用，超过固定 schema 的 12 条上限而被拒绝。12 次模型调用全部成功但没有合格最终报告。此例暴露必需引用、引用容量与恢复流程之间的问题；业务状态正确与完整报告交付分开计分。']
+    else:
+        lines += ['', '本轮 216 次均通过预登记验收。这个结果只适用于上述有限、明确说明任务目标的模拟案例；全部通过不等于未知用户错误率为零。']
+    lines += ['', '## 补充文字解释抽查', '',
+        '在部分结果出来后，额外选择每类的变体 0、单 Agent 轨迹，共 18 份解释，由撰写报告的助手逐份对照保存的请求、商品字段和状态。这个选择未预登记，不是独立人类盲审，不覆盖全部 216 份回答，也不据此给出新的总体准确率；原验收结果保持不变。',
+        '其中 EX-14-0 在预登记验收中通过，但解释存在确定的时间与班次混淆：原航班计划 2027-11-13 16:00 UTC 起飞，延误 2160 分钟应为 11-15 04:00；程序实际改选了另一班 11-14 04:00 的航班，新班次没有该延误事件。模型却把后者说成原班次延误后的起飞时间，两者相差 24 小时。新版路线、成本和版本链核验通过，仍不能证明这段解释正确。',
+        '其他所读样本未观察到同类明确矛盾，不代表全部句子已被自动验证；一些回答依赖引用表呈现具体属性，部分正文省略时区。EX-06-0虽正确保留不可拆包的阻断，也重复询问了已经明确的采购单位，澄清问题可更聚焦。后续需把服务标识、事件归属和时间变化做成确定性对照事实，并在新案例上检验解释，不能只靠当前字段引用率。',
+        '', '- [18 份抽查记录及延误反例计算](../evidence/apparel_expansion_qualitative_20260909.json)', '',
+        '## 每类案例与配对结果', '', '| 业务问题 | 单 Agent | 协调员加专家 | 按需委派 |', '| --- | ---: | ---: | ---: |']
+    for family, label in FAMILIES.items():
+        lines.append('| ' + label + ' | ' + ' | '.join(f"{groups[a]['families'][family]['passed']}/4" for a in ARMS) + ' |')
+    for arm in ('coordinator', 'on_demand'):
+        p = summary['paired'][arm + '_vs_single']
+        low, high = p['paired_bootstrap_95_percentile']
+        lines += ['', f"{LABELS[arm]}相对单 Agent：{p['win']} 对提升、{p['tie']} 对相同、{p['loss']} 对下降；通过率差 {p['acceptance_difference']:.2%}，案例配对自助重采样区间 [{low:.2%}, {high:.2%}]。"]
+    lines += ['这些区间仅描述开发案例重采样，四个同类变体之间存在结构相似性，不能当作真实商家总体置信区间。零宽区间也不证明总体等效。', '',
+        '## 独立核验与证据位置', '',
+        f"审计核对 {len(audit['verified_sha256'])} 个文件散列、216 份实际 SQLite 状态和 {audit['unique_paid_rows']} 条唯一付费账本记录，使用另写的数量／约束计算与运输段算术，不调用模型、Agent 或原验收器。",
+        f"另核对 {sum(g['itinerary_checks'] for g in audit['groups'].values())} 条当前可行运输路线、{sum(g['old_validity_checks'] for g in audit['groups'].values())} 次原提案有效性和 {sum(g['capacity_infeasible_checks'] for g in audit['groups'].values())} 次容量／时限无解。无解验证枚举本走廊所有进入 EU 的空、海、铁运输段，证明每条至少违反容量或最短时长条件；不是一般物流网络的最优性证明。",
+        f"本轮商品搜索产生 {sum(g['gpu_requests'] for g in audit['groups'].values())} 次本地 GPU 重排请求、{sum(g['gpu_query_product_pairs'] for g in audit['groups'].values())} 对查询与商品；这是工具层计数，不是底层前向次数或新的公开 NDCG 评测。",
+        '结构化引用逐字段对照实际工具观察，完整商品材料对照当前快照。该核验不自动证明所有解释文字都被来源蕴含，也不证明模拟库存或承运人是真实业务状态。', '',
+        '- [预登记协议](APPAREL_EXPANSION_PROTOCOL.md)、[注册及冻结散列](../evidence/apparel_expansion_study_v1/registration.json)',
+        '- [逐例原始运行](../evidence/apparel_expansion_study_v1/summary.json)、[独立审计](../evidence/apparel_expansion_audit_20260909.json)',
+        '- [新增资料清单](../evidence/apparel_expansion_sources_v1/manifest.json)、[240 条原始行核验](../evidence/apparel_expansion_sources_v1/audit.json)',
+        '- [前一轮商品资料核验结果](APPAREL_SOURCE_REVIEW_RESULTS.md)', '',
+        '后续修复和独立验证范围见[对象、必需引用与运输解释](NEXT_OPERATION_RELIABILITY.md)。该文件为待实施方案，本轮没有据此更改策略或重新打分。', '',
+        f"本轮新增账本费用 **{audit['paid_micro_cny']/1000000:.6f} 元**；全项目累计 **{audit['ledger_micro_cny']/1000000:.6f}／480 元**，共 {audit['ledger_rows']} 条。模型选型子任务仍为 64.986070／100 元，本轮没有增加选型调用。费用为本地保守 token 估算与未确定请求的预留，不冒充平台发票。", '',
+        '## 能写入项目的实际贡献', '',
+        '> 扩展并核对 240 条公开服装资料，构建 277 个变体的研究快照；实现并验证订单变体、包装、库存、品牌规则及单仓跨境运输事件复核。新增 18 类、72 个模拟状态，在相同业务版本上完成 216 次单 Agent、协调员加专家、按需委派对照，保留逐例来源、提案版本、工具轨迹与调用账本，并分析验收率、费用和时延。', '',
+        '简历上的具体通过数和费用应引用上表。不能写成 277 位客户、72 个真实商家或 216 笔真实订单，也没有新增 RA 任职、真实交易或真实发货。工作台仍保留原 37 个商品和用户原草稿；扩展 277 个目录用于本次研究，未自动迁移在线业务数据。Finance-Agent 继续暂停。', '']
+    with OUT.open('x', encoding='utf-8') as file:
+        file.write('\n'.join(lines))
+    print(json.dumps({'report': str(OUT), 'runs': 216, 'failed_runs': len(failed), 'highest_acceptance_lowest_cost': cheapest}, ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    main()

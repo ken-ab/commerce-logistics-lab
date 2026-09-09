@@ -1,0 +1,190 @@
+{
+  "created_at": "2026-09-08T22:15:19.697802+00:00",
+  "registration_sha256": "aeb84a735fe40de49808115500f1de030136b53f99dbabfff2a7d86345f66937",
+  "reviewer": "The assistant writing this report; not a separate human or blind panel.",
+  "selection": "Supplementary review selected after partial trial results: variation 0, single arm, once for each of 18 families. Not preregistered or used to retune the completed study.",
+  "reviewed_rationales": 18,
+  "records": [
+    {
+      "case_id": "EX-00-0",
+      "family": "inspect_fields",
+      "arm": "single",
+      "execution_sha256": "cff5f102cd26aa6a82ca6a36ea3544afd00d0c768a2c449bec2a799d58e7e406",
+      "rationale": "已读取指定 SKU 的完整当前商品记录；尺码、颜色和品牌均有对应字段及来源信息。未读取或使用其他商品，也未将商品选入订单。",
+      "finding": "citation_table_dependency",
+      "review_note": "正文只说字段有依据，具体Hanes、deep red、S由引用字段呈现；没有发现与所读来源矛盾的属性。"
+    },
+    {
+      "case_id": "EX-01-0",
+      "family": "inspect_material",
+      "arm": "single",
+      "execution_sha256": "ef71dc5aeec6d2db8d3520c95daa1c14b71f8cec64fc1f0c50a9ee5c37e0d8aa",
+      "rationale": "已仅读取指定 SKU 的完整商品记录；未查找、补全或选择其他商品。材质原文和销售单位件数分别按商品来源字段及其来源证据报告。",
+      "finding": "citation_table_dependency",
+      "review_note": "材质原文为cotton micro-mesh，标题和目录单位为3件装；正文依赖引用表，未编造棉含量百分比。"
+    },
+    {
+      "case_id": "EX-02-0",
+      "family": "two_line_pickup",
+      "arm": "single",
+      "execution_sha256": "372020fed747a555981ed9fac22d09df73ecfe4491513efbc50f37fbd5d118a3",
+      "rationale": "已按两行分别读取并选择匹配的 Gildan T 恤和 Hanes 连帽衫；两行各 11 件，目录单位均为 1 件，库存与批发最低量检查通过。整单核对就绪，并已准备无需运输的自提提案，等待确认；未下单。",
+      "finding": "no_contradiction_observed",
+      "review_note": "Gildan T恤及Hanes连帽衫各11件，包装均1件；对应选择和无需运输的pending提案相符。"
+    },
+    {
+      "case_id": "EX-03-0",
+      "family": "mixed_pack_shipping",
+      "arm": "single",
+      "execution_sha256": "6189807cd37a44e3a5c6f084fd2d762796db3f08efc00db4c7f2cf1df04f33e0",
+      "rationale": "已核对两项当前商品资料并按要求换算：第一行6包×2件=12件、重量2160克；第二行11件×1=11件、重量5500克；合计23件、7660克。订单检查通过，已生成同仓（CN-SZ）发往DE-DC的待确认运输提案：费用207.77 USD，预计2027-09-21 20:00 UTC到达，满足预算与交期。",
+      "finding": "no_contradiction_observed",
+      "review_note": "6包×2=12件及11件合计23件，2160+5500=7660克；207.77 USD和9月21日20:00 UTC与路线相符。重量真实性依赖报告的模拟标识。"
+    },
+    {
+      "case_id": "EX-04-0",
+      "family": "aggregate_stock",
+      "arm": "single",
+      "execution_sha256": "7e14ea3bd9de91857a631b5972eb87b91e986f9a791af2e00920b367d9a6297f",
+      "rationale": "两行使用同一 SKU，应合并核算：14 + 17 = 31 个 catalog_unit。当前库存为 25 个 catalog_unit，且每个 catalog_unit 含 1 件，因此库存不足 6 个；未修改数量或选择。",
+      "finding": "no_contradiction_observed",
+      "review_note": "同SKU两行14+17=31单位，库存25、缺口6，与合并库存阻断相符。"
+    },
+    {
+      "case_id": "EX-05-0",
+      "family": "unspecified_unit",
+      "arm": "single",
+      "execution_sha256": "36bba2fd18b2841d76970f701b52b6d93d245a4e06ed52a0d3ca4ec425987638",
+      "rationale": "已核对：当前填写数量为13，但unit为空；该商品名称包含“2 pack”，因此无法确定13是包装数还是单件数，也无法据此换算实际件数。请明确数量单位（pack/包装，或piece/件）。在收到回复前不凑整、不拆包、不改变订单。",
+      "finding": "no_contradiction_observed",
+      "review_note": "数量13但单位为空、2件装，要求用户明确包或件，没有自行取整或修改订单。"
+    },
+    {
+      "case_id": "EX-06-0",
+      "family": "indivisible_pack",
+      "arm": "single",
+      "execution_sha256": "8b1170ac7d9ed250cb5ffe6e2c74cb1c5b211710762e87fcc9aa39b017172ff0",
+      "rationale": "当前仍为 needs_clarification，未凑整、拆包、替换或改变订单。该 SKU 是每个目录包装含 12 件；所填 quantity=37 且 unit=piece 无法按不可拆包装直接执行。请明确要 37 个单件数量（并选择可接受的整包件数/总件数），还是 37 个 12件装；在收到回复前不继续处理。",
+      "finding": "overbroad_clarification",
+      "review_note": "37件无法整除12件装，保持澄清且未拆包、改数量。unit已明确piece，解释仍询问是否37包；没有擅自更改，但澄清可聚焦用户是否接受整包数量调整。"
+    },
+    {
+      "case_id": "EX-07-0",
+      "family": "audience_conflict",
+      "arm": "single",
+      "execution_sha256": "f1fc41fb115f04a2b36771fc6e69290488f0e0ee71c0a2477bdf194e24853ec1",
+      "rationale": "实际候选为 Fruit of the Loom 男款连帽衫，而确认要求是女款；服装类别仍为 hoodie，品牌和 style_id 一致。该 audience 变化需要明确批准（SUB-1d3d55c0451257085d4dc1fb）；当前没有批准，不能将其视为女款商品或完成订单核对。",
+      "finding": "no_contradiction_observed",
+      "review_note": "实际男款与要求女款不同，类别hoodie不变；批准仍缺失，报告保留待澄清。"
+    },
+    {
+      "case_id": "EX-08-0",
+      "family": "category_conflict",
+      "arm": "single",
+      "execution_sha256": "5d25f4e453d82f07f1445d7313a6a1e4431d7eab7393aa5c9c4d4c89ef14c177",
+      "rationale": "实际选中的 SKU 是男款 Champion 藏青 XL 连帽衫（hoodie），而采购要求是男款 T 恤（t_shirt）。男装、品牌、颜色和尺码一致，但服装类别发生变化；该变化需要明确批准，目前没有已批准的替代品，因此不能将两者视为同一商品。",
+      "finding": "no_contradiction_observed",
+      "review_note": "要求男款T恤，实际Champion藏青XL连帽衫；其余属性一致但类别不符，未获批准且状态待澄清，原状态未变。"
+    },
+    {
+      "case_id": "EX-09-0",
+      "family": "blocked_region",
+      "arm": "single",
+      "execution_sha256": "1fe3b3e65196920da63eb4abddc7ca8023476a57f740927b26d71c2803c2c0e1",
+      "rationale": "整单按当前候选和要求核验：Champion 被其品牌规则阻断，DE 不在允许销售地区 GB/US 内；Gildan 的品牌规则允许 DE，且两条数量均为11件、达到各自10件批发最低量。不得用 Gildan 规则豁免 Champion。候选、数量及要求未改变。",
+      "finding": "no_contradiction_observed",
+      "review_note": "Champion模拟规则仅允许GB/US，Gildan允许DE；两行各11件均达到10件起订量，但前一品牌仍因销售地区被阻断，整单未改动。"
+    },
+    {
+      "case_id": "EX-10-0",
+      "family": "mixed_moq",
+      "arm": "single",
+      "execution_sha256": "7a4b8700d1760abff25d93cebd34a01262ff9adcf011296cb53064fbd341f239",
+      "rationale": "按每个SKU分别检查，未跨行合并数量。primary 的 Gildan SKU 为1件，低于该SKU每SKU 100件的批发起订量，阻断整单；secondary 的 Champion SKU 为11件，达到每SKU 10件起订量。请调整 primary 数量或选择其他方案。",
+      "finding": "no_contradiction_observed",
+      "review_note": "Gildan行1件低于100件起订量，Champion行11件达到10件要求；没有跨SKU拼起订量。"
+    },
+    {
+      "case_id": "EX-11-0",
+      "family": "stage_replacement",
+      "arm": "single",
+      "execution_sha256": "13df3fe8015a30aca6b1d9ddb534ab838f4477e7da56148bb73de2d7fdc884a8",
+      "rationale": "已实际将库存充足且差异最少的候选选入 primary 供审阅；未批准替代，也未生成运输提案。候选完整资料已读取。",
+      "finding": "no_contradiction_observed",
+      "review_note": "原Fruit男童蓝色M连帽衫库存0；暂选同研究款式灰橙M，库存120，2项差异少于其余7个返回候选。该最少判断限于返回集合。状态待澄清，无批准记录、无运输提案。"
+    },
+    {
+      "case_id": "EX-12-0",
+      "family": "approved_replacement_review",
+      "arm": "single",
+      "execution_sha256": "5aa253a46b5bbd7a495a7235c86355ce9051c076be3f63737d4508e85159b697",
+      "rationale": "已核对实际获批替代商品 us:B01LYXATTT 的完整资料；未换回原商品，也未重新改选。旧版提案因运输事件导致无效，已按同一商品和原运输约束修订为新版待确认提案。订单复核通过，修订路线审计通过。",
+      "finding": "no_contradiction_observed",
+      "review_note": "保留已批准的Fruit红色XXL两件装18件，9包；未改回原白色六件装。旧方案被替代，新版费用16578美分、到达11月5日20:00 UTC，选择和批准未变。"
+    },
+    {
+      "case_id": "EX-13-0",
+      "family": "cancelled_multiline",
+      "arm": "single",
+      "execution_sha256": "108eb967f92483ae7631863425ea1b823a4279d489a16e23218d79c694eb523c",
+      "rationale": "已读取两行当前商品资料并复核旧版。旧提案因 HK-EU-AIR 于 2027-11-08 16:00Z 的班次取消且缺少事件证据而失效；版本2仅调整该空运段至 2027-11-09 04:00Z，其余运输段保留。新提案仍在预算内并满足交期，订单检查通过，待单独确认。",
+      "finding": "no_contradiction_observed",
+      "review_note": "取消11月8日16:00空运服务后改用11月9日04:00另一班。两段公路仍为原班次，预算交期满足；末段等待由1320降至600分钟，正文所说保留应理解为班次保留，并非所有时间字段不变。"
+    },
+    {
+      "case_id": "EX-14-0",
+      "family": "delayed_multiline",
+      "arm": "single",
+      "execution_sha256": "a7a05fe45651a7f7081819a7611d1b191fbad4136aa69b0592128459a83602e8",
+      "rationale": "已读取两行当前商品资料及运输事件。旧版提案因未纳入已发布的 HK-EU-AIR 延误事件而失效；已在不改变预算、交期或商品选择的前提下生成第2版，保留旧版为 previous_proposal_id。受影响运输段为 HK-HUB→EU-HUB 航空段：原定 2027-11-13 16:00，事件延误2160分钟后改为 2027-11-14 04:00。新版仍按原约束可行。",
+      "finding": "incorrect_explanation",
+      "review_note": "将改用下一班服务解释成原班次延误后的起飞时间。原班次11月13日16:00加2160分钟应为11月15日04:00；新版选择的是11月14日04:00的另一班，未带该延误事件。"
+    },
+    {
+      "case_id": "EX-15-0",
+      "family": "current_valid",
+      "arm": "single",
+      "execution_sha256": "1e8100ea6b67bf3ab8af9e612bec135ef0d6b94b40a4aad418f648380b59744c",
+      "rationale": "已读取当前商品、运输事件并复核现有提案。取消事件针对HK-EU-SEA，而现有路线使用HK-EU-AIR；因此提案仍有效，保留原版本，不重建。当前订单检查为ready且无问题；路线审计通过，费用18,725美分，预计2027-11-20 20:00到达。",
+      "finding": "no_contradiction_observed",
+      "review_note": "已发布取消事件属于海运，原方案为空运，仍有效并保留版本1；18725美分和11月20日20:00与保存路线相符。正文未重述UTC。"
+    },
+    {
+      "case_id": "EX-16-0",
+      "family": "future_event",
+      "arm": "single",
+      "execution_sha256": "a1844abfbc71a4854f0d9139bfa09fb148b9eba9c9c596b1a14c46768f1369ae",
+      "rationale": "已读取当前选中商品及其库存/规则快照，并读取当前可见运输事件。事件列表为空，且现有提案的有效性复核通过、订单检查为 ready、路线审计通过；因此按要求保留原提案版本，不重建。",
+      "finding": "no_contradiction_observed",
+      "review_note": "当前可见事件为空，已读取的旧提案仍有效，因此保留原版本；没有把未来发布事件当作当前事件。"
+    },
+    {
+      "case_id": "EX-17-0",
+      "family": "capacity_unfulfillable",
+      "arm": "single",
+      "execution_sha256": "b32ee9ca3ca1b3eb06a0d0fb3857f2ff9ac2b07c9a2fea21991b57b3c99a9494",
+      "rationale": "已核对实际商品、数量与模拟重量：Champion 男款 Oxford Gray、XL 连帽衫，60 件；每件模拟 500 g，合计约 30 kg。商品与订单校验通过，但在原预算、交期、目的地和容量等固定条件下没有可行路线。请从规划器给出的调整方向中选择：接受最早 2027-12-25 20:00 到达的海运示例，或接受最早 2027-12-14 20:00 到达的铁路示例；不能拆仓或自行放宽要求。",
+      "finding": "no_contradiction_observed",
+      "review_note": "60件×模拟500克=30千克，无解状态与交期调整选项一致，海运12月25日20:00及铁路12月14日20:00均照实引用；正文未重述UTC，时区可读性仍可改进。"
+    }
+  ],
+  "delay_explanation_counterexample": {
+    "old_service_id": "HK-EU-AIR@2027-11-13T16:00:00Z",
+    "event_id": "EV-EX-14-0",
+    "delay_minutes": 2160,
+    "old_service_delayed_departure": "2027-11-15T04:00:00+00:00",
+    "replacement_service_id": "HK-EU-AIR@2027-11-14T04:00:00Z",
+    "replacement_nominal_departure": "2027-11-14T04:00:00Z",
+    "replacement_actual_departure": "2027-11-14T04:00:00Z",
+    "replacement_event_ids": [],
+    "difference_hours": 24.0
+  },
+  "cases_with_observed_explanation_error": [
+    "EX-14-0"
+  ],
+  "no_new_accuracy_estimate": true,
+  "preregistered_results_changed": false,
+  "new_project_model_calls": 0,
+  "new_real_users": 0,
+  "scope": "Compare selected natural-language rationale claims with request, saved source fields, deterministic outputs and event/service identities. No exhaustive claim extraction, inter-rater reliability or coverage of all 216 reports."
+}

@@ -1,0 +1,2507 @@
+{
+  "dataset_id": "apparel-fulfillment-v1-20260908",
+  "catalog_dataset": "amazon-esci-7916cdf6",
+  "catalog_source_url": "https://github.com/amazon-science/esci-data",
+  "notice": "Public product text plus explicitly simulated merchant operations. No live stock, manufacturer SKU relationship or real brand distribution rights are asserted.",
+  "warehouse": "CN-SZ",
+  "variants": {
+    "us:B06XW4B474": {
+      "sku": "us:B06XW4B474",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "olive",
+      "size": "M",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Olive, Medium",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 15082,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XW4B474",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Olive, Medium",
+        "brand": "Goodthreads",
+        "color": "Olive",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nMade in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "712f1f287e4e6160ee70653d6857f452f2855bbcc43611eb45e74e9f1f7f61a9",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XW4B474:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XW4B474:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XW4B474:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XW4B474:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XW4B474:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XW4B474"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XW4B474"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XW4B474"
+        }
+      }
+    },
+    "us:B06XW83BWX": {
+      "sku": "us:B06XW83BWX",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "light blue",
+      "size": "L",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Light Blue, Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 18226,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XW83BWX",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Light Blue, Large",
+        "brand": "Goodthreads",
+        "color": "Light Blue",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\n"
+      },
+      "source_record_sha256": "71f3f1ff237d3470f4a8b49d8c397cdee1de60620fec8553f2c0f5f531421965",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XW83BWX:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XW83BWX:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XW83BWX:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XW83BWX:title",
+          "raw": "Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XW83BWX:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XW83BWX"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XW83BWX"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XW83BWX"
+        }
+      }
+    },
+    "us:B06XW85TGX": {
+      "sku": "us:B06XW85TGX",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "light blue",
+      "size": "S",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Light Blue, Small",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 2785,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XW85TGX",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Light Blue, Small",
+        "brand": "Goodthreads",
+        "color": "Light Blue",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\n"
+      },
+      "source_record_sha256": "4f6fdc220e1fd15138281ba7e69ad70c723b285f080c77511b3bb1da1201f554",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XW85TGX:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XW85TGX:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XW85TGX:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XW85TGX:title",
+          "raw": "Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XW85TGX:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XW85TGX"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XW85TGX"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XW85TGX"
+        }
+      }
+    },
+    "us:B06XW9N3S5": {
+      "sku": "us:B06XW9N3S5",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "washed navy",
+      "size": "XL",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Washed Navy, X-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 8585,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XW9N3S5",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Washed Navy, X-Large",
+        "brand": "Goodthreads",
+        "color": "Washed Navy",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\n"
+      },
+      "source_record_sha256": "303043a552bfcc1907eb5652b56d30eac10b6f7a31cf3a424376a92e0f7b1dc0",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XW9N3S5:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XW9N3S5:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XW9N3S5:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XW9N3S5:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XW9N3S5:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XW9N3S5"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XW9N3S5"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XW9N3S5"
+        }
+      }
+    },
+    "us:B06XWGZD1C": {
+      "sku": "us:B06XWGZD1C",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "S",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Small",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 4699,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWGZD1C",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Small",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "This casual wardrobe-essential tee features a lightweight fit for comfortable everyday wear\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nGreat for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "eaa435eb8ee55daeba02ae9420e2294846e88cd818fd70965ba8a7c554d17031",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWGZD1C:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWGZD1C:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWGZD1C:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWGZD1C:title",
+          "raw": "Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWGZD1C:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWGZD1C"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWGZD1C"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWGZD1C"
+        }
+      }
+    },
+    "us:B06XWLMYVY": {
+      "sku": "us:B06XWLMYVY",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "L",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 4751,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWLMYVY",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Large",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nMade in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "97bc7bb6393fefa343866a7da5a1c4daf8d6b0b3951e9bec78f54a7259110f89",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWLMYVY:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWLMYVY:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWLMYVY:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWLMYVY:title",
+          "raw": "Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWLMYVY:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWLMYVY"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWLMYVY"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWLMYVY"
+        }
+      }
+    },
+    "us:B06XWM3BV1": {
+      "sku": "us:B06XWM3BV1",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "royal blue",
+      "size": "L",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Royal Blue, Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 14761,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWM3BV1",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Royal Blue, Large",
+        "brand": "Goodthreads",
+        "color": "Royal Blue",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\n"
+      },
+      "source_record_sha256": "84b08cd1d28f34629312b3f2e17f35ecdddb469f12fa1f1a524eae4fc5226402",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWM3BV1:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWM3BV1:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWM3BV1:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWM3BV1:title",
+          "raw": "Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWM3BV1:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWM3BV1"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWM3BV1"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWM3BV1"
+        }
+      }
+    },
+    "us:B06XWMFY34": {
+      "sku": "us:B06XWMFY34",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "red",
+      "size": "M",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Red, Medium",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 8499,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWMFY34",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Red, Medium",
+        "brand": "Goodthreads",
+        "color": "Red",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nMade in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "d9fa53172569813682f7e2586466548747ed88558528858fda6e291c48d6401e",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWMFY34:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWMFY34:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWMFY34:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWMFY34:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWMFY34:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWMFY34"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWMFY34"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWMFY34"
+        }
+      }
+    },
+    "us:B06XWMHBT3": {
+      "sku": "us:B06XWMHBT3",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "light blue",
+      "size": "XL",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Light Blue, X-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 2606,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWMHBT3",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Light Blue, X-Large",
+        "brand": "Goodthreads",
+        "color": "Light Blue",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nMade in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "b7f0fdef1bfb5f6c775d19ce0efdee33088e80e34359cca09873233d66487799",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWMHBT3:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWMHBT3:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWMHBT3:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWMHBT3:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWMHBT3:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWMHBT3"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWMHBT3"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWMHBT3"
+        }
+      }
+    },
+    "us:B06XWMJ7G5": {
+      "sku": "us:B06XWMJ7G5",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "white",
+      "size": "XL",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, White, X-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 17513,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWMJ7G5",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, White, X-Large",
+        "brand": "Goodthreads",
+        "color": "White",
+        "description": "This casual wardrobe-essential tee features a lightweight fit for comfortable everyday wear\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nGreat for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "3abbaf6e2aeaa2d419458d52a571afb6e1c0c9f565717a92efbfca0d077f4da6",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWMJ7G5:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWMJ7G5:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWMJ7G5:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWMJ7G5:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWMJ7G5:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWMJ7G5"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWMJ7G5"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWMJ7G5"
+        }
+      }
+    },
+    "us:B06XWMKR2F": {
+      "sku": "us:B06XWMKR2F",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "M",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Medium",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 13596,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWMKR2F",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, Medium",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nMade in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nAt Goodthreads, we are on a mission to create incredible clothes crafted with care\nModel is 6'2\" and wearing a size Medium\nAn Amazon brand\n"
+      },
+      "source_record_sha256": "01650563ffe64c59f283272ec8544171220fedc15066ad022a0999445795c48c",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWMKR2F:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWMKR2F:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWMKR2F:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWMKR2F:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWMKR2F:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWMKR2F"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWMKR2F"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWMKR2F"
+        }
+      }
+    },
+    "us:B06XWP72G7": {
+      "sku": "us:B06XWP72G7",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "olive",
+      "size": "L",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Olive, Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 10806,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWP72G7",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Olive, Large",
+        "brand": "Goodthreads",
+        "color": "Olive",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\n"
+      },
+      "source_record_sha256": "f5159eed3e9d2abf9c088bbb39830ae2fe1bd49b076f9f88272c1ed4d5a2bce1",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWP72G7:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWP72G7:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWP72G7:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWP72G7:title",
+          "raw": "Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWP72G7:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWP72G7"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWP72G7"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWP72G7"
+        }
+      }
+    },
+    "us:B06XWPR5RY": {
+      "sku": "us:B06XWPR5RY",
+      "style_id": "LAB-GT-CREW",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "XL",
+      "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, X-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 10313,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWPR5RY",
+        "title": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt, Black, X-Large",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed crewneck, straight hem, short sleeves, and a tag-free neck for everyday comfort\nModel is 6'2\" and wearing a size Medium\n"
+      },
+      "source_record_sha256": "f2a8bb457ea8200fc24fdc499e523a4cc5e70c3b11f895278655f942d6707166",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWPR5RY:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWPR5RY:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWPR5RY:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWPR5RY:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWPR5RY:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-CREW"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWPR5RY"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWPR5RY"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWPR5RY"
+        }
+      }
+    },
+    "us:B06XW9KPZH": {
+      "sku": "us:B06XW9KPZH",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "white",
+      "size": "XXL",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, White, XX-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 12397,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XW9KPZH",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, White, XX-Large",
+        "brand": "Goodthreads",
+        "color": "White",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "2a77031c1f7f94cdcdbdef332e7157e0533758bab624fad1ca4da1d56e7739f8",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XW9KPZH:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XW9KPZH:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XW9KPZH:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XW9KPZH:title",
+          "raw": "XX-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XW9KPZH:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XW9KPZH"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XW9KPZH"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XW9KPZH"
+        }
+      }
+    },
+    "us:B06XWLT57Q": {
+      "sku": "us:B06XWLT57Q",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "washed navy",
+      "size": "XL",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Washed Navy, X-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 2488,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWLT57Q",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Washed Navy, X-Large",
+        "brand": "Goodthreads",
+        "color": "Washed Navy",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "e305561472f6edea536074bc6c27f87e8a896c59ef8330735b39e3419fc00bb7",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWLT57Q:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWLT57Q:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWLT57Q:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWLT57Q:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWLT57Q:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWLT57Q"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWLT57Q"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWLT57Q"
+        }
+      }
+    },
+    "us:B06XWMJ9XF": {
+      "sku": "us:B06XWMJ9XF",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "M",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 15850,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWMJ9XF",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Medium",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "130d7999fc016c59f840c8e1e1fae046762fc9572f650a478dddbc3a9807a2c3",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWMJ9XF:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWMJ9XF:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWMJ9XF:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWMJ9XF:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWMJ9XF:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWMJ9XF"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWMJ9XF"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWMJ9XF"
+        }
+      }
+    },
+    "us:B06XWN9SP5": {
+      "sku": "us:B06XWN9SP5",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "XS",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, X-Small",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 4447,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWN9SP5",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, X-Small",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "c2dd253eb99cb50b99c32c49c90dc4251b6701e62657d79f590e12f6b18077e8",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWN9SP5:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWN9SP5:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWN9SP5:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWN9SP5:title",
+          "raw": "X-Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWN9SP5:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWN9SP5"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWN9SP5"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWN9SP5"
+        }
+      }
+    },
+    "us:B06XWQBJ6N": {
+      "sku": "us:B06XWQBJ6N",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "black",
+      "size": "L",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 8685,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWQBJ6N",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Black, Large",
+        "brand": "Goodthreads",
+        "color": "Black",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "6ed86d7054af48fe6ac5d77c09796a827c2d22b0cb48b93e3f80e34294de5da2",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWQBJ6N:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWQBJ6N:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWQBJ6N:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWQBJ6N:title",
+          "raw": "Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWQBJ6N:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B06XWQBJ6N"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWQBJ6N"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWQBJ6N"
+        }
+      }
+    },
+    "us:B078LDCRS2": {
+      "sku": "us:B078LDCRS2",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "royal blue",
+      "size": "S",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Royal Blue, Small",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 7408,
+      "version": 1,
+      "source_record": {
+        "id": "us:B078LDCRS2",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Royal Blue, Small",
+        "brand": "Goodthreads",
+        "color": "Royal Blue",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "e843aeebeeaf4f06c077a8179df7553e260a67b996d1a95cab5d1577e1a9b8ed",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B078LDCRS2:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B078LDCRS2:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B078LDCRS2:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B078LDCRS2:title",
+          "raw": "Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B078LDCRS2:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B078LDCRS2"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B078LDCRS2"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B078LDCRS2"
+        }
+      }
+    },
+    "us:B078LGK6VW": {
+      "sku": "us:B078LGK6VW",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "red",
+      "size": "XXL",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Red, XX-Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 3435,
+      "version": 1,
+      "source_record": {
+        "id": "us:B078LGK6VW",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Red, XX-Large",
+        "brand": "Goodthreads",
+        "color": "Red",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "867af79a17dfa65db53d71e5ed3ffe419671ddaec37e6b5e0bb2be1486c8855a",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B078LGK6VW:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B078LGK6VW:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B078LGK6VW:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B078LGK6VW:title",
+          "raw": "XX-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B078LGK6VW:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B078LGK6VW"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B078LGK6VW"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B078LGK6VW"
+        }
+      }
+    },
+    "us:B078LGTSP1": {
+      "sku": "us:B078LGTSP1",
+      "style_id": "LAB-GT-VNECK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Goodthreads",
+      "color": "washed navy",
+      "size": "L",
+      "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Washed Navy, Large",
+      "pieces_per_catalog_unit": 1,
+      "weight_grams_per_catalog_unit": 200,
+      "unit_price_cents": 6273,
+      "version": 1,
+      "source_record": {
+        "id": "us:B078LGTSP1",
+        "title": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton, Washed Navy, Large",
+        "brand": "Goodthreads",
+        "color": "Washed Navy",
+        "description": "Great for layering or wearing alone, this smooth cotton T-shirt features a ribbed V-neck and short sleeves. Made in our Signature Tumbled Cotton for a soft, yet sturdy, hand. We utilize a unique Heritage Wash to give our garments a custom, lived-in feel right away\nModel is 6'1\" and wearing a size Medium\nMade in China\n"
+      },
+      "source_record_sha256": "ce5753cc5855d0ec7636d3bedc4cb873b3caad80a5c09b3ceb11864f4a4f4d66",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B078LGTSP1:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B078LGTSP1:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B078LGTSP1:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B078LGTSP1:title",
+          "raw": "Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B078LGTSP1:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-GT-VNECK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-unit:us:B078LGTSP1"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B078LGTSP1"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B078LGTSP1"
+        }
+      }
+    },
+    "us:B06XW9KP27": {
+      "sku": "us:B06XW9KP27",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "bright blue",
+      "size": "M",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Imperial Blue, Medium",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 12312,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XW9KP27",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Imperial Blue, Medium",
+        "brand": "Amazon Essentials",
+        "color": "Bright Blue",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "4fb93eb8830603ca7802a284e76722f58fcb70c3bb0909a010af2c5ca88481ec",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XW9KP27:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XW9KP27:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XW9KP27:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XW9KP27:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XW9KP27:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XW9KP27:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XW9KP27"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XW9KP27"
+        }
+      }
+    },
+    "us:B06XWGYHLZ": {
+      "sku": "us:B06XWGYHLZ",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "white",
+      "size": "XL",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, White, X-Large",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 12432,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWGYHLZ",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, White, X-Large",
+        "brand": "Amazon Essentials",
+        "color": "White",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "8505566eeabc7bf264974529b77de4e4325a5d5134d1dba683952a40cf5e01c6",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWGYHLZ:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWGYHLZ:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWGYHLZ:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWGYHLZ:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWGYHLZ:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWGYHLZ:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWGYHLZ"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWGYHLZ"
+        }
+      }
+    },
+    "us:B06XWLXFXW": {
+      "sku": "us:B06XWLXFXW",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "dark green",
+      "size": "XL",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Dark Green, X-Large",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 14120,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWLXFXW",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Dark Green, X-Large",
+        "brand": "Amazon Essentials",
+        "color": "Dark Green",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "9846d4a6e97625f999c510a2d68d6d101b66be596311b0a2f5c04af50715f1a5",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWLXFXW:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWLXFXW:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWLXFXW:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWLXFXW:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWLXFXW:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWLXFXW:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWLXFXW"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWLXFXW"
+        }
+      }
+    },
+    "us:B06XWMHCG1": {
+      "sku": "us:B06XWMHCG1",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "grey heather",
+      "size": "XS",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Heather Grey, X-Small",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 2049,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWMHCG1",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Heather Grey, X-Small",
+        "brand": "Amazon Essentials",
+        "color": "Grey Heather",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "6148af3f2b1d102514db01b84df47ca8ffc5b51ba3451beaa1479d8d4ece5aec",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWMHCG1:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWMHCG1:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWMHCG1:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWMHCG1:title",
+          "raw": "X-Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWMHCG1:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWMHCG1:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWMHCG1"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWMHCG1"
+        }
+      }
+    },
+    "us:B06XWN7P33": {
+      "sku": "us:B06XWN7P33",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "black",
+      "size": "XXL",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Black, XX-Large",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 6028,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWN7P33",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Black, XX-Large",
+        "brand": "Amazon Essentials",
+        "color": "Black",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "62f7f963a1c243d87ea0ea39965e8808b4446d917bf22ea77cb718df6445b75d",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWN7P33:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWN7P33:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWN7P33:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWN7P33:title",
+          "raw": "XX-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWN7P33:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWN7P33:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWN7P33"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWN7P33"
+        }
+      }
+    },
+    "us:B06XWPMG43": {
+      "sku": "us:B06XWPMG43",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "grey heather",
+      "size": "XL",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Heather Grey, X-Large",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 6227,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWPMG43",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Heather Grey, X-Large",
+        "brand": "Amazon Essentials",
+        "color": "Grey Heather",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "cc72627433a66e66ec44687474fb6dcfad260ea25dca312de9792aee921378b8",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWPMG43:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWPMG43:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWPMG43:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWPMG43:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWPMG43:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWPMG43:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWPMG43"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWPMG43"
+        }
+      }
+    },
+    "us:B06XWPMG5D": {
+      "sku": "us:B06XWPMG5D",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "black",
+      "size": "S",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Black, Small",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 15948,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWPMG5D",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Black, Small",
+        "brand": "Amazon Essentials",
+        "color": "Black",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "a986ee00cd6df1c112019cd1352cfdb3b57c06f15044dc74b7dd08f437874d92",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWPMG5D:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWPMG5D:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWPMG5D:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWPMG5D:title",
+          "raw": "Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWPMG5D:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWPMG5D:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWPMG5D"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWPMG5D"
+        }
+      }
+    },
+    "us:B06XWPQT19": {
+      "sku": "us:B06XWPQT19",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "black",
+      "size": "M",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Black, Medium",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 14179,
+      "version": 1,
+      "source_record": {
+        "id": "us:B06XWPQT19",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Black, Medium",
+        "brand": "Amazon Essentials",
+        "color": "Black",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "8f986d190afd45c728b53a8a5772943f6a27c3779c2739a92ab8fba9f3983f3f",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B06XWPQT19:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B06XWPQT19:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B06XWPQT19:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B06XWPQT19:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B06XWPQT19:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B06XWPQT19:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B06XWPQT19"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B06XWPQT19"
+        }
+      }
+    },
+    "us:B07756QRP3": {
+      "sku": "us:B07756QRP3",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "teal blue",
+      "size": "XL",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, teal heather, X-Large",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 16089,
+      "version": 1,
+      "source_record": {
+        "id": "us:B07756QRP3",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, teal heather, X-Large",
+        "brand": "Amazon Essentials",
+        "color": "Teal Blue",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "326cc9698d43fbe30ec00d9cb3ee0d98756062d9d7b3c93bcb8ba7e695e4a618",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B07756QRP3:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B07756QRP3:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B07756QRP3:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B07756QRP3:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B07756QRP3:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B07756QRP3:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B07756QRP3"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B07756QRP3"
+        }
+      }
+    },
+    "us:B0775BWWRJ": {
+      "sku": "us:B0775BWWRJ",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "orange heather",
+      "size": "M",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, orange heather, Medium",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 11275,
+      "version": 1,
+      "source_record": {
+        "id": "us:B0775BWWRJ",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, orange heather, Medium",
+        "brand": "Amazon Essentials",
+        "color": "Orange Heather",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "6df548806729eef7804a0b80b826fbedb3b1916e9fffb046de2f52cf8a89cf2c",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B0775BWWRJ:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B0775BWWRJ:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B0775BWWRJ:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B0775BWWRJ:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B0775BWWRJ:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B0775BWWRJ:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B0775BWWRJ"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B0775BWWRJ"
+        }
+      }
+    },
+    "us:B0775CTCWT": {
+      "sku": "us:B0775CTCWT",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "navy heather",
+      "size": "M",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, navy heather, Medium",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 12082,
+      "version": 1,
+      "source_record": {
+        "id": "us:B0775CTCWT",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, navy heather, Medium",
+        "brand": "Amazon Essentials",
+        "color": "Navy Heather",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "eeddc170b87a30b68fa355626f4337255a8eec4d9cc51cc38539af37148d1455",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B0775CTCWT:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B0775CTCWT:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B0775CTCWT:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B0775CTCWT:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B0775CTCWT:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B0775CTCWT:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B0775CTCWT"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B0775CTCWT"
+        }
+      }
+    },
+    "us:B0775G5YS3": {
+      "sku": "us:B0775G5YS3",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "charcoal heather",
+      "size": "S",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, charcoal heather, Small",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 12571,
+      "version": 1,
+      "source_record": {
+        "id": "us:B0775G5YS3",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, charcoal heather, Small",
+        "brand": "Amazon Essentials",
+        "color": "Charcoal Heather",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "6290272506a860fc673a417bc40ace9b2932cc883d00488bef1b05ae7e0c73bd",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B0775G5YS3:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B0775G5YS3:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B0775G5YS3:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B0775G5YS3:title",
+          "raw": "Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B0775G5YS3:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B0775G5YS3:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B0775G5YS3"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B0775G5YS3"
+        }
+      }
+    },
+    "us:B0775M8FWT": {
+      "sku": "us:B0775M8FWT",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "light blue",
+      "size": "M",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, light blue, Medium",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 1462,
+      "version": 1,
+      "source_record": {
+        "id": "us:B0775M8FWT",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, light blue, Medium",
+        "brand": "Amazon Essentials",
+        "color": "Light Blue",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "32f7064c7730acccbb1f8f7934795007706cee00175571cd88f8956b9e59302b",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B0775M8FWT:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B0775M8FWT:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B0775M8FWT:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B0775M8FWT:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B0775M8FWT:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B0775M8FWT:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B0775M8FWT"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B0775M8FWT"
+        }
+      }
+    },
+    "us:B0775YG12N": {
+      "sku": "us:B0775YG12N",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "light pink",
+      "size": "XL",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, light pink, X-Large",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 2592,
+      "version": 1,
+      "source_record": {
+        "id": "us:B0775YG12N",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, light pink, X-Large",
+        "brand": "Amazon Essentials",
+        "color": "Light Pink",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "4f9f7485bd0218ed4d071c9529fcc371991d06948e8c8930cc75ea3737dca507",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B0775YG12N:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B0775YG12N:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B0775YG12N:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B0775YG12N:title",
+          "raw": "X-Large"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B0775YG12N:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B0775YG12N:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B0775YG12N"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B0775YG12N"
+        }
+      }
+    },
+    "us:B07YDZV8YT": {
+      "sku": "us:B07YDZV8YT",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "navy/white, stripe",
+      "size": "M",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Navy-White Stripe/Navy, Medium",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 5113,
+      "version": 1,
+      "source_record": {
+        "id": "us:B07YDZV8YT",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Navy-White Stripe/Navy, Medium",
+        "brand": "Amazon Essentials",
+        "color": "Navy/White, Stripe",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "e4eb978fd27338fc0dcbb8b43117aed228d3f52b321095edc7e5ebda9191ba02",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B07YDZV8YT:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B07YDZV8YT:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B07YDZV8YT:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B07YDZV8YT:title",
+          "raw": "Medium"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B07YDZV8YT:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B07YDZV8YT:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B07YDZV8YT"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B07YDZV8YT"
+        }
+      }
+    },
+    "us:B07YF2J62X": {
+      "sku": "us:B07YF2J62X",
+      "style_id": "LAB-AE-CREW-2PACK",
+      "category": "t_shirt",
+      "audience": "men",
+      "brand": "Amazon Essentials",
+      "color": "green/navy/charcoal heather, stripe",
+      "size": "S",
+      "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Green, Navy, Grey Heather Stripe/Charcoal, Small",
+      "pieces_per_catalog_unit": 2,
+      "weight_grams_per_catalog_unit": 400,
+      "unit_price_cents": 19584,
+      "version": 1,
+      "source_record": {
+        "id": "us:B07YF2J62X",
+        "title": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt, Green, Navy, Grey Heather Stripe/Charcoal, Small",
+        "brand": "Amazon Essentials",
+        "color": "Green/Navy/Charcoal Heather, Stripe",
+        "description": "Two-pack of classic regular-fit tees featuring all-cotton construction, a crew neckline and short-sleeves for comfort\nEveryday made better: we listen to customer feedback and fine-tune every detail to ensure quality, fit, and comfort\nModel is 6'1\" and wearing size Medium\n"
+      },
+      "source_record_sha256": "61947199f3da5a9e06cd2412c3589d69113d7a14c02a91df0e1f292fcfb09f28",
+      "provenance": {
+        "sku": {
+          "kind": "public_asin_used_as_lab_sku",
+          "evidence_id": "esci:us:B07YF2J62X:id"
+        },
+        "brand": {
+          "kind": "public_metadata",
+          "evidence_id": "esci:us:B07YF2J62X:brand"
+        },
+        "color": {
+          "kind": "normalized_public_metadata",
+          "evidence_id": "esci:us:B07YF2J62X:color"
+        },
+        "size": {
+          "kind": "normalized_title",
+          "evidence_id": "esci:us:B07YF2J62X:title",
+          "raw": "Small"
+        },
+        "category": {
+          "kind": "title_classification",
+          "evidence_id": "esci:us:B07YF2J62X:title"
+        },
+        "style_id": {
+          "kind": "research_grouping",
+          "evidence_id": "lab-style:LAB-AE-CREW-2PACK"
+        },
+        "pieces_per_catalog_unit": {
+          "kind": "explicit_title_pack_count",
+          "evidence_id": "esci:us:B07YF2J62X:title"
+        },
+        "weight_grams_per_catalog_unit": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-weight:us:B07YF2J62X"
+        },
+        "unit_price_cents": {
+          "kind": "merchant_simulation",
+          "evidence_id": "sim-price:us:B07YF2J62X"
+        }
+      }
+    }
+  },
+  "stock": {
+    "us:B06XW4B474": {
+      "available_catalog_units": 14,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XW4B474"
+    },
+    "us:B06XW83BWX": {
+      "available_catalog_units": 49,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XW83BWX"
+    },
+    "us:B06XW85TGX": {
+      "available_catalog_units": 40,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XW85TGX"
+    },
+    "us:B06XW9N3S5": {
+      "available_catalog_units": 52,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XW9N3S5"
+    },
+    "us:B06XWGZD1C": {
+      "available_catalog_units": 41,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWGZD1C"
+    },
+    "us:B06XWLMYVY": {
+      "available_catalog_units": 36,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWLMYVY"
+    },
+    "us:B06XWM3BV1": {
+      "available_catalog_units": 80,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWM3BV1"
+    },
+    "us:B06XWMFY34": {
+      "available_catalog_units": 53,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWMFY34"
+    },
+    "us:B06XWMHBT3": {
+      "available_catalog_units": 61,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWMHBT3"
+    },
+    "us:B06XWMJ7G5": {
+      "available_catalog_units": 63,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWMJ7G5"
+    },
+    "us:B06XWMKR2F": {
+      "available_catalog_units": 8,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWMKR2F"
+    },
+    "us:B06XWP72G7": {
+      "available_catalog_units": 27,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWP72G7"
+    },
+    "us:B06XWPR5RY": {
+      "available_catalog_units": 68,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWPR5RY"
+    },
+    "us:B06XW9KPZH": {
+      "available_catalog_units": 79,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XW9KPZH"
+    },
+    "us:B06XWLT57Q": {
+      "available_catalog_units": 43,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWLT57Q"
+    },
+    "us:B06XWMJ9XF": {
+      "available_catalog_units": 45,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWMJ9XF"
+    },
+    "us:B06XWN9SP5": {
+      "available_catalog_units": 64,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWN9SP5"
+    },
+    "us:B06XWQBJ6N": {
+      "available_catalog_units": 52,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWQBJ6N"
+    },
+    "us:B078LDCRS2": {
+      "available_catalog_units": 44,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B078LDCRS2"
+    },
+    "us:B078LGK6VW": {
+      "available_catalog_units": 50,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B078LGK6VW"
+    },
+    "us:B078LGTSP1": {
+      "available_catalog_units": 51,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B078LGTSP1"
+    },
+    "us:B06XW9KP27": {
+      "available_catalog_units": 55,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XW9KP27"
+    },
+    "us:B06XWGYHLZ": {
+      "available_catalog_units": 27,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWGYHLZ"
+    },
+    "us:B06XWLXFXW": {
+      "available_catalog_units": 53,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWLXFXW"
+    },
+    "us:B06XWMHCG1": {
+      "available_catalog_units": 19,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWMHCG1"
+    },
+    "us:B06XWN7P33": {
+      "available_catalog_units": 15,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWN7P33"
+    },
+    "us:B06XWPMG43": {
+      "available_catalog_units": 51,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWPMG43"
+    },
+    "us:B06XWPMG5D": {
+      "available_catalog_units": 76,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWPMG5D"
+    },
+    "us:B06XWPQT19": {
+      "available_catalog_units": 30,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B06XWPQT19"
+    },
+    "us:B07756QRP3": {
+      "available_catalog_units": 10,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B07756QRP3"
+    },
+    "us:B0775BWWRJ": {
+      "available_catalog_units": 53,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B0775BWWRJ"
+    },
+    "us:B0775CTCWT": {
+      "available_catalog_units": 44,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B0775CTCWT"
+    },
+    "us:B0775G5YS3": {
+      "available_catalog_units": 60,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B0775G5YS3"
+    },
+    "us:B0775M8FWT": {
+      "available_catalog_units": 40,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B0775M8FWT"
+    },
+    "us:B0775YG12N": {
+      "available_catalog_units": 19,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B0775YG12N"
+    },
+    "us:B07YDZV8YT": {
+      "available_catalog_units": 30,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B07YDZV8YT"
+    },
+    "us:B07YF2J62X": {
+      "available_catalog_units": 52,
+      "version": 1,
+      "evidence_id": "sim-stock:CN-SZ:us:B07YF2J62X"
+    }
+  },
+  "brand_rules": {
+    "Goodthreads": {
+      "allowed_sales_regions": [
+        "DE",
+        "GB",
+        "US"
+      ],
+      "wholesale_minimum_pieces_per_sku": 10,
+      "version": 1,
+      "evidence_id": "sim-brand-policy:Goodthreads"
+    },
+    "Amazon Essentials": {
+      "allowed_sales_regions": [
+        "DE",
+        "GB",
+        "US"
+      ],
+      "wholesale_minimum_pieces_per_sku": 10,
+      "version": 1,
+      "evidence_id": "sim-brand-policy:Amazon Essentials"
+    }
+  },
+  "styles": {
+    "LAB-GT-CREW": {
+      "brand": "Goodthreads",
+      "title_prefix": "Goodthreads Men's Short-Sleeve Crewneck Cotton T-Shirt,",
+      "relationship": "research grouping, not manufacturer-confirmed parent ASIN"
+    },
+    "LAB-GT-VNECK": {
+      "brand": "Goodthreads",
+      "title_prefix": "Amazon Brand - Goodthreads Men's Slim-Fit \"The Perfect V-Neck T-Shirt\" Short-Sleeve Cotton,",
+      "relationship": "research grouping, not manufacturer-confirmed parent ASIN"
+    },
+    "LAB-AE-CREW-2PACK": {
+      "brand": "Amazon Essentials",
+      "title_prefix": "Amazon Essentials Men's 2-Pack Regular-Fit Short-Sleeve Crewneck T-Shirt,",
+      "relationship": "research grouping, not manufacturer-confirmed parent ASIN"
+    }
+  },
+  "selection": {
+    "rule": "Up to 80 ASIN-sorted records for each of three exact title-prefix families; retain explicit supported size suffix and nonempty color",
+    "skipped": {
+      "size_or_color_unresolved": 11
+    },
+    "rows": 37
+  },
+  "simulation_fields": [
+    "stock",
+    "brand_rules",
+    "style relationships",
+    "single-piece unit assumptions where no pack count is explicit",
+    "weight",
+    "price"
+  ]
+}

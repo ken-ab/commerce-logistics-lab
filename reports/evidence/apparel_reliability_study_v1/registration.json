@@ -1,0 +1,834 @@
+{
+  "registered_at": "2026-09-08T22:33:33.485589+00:00",
+  "cases": 24,
+  "runs": 144,
+  "model": "gpt-5.6-luna",
+  "conditions": [
+    "v5_single",
+    "v5_coordinator",
+    "v5_on_demand",
+    "v6_single",
+    "v6_coordinator",
+    "v6_on_demand"
+  ],
+  "jobs": [
+    [
+      "RL-07-1",
+      "v5_single"
+    ],
+    [
+      "RL-07-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-07-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-07-1",
+      "v6_single"
+    ],
+    [
+      "RL-07-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-07-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-09-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-09-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-09-1",
+      "v6_single"
+    ],
+    [
+      "RL-09-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-09-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-09-1",
+      "v5_single"
+    ],
+    [
+      "RL-02-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-02-0",
+      "v6_single"
+    ],
+    [
+      "RL-02-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-02-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-02-0",
+      "v5_single"
+    ],
+    [
+      "RL-02-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-02-1",
+      "v6_single"
+    ],
+    [
+      "RL-02-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-02-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-02-1",
+      "v5_single"
+    ],
+    [
+      "RL-02-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-02-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-01-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-01-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-01-0",
+      "v5_single"
+    ],
+    [
+      "RL-01-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-01-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-01-0",
+      "v6_single"
+    ],
+    [
+      "RL-01-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-01-1",
+      "v5_single"
+    ],
+    [
+      "RL-01-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-01-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-01-1",
+      "v6_single"
+    ],
+    [
+      "RL-01-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-05-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-05-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-05-0",
+      "v6_single"
+    ],
+    [
+      "RL-05-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-05-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-05-0",
+      "v5_single"
+    ],
+    [
+      "RL-08-1",
+      "v5_single"
+    ],
+    [
+      "RL-08-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-08-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-08-1",
+      "v6_single"
+    ],
+    [
+      "RL-08-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-08-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-11-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-11-1",
+      "v5_single"
+    ],
+    [
+      "RL-11-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-11-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-11-1",
+      "v6_single"
+    ],
+    [
+      "RL-11-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-03-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-03-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-03-0",
+      "v5_single"
+    ],
+    [
+      "RL-03-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-03-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-03-0",
+      "v6_single"
+    ],
+    [
+      "RL-06-0",
+      "v6_single"
+    ],
+    [
+      "RL-06-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-06-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-06-0",
+      "v5_single"
+    ],
+    [
+      "RL-06-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-06-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-00-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-00-0",
+      "v6_single"
+    ],
+    [
+      "RL-00-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-00-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-00-0",
+      "v5_single"
+    ],
+    [
+      "RL-00-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-10-0",
+      "v5_single"
+    ],
+    [
+      "RL-10-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-10-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-10-0",
+      "v6_single"
+    ],
+    [
+      "RL-10-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-10-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-07-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-07-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-07-0",
+      "v6_single"
+    ],
+    [
+      "RL-07-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-07-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-07-0",
+      "v5_single"
+    ],
+    [
+      "RL-03-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-03-1",
+      "v6_single"
+    ],
+    [
+      "RL-03-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-03-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-03-1",
+      "v5_single"
+    ],
+    [
+      "RL-03-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-11-0",
+      "v6_single"
+    ],
+    [
+      "RL-11-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-11-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-11-0",
+      "v5_single"
+    ],
+    [
+      "RL-11-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-11-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-06-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-06-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-06-1",
+      "v5_single"
+    ],
+    [
+      "RL-06-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-06-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-06-1",
+      "v6_single"
+    ],
+    [
+      "RL-05-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-05-1",
+      "v5_single"
+    ],
+    [
+      "RL-05-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-05-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-05-1",
+      "v6_single"
+    ],
+    [
+      "RL-05-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-04-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-04-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-04-1",
+      "v6_single"
+    ],
+    [
+      "RL-04-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-04-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-04-1",
+      "v5_single"
+    ],
+    [
+      "RL-09-0",
+      "v5_single"
+    ],
+    [
+      "RL-09-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-09-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-09-0",
+      "v6_single"
+    ],
+    [
+      "RL-09-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-09-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-00-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-00-1",
+      "v5_single"
+    ],
+    [
+      "RL-00-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-00-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-00-1",
+      "v6_single"
+    ],
+    [
+      "RL-00-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-08-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-08-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-08-0",
+      "v5_single"
+    ],
+    [
+      "RL-08-0",
+      "v6_on_demand"
+    ],
+    [
+      "RL-08-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-08-0",
+      "v6_single"
+    ],
+    [
+      "RL-10-1",
+      "v6_single"
+    ],
+    [
+      "RL-10-1",
+      "v5_on_demand"
+    ],
+    [
+      "RL-10-1",
+      "v5_coordinator"
+    ],
+    [
+      "RL-10-1",
+      "v5_single"
+    ],
+    [
+      "RL-10-1",
+      "v6_on_demand"
+    ],
+    [
+      "RL-10-1",
+      "v6_coordinator"
+    ],
+    [
+      "RL-04-0",
+      "v6_coordinator"
+    ],
+    [
+      "RL-04-0",
+      "v6_single"
+    ],
+    [
+      "RL-04-0",
+      "v5_on_demand"
+    ],
+    [
+      "RL-04-0",
+      "v5_coordinator"
+    ],
+    [
+      "RL-04-0",
+      "v5_single"
+    ],
+    [
+      "RL-04-0",
+      "v6_on_demand"
+    ]
+  ],
+  "seed": 26090984,
+  "condition_position_balance": {
+    "v5_single": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "v5_coordinator": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "v5_on_demand": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "v6_single": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "v6_coordinator": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "v6_on_demand": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  "cases_sha256": "50f8a317c43c0ce70d1747c498cc8c47ea0b90f7f0e710aa3aa04ed2ae9be37f",
+  "fixture_sha256": "b048069e2dbaf1776d194f2d997e73d7d931494936c2859baab6ff953ce01716",
+  "initial_sha256": {
+    "initial/RL-00-0/operations.sqlite": "443bff4b4d02353553e11058b23aa35548d7d6621c4761ca1d3ac44e16f4ef87",
+    "initial/RL-00-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-00-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-00-0/seed.json": "1e4f34890744777dac461e6967cc415b317d1414cd27777f14b29629e6b66b36",
+    "initial/RL-00-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-00-1/operations.sqlite": "548331276bd5e3c693e21bcc79a12ec18fe843bb510d6ee6ab91b3d603d30f1e",
+    "initial/RL-00-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-00-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-00-1/seed.json": "455149db3c0298c3a95252f5d0bbee2034d4c33c44e123f934852b3673c194ff",
+    "initial/RL-00-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-01-0/operations.sqlite": "0868467fe51bd1006ce85f9e9cb6171352ec9f3c1dabe3c01951412f767123ea",
+    "initial/RL-01-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-01-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-01-0/seed.json": "99eca90791b5cb40a6794df025d28bb0dd6770ced6f197dc6bd3e189ab7a6682",
+    "initial/RL-01-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-01-1/operations.sqlite": "2bae7ba73fadd2e4d766d4744533afb126e174401cf15fe6441133a8a92d7402",
+    "initial/RL-01-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-01-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-01-1/seed.json": "b6200fbd885b3cc01523a51e6c8e514a43a1b19970646564ad8dd6c8ff4a49e1",
+    "initial/RL-01-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-02-0/operations.sqlite": "22e89cff605f4dab128a2bea34d4f83ba3682383fd6ced1c052a4ab55b9cac99",
+    "initial/RL-02-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-02-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-02-0/seed.json": "5dfd33bf76228b06ce28d48e9da2b2c21f292757118df32756f6e93f6c188790",
+    "initial/RL-02-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-02-1/operations.sqlite": "03dac84aaa4200ac82d949311032f8a2103f51ef990d4c90a65b8f506519b9bf",
+    "initial/RL-02-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-02-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-02-1/seed.json": "dbbbc1a81a733260a4f42fab7e43ac9ef0c243409e9cccfc7445954afd82f7d1",
+    "initial/RL-02-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-03-0/operations.sqlite": "e54ae8b830d9a48fe4fe8584941fb72d2305153958076832b57b686a7960252e",
+    "initial/RL-03-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-03-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-03-0/seed.json": "47601eb67c63ba44a4cd8d080bef512bf16d2f84a3ada2b22b57ec6b2f75267e",
+    "initial/RL-03-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-03-1/operations.sqlite": "9494822415530419185ddcc48ed73680c41960bee0a4948fe218d5085403eff0",
+    "initial/RL-03-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-03-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-03-1/seed.json": "dedc1019e8de865eb009b12512181d13da85e2cb69c0f15fc78d38df8db7eadb",
+    "initial/RL-03-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-04-0/operations.sqlite": "f851751a3e39c676df4eefe423077e26aa9ad0577216eac14aca176dbcef923c",
+    "initial/RL-04-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-04-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-04-0/seed.json": "ff1fadcae841244e1b9301591341eb009edea1e18cd1f7547a72834afacb087c",
+    "initial/RL-04-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-04-1/operations.sqlite": "6a45e11f82432cec3a3e39ce2d91f3a9f9ce74b739596c043a229b20be390480",
+    "initial/RL-04-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-04-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-04-1/seed.json": "27adca079e1c318312bd53183482da84e019401e1544b85eddf035ecd99fcb0b",
+    "initial/RL-04-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-05-0/operations.sqlite": "4c55c569e2a75130daceaf7eebafdb9162f5d7f63c3ae77d7df5dbe932d1e2e3",
+    "initial/RL-05-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-05-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-05-0/seed.json": "d76f7fea525810084664a01b05b3cf19aa9fe7b8d35898bf7a825821ef882ec5",
+    "initial/RL-05-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-05-1/operations.sqlite": "9b09dc3a176e70a1d0d96eec13f1773dcfa2337653fd0faf550c24d5e78407df",
+    "initial/RL-05-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-05-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-05-1/seed.json": "61daa0b1aa34427bd1f79b941eb9b6c08161b363b80d4410047518ffee5ac674",
+    "initial/RL-05-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-06-0/operations.sqlite": "9690e69df3e35160dfc36688c10cf84f30b3243a68cd25017b34ea3c0d25c41a",
+    "initial/RL-06-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-06-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-06-0/seed.json": "d2e1db596813bf72165c2256600c5e438ca7f72f4b7cd20090f9fd209f21617e",
+    "initial/RL-06-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-06-1/operations.sqlite": "db5bf4e0158db27a1e05f5549c4b503f0254ee7e64c929ccb4a48f9089f30a30",
+    "initial/RL-06-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-06-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-06-1/seed.json": "7046141479be789178ff5dbd4b07e69de3575b91c8e5245542d6c83c4da6394a",
+    "initial/RL-06-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-07-0/operations.sqlite": "28c7ffab66ccf5131ee4a4d764f7946fbc36ef476488fc7b30ec84ce9c075063",
+    "initial/RL-07-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-07-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-07-0/seed.json": "18a86cc32a61dfff302943faae67675299b1b8349cc99d914e6b3b5f895daf18",
+    "initial/RL-07-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-07-1/operations.sqlite": "b71f6e8f8d171c699f546c626b71068d5b7485081485209ab5435c1fe98affb4",
+    "initial/RL-07-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-07-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-07-1/seed.json": "241374cfbf5413d54651bf4a93af3b6e4748594c1615d7c7d038c48cb734542b",
+    "initial/RL-07-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-08-0/operations.sqlite": "a4dca78a658e86b2e1665d2150e1017efbf0c76183efcc121608cb7f877b0cc3",
+    "initial/RL-08-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-08-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-08-0/seed.json": "6d8b7a30e5b8fbeeec378d3b9d1e437c1005bc396932f39a606343d189ea667d",
+    "initial/RL-08-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-08-1/operations.sqlite": "b36f69c20fd107934621f78431b871e50931222fb460c9e44ae5e076d0a2d428",
+    "initial/RL-08-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-08-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-08-1/seed.json": "d6bb1276c3e398c70b05644239ce7b0d8e3f51013a1080b06428defc624219bb",
+    "initial/RL-08-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-09-0/operations.sqlite": "534d0b7fe08ffc96650978717d135c13e946a89f8e8be3453fffe2bbf38010fd",
+    "initial/RL-09-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-09-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-09-0/seed.json": "0ea1750d52cb2caf0292b692d791d0119a1b09053310e1e49bb439ecc82f2ae2",
+    "initial/RL-09-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-09-1/operations.sqlite": "010f6c7493c329a31a741839d46b56817e1412a6174bef1127faf34e0d39703f",
+    "initial/RL-09-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-09-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-09-1/seed.json": "ff04c6b5d33cbf11079de6c1e98ed61bcd8ec440119b1da34a5f9e29abec3024",
+    "initial/RL-09-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-10-0/operations.sqlite": "7a0147b5c5caa40fa5e0f4edff779b80d710190c2001d910f6237cacc31cdbab",
+    "initial/RL-10-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-10-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-10-0/seed.json": "f7c5cebf43de6feb45ce352fd63d44b3c58474ae4115908c5cd4b4e3837d585f",
+    "initial/RL-10-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-10-1/operations.sqlite": "b7192f89d756fe7c7f45d2a56a6118e128c76fe36400b0be8022edd3e7f57a69",
+    "initial/RL-10-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-10-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-10-1/seed.json": "9a8cde80090013298a831a69e4616f343d8cc03ca02aa4f7187babea93bf4be8",
+    "initial/RL-10-1/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-11-0/operations.sqlite": "e11f2535abbd307e781353260a5464f3c57015c5bb13cf6b73d0742c9051d547",
+    "initial/RL-11-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-11-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-11-0/seed.json": "4ea1ac5971e43936d89930f40dbce90108538e7d499f7802b8b7d07e29f77891",
+    "initial/RL-11-0/world.json": "7b37a3f533ac6a65436810e111698a84b7d809b5b41b480ae9bb9f87690d40f4",
+    "initial/RL-11-1/operations.sqlite": "f45db2774ae98fa07b11635f4c7619b6afcb99a85df7ffbc117801031125c552",
+    "initial/RL-11-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/RL-11-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/RL-11-1/seed.json": "189ff7ebeb65ffd343196e66ea0613fab988be4b31c8ffadbfe0fbcfa326b56b",
+    "initial/RL-11-1/world.json": "9d7eae5c74f5246a27adf56ad391e0411f35e993e04f9bd6b7b44440e64c7b96"
+  },
+  "source_sha256": {
+    "apparel_fulfillment/action_contract.py": "fc9010101328d722a845523e675196a1b8fb076adcce1343b40679d79a66e21c",
+    "apparel_fulfillment/agent.py": "db457be82ae57b33aa4b4bf12f823f2724e4c6999cf82bfc8836bffc61ee1016",
+    "apparel_fulfillment/agent_candidate_v4.py": "02ee8b82c3c9314340966d01f3d8866f2f75c214648a1a6e33aab64e96b7d3bd",
+    "apparel_fulfillment/agent_evidence_v2.py": "b1ace833ae3e5733670304df562a0a157e8af87f295b6189ffe2452ae1bad6b3",
+    "apparel_fulfillment/agent_reliability_v6.py": "f5ecff0ea1a905659ddc118b4d74037bc8412993964ebe9d49d11d0869db5123",
+    "apparel_fulfillment/agent_source_v5.py": "1524c8cf2d3064d56af9aa084175c8407958c3e8f5d6c026e800443abaa24e70",
+    "apparel_fulfillment/agent_state_v3.py": "b0507eab3ce493f01c2d7a8d5a65801d39406dda85eb777f076bd923695cb8a9",
+    "apparel_fulfillment/candidate_search.py": "782ee01454114af86dc5e445315461f7572fa31ee4a1c576e8dfbd1500632bbd",
+    "apparel_fulfillment/orders.py": "69c2e1bf6d82cd375669949e4ffb4aa14a9a383bc2d7ab56436e8fada7e09897",
+    "apparel_fulfillment/reliability_support.py": "326c111fdcd7aa23ea3a2ad5aa9fd76466da6644edf53d08add682699b198dff",
+    "apparel_fulfillment/route_audit.py": "db68c5762e040f333d644d421a6a5d5030033813b2af8a506899ca51d91fb2b3",
+    "apparel_fulfillment/source_review.py": "e39f2237bc2134ce6b609d3d0ba39075173828c2a6bd2cb2de3dcbc66caf2250",
+    "apparel_fulfillment/store.py": "0370ee5932056f103b30cdc5e33c4b646c63cea89335dcf01d126074fca9cde4",
+    "apparel_fulfillment/transport.py": "348189bd8d69d03580f9cfd749a74d8cc5b5f734acbf4dfb01fb99c5657b9daa",
+    "commerce_lab/retrieval.py": "eabb5aacda27a7f9a365b207acbc259f76afe033434aff706a4d31a639920dfc",
+    "data/apparel_corridor_v1.json": "f111d115913aaf3a7f00a423a1869fa5636a7452f1b827886698695004b7c5ef",
+    "data/apparel_fulfillment_expansion_v1.json": "09ed41394345f015c11dcd9b693d379b5d7e05949b0d199476173b1204bd26e2",
+    "data/apparel_fulfillment_v1.json": "51c68c785a90fb9795defa0fb3b1c45614f36c75e5aadb94531fd8960f90cd7c",
+    "delivery_budget.py": "c17a4b9c1a507f192bc8c94fd7f182ffd6c3bf2bdbfafbac78fafe36d8ce4e53",
+    "delivery_budget_policy.json": "9aa0220b866a4670c437e31241d479f32f8ceef07cec9a23d9371abf531b78c7",
+    "evidence/apparel_expansion_sources_v1/audit.json": "616822fc8a99ae33b581dc707fb4ff5aa6da1e70366f32b66a8987e4e220efc0",
+    "evidence/apparel_expansion_sources_v1/manifest.json": "a7d4b3987e8d476d46bc3d190bd4d457c61348461358522e0c863d1e5fd3f523",
+    "evidence/apparel_expansion_sources_v1/raw_records.json": "0391f4c91142c1014231d0cb5999809fc6e56c18c6c39bc543fbc470b64bee76",
+    "evidence/apparel_reliability_tests_20260909.json": "ee4d01d239e29bb3e1b2f08c5ceab55a86be0df8395f2929ff0bf99524b38068",
+    "research/APPAREL_CANDIDATE_VALIDATION_PROTOCOL.md": "d4c1f5d1a2467e09a1a91ba17669e791cd1ab7ad901dbc6cf52a7ae62c24b028",
+    "research/APPAREL_EXPANSION_PROTOCOL.md": "de0f4a19227a9ccfb7e87133c214f57fbc8b5699d0832a7e17a48acee91dba43",
+    "research/APPAREL_RELIABILITY_PROTOCOL.md": "f44f25c388f344b79a4215975e59474ee7bd8ef2b4ed833a48d4e81e1f1e49dc",
+    "research/APPAREL_SOURCE_REVIEW_PROTOCOL.md": "9c22cd9e0bf735acfa4734e8747cce1efdf601a20185e5a5354ff6381b0e3041",
+    "research/apparel_candidate_validation.py": "cab1cb562c4b9300d5ac525ad50187be3ce3b0ed41f42ed7d476e5ba16788127",
+    "research/apparel_expansion_cases.py": "ecdb05a79fa3c536fd5e23ed99efe53d841a81f887bb0d6901b3683c5ba30ad7",
+    "research/apparel_expansion_data.py": "bf7cc3731f614a79d275d288a8a043b8f9c3f5015b151574c172051c05fa3912",
+    "research/apparel_expansion_evaluation.py": "380f6c64fc5829fb0fd58ecd1e8831512d67760a6fa670cc7089d532ed3c830f",
+    "research/apparel_expansion_study.py": "5e619ad6238e9847654e876f9cf5a59a7c82086490a8da78e8f9482ba7b20ab4",
+    "research/apparel_reliability_cases.py": "094d4ea27cb23067e3009e2e614cae912b06d3eff570a9115d73640ecb376658",
+    "research/apparel_reliability_study.py": "368f41ed266d920573b70011b0320364e1302ddf0ceed016105b3cd00a7185f1",
+    "research/apparel_source_validation.py": "0c2a2cbd82f5c43dcae871c83ffb544ac2ebfe03467b3e408aaeb69048f4f7db",
+    "research/audit_apparel_candidate_validation.py": "02f5238aebdce7055837c534085775aca19115f3efd45da129d2a3079879f961",
+    "research/audit_apparel_expansion_sources.py": "1256be39790e11167d109522a08fb6e94f213e3728a5dbfb7bd46d9025c0ea18",
+    "research/model_client.py": "ae2563703d4ea9f212cc2b00c7525ddd846e521fd6a90b2e47279b5be48979b2",
+    "research/provider_gate.py": "a877a3945032f9be88e58b30f4676da899afbe8ae78dde0f682a1b1348916629",
+    "research/rate_card.json": "03c5e5dbf42520341a079477cd44e8f8ea43b63282b26af38d183457c759bbf4",
+    "research/tls_transport.py": "35153e09293eb962da2babb5d90bed11f17029a6b485469cb0f6e46214d45aa9",
+    "serving/reranker.py": "f89f7b69121e827c60caffc1c6ac8587749119f192e3ca2ba101ff5e28947b9c",
+    "tests/test_apparel_expansion_evaluation.py": "03864e690e2bfbb902006eb11b4e43f7012b1edf2c8123fe409757650879245d",
+    "tests/test_apparel_reliability.py": "998eec309ca69fb072a3eb92cfee4b19dec7222411995268d3e0c72a84fc5ac3",
+    "tests/test_apparel_source_review.py": "ff0ed6289c8579904f5238b3a2a3367fdbacddbfca890b64db46b0ee57d10b63"
+  },
+  "ledger_before": {
+    "micro_cny": 327611085,
+    "rows": 18183
+  },
+  "estimated_cny": [
+    8,
+    25
+  ],
+  "project_budget_cny": 480,
+  "model_selection_calls": 0,
+  "scope": "New developer-authored event compositions in a known historical catalogue; single stochastic trajectory per condition. Not unseen merchants.",
+  "engineering_gate": {
+    "min_passed_per_v6_arm": 23,
+    "no_arm_acceptance_regression": true,
+    "protected_violations": 0,
+    "v6_completed_revision_facts_correct": true,
+    "max_total_cost_ratio": "1.5",
+    "max_mean_latency_ratio_each_arm": 1.5
+  }
+}

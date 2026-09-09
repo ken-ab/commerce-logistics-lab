@@ -1,0 +1,5712 @@
+{
+  "version": "apparel-cases-v1",
+  "partition": "test",
+  "cases": [
+    {
+      "id": "AC-d892238db830e9df",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B0775CTCWT",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "JP",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775CTCWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy heather",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775CTCWT",
+      "stock_overrides": {
+        "us:B0775CTCWT": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B0775CTCWT"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "sales_region_not_allowed",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-bd9d7a8620b9bded",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XW9KP27",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 500,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KP27",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "bright blue",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-14T03:00:00Z",
+          "deadline_at": "2026-10-20T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW9KP27",
+      "stock_overrides": {
+        "us:B06XW9KP27": 1000
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XW9KP27"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "100 kg exceeds the 25 kg air-leg capacity; rail/sea transit alone exceeds the six-day deadline."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-09ed1b5f08eca354",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XWMJ7G5",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "JP",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMJ7G5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWMJ7G5",
+      "stock_overrides": {
+        "us:B06XWMJ7G5": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWMJ7G5"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "sales_region_not_allowed",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-919c2e5cad8f1d97",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWLXFXW",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "dark green",
+            "size": null
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWLXFXW",
+      "stock_overrides": {
+        "us:B06XWLXFXW": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWLXFXW"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "size_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-b9fbe7d36dd2124c",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B07YDZV8YT",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 500,
+            "unit": "piece",
+            "requested_sku": "us:B07YDZV8YT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy/white, stripe",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-20T00:00:00Z",
+          "deadline_at": "2026-10-26T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B07YDZV8YT",
+      "stock_overrides": {
+        "us:B07YDZV8YT": 1000
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "100 kg exceeds the 25 kg air-leg capacity; rail/sea transit alone exceeds the six-day deadline."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-a03c87a6a9a5f4c9",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XWLXFXW",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "JP",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLXFXW",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "dark green",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWLXFXW",
+      "stock_overrides": {
+        "us:B06XWLXFXW": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWLXFXW"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "sales_region_not_allowed",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-929e0e7411e9a653",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XWGYHLZ",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 4,
+            "unit": "piece",
+            "requested_sku": "us:B06XWGYHLZ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWGYHLZ",
+      "stock_overrides": {
+        "us:B06XWGYHLZ": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWGYHLZ"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "wholesale_minimum_not_met",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-b32cbb3c88d7478e",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWM3BV1",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": null,
+            "requested_sku": "us:B06XWM3BV1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "royal blue",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWM3BV1",
+      "stock_overrides": {
+        "us:B06XWM3BV1": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWM3BV1"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "quantity_unit_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-1e6fae48f01f8b9c",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XW83BWX",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XW83BWX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-18T13:00:00Z",
+          "deadline_at": "2026-10-24T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW83BWX",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 0,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW85TGX"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "minimum_differences": 2,
+        "must_read_alternatives": false,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "这笔缺货替代已通过单独的具体确认。请核验已确认的替代服装与订单规则，再读取运输事件并检查旧提案；失效时按原预算和交期修订并引用新方案依据，不改变已确认条件或直接确认订单。",
+      "approved_sku": "us:B06XW85TGX"
+    },
+    {
+      "id": "AC-7d63746d5aa46ad9",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XWN9SP5",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "JP",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWN9SP5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XS"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWN9SP5",
+      "stock_overrides": {
+        "us:B06XWN9SP5": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWN9SP5"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "sales_region_not_allowed",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-9de6b1fd142c9d49",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XWMHCG1",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHCG1",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XS"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-22T03:00:00Z",
+          "deadline_at": "2026-10-28T03:00:00Z",
+          "budget_cents": 1
+        }
+      },
+      "initial_sku": "us:B06XWMHCG1",
+      "stock_overrides": {
+        "us:B06XWMHCG1": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWMHCG1"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every outgoing leg has fixed cost at least 1500 cents, greater than the 1-cent budget."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-0b608345fc84bdf8",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B0775G5YS3",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": null,
+            "requested_sku": "us:B0775G5YS3",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "charcoal heather",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775G5YS3",
+      "stock_overrides": {
+        "us:B0775G5YS3": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B0775G5YS3"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "quantity_unit_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-cee161421f4fa103",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWGZD1C",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWGZD1C",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWGZD1C",
+      "stock_overrides": {
+        "us:B06XWGZD1C": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWGZD1C"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "color",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWGZD1C 的颜色。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-c99791db0951c456",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XWPMG43",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG43",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-18T13:00:00Z",
+          "deadline_at": "2026-10-24T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPMG43",
+      "stock_overrides": {
+        "us:B06XWPMG43": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWPMG43"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-2c738250c9ede8cf",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XW9KPZH",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KPZH",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XXL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-14T03:00:00Z",
+          "deadline_at": "2026-10-20T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW9KPZH",
+      "stock_overrides": {
+        "us:B06XW9KPZH": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9KPZH"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-f62a393449f91180",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XWQBJ6N",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B06XWQBJ6N",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "L"
+          },
+          {
+            "line_id": "2",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B06XWQBJ6N",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XWQBJ6N": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWQBJ6N"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-793eaf13b5f5ec44",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWMHBT3",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHBT3",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "XL",
+            "style_id": "LAB-GT-CREW"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-04T00:00:00Z",
+          "deadline_at": "2026-10-10T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWMHBT3",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 0,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW83BWX",
+          "us:B06XW85TGX",
+          "us:B06XW9N3S5",
+          "us:B06XWMJ7G5",
+          "us:B06XWPR5RY"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true,
+        "no_transport_calls": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。虽然订单需要运输，但替代未确认前不要启动运输规划。"
+    },
+    {
+      "id": "AC-fd22b6a0f82ef162",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B0775BWWRJ",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775BWWRJ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "orange heather",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B0775BWWRJ": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775BWWRJ"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-922e314a0927c117",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B0775M8FWT",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775M8FWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775M8FWT",
+      "stock_overrides": {
+        "us:B0775M8FWT": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B0775M8FWT"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "color",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B0775M8FWT 的颜色。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-ff35e783938f3023",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XWMHBT3",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHBT3",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-16T07:00:00Z",
+          "deadline_at": "2026-10-22T07:00:00Z",
+          "budget_cents": 1
+        }
+      },
+      "initial_sku": "us:B06XWMHBT3",
+      "stock_overrides": {
+        "us:B06XWMHBT3": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWMHBT3"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every outgoing leg has fixed cost at least 1500 cents, greater than the 1-cent budget."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-f8764f2bee87da8b",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B078LGTSP1",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B078LGTSP1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-04T00:00:00Z",
+          "deadline_at": "2026-10-10T00:00:00Z",
+          "budget_cents": 1
+        }
+      },
+      "initial_sku": "us:B078LGTSP1",
+      "stock_overrides": {
+        "us:B078LGTSP1": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B078LGTSP1"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every outgoing leg has fixed cost at least 1500 cents, greater than the 1-cent budget."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-4b2581ddcb166929",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWMJ7G5",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": null
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWMJ7G5",
+      "stock_overrides": {
+        "us:B06XWMJ7G5": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWMJ7G5"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "size_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-8ee54f5addc1e63b",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XWGZD1C",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWGZD1C",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XWGZD1C": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWGZD1C"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-bde7c65c405643ba",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XW9KPZH",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 4,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KPZH",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XXL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW9KPZH",
+      "stock_overrides": {
+        "us:B06XW9KPZH": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XW9KPZH"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "wholesale_minimum_not_met",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-e0a375d7e072785f",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XWGYHLZ",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWGYHLZ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL",
+            "style_id": "LAB-AE-CREW-2PACK"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWGYHLZ",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 0,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWLXFXW",
+          "us:B06XWPMG43",
+          "us:B07756QRP3",
+          "us:B0775YG12N"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-d763d95f4960f126",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWGZD1C",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": null,
+            "requested_sku": "us:B06XWGZD1C",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWGZD1C",
+      "stock_overrides": {
+        "us:B06XWGZD1C": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWGZD1C"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "quantity_unit_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-3f0db213f254ea48",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B0775M8FWT",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775M8FWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "M",
+            "style_id": "LAB-AE-CREW-2PACK"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-16T07:00:00Z",
+          "deadline_at": "2026-10-22T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B0775M8FWT",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 0,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW9KP27",
+          "us:B06XWPQT19",
+          "us:B0775BWWRJ",
+          "us:B0775CTCWT",
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true,
+        "no_transport_calls": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。虽然订单需要运输，但替代未确认前不要启动运输规划。"
+    },
+    {
+      "id": "AC-baafe857df9e068d",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XWMJ7G5",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMJ7G5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWMJ7G5",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 0,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW9KPZH",
+          "us:B06XW9N3S5",
+          "us:B06XWGYHLZ",
+          "us:B06XWLT57Q",
+          "us:B06XWMHBT3",
+          "us:B06XWPR5RY"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-acba993788195791",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWPMG43",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG43",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-06T03:00:00Z",
+          "deadline_at": "2026-10-12T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPMG43",
+      "stock_overrides": {
+        "us:B06XWPMG43": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWPMG43"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "delay",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-601a570f0dbd2801",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWLT57Q",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLT57Q",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWLT57Q",
+      "stock_overrides": {
+        "us:B06XWLT57Q": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWLT57Q"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "size",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWLT57Q 的尺码。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-9dbc5e6b873bf185",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWMHBT3",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHBT3",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-10T13:00:00Z",
+          "deadline_at": "2026-10-16T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWMHBT3",
+      "stock_overrides": {
+        "us:B06XWMHBT3": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWMHBT3"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": false,
+        "old_valid": false
+      },
+      "scenario_kind": "missed",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-3b3490c0e3e91c28",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWN9SP5",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": null
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWN9SP5",
+      "stock_overrides": {
+        "us:B06XWN9SP5": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWN9SP5"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "size_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-9c0f3f586508855e",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B0775G5YS3",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B0775G5YS3",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "charcoal heather",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B0775G5YS3": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775G5YS3"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-11f3e6e1feaf8190",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWPR5RY",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPR5RY",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-06T03:00:00Z",
+          "deadline_at": "2026-10-12T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPR5RY",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 0,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9N3S5"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "minimum_differences": 2,
+        "must_read_alternatives": false,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "这笔缺货替代已通过单独的具体确认。请核验已确认的替代服装与订单规则，再读取运输事件并检查旧提案；失效时按原预算和交期修订并引用新方案依据，不改变已确认条件或直接确认订单。",
+      "approved_sku": "us:B06XW9N3S5"
+    },
+    {
+      "id": "AC-1eeb084f8b92a3ea",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B078LGK6VW",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B078LGK6VW",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "red",
+            "size": "XXL",
+            "style_id": "LAB-GT-VNECK"
+          }
+        ]
+      },
+      "initial_sku": "us:B078LGK6VW",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 0,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW9KPZH"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-e525d08539b4e4f9",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B0775M8FWT",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775M8FWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B0775M8FWT": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775M8FWT"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-242f4f14e36718ae",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWMHCG1",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHCG1",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XS"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-10T13:00:00Z",
+          "deadline_at": "2026-10-16T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWMHCG1",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 0,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWPMG43"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "minimum_differences": 2,
+        "must_read_alternatives": false,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "这笔缺货替代已通过单独的具体确认。请核验已确认的替代服装与订单规则，再读取运输事件并检查旧提案；失效时按原预算和交期修订并引用新方案依据，不改变已确认条件或直接确认订单。",
+      "approved_sku": "us:B06XWPMG43"
+    },
+    {
+      "id": "AC-f9daaee653f74a6b",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B078LGK6VW",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B078LGK6VW",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "red",
+            "size": "XXL"
+          },
+          {
+            "line_id": "2",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B078LGK6VW",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "red",
+            "size": "XXL"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B078LGK6VW": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B078LGK6VW"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-cbef6dabea0a06c5",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XWLT57Q",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLT57Q",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          },
+          {
+            "line_id": "2",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLT57Q",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XWLT57Q": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWLT57Q"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-d3368ac167cbc6c6",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWPR5RY",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPR5RY",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-12T00:00:00Z",
+          "deadline_at": "2026-10-18T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPR5RY",
+      "stock_overrides": {
+        "us:B06XWPR5RY": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWPR5RY"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-cc29931c29b59b9b",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XW83BWX",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW83BWX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XW83BWX": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW83BWX"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-d9878e3991d9deff",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWM3BV1",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWM3BV1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "royal blue",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWM3BV1",
+      "stock_overrides": {
+        "us:B06XWM3BV1": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWM3BV1"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "size",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWM3BV1 的尺码。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-a732dee96d4995b1",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWQBJ6N",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWQBJ6N",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWQBJ6N",
+      "stock_overrides": {
+        "us:B06XWQBJ6N": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWQBJ6N"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "size",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWQBJ6N 的尺码。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-b05c0e852cde0cef",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XWPMG43",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG43",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-12T00:00:00Z",
+          "deadline_at": "2026-10-12T01:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPMG43",
+      "stock_overrides": {
+        "us:B06XWPMG43": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWPMG43"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every origin-to-destination path takes more than one hour even without schedule waits."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-4f450aee603f0fdc",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XW9N3S5",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9N3S5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XW9N3S5": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9N3S5"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-57da6ab4a27e4411",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B0775YG12N",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775YG12N",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light pink",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-16T07:00:00Z",
+          "deadline_at": "2026-11-07T07:00:00Z",
+          "budget_cents": 15000
+        }
+      },
+      "initial_sku": "us:B0775YG12N",
+      "stock_overrides": {
+        "us:B0775YG12N": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775YG12N"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-b3766a0a549d91d0",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XW9N3S5",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 4,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9N3S5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW9N3S5",
+      "stock_overrides": {
+        "us:B06XW9N3S5": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XW9N3S5"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "wholesale_minimum_not_met",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-8b83956eb5cf235c",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWGYHLZ",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": null,
+            "requested_sku": "us:B06XWGYHLZ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWGYHLZ",
+      "stock_overrides": {
+        "us:B06XWGYHLZ": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWGYHLZ"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "quantity_unit_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-027dff76bdad8894",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XWLT57Q",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": null
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWLT57Q",
+      "stock_overrides": {
+        "us:B06XWLT57Q": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWLT57Q"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "size_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-4ed8edcc8da4daa9",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XW9KPZH",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 500,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KPZH",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XXL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-08T07:00:00Z",
+          "deadline_at": "2026-10-14T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW9KPZH",
+      "stock_overrides": {
+        "us:B06XW9KPZH": 1000
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XW9KPZH"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "100 kg exceeds the 25 kg air-leg capacity; rail/sea transit alone exceeds the six-day deadline."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-e3cd22d15ed3888f",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B07YDZV8YT",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B07YDZV8YT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy/white, stripe",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-26T13:00:00Z",
+          "deadline_at": "2026-11-01T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B07YDZV8YT",
+      "stock_overrides": {
+        "us:B07YDZV8YT": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-d195f8bd8dd7b5cb",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B06XW9N3S5",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": null,
+            "requested_sku": "us:B06XW9N3S5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW9N3S5",
+      "stock_overrides": {
+        "us:B06XW9N3S5": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW9N3S5"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "quantity_unit_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-7db21889b2d9e878",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B0775M8FWT",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775M8FWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-22T03:00:00Z",
+          "deadline_at": "2026-10-28T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B0775M8FWT",
+      "stock_overrides": {
+        "us:B0775M8FWT": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775M8FWT"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "delay",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-90f27c6ba0bea9a7",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWLT57Q",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLT57Q",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-26T13:00:00Z",
+          "deadline_at": "2026-11-01T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWLT57Q",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 0,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9N3S5"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "minimum_differences": 1,
+        "must_read_alternatives": false,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "这笔缺货替代已通过单独的具体确认。请核验已确认的替代服装与订单规则，再读取运输事件并检查旧提案；失效时按原预算和交期修订并引用新方案依据，不改变已确认条件或直接确认订单。",
+      "approved_sku": "us:B06XW9N3S5"
+    },
+    {
+      "id": "AC-82e1bd704336a355",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWPMG5D",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG5D",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWPMG5D",
+      "stock_overrides": {
+        "us:B06XWPMG5D": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWPMG5D"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "material",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWPMG5D 的材质原文依据。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-44bd95a0577323de",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWPMG5D",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG5D",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-18T13:00:00Z",
+          "deadline_at": "2026-10-24T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPMG5D",
+      "stock_overrides": {
+        "us:B06XWPMG5D": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWPMG5D"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": false,
+        "old_valid": false
+      },
+      "scenario_kind": "missed",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-4c4fdebd7c9eff97",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XWPMG5D",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG5D",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-24T07:00:00Z",
+          "deadline_at": "2026-10-24T08:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPMG5D",
+      "stock_overrides": {
+        "us:B06XWPMG5D": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWPMG5D"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every origin-to-destination path takes more than one hour even without schedule waits."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-b0736e08c758b096",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XWN9SP5",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWN9SP5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XS"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWN9SP5",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 0,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWGZD1C",
+          "us:B06XWLMYVY",
+          "us:B06XWMJ9XF",
+          "us:B06XWMKR2F",
+          "us:B06XWPR5RY",
+          "us:B06XWQBJ6N"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-2adb2fb3340d19f3",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B078LGTSP1",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B078LGTSP1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "L",
+            "style_id": "LAB-GT-VNECK"
+          }
+        ]
+      },
+      "initial_sku": "us:B078LGTSP1",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 0,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWLT57Q",
+          "us:B06XWQBJ6N"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-785f0a34c99a39c1",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XW9KP27",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KP27",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "bright blue",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW9KP27",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 0,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWPQT19",
+          "us:B0775BWWRJ",
+          "us:B0775CTCWT",
+          "us:B0775M8FWT",
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-746790f130babe9c",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B0775G5YS3",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775G5YS3",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "charcoal heather",
+            "size": "S",
+            "style_id": "LAB-AE-CREW-2PACK"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-24T07:00:00Z",
+          "deadline_at": "2026-10-30T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B0775G5YS3",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 0,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWPMG5D",
+          "us:B07YF2J62X"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true,
+        "no_transport_calls": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。虽然订单需要运输，但替代未确认前不要启动运输规划。"
+    },
+    {
+      "id": "AC-27751da680ea5551",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B078LGTSP1",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 4,
+            "unit": "piece",
+            "requested_sku": "us:B078LGTSP1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": "us:B078LGTSP1",
+      "stock_overrides": {
+        "us:B078LGTSP1": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B078LGTSP1"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "wholesale_minimum_not_met",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-c2d21a60805f93e2",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XW9N3S5",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9N3S5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL",
+            "style_id": "LAB-GT-CREW"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW9N3S5",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 0,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWLT57Q",
+          "us:B06XWMHBT3",
+          "us:B06XWMJ7G5",
+          "us:B06XWPR5RY"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-a578aa471cdf50c3",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XW83BWX",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW83BWX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW83BWX",
+      "stock_overrides": {
+        "us:B06XW83BWX": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XW83BWX"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "material",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XW83BWX 的材质原文依据。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-dc9aa6c31d2afc35",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XWQBJ6N",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 500,
+            "unit": "piece",
+            "requested_sku": "us:B06XWQBJ6N",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-26T13:00:00Z",
+          "deadline_at": "2026-11-01T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWQBJ6N",
+      "stock_overrides": {
+        "us:B06XWQBJ6N": 1000
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWQBJ6N"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "100 kg exceeds the 25 kg air-leg capacity; rail/sea transit alone exceeds the six-day deadline."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-315ae7d3fedb6b8c",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XWGYHLZ",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWGYHLZ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-06T03:00:00Z",
+          "deadline_at": "2026-10-12T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWGYHLZ",
+      "stock_overrides": {
+        "us:B06XWGYHLZ": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWGYHLZ"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-e25b1c412b0a9bca",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B078LGK6VW",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 4,
+            "unit": "piece",
+            "requested_sku": "us:B078LGK6VW",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "red",
+            "size": "XXL"
+          }
+        ]
+      },
+      "initial_sku": "us:B078LGK6VW",
+      "stock_overrides": {
+        "us:B078LGK6VW": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B078LGK6VW"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "wholesale_minimum_not_met",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-ab43f9cfb51bd4d5",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XWPMG43",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG43",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XL",
+            "style_id": "LAB-AE-CREW-2PACK"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWPMG43",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 0,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWGYHLZ",
+          "us:B06XWLXFXW",
+          "us:B06XWMHCG1",
+          "us:B07756QRP3",
+          "us:B0775YG12N"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-a52051e2d0ef005c",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XWPR5RY",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPR5RY",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-24T07:00:00Z",
+          "deadline_at": "2026-10-30T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPR5RY",
+      "stock_overrides": {
+        "us:B06XWPR5RY": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWPR5RY"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-bacc63ede1d5b41f",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B0775CTCWT",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775CTCWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy heather",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B0775CTCWT": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775CTCWT"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-1a297b58e925052c",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B0775BWWRJ",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775BWWRJ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "orange heather",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775BWWRJ",
+      "stock_overrides": {
+        "us:B0775BWWRJ": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B0775BWWRJ"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "color",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B0775BWWRJ 的颜色。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-e94c909269eda0c9",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XWPR5RY",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPR5RY",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-18T13:00:00Z",
+          "deadline_at": "2026-10-18T14:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPR5RY",
+      "stock_overrides": {
+        "us:B06XWPR5RY": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWPR5RY"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every origin-to-destination path takes more than one hour even without schedule waits."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-87d2c565221c319c",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B0775YG12N",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775YG12N",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light pink",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-04T00:00:00Z",
+          "deadline_at": "2026-10-10T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B0775YG12N",
+      "stock_overrides": {
+        "us:B0775YG12N": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B0775YG12N"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-874feb3e1442310a",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XWN9SP5",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWN9SP5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "XS"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-08T07:00:00Z",
+          "deadline_at": "2026-10-14T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWN9SP5",
+      "stock_overrides": {
+        "us:B06XWN9SP5": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWN9SP5"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-e868fb899f42474d",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XW9KP27",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KP27",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "bright blue",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-20T00:00:00Z",
+          "deadline_at": "2026-10-26T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW9KP27",
+      "stock_overrides": {
+        "us:B06XW9KP27": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9KP27"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-f539bce766557cc7",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWQBJ6N",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWQBJ6N",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-20T00:00:00Z",
+          "deadline_at": "2026-10-26T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWQBJ6N",
+      "stock_overrides": {
+        "us:B06XWQBJ6N": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWQBJ6N"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-0c77f97d75fa0137",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B0775CTCWT",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy heather",
+            "size": null
+          }
+        ]
+      },
+      "initial_sku": "us:B0775CTCWT",
+      "stock_overrides": {
+        "us:B0775CTCWT": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B0775CTCWT"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "size_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-35d4bd8ba8db7c52",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XW85TGX",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XW85TGX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "S"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-12T00:00:00Z",
+          "deadline_at": "2026-10-18T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW85TGX",
+      "stock_overrides": {
+        "us:B06XW85TGX": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW85TGX"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-eb647f62a40a2b59",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XW83BWX",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XW83BWX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-24T07:00:00Z",
+          "deadline_at": "2026-10-30T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW83BWX",
+      "stock_overrides": {
+        "us:B06XW83BWX": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW83BWX"
+        ],
+        "proposal": "keep",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": true
+      },
+      "scenario_kind": "unrelated",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-8451ae52ab5b6afc",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWM3BV1",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWM3BV1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "royal blue",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-26T13:00:00Z",
+          "deadline_at": "2026-11-01T13:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWM3BV1",
+      "stock_overrides": {
+        "us:B06XWM3BV1": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWM3BV1"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": false,
+        "old_valid": false
+      },
+      "scenario_kind": "missed",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-2c6128142af7cdf4",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B06XW85TGX",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XW85TGX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "S"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-06T03:00:00Z",
+          "deadline_at": "2026-10-06T04:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW85TGX",
+      "stock_overrides": {
+        "us:B06XW85TGX": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XW85TGX"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every origin-to-destination path takes more than one hour even without schedule waits."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-19c29447b0f0db8a",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XW9KPZH",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KPZH",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XXL",
+            "style_id": "LAB-GT-VNECK"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW9KPZH",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 0,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B078LGK6VW"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-fcf9250d9041ba1f",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B078LGTSP1",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B078LGTSP1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-10T13:00:00Z",
+          "deadline_at": "2026-11-01T13:00:00Z",
+          "budget_cents": 15000
+        }
+      },
+      "initial_sku": "us:B078LGTSP1",
+      "stock_overrides": {
+        "us:B078LGTSP1": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B078LGTSP1"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-9fb0c2dc63993eec",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWPMG5D",
+      "now": "2026-10-11T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWPMG5D",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S",
+            "style_id": "LAB-AE-CREW-2PACK"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-12T00:00:00Z",
+          "deadline_at": "2026-10-18T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWPMG5D",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 0,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWN7P33",
+          "us:B06XWPQT19",
+          "us:B0775G5YS3",
+          "us:B07YF2J62X"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true,
+        "no_transport_calls": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。虽然订单需要运输，但替代未确认前不要启动运输规划。"
+    },
+    {
+      "id": "AC-3ea6ccffaeb4fe2e",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B07YDZV8YT",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B07YDZV8YT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy/white, stripe",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-14T03:00:00Z",
+          "deadline_at": "2026-10-20T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B07YDZV8YT",
+      "stock_overrides": {
+        "us:B07YDZV8YT": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "delay",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-9eb548044222021f",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B06XW85TGX",
+      "now": "2026-10-17T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XW85TGX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW85TGX",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 0,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW83BWX",
+          "us:B06XWGZD1C",
+          "us:B06XWMHBT3",
+          "us:B078LDCRS2"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-5cacb605a3d468f1",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XW85TGX",
+      "now": "2026-10-23T00:00:00Z",
+      "request": {
+        "sales_region": "JP",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XW85TGX",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XW85TGX",
+      "stock_overrides": {
+        "us:B06XW85TGX": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XW85TGX"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "sales_region_not_allowed",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-b240ba4ded82a9a2",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XWLT57Q",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "JP",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLT57Q",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "washed navy",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWLT57Q",
+      "stock_overrides": {
+        "us:B06XWLT57Q": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWLT57Q"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "sales_region_not_allowed",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-11bd0d1f342a12d9",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B0775BWWRJ",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775BWWRJ",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "orange heather",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-22T03:00:00Z",
+          "deadline_at": "2026-10-28T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B0775BWWRJ",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 0,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9KP27"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "minimum_differences": 2,
+        "must_read_alternatives": false,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "这笔缺货替代已通过单独的具体确认。请核验已确认的替代服装与订单规则，再读取运输事件并检查旧提案；失效时按原预算和交期修订并引用新方案依据，不改变已确认条件或直接确认订单。",
+      "approved_sku": "us:B06XW9KP27"
+    },
+    {
+      "id": "AC-3dee8cc011216b1b",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B0775BWWRJ",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "orange heather",
+            "size": null
+          }
+        ]
+      },
+      "initial_sku": "us:B0775BWWRJ",
+      "stock_overrides": {
+        "us:B0775BWWRJ": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B0775BWWRJ"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "size_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-8866bccb0c4805c2",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B0775YG12N",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775YG12N",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light pink",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775YG12N",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 0,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XWGYHLZ",
+          "us:B06XWLXFXW",
+          "us:B06XWPMG43",
+          "us:B07756QRP3"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-62e7aa4da8a887bc",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "target_sku": "us:B0775CTCWT",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B0775CTCWT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy heather",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775CTCWT",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 0,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW9KP27",
+          "us:B06XWPQT19",
+          "us:B0775BWWRJ",
+          "us:B0775M8FWT",
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。"
+    },
+    {
+      "id": "AC-6e2899294b98fef7",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWQBJ6N",
+      "now": "2026-10-13T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWQBJ6N",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "L"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-14T03:00:00Z",
+          "deadline_at": "2026-10-20T03:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWQBJ6N",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 0,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWLMYVY"
+        ],
+        "proposal": "revision",
+        "must_read_variant": true,
+        "minimum_differences": 1,
+        "must_read_alternatives": false,
+        "event_read": true,
+        "old_valid": false
+      },
+      "scenario_kind": "cancel",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "这笔缺货替代已通过单独的具体确认。请核验已确认的替代服装与订单规则，再读取运输事件并检查旧提案；失效时按原预算和交期修订并引用新方案依据，不改变已确认条件或直接确认订单。",
+      "approved_sku": "us:B06XWLMYVY"
+    },
+    {
+      "id": "AC-c1ea54e03e67b6d9",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "target_sku": "us:B0775YG12N",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B0775YG12N",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "light pink",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-10T13:00:00Z",
+          "deadline_at": "2026-10-16T13:00:00Z",
+          "budget_cents": 1
+        }
+      },
+      "initial_sku": "us:B0775YG12N",
+      "stock_overrides": {
+        "us:B0775YG12N": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B0775YG12N"
+        ],
+        "proposal": "infeasible",
+        "must_read_variant": true,
+        "infeasibility_certificate": "Every outgoing leg has fixed cost at least 1500 cents, greater than the 1-cent budget."
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验服装与库存后尝试按原预算、交期和运输条件准备提案。如果不能满足，引用无解状态和需要我选择的调整方向，不能私自放宽要求。"
+    },
+    {
+      "id": "AC-c6153bb72e0c847a",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B06XWM3BV1",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWM3BV1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "royal blue",
+            "size": "L",
+            "style_id": "LAB-GT-CREW"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-20T00:00:00Z",
+          "deadline_at": "2026-10-26T00:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWM3BV1",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 0,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 100,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW83BWX",
+          "us:B06XWLMYVY",
+          "us:B06XWP72G7"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true,
+        "no_transport_calls": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。虽然订单需要运输，但替代未确认前不要启动运输规划。"
+    },
+    {
+      "id": "AC-6ae932d8530c2506",
+      "partition": "test",
+      "family": "order_clarification",
+      "target_sku": "us:B078LGK6VW",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": null,
+            "requested_sku": "us:B078LGK6VW",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "red",
+            "size": "XXL"
+          }
+        ]
+      },
+      "initial_sku": "us:B078LGK6VW",
+      "stock_overrides": {
+        "us:B078LGK6VW": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B078LGK6VW"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "quantity_unit_unspecified",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前候选，缺少的订单条件请指出并提供依据，等我补充后再继续。不得把候选资料当作我已经确认的需求，也不要修改要求或准备提案。"
+    },
+    {
+      "id": "AC-ddbaa56b903ec5fa",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B07YDZV8YT",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B07YDZV8YT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy/white, stripe",
+            "size": "M"
+          }
+        ]
+      },
+      "initial_sku": "us:B07YDZV8YT",
+      "stock_overrides": {
+        "us:B07YDZV8YT": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B07YDZV8YT"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "size",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B07YDZV8YT 的尺码。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-e811325e30c3d0b2",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XWMHCG1",
+      "now": "2026-10-15T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHCG1",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XS"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-16T07:00:00Z",
+          "deadline_at": "2026-10-22T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XWMHCG1",
+      "stock_overrides": {
+        "us:B06XWMHCG1": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWMHCG1"
+        ],
+        "proposal": "keep",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": true
+      },
+      "scenario_kind": "unrelated",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-141799294ab69468",
+      "partition": "test",
+      "family": "shipping_revision",
+      "target_sku": "us:B06XW9KP27",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XW9KP27",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "bright blue",
+            "size": "M"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-08T07:00:00Z",
+          "deadline_at": "2026-10-14T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B06XW9KP27",
+      "stock_overrides": {
+        "us:B06XW9KP27": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XW9KP27"
+        ],
+        "proposal": "keep",
+        "must_read_variant": true,
+        "event_read": true,
+        "old_valid": true
+      },
+      "scenario_kind": "unrelated",
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "运输状态可能变化。读取当前事件并检查旧版是否仍然有效；仍有效则保留原版，失效时在原预算交期内修订。引用有效性判断、新旧依据及最终方案费用和到达时间，不确认订单。"
+    },
+    {
+      "id": "AC-8ef89875a32ed0af",
+      "partition": "test",
+      "family": "rule_blocked",
+      "target_sku": "us:B06XWGZD1C",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 4,
+            "unit": "piece",
+            "requested_sku": "us:B06XWGZD1C",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "black",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWGZD1C",
+      "stock_overrides": {
+        "us:B06XWGZD1C": 100
+      },
+      "expected": {
+        "status": "unfulfillable",
+        "selected_skus": [
+          "us:B06XWGZD1C"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "wholesale_minimum_not_met",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核对当前商品订单是否遵守商家模拟规则，并引用具体核验问题。不能更改原地区或数量，不要准备违反规则的提案。"
+    },
+    {
+      "id": "AC-3ca9eab3207decf1",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWMHCG1",
+      "now": "2026-10-05T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 22,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHCG1",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "grey heather",
+            "size": "XS"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWMHCG1",
+      "stock_overrides": {
+        "us:B06XWMHCG1": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWMHCG1"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "color",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWMHCG1 的颜色。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-0c52652d9843fd1b",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XWMJ7G5",
+      "now": "2026-10-03T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMJ7G5",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "white",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-04T00:00:00Z",
+          "deadline_at": "2026-10-26T00:00:00Z",
+          "budget_cents": 15000
+        }
+      },
+      "initial_sku": "us:B06XWMJ7G5",
+      "stock_overrides": {
+        "us:B06XWMJ7G5": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWMJ7G5"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-41136a52496d351b",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XWM3BV1",
+      "now": "2026-10-09T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B06XWM3BV1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "royal blue",
+            "size": "L"
+          },
+          {
+            "line_id": "2",
+            "quantity": 6,
+            "unit": "piece",
+            "requested_sku": "us:B06XWM3BV1",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "royal blue",
+            "size": "L"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XWM3BV1": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWM3BV1"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-34db18aed0eb75d0",
+      "partition": "test",
+      "family": "shipping_normal",
+      "target_sku": "us:B06XWMHBT3",
+      "now": "2026-10-21T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 20,
+            "unit": "piece",
+            "requested_sku": "us:B06XWMHBT3",
+            "brand": "Goodthreads",
+            "category": "t_shirt",
+            "color": "light blue",
+            "size": "XL"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-22T03:00:00Z",
+          "deadline_at": "2026-11-13T03:00:00Z",
+          "budget_cents": 15000
+        }
+      },
+      "initial_sku": "us:B06XWMHBT3",
+      "stock_overrides": {
+        "us:B06XWMHBT3": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWMHBT3"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "核验当前服装、库存和规则，满足后按原预算与交期准备可确认的运输提案，引用费用、到达时间和核验结果。不要直接确认订单。"
+    },
+    {
+      "id": "AC-e8028fc0e71187bf",
+      "partition": "test",
+      "family": "combined",
+      "target_sku": "us:B07YDZV8YT",
+      "now": "2026-10-07T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": true,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B07YDZV8YT",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "navy/white, stripe",
+            "size": "M",
+            "style_id": "LAB-AE-CREW-2PACK"
+          }
+        ],
+        "shipping": {
+          "destination": "DE-DC",
+          "ready_at": "2026-10-08T07:00:00Z",
+          "deadline_at": "2026-10-14T07:00:00Z",
+          "budget_cents": 30000
+        }
+      },
+      "initial_sku": "us:B07YDZV8YT",
+      "stock_overrides": {
+        "us:B06XW4B474": 100,
+        "us:B06XW83BWX": 100,
+        "us:B06XW85TGX": 100,
+        "us:B06XW9N3S5": 100,
+        "us:B06XWGZD1C": 100,
+        "us:B06XWLMYVY": 100,
+        "us:B06XWM3BV1": 100,
+        "us:B06XWMFY34": 100,
+        "us:B06XWMHBT3": 100,
+        "us:B06XWMJ7G5": 100,
+        "us:B06XWMKR2F": 100,
+        "us:B06XWP72G7": 100,
+        "us:B06XWPR5RY": 100,
+        "us:B06XW9KPZH": 100,
+        "us:B06XWLT57Q": 100,
+        "us:B06XWMJ9XF": 100,
+        "us:B06XWN9SP5": 100,
+        "us:B06XWQBJ6N": 100,
+        "us:B078LDCRS2": 100,
+        "us:B078LGK6VW": 100,
+        "us:B078LGTSP1": 100,
+        "us:B06XW9KP27": 100,
+        "us:B06XWGYHLZ": 100,
+        "us:B06XWLXFXW": 100,
+        "us:B06XWMHCG1": 100,
+        "us:B06XWN7P33": 100,
+        "us:B06XWPMG43": 100,
+        "us:B06XWPMG5D": 100,
+        "us:B06XWPQT19": 100,
+        "us:B07756QRP3": 100,
+        "us:B0775BWWRJ": 100,
+        "us:B0775CTCWT": 100,
+        "us:B0775G5YS3": 100,
+        "us:B0775M8FWT": 100,
+        "us:B0775YG12N": 100,
+        "us:B07YDZV8YT": 0,
+        "us:B07YF2J62X": 100
+      },
+      "expected": {
+        "status": "needs_clarification",
+        "selected_skus": [
+          "us:B06XW9KP27",
+          "us:B06XWPQT19",
+          "us:B0775BWWRJ",
+          "us:B0775CTCWT",
+          "us:B0775M8FWT"
+        ],
+        "proposal": "none",
+        "must_read_variant": false,
+        "issue": "substitution_requires_confirmation",
+        "minimum_differences": 2,
+        "must_read_alternatives": true,
+        "no_transport_calls": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "当前服装缺货时，找出与我明确要求差异最少且库存、单位、销售规则合格的替代，选入供我审阅。改变任何明确要求都要等我单独确认，引用替代差异和核验问题；不要准备提案。虽然订单需要运输，但替代未确认前不要启动运输规划。"
+    },
+    {
+      "id": "AC-689679bf26305918",
+      "partition": "test",
+      "family": "order_ready",
+      "target_sku": "us:B06XWLXFXW",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLXFXW",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "dark green",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": null,
+      "stock_overrides": {
+        "us:B06XWLXFXW": 100
+      },
+      "expected": {
+        "status": "ready",
+        "selected_skus": [
+          "us:B06XWLXFXW"
+        ],
+        "proposal": "new",
+        "must_read_variant": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "按已确认的服装订单要求选择具体变体并核验，合格后生成不需要运输的订单提案，引用核验状态和变体依据。不要确认订单。"
+    },
+    {
+      "id": "AC-cbfaf3cd8781886a",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B0775G5YS3",
+      "now": "2026-10-19T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B0775G5YS3",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "charcoal heather",
+            "size": "S"
+          }
+        ]
+      },
+      "initial_sku": "us:B0775G5YS3",
+      "stock_overrides": {
+        "us:B0775G5YS3": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B0775G5YS3"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "material",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B0775G5YS3 的材质原文依据。给出对应来源字段，不修改订单、候选或任何提案。"
+    },
+    {
+      "id": "AC-1af4e5fd6af8d281",
+      "partition": "test",
+      "family": "product_info",
+      "target_sku": "us:B06XWLXFXW",
+      "now": "2026-10-25T00:00:00Z",
+      "request": {
+        "sales_region": "DE",
+        "wholesale": true,
+        "needs_shipping": false,
+        "lines": [
+          {
+            "line_id": "1",
+            "quantity": 24,
+            "unit": "piece",
+            "requested_sku": "us:B06XWLXFXW",
+            "brand": "Amazon Essentials",
+            "category": "t_shirt",
+            "color": "dark green",
+            "size": "XL"
+          }
+        ]
+      },
+      "initial_sku": "us:B06XWLXFXW",
+      "stock_overrides": {
+        "us:B06XWLXFXW": 100
+      },
+      "expected": {
+        "status": "information",
+        "selected_skus": [
+          "us:B06XWLXFXW"
+        ],
+        "proposal": "none",
+        "must_read_variant": true,
+        "info_field": "material",
+        "unchanged": true
+      },
+      "scenario_kind": null,
+      "simulation_notice": "Developer-authored simulated business scenario over public product text.",
+      "task": "只查阅 us:B06XWLXFXW 的材质原文依据。给出对应来源字段，不修改订单、候选或任何提案。"
+    }
+  ],
+  "families": [
+    "product_info",
+    "order_ready",
+    "order_clarification",
+    "rule_blocked",
+    "shortage_alternative",
+    "shipping_normal",
+    "shipping_infeasible",
+    "shipping_revision",
+    "combined"
+  ],
+  "target_pool": [
+    "us:B07YDZV8YT",
+    "us:B06XWMHCG1",
+    "us:B06XWPMG5D",
+    "us:B06XWQBJ6N",
+    "us:B0775M8FWT",
+    "us:B06XW83BWX",
+    "us:B06XWM3BV1",
+    "us:B0775BWWRJ",
+    "us:B0775G5YS3",
+    "us:B06XWLT57Q",
+    "us:B06XWGZD1C",
+    "us:B06XWLXFXW",
+    "us:B078LGK6VW",
+    "us:B0775CTCWT",
+    "us:B06XW9N3S5",
+    "us:B06XWMJ7G5",
+    "us:B06XWGYHLZ",
+    "us:B06XWN9SP5",
+    "us:B078LGTSP1",
+    "us:B06XW85TGX",
+    "us:B06XW9KPZH",
+    "us:B0775YG12N",
+    "us:B06XWPMG43",
+    "us:B06XW9KP27",
+    "us:B06XWMHBT3",
+    "us:B06XWPR5RY"
+  ],
+  "development_target_exclusions": [
+    "us:B06XWMJ9XF",
+    "us:B06XWMKR2F",
+    "us:B06XWPQT19"
+  ],
+  "limitations": "Synthetic developer-authored tasks; same small catalogue is searchable across splits. No live merchant outcomes or public benchmark scores are asserted."
+}

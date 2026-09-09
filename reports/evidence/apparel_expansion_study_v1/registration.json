@@ -1,0 +1,1316 @@
+{
+  "registered_at": "2026-09-08T21:07:32.043169+00:00",
+  "cases": 72,
+  "families": 18,
+  "runs": 216,
+  "model": "gpt-5.6-luna",
+  "arms": [
+    "single",
+    "coordinator",
+    "on_demand"
+  ],
+  "jobs": [
+    [
+      "EX-06-2",
+      "single"
+    ],
+    [
+      "EX-06-2",
+      "coordinator"
+    ],
+    [
+      "EX-06-2",
+      "on_demand"
+    ],
+    [
+      "EX-15-2",
+      "single"
+    ],
+    [
+      "EX-15-2",
+      "on_demand"
+    ],
+    [
+      "EX-15-2",
+      "coordinator"
+    ],
+    [
+      "EX-15-3",
+      "coordinator"
+    ],
+    [
+      "EX-15-3",
+      "single"
+    ],
+    [
+      "EX-15-3",
+      "on_demand"
+    ],
+    [
+      "EX-14-1",
+      "coordinator"
+    ],
+    [
+      "EX-14-1",
+      "on_demand"
+    ],
+    [
+      "EX-14-1",
+      "single"
+    ],
+    [
+      "EX-04-0",
+      "on_demand"
+    ],
+    [
+      "EX-04-0",
+      "single"
+    ],
+    [
+      "EX-04-0",
+      "coordinator"
+    ],
+    [
+      "EX-16-3",
+      "on_demand"
+    ],
+    [
+      "EX-16-3",
+      "coordinator"
+    ],
+    [
+      "EX-16-3",
+      "single"
+    ],
+    [
+      "EX-00-0",
+      "single"
+    ],
+    [
+      "EX-00-0",
+      "coordinator"
+    ],
+    [
+      "EX-00-0",
+      "on_demand"
+    ],
+    [
+      "EX-03-1",
+      "single"
+    ],
+    [
+      "EX-03-1",
+      "on_demand"
+    ],
+    [
+      "EX-03-1",
+      "coordinator"
+    ],
+    [
+      "EX-04-1",
+      "coordinator"
+    ],
+    [
+      "EX-04-1",
+      "single"
+    ],
+    [
+      "EX-04-1",
+      "on_demand"
+    ],
+    [
+      "EX-03-0",
+      "coordinator"
+    ],
+    [
+      "EX-03-0",
+      "on_demand"
+    ],
+    [
+      "EX-03-0",
+      "single"
+    ],
+    [
+      "EX-11-1",
+      "on_demand"
+    ],
+    [
+      "EX-11-1",
+      "single"
+    ],
+    [
+      "EX-11-1",
+      "coordinator"
+    ],
+    [
+      "EX-02-0",
+      "on_demand"
+    ],
+    [
+      "EX-02-0",
+      "coordinator"
+    ],
+    [
+      "EX-02-0",
+      "single"
+    ],
+    [
+      "EX-07-1",
+      "single"
+    ],
+    [
+      "EX-07-1",
+      "coordinator"
+    ],
+    [
+      "EX-07-1",
+      "on_demand"
+    ],
+    [
+      "EX-01-0",
+      "single"
+    ],
+    [
+      "EX-01-0",
+      "on_demand"
+    ],
+    [
+      "EX-01-0",
+      "coordinator"
+    ],
+    [
+      "EX-16-2",
+      "coordinator"
+    ],
+    [
+      "EX-16-2",
+      "single"
+    ],
+    [
+      "EX-16-2",
+      "on_demand"
+    ],
+    [
+      "EX-06-3",
+      "coordinator"
+    ],
+    [
+      "EX-06-3",
+      "on_demand"
+    ],
+    [
+      "EX-06-3",
+      "single"
+    ],
+    [
+      "EX-17-3",
+      "on_demand"
+    ],
+    [
+      "EX-17-3",
+      "single"
+    ],
+    [
+      "EX-17-3",
+      "coordinator"
+    ],
+    [
+      "EX-16-1",
+      "on_demand"
+    ],
+    [
+      "EX-16-1",
+      "coordinator"
+    ],
+    [
+      "EX-16-1",
+      "single"
+    ],
+    [
+      "EX-13-3",
+      "single"
+    ],
+    [
+      "EX-13-3",
+      "coordinator"
+    ],
+    [
+      "EX-13-3",
+      "on_demand"
+    ],
+    [
+      "EX-12-2",
+      "single"
+    ],
+    [
+      "EX-12-2",
+      "on_demand"
+    ],
+    [
+      "EX-12-2",
+      "coordinator"
+    ],
+    [
+      "EX-03-2",
+      "coordinator"
+    ],
+    [
+      "EX-03-2",
+      "single"
+    ],
+    [
+      "EX-03-2",
+      "on_demand"
+    ],
+    [
+      "EX-05-3",
+      "coordinator"
+    ],
+    [
+      "EX-05-3",
+      "on_demand"
+    ],
+    [
+      "EX-05-3",
+      "single"
+    ],
+    [
+      "EX-17-0",
+      "on_demand"
+    ],
+    [
+      "EX-17-0",
+      "single"
+    ],
+    [
+      "EX-17-0",
+      "coordinator"
+    ],
+    [
+      "EX-10-0",
+      "on_demand"
+    ],
+    [
+      "EX-10-0",
+      "coordinator"
+    ],
+    [
+      "EX-10-0",
+      "single"
+    ],
+    [
+      "EX-09-3",
+      "single"
+    ],
+    [
+      "EX-09-3",
+      "coordinator"
+    ],
+    [
+      "EX-09-3",
+      "on_demand"
+    ],
+    [
+      "EX-04-2",
+      "single"
+    ],
+    [
+      "EX-04-2",
+      "on_demand"
+    ],
+    [
+      "EX-04-2",
+      "coordinator"
+    ],
+    [
+      "EX-13-2",
+      "coordinator"
+    ],
+    [
+      "EX-13-2",
+      "single"
+    ],
+    [
+      "EX-13-2",
+      "on_demand"
+    ],
+    [
+      "EX-07-0",
+      "coordinator"
+    ],
+    [
+      "EX-07-0",
+      "on_demand"
+    ],
+    [
+      "EX-07-0",
+      "single"
+    ],
+    [
+      "EX-05-2",
+      "on_demand"
+    ],
+    [
+      "EX-05-2",
+      "single"
+    ],
+    [
+      "EX-05-2",
+      "coordinator"
+    ],
+    [
+      "EX-14-2",
+      "on_demand"
+    ],
+    [
+      "EX-14-2",
+      "coordinator"
+    ],
+    [
+      "EX-14-2",
+      "single"
+    ],
+    [
+      "EX-08-1",
+      "single"
+    ],
+    [
+      "EX-08-1",
+      "coordinator"
+    ],
+    [
+      "EX-08-1",
+      "on_demand"
+    ],
+    [
+      "EX-05-1",
+      "single"
+    ],
+    [
+      "EX-05-1",
+      "on_demand"
+    ],
+    [
+      "EX-05-1",
+      "coordinator"
+    ],
+    [
+      "EX-15-1",
+      "coordinator"
+    ],
+    [
+      "EX-15-1",
+      "single"
+    ],
+    [
+      "EX-15-1",
+      "on_demand"
+    ],
+    [
+      "EX-05-0",
+      "coordinator"
+    ],
+    [
+      "EX-05-0",
+      "on_demand"
+    ],
+    [
+      "EX-05-0",
+      "single"
+    ],
+    [
+      "EX-00-3",
+      "on_demand"
+    ],
+    [
+      "EX-00-3",
+      "single"
+    ],
+    [
+      "EX-00-3",
+      "coordinator"
+    ],
+    [
+      "EX-06-1",
+      "on_demand"
+    ],
+    [
+      "EX-06-1",
+      "coordinator"
+    ],
+    [
+      "EX-06-1",
+      "single"
+    ],
+    [
+      "EX-10-3",
+      "single"
+    ],
+    [
+      "EX-10-3",
+      "coordinator"
+    ],
+    [
+      "EX-10-3",
+      "on_demand"
+    ],
+    [
+      "EX-13-1",
+      "single"
+    ],
+    [
+      "EX-13-1",
+      "on_demand"
+    ],
+    [
+      "EX-13-1",
+      "coordinator"
+    ],
+    [
+      "EX-16-0",
+      "coordinator"
+    ],
+    [
+      "EX-16-0",
+      "single"
+    ],
+    [
+      "EX-16-0",
+      "on_demand"
+    ],
+    [
+      "EX-04-3",
+      "coordinator"
+    ],
+    [
+      "EX-04-3",
+      "on_demand"
+    ],
+    [
+      "EX-04-3",
+      "single"
+    ],
+    [
+      "EX-12-1",
+      "on_demand"
+    ],
+    [
+      "EX-12-1",
+      "single"
+    ],
+    [
+      "EX-12-1",
+      "coordinator"
+    ],
+    [
+      "EX-17-2",
+      "on_demand"
+    ],
+    [
+      "EX-17-2",
+      "coordinator"
+    ],
+    [
+      "EX-17-2",
+      "single"
+    ],
+    [
+      "EX-01-1",
+      "single"
+    ],
+    [
+      "EX-01-1",
+      "coordinator"
+    ],
+    [
+      "EX-01-1",
+      "on_demand"
+    ],
+    [
+      "EX-08-2",
+      "single"
+    ],
+    [
+      "EX-08-2",
+      "on_demand"
+    ],
+    [
+      "EX-08-2",
+      "coordinator"
+    ],
+    [
+      "EX-14-0",
+      "coordinator"
+    ],
+    [
+      "EX-14-0",
+      "single"
+    ],
+    [
+      "EX-14-0",
+      "on_demand"
+    ],
+    [
+      "EX-15-0",
+      "coordinator"
+    ],
+    [
+      "EX-15-0",
+      "on_demand"
+    ],
+    [
+      "EX-15-0",
+      "single"
+    ],
+    [
+      "EX-02-1",
+      "on_demand"
+    ],
+    [
+      "EX-02-1",
+      "single"
+    ],
+    [
+      "EX-02-1",
+      "coordinator"
+    ],
+    [
+      "EX-03-3",
+      "on_demand"
+    ],
+    [
+      "EX-03-3",
+      "coordinator"
+    ],
+    [
+      "EX-03-3",
+      "single"
+    ],
+    [
+      "EX-10-2",
+      "single"
+    ],
+    [
+      "EX-10-2",
+      "coordinator"
+    ],
+    [
+      "EX-10-2",
+      "on_demand"
+    ],
+    [
+      "EX-11-0",
+      "single"
+    ],
+    [
+      "EX-11-0",
+      "on_demand"
+    ],
+    [
+      "EX-11-0",
+      "coordinator"
+    ],
+    [
+      "EX-12-0",
+      "coordinator"
+    ],
+    [
+      "EX-12-0",
+      "single"
+    ],
+    [
+      "EX-12-0",
+      "on_demand"
+    ],
+    [
+      "EX-12-3",
+      "coordinator"
+    ],
+    [
+      "EX-12-3",
+      "on_demand"
+    ],
+    [
+      "EX-12-3",
+      "single"
+    ],
+    [
+      "EX-17-1",
+      "on_demand"
+    ],
+    [
+      "EX-17-1",
+      "single"
+    ],
+    [
+      "EX-17-1",
+      "coordinator"
+    ],
+    [
+      "EX-00-2",
+      "on_demand"
+    ],
+    [
+      "EX-00-2",
+      "coordinator"
+    ],
+    [
+      "EX-00-2",
+      "single"
+    ],
+    [
+      "EX-11-3",
+      "single"
+    ],
+    [
+      "EX-11-3",
+      "coordinator"
+    ],
+    [
+      "EX-11-3",
+      "on_demand"
+    ],
+    [
+      "EX-00-1",
+      "single"
+    ],
+    [
+      "EX-00-1",
+      "on_demand"
+    ],
+    [
+      "EX-00-1",
+      "coordinator"
+    ],
+    [
+      "EX-09-2",
+      "coordinator"
+    ],
+    [
+      "EX-09-2",
+      "single"
+    ],
+    [
+      "EX-09-2",
+      "on_demand"
+    ],
+    [
+      "EX-07-3",
+      "coordinator"
+    ],
+    [
+      "EX-07-3",
+      "on_demand"
+    ],
+    [
+      "EX-07-3",
+      "single"
+    ],
+    [
+      "EX-13-0",
+      "on_demand"
+    ],
+    [
+      "EX-13-0",
+      "single"
+    ],
+    [
+      "EX-13-0",
+      "coordinator"
+    ],
+    [
+      "EX-09-0",
+      "on_demand"
+    ],
+    [
+      "EX-09-0",
+      "coordinator"
+    ],
+    [
+      "EX-09-0",
+      "single"
+    ],
+    [
+      "EX-07-2",
+      "single"
+    ],
+    [
+      "EX-07-2",
+      "coordinator"
+    ],
+    [
+      "EX-07-2",
+      "on_demand"
+    ],
+    [
+      "EX-01-2",
+      "single"
+    ],
+    [
+      "EX-01-2",
+      "on_demand"
+    ],
+    [
+      "EX-01-2",
+      "coordinator"
+    ],
+    [
+      "EX-10-1",
+      "coordinator"
+    ],
+    [
+      "EX-10-1",
+      "single"
+    ],
+    [
+      "EX-10-1",
+      "on_demand"
+    ],
+    [
+      "EX-09-1",
+      "coordinator"
+    ],
+    [
+      "EX-09-1",
+      "on_demand"
+    ],
+    [
+      "EX-09-1",
+      "single"
+    ],
+    [
+      "EX-02-3",
+      "on_demand"
+    ],
+    [
+      "EX-02-3",
+      "single"
+    ],
+    [
+      "EX-02-3",
+      "coordinator"
+    ],
+    [
+      "EX-06-0",
+      "on_demand"
+    ],
+    [
+      "EX-06-0",
+      "coordinator"
+    ],
+    [
+      "EX-06-0",
+      "single"
+    ],
+    [
+      "EX-11-2",
+      "single"
+    ],
+    [
+      "EX-11-2",
+      "coordinator"
+    ],
+    [
+      "EX-11-2",
+      "on_demand"
+    ],
+    [
+      "EX-08-3",
+      "single"
+    ],
+    [
+      "EX-08-3",
+      "on_demand"
+    ],
+    [
+      "EX-08-3",
+      "coordinator"
+    ],
+    [
+      "EX-08-0",
+      "coordinator"
+    ],
+    [
+      "EX-08-0",
+      "single"
+    ],
+    [
+      "EX-08-0",
+      "on_demand"
+    ],
+    [
+      "EX-01-3",
+      "coordinator"
+    ],
+    [
+      "EX-01-3",
+      "on_demand"
+    ],
+    [
+      "EX-01-3",
+      "single"
+    ],
+    [
+      "EX-02-2",
+      "on_demand"
+    ],
+    [
+      "EX-02-2",
+      "single"
+    ],
+    [
+      "EX-02-2",
+      "coordinator"
+    ],
+    [
+      "EX-14-3",
+      "on_demand"
+    ],
+    [
+      "EX-14-3",
+      "coordinator"
+    ],
+    [
+      "EX-14-3",
+      "single"
+    ]
+  ],
+  "seed": 26090972,
+  "arm_position_balance": {
+    "single": [
+      24,
+      24,
+      24
+    ],
+    "coordinator": [
+      24,
+      24,
+      24
+    ],
+    "on_demand": [
+      24,
+      24,
+      24
+    ]
+  },
+  "catalog_variants": 277,
+  "new_catalog_variants": 240,
+  "distinct_initial_inspection_or_approved_targets": 83,
+  "cases_sha256": "3f560dd93cc57886387c47124e3b867772dde26cc2c47c4e046ab07b9ce91c4b",
+  "fixture_sha256": "39cb4ed368b2c845995c12eb04b1614ad04acaed8be4e08230b008101cc513ad",
+  "source_sha256": {
+    "apparel_fulfillment/action_contract.py": "fc9010101328d722a845523e675196a1b8fb076adcce1343b40679d79a66e21c",
+    "apparel_fulfillment/agent.py": "db457be82ae57b33aa4b4bf12f823f2724e4c6999cf82bfc8836bffc61ee1016",
+    "apparel_fulfillment/agent_candidate_v4.py": "02ee8b82c3c9314340966d01f3d8866f2f75c214648a1a6e33aab64e96b7d3bd",
+    "apparel_fulfillment/agent_evidence_v2.py": "b1ace833ae3e5733670304df562a0a157e8af87f295b6189ffe2452ae1bad6b3",
+    "apparel_fulfillment/agent_source_v5.py": "1524c8cf2d3064d56af9aa084175c8407958c3e8f5d6c026e800443abaa24e70",
+    "apparel_fulfillment/agent_state_v3.py": "b0507eab3ce493f01c2d7a8d5a65801d39406dda85eb777f076bd923695cb8a9",
+    "apparel_fulfillment/candidate_search.py": "782ee01454114af86dc5e445315461f7572fa31ee4a1c576e8dfbd1500632bbd",
+    "apparel_fulfillment/orders.py": "69c2e1bf6d82cd375669949e4ffb4aa14a9a383bc2d7ab56436e8fada7e09897",
+    "apparel_fulfillment/route_audit.py": "db68c5762e040f333d644d421a6a5d5030033813b2af8a506899ca51d91fb2b3",
+    "apparel_fulfillment/source_review.py": "e39f2237bc2134ce6b609d3d0ba39075173828c2a6bd2cb2de3dcbc66caf2250",
+    "apparel_fulfillment/store.py": "0370ee5932056f103b30cdc5e33c4b646c63cea89335dcf01d126074fca9cde4",
+    "apparel_fulfillment/transport.py": "348189bd8d69d03580f9cfd749a74d8cc5b5f734acbf4dfb01fb99c5657b9daa",
+    "commerce_lab/retrieval.py": "eabb5aacda27a7f9a365b207acbc259f76afe033434aff706a4d31a639920dfc",
+    "data/apparel_corridor_v1.json": "f111d115913aaf3a7f00a423a1869fa5636a7452f1b827886698695004b7c5ef",
+    "data/apparel_fulfillment_expansion_v1.json": "09ed41394345f015c11dcd9b693d379b5d7e05949b0d199476173b1204bd26e2",
+    "data/apparel_fulfillment_v1.json": "51c68c785a90fb9795defa0fb3b1c45614f36c75e5aadb94531fd8960f90cd7c",
+    "delivery_budget.py": "c17a4b9c1a507f192bc8c94fd7f182ffd6c3bf2bdbfafbac78fafe36d8ce4e53",
+    "delivery_budget_policy.json": "9aa0220b866a4670c437e31241d479f32f8ceef07cec9a23d9371abf531b78c7",
+    "evidence/apparel_expansion_sources_v1/audit.json": "616822fc8a99ae33b581dc707fb4ff5aa6da1e70366f32b66a8987e4e220efc0",
+    "evidence/apparel_expansion_sources_v1/manifest.json": "a7d4b3987e8d476d46bc3d190bd4d457c61348461358522e0c863d1e5fd3f523",
+    "evidence/apparel_expansion_sources_v1/raw_records.json": "0391f4c91142c1014231d0cb5999809fc6e56c18c6c39bc543fbc470b64bee76",
+    "research/APPAREL_CANDIDATE_VALIDATION_PROTOCOL.md": "d4c1f5d1a2467e09a1a91ba17669e791cd1ab7ad901dbc6cf52a7ae62c24b028",
+    "research/APPAREL_EXPANSION_PROTOCOL.md": "de0f4a19227a9ccfb7e87133c214f57fbc8b5699d0832a7e17a48acee91dba43",
+    "research/APPAREL_SOURCE_REVIEW_PROTOCOL.md": "9c22cd9e0bf735acfa4734e8747cce1efdf601a20185e5a5354ff6381b0e3041",
+    "research/apparel_candidate_validation.py": "cab1cb562c4b9300d5ac525ad50187be3ce3b0ed41f42ed7d476e5ba16788127",
+    "research/apparel_expansion_cases.py": "ecdb05a79fa3c536fd5e23ed99efe53d841a81f887bb0d6901b3683c5ba30ad7",
+    "research/apparel_expansion_data.py": "bf7cc3731f614a79d275d288a8a043b8f9c3f5015b151574c172051c05fa3912",
+    "research/apparel_expansion_evaluation.py": "380f6c64fc5829fb0fd58ecd1e8831512d67760a6fa670cc7089d532ed3c830f",
+    "research/apparel_expansion_study.py": "5e619ad6238e9847654e876f9cf5a59a7c82086490a8da78e8f9482ba7b20ab4",
+    "research/apparel_source_validation.py": "0c2a2cbd82f5c43dcae871c83ffb544ac2ebfe03467b3e408aaeb69048f4f7db",
+    "research/audit_apparel_candidate_validation.py": "02f5238aebdce7055837c534085775aca19115f3efd45da129d2a3079879f961",
+    "research/audit_apparel_expansion_sources.py": "1256be39790e11167d109522a08fb6e94f213e3728a5dbfb7bd46d9025c0ea18",
+    "research/model_client.py": "ae2563703d4ea9f212cc2b00c7525ddd846e521fd6a90b2e47279b5be48979b2",
+    "research/provider_gate.py": "a877a3945032f9be88e58b30f4676da899afbe8ae78dde0f682a1b1348916629",
+    "research/rate_card.json": "03c5e5dbf42520341a079477cd44e8f8ea43b63282b26af38d183457c759bbf4",
+    "research/tls_transport.py": "35153e09293eb962da2babb5d90bed11f17029a6b485469cb0f6e46214d45aa9",
+    "serving/reranker.py": "f89f7b69121e827c60caffc1c6ac8587749119f192e3ca2ba101ff5e28947b9c",
+    "tests/test_apparel_expansion_evaluation.py": "03864e690e2bfbb902006eb11b4e43f7012b1edf2c8123fe409757650879245d",
+    "tests/test_apparel_source_review.py": "ff0ed6289c8579904f5238b3a2a3367fdbacddbfca890b64db46b0ee57d10b63"
+  },
+  "initial_sha256": {
+    "initial/EX-00-0/operations.sqlite": "e879dde50adc86489c044936457fa2b51a4640cbca41e97b07578202ee249e65",
+    "initial/EX-00-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-00-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-00-0/seed.json": "c047151a0f5bd61699964c0cca8f5446290b749e1ca9dde7a543e0acdefda2e0",
+    "initial/EX-00-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-00-1/operations.sqlite": "3756d0ff144f55017ae176cbf23068ae3d89ed98fe92f6a1a3b88e62e58c2a7d",
+    "initial/EX-00-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-00-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-00-1/seed.json": "efcd37dba262a478c07677053a1eeec200ec2a1014394f45a03b17fb4985f590",
+    "initial/EX-00-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-00-2/operations.sqlite": "692a9449334fa2bfef5a411bf482ca06e13bffaaeb3d151c4688413600602b51",
+    "initial/EX-00-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-00-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-00-2/seed.json": "d866fe2a0d63c3e36a9af93a65ac3e366cec5b335989a776a372ba42655a12fd",
+    "initial/EX-00-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-00-3/operations.sqlite": "60d02ff694253b59ec66d1f2b90097254c3ffbdb57faaa76804476b3c2758532",
+    "initial/EX-00-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-00-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-00-3/seed.json": "c5771d8cfc5157df825027d823ab64c8b0d6b63c2e2d6a028b35ca561f5dc86a",
+    "initial/EX-00-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-01-0/operations.sqlite": "df50d3af776c14befa32eb87dc8209ff65c9053cc1d8c0a98a781bdc522a0bdd",
+    "initial/EX-01-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-01-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-01-0/seed.json": "03e500cdae7702233fc32d61fb6a5d99ada07737128cda419cc6847aa5279f23",
+    "initial/EX-01-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-01-1/operations.sqlite": "fa81b2af023a576165932ea572b5dcf714f19ff13881cac90cb601f3edf6cf70",
+    "initial/EX-01-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-01-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-01-1/seed.json": "b9b51b4748c6dafa4acdd5e37b6d784d98174ba191d5f37792b5d2b8de33d1b0",
+    "initial/EX-01-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-01-2/operations.sqlite": "2677f61aab78161ea25503c85377d77986d0c3138486f2eb2a9bb6c082261348",
+    "initial/EX-01-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-01-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-01-2/seed.json": "f63b379d44b4e8b520a2a555acf52a6152256f13190fd774159aca5913fd8ae5",
+    "initial/EX-01-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-01-3/operations.sqlite": "bb2b0a30d85ddd6fcd86a9fb9fe2270322823595d9277781ab0d91a2f546d301",
+    "initial/EX-01-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-01-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-01-3/seed.json": "745392a35073caf60c7200f32ee38e732507cb61e52059c9ffa3b131fd52724c",
+    "initial/EX-01-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-02-0/operations.sqlite": "4a8643abea0a601d2ca6eb4b6afaa503041dd7e8f875b2bad59a41a425597da6",
+    "initial/EX-02-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-02-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-02-0/seed.json": "aa91765107d66f1ddee320b3c6b76166db52b91985f173ac28ea6b5274c619ea",
+    "initial/EX-02-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-02-1/operations.sqlite": "88cade4f4bed155733fda4b8416fb9bf2effd77c73da33e4f0dad297b330ff5e",
+    "initial/EX-02-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-02-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-02-1/seed.json": "bb2a54fc96e7c4a0d0973e8eecc3f50cf86553e768659a731c31e05d0164d2bc",
+    "initial/EX-02-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-02-2/operations.sqlite": "9fe73091bcdfc69916e41f61ad353b4e1db790b3af73dbfd8c41f4501b8a1fa3",
+    "initial/EX-02-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-02-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-02-2/seed.json": "b8d5acb9ea4a5cbdaee0487bb2d94d8f39f58169c38ee4a85c1d74cb7de3ef3e",
+    "initial/EX-02-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-02-3/operations.sqlite": "f3445a7144be18eb83546c61b59b7dce50982469923394a53d07b5beb66a9222",
+    "initial/EX-02-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-02-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-02-3/seed.json": "abb1383ed86194b5e90e50c2d245752f5b407671dac9db4fac3726513920ddc3",
+    "initial/EX-02-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-03-0/operations.sqlite": "9e9482c84ae2f2d677fe3aadeb1403fc3ffda43fe7850cbb62eb16f0921105c7",
+    "initial/EX-03-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-03-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-03-0/seed.json": "c31337daef73fcc653e0f8e8cac4cc5a971e885ef9932b944c688107a16d5659",
+    "initial/EX-03-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-03-1/operations.sqlite": "8c3c2079442614de39327dce021295313493641da28130f051a1d0d06f9d25b8",
+    "initial/EX-03-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-03-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-03-1/seed.json": "e5eb3b3ec5b5b52a836388f10033bea42804a73b1d55fe48f2bfea071c317aba",
+    "initial/EX-03-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-03-2/operations.sqlite": "e4826f560629d31e3ded3306c9906daaf75dadfecb240bf75336a2dd741ae418",
+    "initial/EX-03-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-03-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-03-2/seed.json": "3545b77692cc9e529ac3479da5537f95c36104968cde06b48500787a763674f9",
+    "initial/EX-03-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-03-3/operations.sqlite": "531341ea96753eddac77fd379ad15844196468ef13360960789ce2efaaabc7f6",
+    "initial/EX-03-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-03-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-03-3/seed.json": "501332f9d376a89c4ff461f304c3d119c56915f7d6f22b3f0d73fb58c168aacf",
+    "initial/EX-03-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-04-0/operations.sqlite": "d8605fcd4f2a4fd7aa58ab9286f7ffa8a4774cad4296dac93589685c5aae187c",
+    "initial/EX-04-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-04-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-04-0/seed.json": "1960327fbca591e6db2f02a1c53aacf3aa5a3ab54884dc51e0663b0191a48a9d",
+    "initial/EX-04-0/world.json": "43cab7741f319ceeebf69e8cbe266d2ffc34ab9de546e1f119e65ade7e3cfe79",
+    "initial/EX-04-1/operations.sqlite": "ca7c1afad9a6bef1a02166495dbf0ec3ed4f37d70eb1df823ac6aa6014b4ffef",
+    "initial/EX-04-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-04-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-04-1/seed.json": "9e28d46153cec228826fc6110cc34b0a22486bdcb174844f0d64c8be4d34d605",
+    "initial/EX-04-1/world.json": "c1935b3e819c0063c664e7a1ad1a08051896dab5873d7b6bf719f54026d94462",
+    "initial/EX-04-2/operations.sqlite": "eb88823dd0ad255346c092b963736f336a6dc39bf3570ef2a20a066c885f9709",
+    "initial/EX-04-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-04-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-04-2/seed.json": "4686f9058851c2f4d52788b8736181764f4cd490ece58562c0e3fe92636ab499",
+    "initial/EX-04-2/world.json": "8595d56593ef420e6c4bf542f71ae01dd487a4606557d978b91e0d53a24bcf40",
+    "initial/EX-04-3/operations.sqlite": "e14b1bf8e664ce728ddd402797452992183cacb3a2a341e0025f670eb99bc3ab",
+    "initial/EX-04-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-04-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-04-3/seed.json": "21dbaa06967c57cad7d561ddb09643342b2d4cc40577a96bd5645c54a466f893",
+    "initial/EX-04-3/world.json": "affbe6d89d9db0203a96f050eee3ac3000f7e0a702e9279779418e835bc35b9c",
+    "initial/EX-05-0/operations.sqlite": "4ce02ade8478b28e026ea17ecd7e79ef4edeff54006f18dd55153abbead3be61",
+    "initial/EX-05-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-05-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-05-0/seed.json": "21fc0731f517f9bd32868aa0ad18fef46589e1bc3f518d77d0341c58b86cbab4",
+    "initial/EX-05-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-05-1/operations.sqlite": "d8b7139dc2568d4b8698e891a56e146a8a2b53aebaaded3d74d3400453c6ede5",
+    "initial/EX-05-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-05-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-05-1/seed.json": "0c575ca4dee381373e8fbbef2a7dae7217c89dbc1222de040ffd969185e3c193",
+    "initial/EX-05-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-05-2/operations.sqlite": "df2b5214d1f4dcdc1a9078bcbac64027b081ae20d06140a086b1a961c5b924c0",
+    "initial/EX-05-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-05-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-05-2/seed.json": "21329b7a2c1698cb862bf758648ed3be0bf6f3be5016ae1bf2101477ab2611b8",
+    "initial/EX-05-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-05-3/operations.sqlite": "54d7abfbb107e8ccc23c70049bf25b93b6b551a768ef02083ab3d89941820586",
+    "initial/EX-05-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-05-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-05-3/seed.json": "7627b2fb273e00bd60cd5ccfe337abc79563f2a64a0e871be58536084f514135",
+    "initial/EX-05-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-06-0/operations.sqlite": "0182259c7b5a54eeea1a3ab2e152638149848e452e703483b5a3c47c0f2fe248",
+    "initial/EX-06-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-06-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-06-0/seed.json": "0646c3a3961574032f1fb2d7f8c7843d44eb4090ae044c281f1888492941fa81",
+    "initial/EX-06-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-06-1/operations.sqlite": "de0fcf7bc558919d88f7eb1a90d315d3735bcaba28dcea32d40af4bc2b6a918e",
+    "initial/EX-06-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-06-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-06-1/seed.json": "16dfa397cbc57f859ff4e1fa591d8c89a5ef90e76d953efa3b273119954a0f61",
+    "initial/EX-06-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-06-2/operations.sqlite": "1a1874d188c2f31ce8f1f9672595fbc1fd46ba6e9dc98b15a1309a955f53fc6f",
+    "initial/EX-06-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-06-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-06-2/seed.json": "7f2d044d9a6bcd6d34198cffda50e3db13d2e6fcc9a6ea3e311bf662985a0e9c",
+    "initial/EX-06-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-06-3/operations.sqlite": "eacbef001dc62e4c3df2033d3c272245b3bd2a51782904a9055fbacd55d0cc54",
+    "initial/EX-06-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-06-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-06-3/seed.json": "aade658f7b6817247ad48a0df7934fffabed4c2df8b18276c7fd1c8080fd7f09",
+    "initial/EX-06-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-07-0/operations.sqlite": "9d0aeee765b3a7dafa8f279f7897d05428e5af3042c4178ef25b029be5eebfca",
+    "initial/EX-07-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-07-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-07-0/seed.json": "16526014c16dede4a2616598045989182cd9adb912dcd214b05e1ab4d04e2b6f",
+    "initial/EX-07-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-07-1/operations.sqlite": "54e7898ae25f382a700835ec4bd3abf0724f29b4b53ff28958defaea3bb7fb8d",
+    "initial/EX-07-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-07-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-07-1/seed.json": "fa120f0adb8da9d34fdba8ff73d9f813dedfb0e9c7b1fb24b35fa8d1e0e38701",
+    "initial/EX-07-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-07-2/operations.sqlite": "5e7b6632b57bd670246db68c5a971776b73cbf2175bdaa39198d1d8618d5b67a",
+    "initial/EX-07-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-07-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-07-2/seed.json": "5345f549a9315e39319b3fb9a4d3a21764f6d34faaa072ba4644fb8ecf74b88d",
+    "initial/EX-07-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-07-3/operations.sqlite": "201fe9cf781d0a3f60b75e6598b69200d7c2cce00171f5ebe0a2d7a41c8b36c6",
+    "initial/EX-07-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-07-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-07-3/seed.json": "10fe51c853520c57d081c2516df06e65b254eff41694466224cb6621bc751b6c",
+    "initial/EX-07-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-08-0/operations.sqlite": "bac95698dabdbf86ab92e2a5ad38bd55406feabbd8b5d73752b61fc7f6dd439e",
+    "initial/EX-08-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-08-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-08-0/seed.json": "c42743ae634a7acb5b90fa03b76738a0361c76c8a982a9c9b54536e4765ff838",
+    "initial/EX-08-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-08-1/operations.sqlite": "d066515c029531f58e8aeec8a47636f933a3b1ad732f12d1b9af2156192a4047",
+    "initial/EX-08-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-08-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-08-1/seed.json": "998461b9d38ec9eb62a42ead60259a21fa35cad7d0a536f86b96fc6f030fb560",
+    "initial/EX-08-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-08-2/operations.sqlite": "798697ead101c3c7e6210b6457fdbcb3a301b9b9f50b1949754f76200b90a338",
+    "initial/EX-08-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-08-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-08-2/seed.json": "d34b0aa28b06740d723b9d4a8d9e8a74c17bf97059d55333e8a9715638b76b32",
+    "initial/EX-08-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-08-3/operations.sqlite": "c55459008ba36f66d65997687416e8e1558708a3283bf8fd5c80d058655d18d9",
+    "initial/EX-08-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-08-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-08-3/seed.json": "faa0f03f5b5736dafd49d0b1bd666e04282f6f5c4ee26d8e3107a33521edd357",
+    "initial/EX-08-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-09-0/operations.sqlite": "e1a81a65d809981e6077b20f906788025c53c22670759e1ad455b4fb0569a5e5",
+    "initial/EX-09-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-09-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-09-0/seed.json": "38d43e6bff1598cbc3dfc345ab46ea8fc1645c4f46f9c2078fd289da71effb14",
+    "initial/EX-09-0/world.json": "f5622f2c55fd43901ca3beabf90eab5319d0295364be3f4bd07ba0f9d3278109",
+    "initial/EX-09-1/operations.sqlite": "31e8cfcf3cae1faca5ed2176d7a87373ab3de7d9e0f7603f31c5445c80c73147",
+    "initial/EX-09-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-09-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-09-1/seed.json": "ca15cbaf6795a841130c5456f9e5eae0966e966a20d875986e1a4b845819f593",
+    "initial/EX-09-1/world.json": "bc5f46ca96193d9a1e2cbd429addbe6f8a33670bcb725cd4e696e4a55b16b76a",
+    "initial/EX-09-2/operations.sqlite": "e627a91351280c2085389d4c68adc790738bd7b07aa817f235211a2a0f9ad860",
+    "initial/EX-09-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-09-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-09-2/seed.json": "5929adbc17e9351fa98e5fffe1d86577295f5f68835414536bd2930a76f9aa92",
+    "initial/EX-09-2/world.json": "e835b767b344a97aa288e2c10d302515c10579ab9c7d34724347c07c43d86751",
+    "initial/EX-09-3/operations.sqlite": "b55a546568f0b8937cc5cb5df7aa5560446f6c76112fedcf4313188e811f8ac9",
+    "initial/EX-09-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-09-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-09-3/seed.json": "5eec7870c6cec6d582c59be0dd7e00154250cb533f2a52482967d100ceb05791",
+    "initial/EX-09-3/world.json": "12983d5f0a8fa4b5b0d1ccbadbcb987d460c99e5cb7085808fe356671ed61317",
+    "initial/EX-10-0/operations.sqlite": "bb189fe766cd3f1cbed4dab5dc5233d55d06b6332297ed2d57127e38e9249b8d",
+    "initial/EX-10-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-10-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-10-0/seed.json": "52e49a7998b1e54a37be8d82e09a184956b06a9587d813f19766301a19ff591f",
+    "initial/EX-10-0/world.json": "1c0a6d3f21d7559c103ee2a37719d652058df81db47ab85803b7d68b015e1ca8",
+    "initial/EX-10-1/operations.sqlite": "04842b23d8aa19e3c12c30ec06995d82d088fee1489aeba7ad49ceff5311ef13",
+    "initial/EX-10-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-10-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-10-1/seed.json": "80f0b9f95ee3281e3e0c7aab625db4e0b449227c7efb8eedb543e19696381b41",
+    "initial/EX-10-1/world.json": "d12442a7bba874fa450576d0d78ae85df81cb18a1e05de77a1d365af7018231d",
+    "initial/EX-10-2/operations.sqlite": "16541a068988e99d820acff65ea14be70d97fd0661fe21810c492997e4dbdad5",
+    "initial/EX-10-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-10-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-10-2/seed.json": "c231d21823cc468b809b1ea160e88dcbc9598baaed321739d7dc943acaf1898c",
+    "initial/EX-10-2/world.json": "1c0a6d3f21d7559c103ee2a37719d652058df81db47ab85803b7d68b015e1ca8",
+    "initial/EX-10-3/operations.sqlite": "bd359bf6e2a9e796357f0cebb429e42437c16ea6a947f3e5b5578ec57aae6afc",
+    "initial/EX-10-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-10-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-10-3/seed.json": "3e052718d0ec6730262f34ff61a87f56f0b79aa12ca806fe308fa384eed13287",
+    "initial/EX-10-3/world.json": "3704830701da4685514850ce64cba2ba6d3e62e775c595e757372aa6a463822f",
+    "initial/EX-11-0/operations.sqlite": "f596f01fcfcc47474cd0f85160ac9500a011ab4baf1b68fe378b96e0a178ef60",
+    "initial/EX-11-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-11-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-11-0/seed.json": "b96a999515abfdb614338ab55764950daa4c62cffd7f587a8fd095db6936af61",
+    "initial/EX-11-0/world.json": "83970ece9623dc3bbb75d446a45f455721010f6a865b3907d5de659a5e9ce5e7",
+    "initial/EX-11-1/operations.sqlite": "767a07597a1fe11b21e4594ce4b387242baa216bc5d5936b3ed414d1e7b4d0f5",
+    "initial/EX-11-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-11-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-11-1/seed.json": "2ad138b80e5c33dd1a1c74991a38166b1ab1edd2fa7ff8939f93365315d0612e",
+    "initial/EX-11-1/world.json": "072964a10667fb8274c8f59b16c1284c8ef1d33ec44fc3c87ad720b4bf322d87",
+    "initial/EX-11-2/operations.sqlite": "c12c1adfeddf0f8c85feab2564fe51562ba9b8f5cffc151654898446b1fc83fb",
+    "initial/EX-11-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-11-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-11-2/seed.json": "5277d38d22f8c13b571dbbe225c8e956b61ced5833216f76a7401a2ae1f1ba3c",
+    "initial/EX-11-2/world.json": "fd5b10a379221e62889df826c10c0417d18d3630f93753b4e8cea651c61102e7",
+    "initial/EX-11-3/operations.sqlite": "1f96f6c7b5be5b2b789e32a499b9ef6dd0761c5bcaa6de497f8d0de613335ebd",
+    "initial/EX-11-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-11-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-11-3/seed.json": "cfd0dd11ee35d415f487115553f584c9a77c5d52480b3be3161c41c25e890808",
+    "initial/EX-11-3/world.json": "50cb6151d3856cc100c5e1eb7a2e9149b05e7b9a22c3be4cfdc6d7d95a34747f",
+    "initial/EX-12-0/operations.sqlite": "9557c4c6313a7b556e323d59942fa1f1dbad34e5c64d6c44766b1c5880bf7ef8",
+    "initial/EX-12-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-12-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-12-0/seed.json": "f8329c979f45882d1b45fe4c91bad73c961fbc4244ac1f5161d76b73d29099ed",
+    "initial/EX-12-0/world.json": "fc717e8e8db7e54cff0619489156c28a8f03e97fb5208313decbd22045d828d4",
+    "initial/EX-12-1/operations.sqlite": "8535a83c98a9640c79a89d9bffbe9539d4eebf0eba9c25837a48b3bc45e4093c",
+    "initial/EX-12-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-12-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-12-1/seed.json": "cd3c529ab4efa8b68ebb7349251baf9fe0ecc0937b14d17de30cdd2a4588991f",
+    "initial/EX-12-1/world.json": "5ae088e4b5b6b54b0fe18e52057008a37e7867b6b0fa4bf9557806a2c5668905",
+    "initial/EX-12-2/operations.sqlite": "0f4333ca9ba2c86803e49c8099a1bcedb79557ef3df26c7a0f6ea6e202273cfb",
+    "initial/EX-12-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-12-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-12-2/seed.json": "3503202127fc3e49c61df91461441cf7330a2dbc74d87de09961f71d304dc206",
+    "initial/EX-12-2/world.json": "174ff9ef97a8f41fc957634a19825a63aa74294c010a3705bccb67e695ebd774",
+    "initial/EX-12-3/operations.sqlite": "39f723f9002d65dab4b8e66ca9b5a44628a59792ab9124a5fc8022bceea2077a",
+    "initial/EX-12-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-12-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-12-3/seed.json": "ba9bf80dfd3fdb287f5aa2ef79635bd0dfdcc836ee0ac01cfefa7633679ce8fc",
+    "initial/EX-12-3/world.json": "351049068f6eca3ab638ed46422901780fb67143de1340c842af42477feced41",
+    "initial/EX-13-0/operations.sqlite": "3d5e38e2d6d6148ee579c0fc2bb2370b1fee004a2910fe69ed179bbc1ee5745c",
+    "initial/EX-13-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-13-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-13-0/seed.json": "13505017fb21736c06620456195e23b0336667b1cee271e2e620b962b65ae11c",
+    "initial/EX-13-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-13-1/operations.sqlite": "109e2821b72c22d29e1b068c80a051f8237c8e0f170ecfcb9573eb7572a8ee67",
+    "initial/EX-13-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-13-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-13-1/seed.json": "15a156d893a70e5ef34b688dad949939683f0769ad043344d92f8af6b96aa1a6",
+    "initial/EX-13-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-13-2/operations.sqlite": "5f21d552dc6a9b4eea79d11214ccf3c4526b80f39f8f7e8c034ef212a3f567ad",
+    "initial/EX-13-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-13-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-13-2/seed.json": "c10f3ce19ddfb8f1fa1753b626443e8739b75a5c930860602f5bdf29083ea919",
+    "initial/EX-13-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-13-3/operations.sqlite": "b4478263e05f3e8ee2497318c77b0ed3313bd205085471f0a2339a6b2361ec6f",
+    "initial/EX-13-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-13-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-13-3/seed.json": "b80434607df21ec2fe0e20e909f959e62a178f7c4763d822f242147b596e9368",
+    "initial/EX-13-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-14-0/operations.sqlite": "48daf8ecb121ed3fc778514dd71bb17bf605c18862adb9b2bd3e75b6b3539e15",
+    "initial/EX-14-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-14-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-14-0/seed.json": "734a148aea5f20c14c541ca7c36406960b6620d27478043e5f5e337632f54493",
+    "initial/EX-14-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-14-1/operations.sqlite": "a49695887a9e7e3118162a5a844170c3009c42e2aeb0ec2857b9a80ad19ebbc1",
+    "initial/EX-14-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-14-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-14-1/seed.json": "fff9f8f774b89a4f31f35cf2b0a435ef08da5db80c7f347e0e9a027b6dd3d220",
+    "initial/EX-14-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-14-2/operations.sqlite": "246211332a9c8bfd07dda76ced54a6074528d71ac80fa99c689de20ca40fe054",
+    "initial/EX-14-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-14-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-14-2/seed.json": "8f900c0deeeb9d1ee89a75469be16666a81119c58c67c8e7ee8543d9bc2985df",
+    "initial/EX-14-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-14-3/operations.sqlite": "ef6fbb0f184034fade9babac60b45232c54ed9c620089c40c05f59f29d3af9f8",
+    "initial/EX-14-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-14-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-14-3/seed.json": "b89021399170382a45e8eb06bc8da31d8b8588534f1e40405cc4814e001576a5",
+    "initial/EX-14-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-15-0/operations.sqlite": "c3b0c924c1fdf6a83f4db9e136311648d3088a6392ee156d63be03c64dcac03a",
+    "initial/EX-15-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-15-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-15-0/seed.json": "c725a16f9a8d47dc0964891506ee3742840b37a155daabe3ce6237dd310ccdeb",
+    "initial/EX-15-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-15-1/operations.sqlite": "fcc8ef65caff7e2dc3a59d8add192a7580b7a3e12c50fa57ecdfa3e114471e87",
+    "initial/EX-15-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-15-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-15-1/seed.json": "11c83163b54aa74c6d553e6154ed8548879e94e3780cfd533cb182d2ad2d6cbd",
+    "initial/EX-15-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-15-2/operations.sqlite": "1218aa99e5af5efeddc253f1643d87bdd34db1a79b924b17660316ef1c53dbe4",
+    "initial/EX-15-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-15-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-15-2/seed.json": "6ed32ed1a695020a53e62646cabc3d955582415e58a9d3e3e01216bc7782673f",
+    "initial/EX-15-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-15-3/operations.sqlite": "75cafa49bc953ea06140dd162ee9dab160bc4e0b62f87c3fae9099de306dd92f",
+    "initial/EX-15-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-15-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-15-3/seed.json": "c697de594c6af208e4dee9295311da46960d61e3f9e5ec57b25c48918a7f88e0",
+    "initial/EX-15-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-16-0/operations.sqlite": "c39ca26b6e53a94c60a690103accc2ea42a2727cdc47e6007c93899115345102",
+    "initial/EX-16-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-16-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-16-0/seed.json": "5f40b7c074294818d0e9cf5da7b1654d7ff13b82adb8234c9751b7f6c8e2933e",
+    "initial/EX-16-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-16-1/operations.sqlite": "3875409d7ec28499e433c79f978275c5380ac68720785586346d2abaefb2641c",
+    "initial/EX-16-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-16-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-16-1/seed.json": "5940cd0ad15e2258eeae32c0b8dfb63b3cc48e2e7fd189ceb3dac0d477e4c38c",
+    "initial/EX-16-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-16-2/operations.sqlite": "f005591d1041f28e69d93d97f8ab1aae44191897bb55b79322996150595907b3",
+    "initial/EX-16-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-16-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-16-2/seed.json": "40f185bdf289888c75778166fcefff495febba047b18ec50e6152a20a9784d82",
+    "initial/EX-16-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-16-3/operations.sqlite": "0ece678b685616e95e8ee192fb04795a70fc1855ac3671d495c1ec39cb56af60",
+    "initial/EX-16-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-16-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-16-3/seed.json": "e829bf5e6ae29b1f7d3f4a96a7fc393095af561e70e53b95deb535dfce0a33b8",
+    "initial/EX-16-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-17-0/operations.sqlite": "2079b30479c5ef9e2a5ad12f4af245e4d8b1ea7f06ece9d63947fce6b60cdd6e",
+    "initial/EX-17-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-17-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-17-0/seed.json": "033da5899ac0139e310ef23a27eb5c971540067f4f52735c1acc5098bcc6cf91",
+    "initial/EX-17-0/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-17-1/operations.sqlite": "7d2b92bc0f5c971f58c17df27d7543530e0269dee3739cbd012c1b25065c9d30",
+    "initial/EX-17-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-17-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-17-1/seed.json": "97189d9094bdd85614f2b5d189158c1cfc9bdbdc3f961344d44b632162b6fb4e",
+    "initial/EX-17-1/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-17-2/operations.sqlite": "e93b77375d720a40a289f1dfd57bd0663104480524dbc0845651af8df42f1de9",
+    "initial/EX-17-2/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-17-2/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-17-2/seed.json": "ef011ec26a2fbfc5e4154e0adb9cbbfb3c7224dde355d19767ca2decbad8cc2a",
+    "initial/EX-17-2/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882",
+    "initial/EX-17-3/operations.sqlite": "9fd83c4f5ee82dcaa253f458d7c1949649ff110a67665169c76587a651737969",
+    "initial/EX-17-3/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/EX-17-3/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/EX-17-3/seed.json": "f981ed046bdb4c2ab9dd5e7579d15b8a4bcb1ef4cc372bb62938f2aee9fa97d1",
+    "initial/EX-17-3/world.json": "5d83eabce776afc5189929f04aa548ed7bce0fbc83879c3bb0290f04c9de3882"
+  },
+  "ledger_before": {
+    "micro_cny": 316432172,
+    "rows": 17198
+  },
+  "estimated_cny": [
+    8,
+    25
+  ],
+  "project_budget_cny": 480,
+  "model_selection_calls": 0,
+  "deployment_changed": false,
+  "scope": "New apparel research snapshot and developer-authored composition states. Historical public data, not unknown to pretraining or independently collected user tasks."
+}

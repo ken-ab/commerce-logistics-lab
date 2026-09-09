@@ -1,0 +1,110 @@
+{
+  "status": "complete",
+  "directory": "C:\\Users\\Administrator\\Documents\\ChatGPT\\包装\\projects\\commerce-logistics-lab\\evidence\\ranking_runs\\20260907T130305394987Z_test_product",
+  "partition": "test",
+  "instruction": "product",
+  "finished_at": "2026-09-07T17:47:21.199307+00:00",
+  "results": {
+    "all": {
+      "queries": 14496,
+      "pairs": 336373,
+      "bm25_candidate_pool": {
+        "ndcg_at_10": 0.6878464227891369,
+        "ndcg_all": 0.823580659707417,
+        "mrr_exact": 0.7508874979484434,
+        "hit_exact_at_1": 0.6194812362030905
+      },
+      "qwen_reranker": {
+        "ndcg_at_10": 0.7607773070593775,
+        "ndcg_all": 0.8657372682603034,
+        "mrr_exact": 0.834845390934546,
+        "hit_exact_at_1": 0.7400662251655629
+      },
+      "paired_ndcg10_delta": {
+        "mean": 0.07293088427024069,
+        "bootstrap_95pct_ci": [
+          0.06965235867864202,
+          0.07621676836183222
+        ],
+        "unit": "query ID; repeated normalized queries are not semantically deduplicated"
+      }
+    },
+    "us": {
+      "queries": 8956,
+      "pairs": 181701,
+      "bm25_candidate_pool": {
+        "ndcg_at_10": 0.6997129283426815,
+        "ndcg_all": 0.8229526197589029,
+        "mrr_exact": 0.7497257948245049,
+        "hit_exact_at_1": 0.6142251004912908
+      },
+      "qwen_reranker": {
+        "ndcg_at_10": 0.7618852712991144,
+        "ndcg_all": 0.8601319182758786,
+        "mrr_exact": 0.825243434882929,
+        "hit_exact_at_1": 0.7246538633318446
+      },
+      "paired_ndcg10_delta": {
+        "mean": 0.06217234295643293,
+        "bootstrap_95pct_ci": [
+          0.05853722911416478,
+          0.0662002276892116
+        ],
+        "unit": "query ID; repeated normalized queries are not semantically deduplicated"
+      }
+    },
+    "es": {
+      "queries": 2417,
+      "pairs": 65883,
+      "bm25_candidate_pool": {
+        "ndcg_at_10": 0.6742175733402209,
+        "ndcg_all": 0.8207288639074023,
+        "mrr_exact": 0.7530916016065866,
+        "hit_exact_at_1": 0.6350848158874638
+      },
+      "qwen_reranker": {
+        "ndcg_at_10": 0.7560972495292175,
+        "ndcg_all": 0.8674569987596319,
+        "mrr_exact": 0.843488392461094,
+        "hit_exact_at_1": 0.7629292511377741
+      },
+      "paired_ndcg10_delta": {
+        "mean": 0.08187967618899668,
+        "bootstrap_95pct_ci": [
+          0.07480021024011392,
+          0.08952921765982273
+        ],
+        "unit": "query ID; repeated normalized queries are not semantically deduplicated"
+      }
+    },
+    "jp": {
+      "queries": 3123,
+      "pairs": 88789,
+      "bm25_candidate_pool": {
+        "ndcg_at_10": 0.6643640357832077,
+        "ndcg_all": 0.8275888301292954,
+        "mrr_exact": 0.7525131446459333,
+        "hit_exact_at_1": 0.622478386167147
+      },
+      "qwen_reranker": {
+        "ndcg_at_10": 0.7612219984840692,
+        "ndcg_all": 0.8804810805701436,
+        "mrr_exact": 0.8556923277608726,
+        "hit_exact_at_1": 0.7665706051873199
+      },
+      "paired_ndcg10_delta": {
+        "mean": 0.0968579627008616,
+        "bootstrap_95pct_ci": [
+          0.08922927429687734,
+          0.10439459195545067
+        ],
+        "unit": "query ID; repeated normalized queries are not semantically deduplicated"
+      }
+    }
+  },
+  "latest_process_gpu_seconds": 9668.886999999871,
+  "latest_process_truncated_pairs": 44035,
+  "real_customer_count": 0,
+  "scope": "Ranking only within all labelled Task 1 candidates per query. This is not full-catalog retrieval recall, customer conversion or a new trained model.",
+  "pretraining_contamination": "Publisher data coverage is insufficient to rule out ESCI exposure. Project query isolation does not prove base-model non-exposure."
+}

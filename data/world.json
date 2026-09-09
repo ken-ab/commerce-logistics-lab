@@ -1,0 +1,21 @@
+{
+  "dataset_id": "synthetic-apparel-v1-20260907",
+  "currency": "USD",
+  "notice": "Synthetic experiment data, not commercial quotes or actual brand policies.",
+  "products": {
+    "TEE-BLK-M": {"name": "Cotton Tee", "brand": "DemoNorth", "size": "M", "color": "black", "weight_kg": 0.2, "allowed_destinations": ["DE-DC"], "minimum_units": 10},
+    "TEE-BLK-L": {"name": "Cotton Tee", "brand": "DemoNorth", "size": "L", "color": "black", "weight_kg": 0.2, "allowed_destinations": ["DE-DC"], "minimum_units": 10},
+    "HOOD-GRY-M": {"name": "Cotton Hoodie", "brand": "DemoEast", "size": "M", "color": "grey", "weight_kg": 0.7, "allowed_destinations": ["DE-DC"], "minimum_units": 10}
+  },
+  "warehouses": {
+    "CN-SZ": {"TEE-BLK-M": 180, "TEE-BLK-L": 100, "HOOD-GRY-M": 90},
+    "HK-HUB": {"TEE-BLK-M": 40, "TEE-BLK-L": 20, "HOOD-GRY-M": 30}
+  },
+  "legs": [
+    {"id": "SZ-HK-ROAD", "origin": "CN-SZ", "destination": "HK-HUB", "mode": "road", "days": 1, "fixed_usd": 15, "per_kg_usd": 1, "capacity_kg": 300},
+    {"id": "HK-EU-AIR", "origin": "HK-HUB", "destination": "EU-HUB", "mode": "air", "days": 3, "fixed_usd": 100, "per_kg_usd": 8, "capacity_kg": 25},
+    {"id": "HK-EU-SEA", "origin": "HK-HUB", "destination": "EU-HUB", "mode": "sea", "days": 24, "fixed_usd": 40, "per_kg_usd": 1.5, "capacity_kg": 1000},
+    {"id": "SZ-EU-RAIL", "origin": "CN-SZ", "destination": "EU-HUB", "mode": "rail", "days": 14, "fixed_usd": 60, "per_kg_usd": 3, "capacity_kg": 300},
+    {"id": "EU-DE-ROAD", "origin": "EU-HUB", "destination": "DE-DC", "mode": "road", "days": 2, "fixed_usd": 20, "per_kg_usd": 0.5, "capacity_kg": 300}
+  ]
+}

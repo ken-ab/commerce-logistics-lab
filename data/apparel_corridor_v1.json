@@ -1,0 +1,17 @@
+{
+  "dataset_id": "simulated-cn-de-corridor-v1-20260908",
+  "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+  "currency": "USD",
+  "origin": "CN-SZ",
+  "destination": "DE-DC",
+  "anchor_at": "2026-09-01T00:00:00Z",
+  "maximum_horizon_days": 60,
+  "transfer_minutes": {"CN-SZ": 0, "HK-HUB": 120, "EU-HUB": 360, "DE-DC": 0},
+  "legs": [
+    {"id": "SZ-HK-ROAD", "origin": "CN-SZ", "destination": "HK-HUB", "mode": "road", "duration_minutes": 360, "period_minutes": 360, "offset_minutes": 0, "capacity_grams": 300000, "fixed_cents": 1500, "per_kg_cents": 100},
+    {"id": "HK-EU-AIR", "origin": "HK-HUB", "destination": "EU-HUB", "mode": "air", "duration_minutes": 1080, "period_minutes": 720, "offset_minutes": 240, "capacity_grams": 25000, "fixed_cents": 10000, "per_kg_cents": 800},
+    {"id": "HK-EU-SEA", "origin": "HK-HUB", "destination": "EU-HUB", "mode": "sea", "duration_minutes": 34560, "period_minutes": 10080, "offset_minutes": 600, "capacity_grams": 1000000, "fixed_cents": 4000, "per_kg_cents": 150},
+    {"id": "SZ-EU-RAIL", "origin": "CN-SZ", "destination": "EU-HUB", "mode": "rail", "duration_minutes": 20160, "period_minutes": 2880, "offset_minutes": 600, "capacity_grams": 300000, "fixed_cents": 6000, "per_kg_cents": 300},
+    {"id": "EU-DE-ROAD", "origin": "EU-HUB", "destination": "DE-DC", "mode": "road", "duration_minutes": 720, "period_minutes": 1440, "offset_minutes": 480, "capacity_grams": 300000, "fixed_cents": 2000, "per_kg_cents": 50}
+  ]
+}

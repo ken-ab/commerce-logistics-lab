@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+.env
+.env.*
+!.env.example
+upstream/
+models/
+knowledge/
+data/*.sqlite*
+evidence/*.sqlite*
+evidence/apparel_interactive/
+evidence/interactive_reranking_selected/
+evidence/provider_recovery/
+research/private-cache/
+research/provider_health.json
+
+# Local setup / extracted immutable experiment records
+/evidence/
+data/esci_split_manifest.parquet
+delivery_budget_policy.json
+research/budget_policy.json
+model_selection_100/budget_policy.json
+*.download

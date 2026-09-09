@@ -1,0 +1,149 @@
+{
+  "checked_at": "2026-09-09T02:52:42.336746+00:00",
+  "all_checks_passed": true,
+  "completed_registered_schedule": true,
+  "valid_judgment_coverage_complete": false,
+  "combined": {
+    "scheduled": 144,
+    "audited": 105,
+    "audit_failed": 38,
+    "not_assessable": 1,
+    "verdicts": {
+      "supported": 91,
+      "unsupported": 14,
+      "insufficient_evidence": 0
+    },
+    "original_task_passed": 143
+  },
+  "recovery": {
+    "scheduled": 45,
+    "audited": 26,
+    "audit_failed": 19,
+    "not_assessable": 0,
+    "verdicts": {
+      "supported": 21,
+      "unsupported": 5,
+      "insufficient_evidence": 0
+    },
+    "original_task_passed": 45
+  },
+  "groups": {
+    "v5_coordinator": {
+      "scheduled": 24,
+      "audited": 16,
+      "audit_failed": 7,
+      "not_assessable": 1,
+      "verdicts": {
+        "supported": 13,
+        "unsupported": 3,
+        "insufficient_evidence": 0
+      },
+      "original_task_passed": 23
+    },
+    "v5_on_demand": {
+      "scheduled": 24,
+      "audited": 17,
+      "audit_failed": 7,
+      "not_assessable": 0,
+      "verdicts": {
+        "supported": 14,
+        "unsupported": 3,
+        "insufficient_evidence": 0
+      },
+      "original_task_passed": 24
+    },
+    "v5_single": {
+      "scheduled": 24,
+      "audited": 19,
+      "audit_failed": 5,
+      "not_assessable": 0,
+      "verdicts": {
+        "supported": 16,
+        "unsupported": 3,
+        "insufficient_evidence": 0
+      },
+      "original_task_passed": 24
+    },
+    "v6_coordinator": {
+      "scheduled": 24,
+      "audited": 22,
+      "audit_failed": 2,
+      "not_assessable": 0,
+      "verdicts": {
+        "supported": 21,
+        "unsupported": 1,
+        "insufficient_evidence": 0
+      },
+      "original_task_passed": 24
+    },
+    "v6_on_demand": {
+      "scheduled": 24,
+      "audited": 16,
+      "audit_failed": 8,
+      "not_assessable": 0,
+      "verdicts": {
+        "supported": 13,
+        "unsupported": 3,
+        "insufficient_evidence": 0
+      },
+      "original_task_passed": 24
+    },
+    "v6_single": {
+      "scheduled": 24,
+      "audited": 15,
+      "audit_failed": 9,
+      "not_assessable": 0,
+      "verdicts": {
+        "supported": 14,
+        "unsupported": 1,
+        "insufficient_evidence": 0
+      },
+      "original_task_passed": 24
+    }
+  },
+  "failure_categories": {
+    "schema_or_audit_failure": 26,
+    "transport_failure": 6,
+    "local_raw_save_failure_paid_response_lost": 6
+  },
+  "recovery_failure_categories": {
+    "local_raw_save_failure_paid_response_lost": 6,
+    "transport_failure": 5,
+    "schema_or_audit_failure": 8
+  },
+  "new_requests": 45,
+  "new_call_statuses": {
+    "settled": 40,
+    "uncertain": 5
+  },
+  "new_settled_micro_cny": 9299976,
+  "new_uncertain_reserved_micro_cny": 7444543,
+  "study_settled_micro_cny": 31015270,
+  "study_uncertain_reserved_micro_cny": 61501708,
+  "study_accounted_micro_cny": 92516978,
+  "global_accounted_micro_cny": 432268378,
+  "global_calls": 19148,
+  "lost_paid_raw_responses": [
+    "RL-05-1-v5_coordinator",
+    "RL-05-1-v5_single",
+    "RL-05-1-v6_on_demand",
+    "RL-06-1-v5_coordinator",
+    "RL-06-1-v5_on_demand",
+    "RL-06-1-v6_single"
+  ],
+  "source_sha256": {
+    "evidence/apparel_rationale_account_recovery_v1/registration.json": "7725e48ec58e1c2f37d7eeb8bc75090b78b6e021dba96961506ab21afbe0ae70",
+    "evidence/apparel_rationale_account_recovery_v1/schedule.json": "75ce4ac312234c205208e47b5c39425642c4787ff747c5a051295488abe6453e",
+    "evidence/apparel_rationale_account_recovery_v1/summary.json": "cf0722e975a43707dfb0830166f6216c2fb19f8321c476bf62dc14095872ec27",
+    "evidence/apparel_rationale_account_recovery_v1/combined_results.json": "3c8c585aad890901844e3574a1203a853101a84d7a2fd7818ce77552a5ebaf13",
+    "evidence/apparel_rationale_account_recovery_v1/output_directory_incident.json": "9df82aa664a562e1993927aa15241c19761d0dcc1ee48690bf68c5d7b7ae2302",
+    "evidence/apparel_rationale_account_recovery_v1/study_accounting_export.json": "136f1adcbf45b690ae018a9185f15309df0e5b97aa3d0590157e4881337afd85",
+    "research/audit_apparel_rationale_recovery.py": "1c5ac744d60ba6a90f167f21ffc1550b332b5c90c9f886f362a1e97960e48534"
+  },
+  "limits": [
+    "Structural and accounting checks do not validate the judge semantics.",
+    "Invalid, missing and locally lost outputs remain unscored; they are not assumed correct.",
+    "Earlier account rejections and uncertain reservations remain in the study accounting.",
+    "No successful or schema-invalid model response was resampled for a better verdict."
+  ]
+}

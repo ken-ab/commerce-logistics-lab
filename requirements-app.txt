@@ -1,0 +1,10 @@
+# Install local Apache-2.0 packages from the pinned upstream clone, never namesakes.
+-e ./upstream/commerce-agents/commerce-common
+-e ./upstream/commerce-agents/shopping-agent/core
+pydantic==2.13.4
+fastapi==0.141.1
+uvicorn==0.41.0
+duckdb==1.5.5
+pytest==9.1.1
+httpx==0.28.1
+tzdata==2026.3

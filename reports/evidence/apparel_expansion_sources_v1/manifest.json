@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-09-08T20:54:38.425891+00:00",
+  "source_commit": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+  "source_url": "https://github.com/amazon-science/esci-data",
+  "source_dataset": "amazon-esci-7916cdf6",
+  "source_file_sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265",
+  "license": "Apache-2.0 (repository LICENSE; retain NOTICE)",
+  "selection_rule": "Existing 37 variants retained byte-for-byte as JSON values; add first 60 valid ASIN-sorted rows per named new brand after explicit size/color/category/pack checks.",
+  "rows_considered": 1977,
+  "skipped": {
+    "unresolved_size_suffix_or_color": 1151,
+    "deterministic_per_brand_cap": 584,
+    "ambiguous_or_non_target_garment": 1,
+    "ambiguous_or_out_of_scope_pack_count": 1
+  },
+  "base_variants": 37,
+  "added_variants": 240,
+  "added_per_brand": {
+    "Champion": 60,
+    "Fruit of the Loom": 60,
+    "Gildan": 60,
+    "Hanes": 60
+  },
+  "total_variants": 277,
+  "added_categories": {
+    "hoodie": 119,
+    "polo": 6,
+    "t_shirt": 115
+  },
+  "added_audiences": {
+    "men": 222,
+    "None": 6,
+    "boys": 5,
+    "women": 3,
+    "children": 4
+  },
+  "added_pack_counts": {
+    "1": 200,
+    "5": 12,
+    "4": 6,
+    "2": 11,
+    "3": 5,
+    "12": 1,
+    "6": 2,
+    "8": 3
+  },
+  "full_cleaned_descriptions_over_1200": 0,
+  "maximum_cleaned_description_length": 830,
+  "dataset_sha256": "09ed41394345f015c11dcd9b693d379b5d7e05949b0d199476173b1204bd26e2",
+  "raw_records_sha256": "0391f4c91142c1014231d0cb5999809fc6e56c18c6c39bc543fbc470b64bee76",
+  "builder_sha256": "bf7cc3731f614a79d275d288a8a043b8f9c3f5015b151574c172051c05fa3912",
+  "source_fields_not_human_verified_for_every_product": true,
+  "new_users": 0,
+  "new_queries_or_agent_runs": 0,
+  "new_model_calls": 0,
+  "default_workspace_world_changed": false,
+  "scope": "New to apparel research snapshot, not unseen by model pretraining or the earlier complete ESCI ingestion."
+}

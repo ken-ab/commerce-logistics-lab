@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-09-09T02:35:53.567196+00:00",
+  "affected_ids": [
+    "RL-05-1-v5_coordinator",
+    "RL-05-1-v5_single",
+    "RL-05-1-v6_on_demand",
+    "RL-06-1-v5_coordinator",
+    "RL-06-1-v5_on_demand",
+    "RL-06-1-v6_single"
+  ],
+  "cause": "Raw-output parent directory was absent. Model responses settled but save failed before parsing. Response contents were not retained.",
+  "repair": "Created the existing registered raw output directory before subsequent responses; frozen source unchanged.",
+  "resampled": false,
+  "original_failures_preserved": true,
+  "ledger": {
+    "global_micro_cny": 418252107,
+    "global_rows": 19111,
+    "study_micro_cny": 78500707,
+    "study_rows": 183
+  }
+}

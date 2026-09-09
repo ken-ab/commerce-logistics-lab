@@ -1,0 +1,762 @@
+{
+  "cases": 126,
+  "passed": 126,
+  "rows": [
+    {
+      "case_id": "AC-359b6b88bb2fb6e1",
+      "partition": "validation",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-c6ffd44f8831b914",
+      "partition": "validation",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-f5ee73fd1ac136b3",
+      "partition": "validation",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-4d1be018d8a8b210",
+      "partition": "validation",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8841ddaa6fd5e381",
+      "partition": "validation",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-75bcc8ae12e20bed",
+      "partition": "validation",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d79cc7d3d81b5837",
+      "partition": "validation",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-f0e38a17d63acc44",
+      "partition": "validation",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-dd87d4cfc100dd30",
+      "partition": "validation",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e797db8e38249c29",
+      "partition": "validation",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-6273e09077158c52",
+      "partition": "validation",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-409fff8372bb42e7",
+      "partition": "validation",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-0eef9c034c605086",
+      "partition": "validation",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8cbf7052cf4e6844",
+      "partition": "validation",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-0ada49baa75b8d99",
+      "partition": "validation",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d2717f5e73365c74",
+      "partition": "validation",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-0e4389aeddd59cf8",
+      "partition": "validation",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-7e1e14f4929721a9",
+      "partition": "validation",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d892238db830e9df",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-bd9d7a8620b9bded",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-09ed1b5f08eca354",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-919c2e5cad8f1d97",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-b9fbe7d36dd2124c",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-a03c87a6a9a5f4c9",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-929e0e7411e9a653",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-b32cbb3c88d7478e",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-1e6fae48f01f8b9c",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-7d63746d5aa46ad9",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-9de6b1fd142c9d49",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-0b608345fc84bdf8",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-cee161421f4fa103",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-c99791db0951c456",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-2c738250c9ede8cf",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-f62a393449f91180",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-793eaf13b5f5ec44",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-fd22b6a0f82ef162",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-922e314a0927c117",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-ff35e783938f3023",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-f8764f2bee87da8b",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-4b2581ddcb166929",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8ee54f5addc1e63b",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-bde7c65c405643ba",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e0a375d7e072785f",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d763d95f4960f126",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-3f0db213f254ea48",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-baafe857df9e068d",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-acba993788195791",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-601a570f0dbd2801",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-9dbc5e6b873bf185",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-3b3490c0e3e91c28",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-9c0f3f586508855e",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-11f3e6e1feaf8190",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-1eeb084f8b92a3ea",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e525d08539b4e4f9",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-242f4f14e36718ae",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-f9daaee653f74a6b",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-cbef6dabea0a06c5",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d3368ac167cbc6c6",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-cc29931c29b59b9b",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d9878e3991d9deff",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-a732dee96d4995b1",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-b05c0e852cde0cef",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-4f450aee603f0fdc",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-57da6ab4a27e4411",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-b3766a0a549d91d0",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8b83956eb5cf235c",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-027dff76bdad8894",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-4ed8edcc8da4daa9",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e3cd22d15ed3888f",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-d195f8bd8dd7b5cb",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-7db21889b2d9e878",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-90f27c6ba0bea9a7",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-82e1bd704336a355",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-44bd95a0577323de",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-4c4fdebd7c9eff97",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-b0736e08c758b096",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-2adb2fb3340d19f3",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-785f0a34c99a39c1",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-746790f130babe9c",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-27751da680ea5551",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-c2d21a60805f93e2",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-a578aa471cdf50c3",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-dc9aa6c31d2afc35",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-315ae7d3fedb6b8c",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e25b1c412b0a9bca",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-ab43f9cfb51bd4d5",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-a52051e2d0ef005c",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-bacc63ede1d5b41f",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-1a297b58e925052c",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e94c909269eda0c9",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-87d2c565221c319c",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-874feb3e1442310a",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e868fb899f42474d",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-f539bce766557cc7",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-0c77f97d75fa0137",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-35d4bd8ba8db7c52",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-eb647f62a40a2b59",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8451ae52ab5b6afc",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-2c6128142af7cdf4",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-19c29447b0f0db8a",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-fcf9250d9041ba1f",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-9fb0c2dc63993eec",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-3ea6ccffaeb4fe2e",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-9eb548044222021f",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-5cacb605a3d468f1",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-b240ba4ded82a9a2",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-11bd0d1f342a12d9",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-3dee8cc011216b1b",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8866bccb0c4805c2",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-62e7aa4da8a887bc",
+      "partition": "test",
+      "family": "shortage_alternative",
+      "passed": true
+    },
+    {
+      "case_id": "AC-6e2899294b98fef7",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-c1ea54e03e67b6d9",
+      "partition": "test",
+      "family": "shipping_infeasible",
+      "passed": true
+    },
+    {
+      "case_id": "AC-c6153bb72e0c847a",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-6ae932d8530c2506",
+      "partition": "test",
+      "family": "order_clarification",
+      "passed": true
+    },
+    {
+      "case_id": "AC-ddbaa56b903ec5fa",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e811325e30c3d0b2",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-141799294ab69468",
+      "partition": "test",
+      "family": "shipping_revision",
+      "passed": true
+    },
+    {
+      "case_id": "AC-8ef89875a32ed0af",
+      "partition": "test",
+      "family": "rule_blocked",
+      "passed": true
+    },
+    {
+      "case_id": "AC-3ca9eab3207decf1",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-0c52652d9843fd1b",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-41136a52496d351b",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-34db18aed0eb75d0",
+      "partition": "test",
+      "family": "shipping_normal",
+      "passed": true
+    },
+    {
+      "case_id": "AC-e8028fc0e71187bf",
+      "partition": "test",
+      "family": "combined",
+      "passed": true
+    },
+    {
+      "case_id": "AC-689679bf26305918",
+      "partition": "test",
+      "family": "order_ready",
+      "passed": true
+    },
+    {
+      "case_id": "AC-cbfaf3cd8781886a",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    },
+    {
+      "case_id": "AC-1af4e5fd6af8d281",
+      "partition": "test",
+      "family": "product_info",
+      "passed": true
+    }
+  ]
+}

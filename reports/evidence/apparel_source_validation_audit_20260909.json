@@ -1,0 +1,1259 @@
+{
+  "created_at": "2026-09-08T20:34:26.323889+00:00",
+  "passed": true,
+  "groups": {
+    "v4_candidate": {
+      "infeasible_checks": 2,
+      "input_tokens": 320936,
+      "output_tokens": 11344,
+      "runs": 24,
+      "passed": 19,
+      "model_calls": 76,
+      "tool_calls": 95,
+      "host_initial_reads": 24,
+      "cost_micro_cny": 622431,
+      "search_calls": 6,
+      "runs_with_search": 6,
+      "source_read_required": 14,
+      "source_read_failures": 5,
+      "source_submission_rejections": 0,
+      "gpu_requests": 2,
+      "fallbacks": 0,
+      "empty_searches": 2,
+      "itinerary_checks": 8,
+      "gpu_pairs": 4
+    },
+    "v5_source_review": {
+      "infeasible_checks": 2,
+      "input_tokens": 365061,
+      "output_tokens": 11578,
+      "runs": 24,
+      "passed": 24,
+      "model_calls": 74,
+      "tool_calls": 95,
+      "host_initial_reads": 24,
+      "cost_micro_cny": 695276,
+      "search_calls": 6,
+      "runs_with_search": 6,
+      "source_read_required": 14,
+      "source_read_failures": 0,
+      "source_submission_rejections": 0,
+      "gpu_requests": 2,
+      "fallbacks": 0,
+      "empty_searches": 2,
+      "itinerary_checks": 8,
+      "gpu_pairs": 4
+    }
+  },
+  "cases": [
+    {
+      "case_id": "SR-08-1",
+      "family": "shipping_infeasible",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-3",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 4,
+      "cost_micro_cny": 23918,
+      "latency_seconds": 12.265,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-08-1",
+      "family": "shipping_infeasible",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-3",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [],
+      "model_calls": 4,
+      "tool_calls": 5,
+      "cost_micro_cny": 44207,
+      "latency_seconds": 18.172,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-02-1",
+      "family": "unit_problem",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 12319,
+      "latency_seconds": 8.657,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-02-1",
+      "family": "unit_problem",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 12050,
+      "latency_seconds": 9.031,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-05-0",
+      "family": "shortage_alternative",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWMHBT3": {
+          "observation_id": "O-3",
+          "material_sha256": "b57ce6e8c60a4895a1ecd35dc450b50ed4b3790177a78b118d03d41f203bd6d7"
+        }
+      },
+      "queries": [],
+      "model_calls": 4,
+      "tool_calls": 6,
+      "cost_micro_cny": 49356,
+      "latency_seconds": 19.031,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-05-0",
+      "family": "shortage_alternative",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWLT57Q": {
+          "observation_id": "O-4",
+          "material_sha256": "8568dac343ab540cc60155ec3ecd74d8a80012aef90109bb4f04d764db15578a"
+        }
+      },
+      "queries": [],
+      "model_calls": 4,
+      "tool_calls": 5,
+      "cost_micro_cny": 51914,
+      "latency_seconds": 15.672,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-07-1",
+      "family": "shipping_new",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-4",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Amazon Essentials",
+            "size": "XL",
+            "color": "grey heather",
+            "style_id": null,
+            "query": "t_shirt"
+          },
+          "returned": 1,
+          "method": "single_filtered_candidate"
+        }
+      ],
+      "model_calls": 6,
+      "tool_calls": 6,
+      "cost_micro_cny": 49910,
+      "latency_seconds": 18.282,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-07-1",
+      "family": "shipping_new",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-4",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Amazon Essentials",
+            "size": "XL",
+            "color": "grey heather",
+            "style_id": null,
+            "query": "t-shirt"
+          },
+          "returned": 1,
+          "method": "single_filtered_candidate"
+        }
+      ],
+      "model_calls": 6,
+      "tool_calls": 6,
+      "cost_micro_cny": 42662,
+      "latency_seconds": 15.953,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-01-1",
+      "family": "no_exact",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Missing Source Lab",
+            "size": "XL",
+            "color": "grey heather",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 0,
+          "method": "empty_lexical_candidates"
+        }
+      ],
+      "model_calls": 3,
+      "tool_calls": 2,
+      "cost_micro_cny": 16824,
+      "latency_seconds": 11.282,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-01-1",
+      "family": "no_exact",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Missing Source Lab",
+            "size": "XL",
+            "color": "grey heather",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 0,
+          "method": "empty_lexical_candidates"
+        }
+      ],
+      "model_calls": 3,
+      "tool_calls": 3,
+      "cost_micro_cny": 17472,
+      "latency_seconds": 11.484,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-00-1",
+      "family": "exact_search",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-3",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Amazon Essentials",
+            "size": "XL",
+            "color": "grey heather",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 1,
+          "method": "single_filtered_candidate"
+        }
+      ],
+      "model_calls": 5,
+      "tool_calls": 5,
+      "cost_micro_cny": 38394,
+      "latency_seconds": 17.0,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-00-1",
+      "family": "exact_search",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-3",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Amazon Essentials",
+            "size": "XL",
+            "color": "grey heather",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 1,
+          "method": "single_filtered_candidate"
+        }
+      ],
+      "model_calls": 5,
+      "tool_calls": 5,
+      "cost_micro_cny": 33691,
+      "latency_seconds": 14.781,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-02-0",
+      "family": "unit_problem",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 3,
+      "cost_micro_cny": 17513,
+      "latency_seconds": 12.032,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-02-0",
+      "family": "unit_problem",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 12666,
+      "latency_seconds": 11.859,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-10-1",
+      "family": "approved_revision",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWGYHLZ": {
+          "observation_id": "O-3",
+          "material_sha256": "984fe82bc09d09df97ab7a3d2ff9e0c2c437fa73f19b84840874c9100aacab0a"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 6,
+      "cost_micro_cny": 39423,
+      "latency_seconds": 10.735,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-10-1",
+      "family": "approved_revision",
+      "mode": "v4_candidate",
+      "passed": false,
+      "failures": [
+        "source_read"
+      ],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 5,
+      "cost_micro_cny": 31285,
+      "latency_seconds": 10.218,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-06-1",
+      "family": "aggregate_stock",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 16548,
+      "latency_seconds": 7.859,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-06-1",
+      "family": "aggregate_stock",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 17881,
+      "latency_seconds": 7.516,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-07-0",
+      "family": "shipping_new",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWLT57Q": {
+          "observation_id": "O-3",
+          "material_sha256": "8568dac343ab540cc60155ec3ecd74d8a80012aef90109bb4f04d764db15578a"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Goodthreads",
+            "size": "XL",
+            "color": "washed navy",
+            "style_id": null,
+            "query": "t_shirt"
+          },
+          "returned": 2,
+          "method": "local_qwen_rerank"
+        }
+      ],
+      "model_calls": 5,
+      "tool_calls": 6,
+      "cost_micro_cny": 48785,
+      "latency_seconds": 18.266,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-07-0",
+      "family": "shipping_new",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWLT57Q": {
+          "observation_id": "O-3",
+          "material_sha256": "8568dac343ab540cc60155ec3ecd74d8a80012aef90109bb4f04d764db15578a"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Goodthreads",
+            "size": "XL",
+            "color": "washed navy",
+            "style_id": null,
+            "query": "t_shirt"
+          },
+          "returned": 2,
+          "method": "local_qwen_rerank"
+        }
+      ],
+      "model_calls": 5,
+      "tool_calls": 6,
+      "cost_micro_cny": 42137,
+      "latency_seconds": 14.234,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-09-1",
+      "family": "shipping_revision",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-3",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 6,
+      "cost_micro_cny": 31260,
+      "latency_seconds": 10.968,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-09-1",
+      "family": "shipping_revision",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-2",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 5,
+      "cost_micro_cny": 33257,
+      "latency_seconds": 10.719,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-11-1",
+      "family": "valid_keep",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWPMG43": {
+          "observation_id": "O-2",
+          "material_sha256": "b0f61b3cc7ab4deb38dbf65f00da7d41c9ed65efe0bed9dc6644cc275855854f"
+        }
+      },
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 4,
+      "cost_micro_cny": 18879,
+      "latency_seconds": 11.343,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-11-1",
+      "family": "valid_keep",
+      "mode": "v4_candidate",
+      "passed": false,
+      "failures": [
+        "source_read"
+      ],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 4,
+      "cost_micro_cny": 16447,
+      "latency_seconds": 7.609,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-01-0",
+      "family": "no_exact",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Absent Commerce Research",
+            "size": "XL",
+            "color": "washed navy",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 0,
+          "method": "empty_lexical_candidates"
+        }
+      ],
+      "model_calls": 4,
+      "tool_calls": 3,
+      "cost_micro_cny": 22165,
+      "latency_seconds": 16.297,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-01-0",
+      "family": "no_exact",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Absent Commerce Research",
+            "size": "XL",
+            "color": "washed navy",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 0,
+          "method": "empty_lexical_candidates"
+        }
+      ],
+      "model_calls": 3,
+      "tool_calls": 2,
+      "cost_micro_cny": 18006,
+      "latency_seconds": 11.594,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-03-1",
+      "family": "constraint_conflict",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 13874,
+      "latency_seconds": 8.719,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-03-1",
+      "family": "constraint_conflict",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 16449,
+      "latency_seconds": 11.453,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-06-0",
+      "family": "aggregate_stock",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 17204,
+      "latency_seconds": 8.812,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-06-0",
+      "family": "aggregate_stock",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 17624,
+      "latency_seconds": 9.016,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-08-0",
+      "family": "shipping_infeasible",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XW9N3S5": {
+          "observation_id": "O-2",
+          "material_sha256": "ff7baaf9af63385f9b9a12aa003e4a6072526fe0e66064f8c63c662d05e8e63f"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 3,
+      "cost_micro_cny": 24417,
+      "latency_seconds": 12.594,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-08-0",
+      "family": "shipping_infeasible",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XW9N3S5": {
+          "observation_id": "O-3",
+          "material_sha256": "ff7baaf9af63385f9b9a12aa003e4a6072526fe0e66064f8c63c662d05e8e63f"
+        }
+      },
+      "queries": [],
+      "model_calls": 4,
+      "tool_calls": 4,
+      "cost_micro_cny": 30641,
+      "latency_seconds": 16.188,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-10-0",
+      "family": "approved_revision",
+      "mode": "v4_candidate",
+      "passed": false,
+      "failures": [
+        "source_read"
+      ],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 4,
+      "cost_micro_cny": 28334,
+      "latency_seconds": 12.438,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-10-0",
+      "family": "approved_revision",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWLT57Q": {
+          "observation_id": "O-3",
+          "material_sha256": "8568dac343ab540cc60155ec3ecd74d8a80012aef90109bb4f04d764db15578a"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 6,
+      "cost_micro_cny": 40254,
+      "latency_seconds": 11.781,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-09-0",
+      "family": "shipping_revision",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XW9N3S5": {
+          "observation_id": "O-2",
+          "material_sha256": "ff7baaf9af63385f9b9a12aa003e4a6072526fe0e66064f8c63c662d05e8e63f"
+        }
+      },
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 5,
+      "cost_micro_cny": 33482,
+      "latency_seconds": 10.875,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-09-0",
+      "family": "shipping_revision",
+      "mode": "v4_candidate",
+      "passed": false,
+      "failures": [
+        "source_read"
+      ],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 3,
+      "tool_calls": 4,
+      "cost_micro_cny": 25886,
+      "latency_seconds": 10.609,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-04-1",
+      "family": "policy_block",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 14926,
+      "latency_seconds": 9.718,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-04-1",
+      "family": "policy_block",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 14427,
+      "latency_seconds": 8.328,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-04-0",
+      "family": "policy_block",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 16192,
+      "latency_seconds": 8.407,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-04-0",
+      "family": "policy_block",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 14090,
+      "latency_seconds": 8.672,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-00-0",
+      "family": "exact_search",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XW9N3S5": {
+          "observation_id": "O-4",
+          "material_sha256": "ff7baaf9af63385f9b9a12aa003e4a6072526fe0e66064f8c63c662d05e8e63f"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Goodthreads",
+            "size": "XL",
+            "color": "washed navy",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 2,
+          "method": "local_qwen_rerank"
+        }
+      ],
+      "model_calls": 5,
+      "tool_calls": 6,
+      "cost_micro_cny": 39890,
+      "latency_seconds": 17.016,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-00-0",
+      "family": "exact_search",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XW9N3S5": {
+          "observation_id": "O-4",
+          "material_sha256": "ff7baaf9af63385f9b9a12aa003e4a6072526fe0e66064f8c63c662d05e8e63f"
+        }
+      },
+      "queries": [
+        {
+          "arguments": {
+            "brand": "Goodthreads",
+            "size": "XL",
+            "color": "washed navy",
+            "style_id": null,
+            "query": "cotton tee"
+          },
+          "returned": 2,
+          "method": "local_qwen_rerank"
+        }
+      ],
+      "model_calls": 5,
+      "tool_calls": 6,
+      "cost_micro_cny": 45386,
+      "latency_seconds": 18.5,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-03-0",
+      "family": "constraint_conflict",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 15746,
+      "latency_seconds": 8.937,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-03-0",
+      "family": "constraint_conflict",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 2,
+      "cost_micro_cny": 13633,
+      "latency_seconds": 8.171,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-11-0",
+      "family": "valid_keep",
+      "mode": "v4_candidate",
+      "passed": false,
+      "failures": [
+        "source_read"
+      ],
+      "material_matches": {},
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 3,
+      "cost_micro_cny": 15832,
+      "latency_seconds": 9.547,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-11-0",
+      "family": "valid_keep",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XW9N3S5": {
+          "observation_id": "O-2",
+          "material_sha256": "ff7baaf9af63385f9b9a12aa003e4a6072526fe0e66064f8c63c662d05e8e63f"
+        }
+      },
+      "queries": [],
+      "model_calls": 2,
+      "tool_calls": 4,
+      "cost_micro_cny": 19751,
+      "latency_seconds": 7.969,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-05-1",
+      "family": "shortage_alternative",
+      "mode": "v5_source_review",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWGYHLZ": {
+          "observation_id": "O-4",
+          "material_sha256": "984fe82bc09d09df97ab7a3d2ff9e0c2c437fa73f19b84840874c9100aacab0a"
+        }
+      },
+      "queries": [],
+      "model_calls": 4,
+      "tool_calls": 5,
+      "cost_micro_cny": 51010,
+      "latency_seconds": 16.687,
+      "source_submission_rejections": 0
+    },
+    {
+      "case_id": "SR-05-1",
+      "family": "shortage_alternative",
+      "mode": "v4_candidate",
+      "passed": true,
+      "failures": [],
+      "material_matches": {
+        "us:B06XWGYHLZ": {
+          "observation_id": "O-5",
+          "material_sha256": "984fe82bc09d09df97ab7a3d2ff9e0c2c437fa73f19b84840874c9100aacab0a"
+        }
+      },
+      "queries": [],
+      "model_calls": 4,
+      "tool_calls": 6,
+      "cost_micro_cny": 49690,
+      "latency_seconds": 15.843,
+      "source_submission_rejections": 0
+    }
+  ],
+  "unique_successful_paid_calls": 150,
+  "paid_micro_cny": 1317707,
+  "ledger_micro_cny": 316432172,
+  "ledger_rows": 17198,
+  "requested_models": [
+    "gpt-5.6-luna"
+  ],
+  "returned_models": [
+    "gpt-56-luna"
+  ],
+  "verified_sha256": {
+    "evidence/apparel_source_validation_v1/registration.json": "57991ed420be1ad486f01ff648d72c78020dc7a22373998d4ec332b9fa5388f9",
+    "evidence/apparel_source_validation_v1/cases.json": "5e6c2e4d6be999e1303938ca869b0ff7e6b175a6f9b13ded7141b6c102a83ee8",
+    "evidence/apparel_source_validation_v1/fixture_checks.json": "d54a24a961cc5bb933c750b0ccc608a2d963b59e31b14de60922a640dfbe2771",
+    "apparel_fulfillment/action_contract.py": "fc9010101328d722a845523e675196a1b8fb076adcce1343b40679d79a66e21c",
+    "apparel_fulfillment/agent.py": "db457be82ae57b33aa4b4bf12f823f2724e4c6999cf82bfc8836bffc61ee1016",
+    "apparel_fulfillment/agent_candidate_v4.py": "02ee8b82c3c9314340966d01f3d8866f2f75c214648a1a6e33aab64e96b7d3bd",
+    "apparel_fulfillment/agent_evidence_v2.py": "b1ace833ae3e5733670304df562a0a157e8af87f295b6189ffe2452ae1bad6b3",
+    "apparel_fulfillment/agent_source_v5.py": "1524c8cf2d3064d56af9aa084175c8407958c3e8f5d6c026e800443abaa24e70",
+    "apparel_fulfillment/agent_state_v3.py": "b0507eab3ce493f01c2d7a8d5a65801d39406dda85eb777f076bd923695cb8a9",
+    "apparel_fulfillment/candidate_search.py": "782ee01454114af86dc5e445315461f7572fa31ee4a1c576e8dfbd1500632bbd",
+    "apparel_fulfillment/orders.py": "69c2e1bf6d82cd375669949e4ffb4aa14a9a383bc2d7ab56436e8fada7e09897",
+    "apparel_fulfillment/route_audit.py": "db68c5762e040f333d644d421a6a5d5030033813b2af8a506899ca51d91fb2b3",
+    "apparel_fulfillment/source_review.py": "e39f2237bc2134ce6b609d3d0ba39075173828c2a6bd2cb2de3dcbc66caf2250",
+    "apparel_fulfillment/store.py": "0370ee5932056f103b30cdc5e33c4b646c63cea89335dcf01d126074fca9cde4",
+    "apparel_fulfillment/transport.py": "348189bd8d69d03580f9cfd749a74d8cc5b5f734acbf4dfb01fb99c5657b9daa",
+    "commerce_lab/retrieval.py": "eabb5aacda27a7f9a365b207acbc259f76afe033434aff706a4d31a639920dfc",
+    "data/apparel_corridor_v1.json": "f111d115913aaf3a7f00a423a1869fa5636a7452f1b827886698695004b7c5ef",
+    "data/apparel_fulfillment_v1.json": "51c68c785a90fb9795defa0fb3b1c45614f36c75e5aadb94531fd8960f90cd7c",
+    "delivery_budget.py": "c17a4b9c1a507f192bc8c94fd7f182ffd6c3bf2bdbfafbac78fafe36d8ce4e53",
+    "delivery_budget_policy.json": "9aa0220b866a4670c437e31241d479f32f8ceef07cec9a23d9371abf531b78c7",
+    "research/APPAREL_CANDIDATE_VALIDATION_PROTOCOL.md": "d4c1f5d1a2467e09a1a91ba17669e791cd1ab7ad901dbc6cf52a7ae62c24b028",
+    "research/APPAREL_SOURCE_REVIEW_PROTOCOL.md": "9c22cd9e0bf735acfa4734e8747cce1efdf601a20185e5a5354ff6381b0e3041",
+    "research/apparel_candidate_validation.py": "cab1cb562c4b9300d5ac525ad50187be3ce3b0ed41f42ed7d476e5ba16788127",
+    "research/apparel_source_validation.py": "0c2a2cbd82f5c43dcae871c83ffb544ac2ebfe03467b3e408aaeb69048f4f7db",
+    "research/model_client.py": "ae2563703d4ea9f212cc2b00c7525ddd846e521fd6a90b2e47279b5be48979b2",
+    "research/provider_gate.py": "a877a3945032f9be88e58b30f4676da899afbe8ae78dde0f682a1b1348916629",
+    "research/rate_card.json": "03c5e5dbf42520341a079477cd44e8f8ea43b63282b26af38d183457c759bbf4",
+    "research/tls_transport.py": "35153e09293eb962da2babb5d90bed11f17029a6b485469cb0f6e46214d45aa9",
+    "serving/reranker.py": "f89f7b69121e827c60caffc1c6ac8587749119f192e3ca2ba101ff5e28947b9c",
+    "tests/test_apparel_source_review.py": "ff0ed6289c8579904f5238b3a2a3367fdbacddbfca890b64db46b0ee57d10b63",
+    "evidence/apparel_source_validation_v1/initial/SR-00-0/operations.sqlite": "8ccd32fa086a47114669b77b2f8faac9e596db308e3ab0dc18bccbbe953b5bf7",
+    "evidence/apparel_source_validation_v1/initial/SR-00-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-00-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-00-0/seed.json": "80e9e754e67a3ca9a82bfdba8cf50fbefa6da9c39b82ceaa8ee9f2a808866214",
+    "evidence/apparel_source_validation_v1/initial/SR-00-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-00-1/operations.sqlite": "74b35fc4d8c350db58c832c4c71685037401f40abf761ae604a391b19d687f0a",
+    "evidence/apparel_source_validation_v1/initial/SR-00-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-00-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-00-1/seed.json": "eea407f8531e5700ad0242d114b5480aaf78474b40ae216314635421bc055d2e",
+    "evidence/apparel_source_validation_v1/initial/SR-00-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-01-0/operations.sqlite": "186ed9118a5d1ad34a76015f2f2932aed7e6c7230e8bb945743acc774fb7b44c",
+    "evidence/apparel_source_validation_v1/initial/SR-01-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-01-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-01-0/seed.json": "a55079e267d2ef4bf96f7e23250454b2570fad937220dc0bdcb57c89d6d77f8d",
+    "evidence/apparel_source_validation_v1/initial/SR-01-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-01-1/operations.sqlite": "9065c65968716ab823f9b2b2c9dcfc042b73ea6547a042c155255bde9a228eb2",
+    "evidence/apparel_source_validation_v1/initial/SR-01-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-01-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-01-1/seed.json": "725459f85b388098478d71bbfb3d6c660b78ff7272e3eca43cf8f6b6bcc2f65c",
+    "evidence/apparel_source_validation_v1/initial/SR-01-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-02-0/operations.sqlite": "343b793a370715ec9777599582a2860546b1d3c105aaf5ae50c8d48eae939db5",
+    "evidence/apparel_source_validation_v1/initial/SR-02-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-02-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-02-0/seed.json": "33b9142c99c3f79d3297cc2d82b1045e968316986e8ecbf2f0456ab214c24b54",
+    "evidence/apparel_source_validation_v1/initial/SR-02-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-02-1/operations.sqlite": "415046710c684e927501f3c41fdefd30f604418275f4f50e1f622a8a50838fdd",
+    "evidence/apparel_source_validation_v1/initial/SR-02-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-02-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-02-1/seed.json": "81da384f0d6a99357353d04633f4532f6af4b6d083338ba4b5b6f80beb7b095e",
+    "evidence/apparel_source_validation_v1/initial/SR-02-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-03-0/operations.sqlite": "6bd1450043c66ce5c1f3a24ed80980fc1bea8d519aa1d083792c6d9eff526014",
+    "evidence/apparel_source_validation_v1/initial/SR-03-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-03-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-03-0/seed.json": "69a08ed851305316ef4658df51f38671a3f414cf2532906b7628bc9b814426b5",
+    "evidence/apparel_source_validation_v1/initial/SR-03-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-03-1/operations.sqlite": "91ec561df71f792dfaa2438e07b8554de1ff593d33b7f15bad2e004cc3b697e8",
+    "evidence/apparel_source_validation_v1/initial/SR-03-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-03-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-03-1/seed.json": "e12277025e6e0940a400df71c9647d917f1f2efcf5e448b50ae357095d3e03f9",
+    "evidence/apparel_source_validation_v1/initial/SR-03-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-04-0/operations.sqlite": "5ee4d4a0f3874948f66e3117dacdb3a4ca1bc6a47363b011ebbe7d4229255304",
+    "evidence/apparel_source_validation_v1/initial/SR-04-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-04-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-04-0/seed.json": "0671792d6514345c88ec0e01a38b9965b37f5ae12f9451409978f6898cab75a5",
+    "evidence/apparel_source_validation_v1/initial/SR-04-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-04-1/operations.sqlite": "c9337d69eb03a18c843e93558c4bf1ad175122b0b3d14893883d2b8a7ced6125",
+    "evidence/apparel_source_validation_v1/initial/SR-04-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-04-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-04-1/seed.json": "b5fa94352827eb73e174df1912dd1fff991e2fbe03a652004c25e69620c1f9d3",
+    "evidence/apparel_source_validation_v1/initial/SR-04-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-05-0/operations.sqlite": "59ff180b36364e49293129b4e9eae65a0d5c5f585b836ec1ccaf56cbd898d71b",
+    "evidence/apparel_source_validation_v1/initial/SR-05-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-05-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-05-0/seed.json": "d781ec6c5e1bfba2851b8c370a89eccfb7b27b4882fb3acb2a1bb4469dca6644",
+    "evidence/apparel_source_validation_v1/initial/SR-05-0/world.json": "e264a8e26dd9f3439c78b5b75166e1d398550b7a14e2d3f4bd7a67740fc5e80c",
+    "evidence/apparel_source_validation_v1/initial/SR-05-1/operations.sqlite": "f39b84a6daea6d2a621dbd16b5a793baf9a46496970a431c5684e6029471fd80",
+    "evidence/apparel_source_validation_v1/initial/SR-05-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-05-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-05-1/seed.json": "145079d06dd05adba255aeb0cd359a97753fb8e577cfd5f0c042f8b913f7f145",
+    "evidence/apparel_source_validation_v1/initial/SR-05-1/world.json": "1dd74778d85572499dfa9f7cdd4e0af590cfbc1035b573878ec835546310ffbe",
+    "evidence/apparel_source_validation_v1/initial/SR-06-0/operations.sqlite": "e62da44d56bf2605c434bb5dab689c4c728e0ba213d4a6ded7eab734ebc832ac",
+    "evidence/apparel_source_validation_v1/initial/SR-06-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-06-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-06-0/seed.json": "ac9a66722d24e72c2ac0e3a2c6d6ba84fd4698dde72b5697696251b32f3c04d0",
+    "evidence/apparel_source_validation_v1/initial/SR-06-0/world.json": "d2f6095a9c4cfb53be6b20066c187aa602d799c878990ca95aec31f4b4924395",
+    "evidence/apparel_source_validation_v1/initial/SR-06-1/operations.sqlite": "57fe4036a7c18cc2c701a5c2fcf23fe048693361eed64937ffc3a3c480d9afad",
+    "evidence/apparel_source_validation_v1/initial/SR-06-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-06-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-06-1/seed.json": "a7178f2392d6956607d4a562f39aaddb1bbf31f6a62d1a88500c7c077997c9a0",
+    "evidence/apparel_source_validation_v1/initial/SR-06-1/world.json": "0e88289b91872032c4bdf3c01893eb57d24bce0025e8c7eacc3926bcf3bcd238",
+    "evidence/apparel_source_validation_v1/initial/SR-07-0/operations.sqlite": "5510a3d08a4bf61827882ba404ba0aec10214dba9eb9c6dc02141545b801d1f2",
+    "evidence/apparel_source_validation_v1/initial/SR-07-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-07-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-07-0/seed.json": "012a2710da3b0bb2f7bae2f4e92312ac20292239578512a178281f5be63db10e",
+    "evidence/apparel_source_validation_v1/initial/SR-07-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-07-1/operations.sqlite": "cfd8965708af9a0c4861a29b3c137448f9b3e543e097d17f990fe3be7434576d",
+    "evidence/apparel_source_validation_v1/initial/SR-07-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-07-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-07-1/seed.json": "6dee9729d02e477495a884f53de36d6808bae2572ccc202257c1f12b95516fa4",
+    "evidence/apparel_source_validation_v1/initial/SR-07-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-08-0/operations.sqlite": "c36539c4a38d5f0727bd21348631efd523822d8501a2eeb8d0496f9034436475",
+    "evidence/apparel_source_validation_v1/initial/SR-08-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-08-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-08-0/seed.json": "7bcbf3fd441a19a9a2f00a0cd33fae4ce15f00d4265bac5152828340d2a8ba63",
+    "evidence/apparel_source_validation_v1/initial/SR-08-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-08-1/operations.sqlite": "e4f586dd25d4bd5899f4aacf668e429a1a02583a5b4bd052cabcc9dd069f3998",
+    "evidence/apparel_source_validation_v1/initial/SR-08-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-08-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-08-1/seed.json": "958ad380590845601cfe77118aa9a0d0d78fc989592e1c095a74042daf821e3c",
+    "evidence/apparel_source_validation_v1/initial/SR-08-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-09-0/operations.sqlite": "e88f94ab735786a4e159356154995e7df526bab1fb6bbaafc5248d2650dc7c07",
+    "evidence/apparel_source_validation_v1/initial/SR-09-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-09-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-09-0/seed.json": "4046701e0e7d2cb01a1fe94934a214c3bef53acbdf493b9494f3e2b71538cc99",
+    "evidence/apparel_source_validation_v1/initial/SR-09-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-09-1/operations.sqlite": "f06ab910fc740683295e4accf8767c3823c7be0e481464cab74007686b42fff5",
+    "evidence/apparel_source_validation_v1/initial/SR-09-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-09-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-09-1/seed.json": "4a10f57a00152e483b0005f2219ab994a3935342b6e8dab2d4c5a6bc001b1d69",
+    "evidence/apparel_source_validation_v1/initial/SR-09-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-10-0/operations.sqlite": "2decf0757ac8b18ad55c8852b568556ef4e33dbb0aee4a728d01b78801a8df6d",
+    "evidence/apparel_source_validation_v1/initial/SR-10-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-10-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-10-0/seed.json": "78ae98a87e9b18b53370dd12e45fcccdfcb4dcfbcbaacd1b3dcfb7666628cc8d",
+    "evidence/apparel_source_validation_v1/initial/SR-10-0/world.json": "e264a8e26dd9f3439c78b5b75166e1d398550b7a14e2d3f4bd7a67740fc5e80c",
+    "evidence/apparel_source_validation_v1/initial/SR-10-1/operations.sqlite": "674ee653d70ca749161b4d28ac7a61064adf531911d000073f7cefcef5b82f42",
+    "evidence/apparel_source_validation_v1/initial/SR-10-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-10-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-10-1/seed.json": "d541650085729ff5967608b9b0000706478fc0e97e0c7a638ddeb03d943a66ec",
+    "evidence/apparel_source_validation_v1/initial/SR-10-1/world.json": "1dd74778d85572499dfa9f7cdd4e0af590cfbc1035b573878ec835546310ffbe",
+    "evidence/apparel_source_validation_v1/initial/SR-11-0/operations.sqlite": "184138c91a689ff2e249bed5b4203b148603af5b9907c0c5e6488a89506dc591",
+    "evidence/apparel_source_validation_v1/initial/SR-11-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-11-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-11-0/seed.json": "471cd8139ec12424f1a34fa2ef3c13476a5ef73d5140db0f9a691b712fc48cfb",
+    "evidence/apparel_source_validation_v1/initial/SR-11-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/initial/SR-11-1/operations.sqlite": "857496092aa07526f783e02875a91828e0af0bb04b6767a489275ec917597fdd",
+    "evidence/apparel_source_validation_v1/initial/SR-11-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "evidence/apparel_source_validation_v1/initial/SR-11-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/apparel_source_validation_v1/initial/SR-11-1/seed.json": "424ad12de4bdfab655ae30097ed876eae75ad58a4d7f7b059ac077394f87c583",
+    "evidence/apparel_source_validation_v1/initial/SR-11-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "evidence/apparel_source_validation_v1/runs/SR-00-0-v4_candidate/result.json": "7759fd139c94d2e7ae84c6114051a36114b8e4fdee9c1ff599d7d1bbff7e4e00",
+    "evidence/apparel_source_validation_v1/runs/SR-00-0-v5_source_review/result.json": "67a3e3df42e2ac0ea6c45f39ea0692ac463e5c519a5b747ff9569e1653e99a0c",
+    "evidence/apparel_source_validation_v1/runs/SR-00-1-v4_candidate/result.json": "9a7dde6bda020fb24a518ae58cbb20f79a068964e438f4b2a585cf5e8ebb0df2",
+    "evidence/apparel_source_validation_v1/runs/SR-00-1-v5_source_review/result.json": "3bd51c1f5791d4af9c205d7098c9921e3f586ef104b4475505af21d0365b2360",
+    "evidence/apparel_source_validation_v1/runs/SR-01-0-v4_candidate/result.json": "40522f5b2ef806c020e75513dd622247d57db2b6cc3edb438e45e696e241896a",
+    "evidence/apparel_source_validation_v1/runs/SR-01-0-v5_source_review/result.json": "4e3ab769e706075461a42061e48422346077ef6d543a87b50812ea2c1ce7acab",
+    "evidence/apparel_source_validation_v1/runs/SR-01-1-v4_candidate/result.json": "934762651bb9817fcd59e882bb92eade975ebd1624c414a32095a9b2dab8fd5a",
+    "evidence/apparel_source_validation_v1/runs/SR-01-1-v5_source_review/result.json": "3628fc28bf1e2868eb9bed35eb580375e3514b2303c13b8af8f053a0a78da113",
+    "evidence/apparel_source_validation_v1/runs/SR-02-0-v4_candidate/result.json": "a8be61b9563514ad4ef5dfba4d9d5c79f788f0f254abd65b007f38d646e87795",
+    "evidence/apparel_source_validation_v1/runs/SR-02-0-v5_source_review/result.json": "ad40a40ac51f88121b88c64558fc1728877cf3232c0086d74f24e670518e6646",
+    "evidence/apparel_source_validation_v1/runs/SR-02-1-v4_candidate/result.json": "b03a8e640a8d592557d85b3425737e2759bc0f2059d26f7cc53dcd6e5ecd42d5",
+    "evidence/apparel_source_validation_v1/runs/SR-02-1-v5_source_review/result.json": "4cc8c4c7f7cc93cda93ce6ac2ffa2621217e371d4f6066744c4e7e51c18c8f85",
+    "evidence/apparel_source_validation_v1/runs/SR-03-0-v4_candidate/result.json": "29a22f6f3ecf9f6ac959d85bf037d8f0870d9e1ab6bd1eef344117423fa26287",
+    "evidence/apparel_source_validation_v1/runs/SR-03-0-v5_source_review/result.json": "55d37a372c5aff94289ab35d548e53752400e213fdcf973b3893165d86978592",
+    "evidence/apparel_source_validation_v1/runs/SR-03-1-v4_candidate/result.json": "0a6038d0f5dc42500a803e99293136764aa2705873563519f20e9ec5a4c7a9d8",
+    "evidence/apparel_source_validation_v1/runs/SR-03-1-v5_source_review/result.json": "c6bad5d46467515c46bf18087b003b335b1bf98c0ecab22c430eacc02f74ed18",
+    "evidence/apparel_source_validation_v1/runs/SR-04-0-v4_candidate/result.json": "d010397ed05888de4a5487948978ced67b98ffba74cac0a2edc6eb799a90c80e",
+    "evidence/apparel_source_validation_v1/runs/SR-04-0-v5_source_review/result.json": "7a0530d53fcd8b62bbe0da95974e286ed35a1d5b405bbf81ff181127fcf4b6c1",
+    "evidence/apparel_source_validation_v1/runs/SR-04-1-v4_candidate/result.json": "8432a94be11530b58ab8112ac28ce228499eaba65d4ef43969fa62f9fda79b2b",
+    "evidence/apparel_source_validation_v1/runs/SR-04-1-v5_source_review/result.json": "e0ecc11d9aeacd47daf0bb56f0a7fc343f04d1374fec51b894e85c46bc500fc9",
+    "evidence/apparel_source_validation_v1/runs/SR-05-0-v4_candidate/result.json": "227b7ecddcf119e72dab13c9510219084fe6b8acc17edec22f6777a05043bb09",
+    "evidence/apparel_source_validation_v1/runs/SR-05-0-v5_source_review/result.json": "9363a3a2844fcba416661caf1bb9722d73ada95ad62b310a287beb36828d9418",
+    "evidence/apparel_source_validation_v1/runs/SR-05-1-v4_candidate/result.json": "77f39c072c4cfcdadd30e24c3067428fafb9f93a311a5cc052070449852b008d",
+    "evidence/apparel_source_validation_v1/runs/SR-05-1-v5_source_review/result.json": "c2d9e5f2a14fe036a3981a8c545748ab134eb84ee1a290cd7ce8459b04ffdaf5",
+    "evidence/apparel_source_validation_v1/runs/SR-06-0-v4_candidate/result.json": "2dd5cf6df0b8fcb61ae136235e242b4b13ac1dc143005ab936c722192df767ac",
+    "evidence/apparel_source_validation_v1/runs/SR-06-0-v5_source_review/result.json": "c919eaf978a1247a169dfa8e241db879c3c37b3f6838ae2adaa8e12bf469949a",
+    "evidence/apparel_source_validation_v1/runs/SR-06-1-v4_candidate/result.json": "5f752a7c080a060c197ed2a65fc55e114472d217a1526d0d8e56a04720f2b686",
+    "evidence/apparel_source_validation_v1/runs/SR-06-1-v5_source_review/result.json": "522ef8782366f13d65bb179c7dd495304a059396649e29594f3a3b33d257e10b",
+    "evidence/apparel_source_validation_v1/runs/SR-07-0-v4_candidate/result.json": "88eec35d7ca5ee01fbb302df7a2b90675e8d8b18f924ad06935985410923face",
+    "evidence/apparel_source_validation_v1/runs/SR-07-0-v5_source_review/result.json": "ed1e99b0c255502f338fb27b362bfede548500d11e0f4002771cd26e48f20bd0",
+    "evidence/apparel_source_validation_v1/runs/SR-07-1-v4_candidate/result.json": "2f2fd00116cbf8e924495535f8b5432eb55bc9e0fafe7ed4df499e473987a186",
+    "evidence/apparel_source_validation_v1/runs/SR-07-1-v5_source_review/result.json": "72a8c5ccec806879283bb80c5b1c138891577d182aa0daa522c3a6985eef50e2",
+    "evidence/apparel_source_validation_v1/runs/SR-08-0-v4_candidate/result.json": "8d77afdee000813d06062a02d5c867f53a50d4109b4bc8086a82981785a52c7d",
+    "evidence/apparel_source_validation_v1/runs/SR-08-0-v5_source_review/result.json": "33d5c3fb260e74d4be49a39ea75472f5ec98287cd2d82e1559f5823ce3ba2c52",
+    "evidence/apparel_source_validation_v1/runs/SR-08-1-v4_candidate/result.json": "481c5180d8c3cb91e6653eda193830cde05c106f79acd94bdf85f51037ec386d",
+    "evidence/apparel_source_validation_v1/runs/SR-08-1-v5_source_review/result.json": "915abed9dd3a1d9b2d3c0a89cc98066ff3e6a63d5e827ceb839886309e7d921e",
+    "evidence/apparel_source_validation_v1/runs/SR-09-0-v4_candidate/result.json": "700de53c7dad9bd5d0cb5d1c5dd6f7c9b70005c28e2e74c229288ac593fe94c4",
+    "evidence/apparel_source_validation_v1/runs/SR-09-0-v5_source_review/result.json": "c6d2f6f51211b71cda8e233a0c67ad136c9d0c7962f41781341db45ccede22ec",
+    "evidence/apparel_source_validation_v1/runs/SR-09-1-v4_candidate/result.json": "26a8b86eaf4f432dd2874be276258412f2e706d6adce9d1360064dfcd521b944",
+    "evidence/apparel_source_validation_v1/runs/SR-09-1-v5_source_review/result.json": "cafb9f2e34edb6093d0f47cd6611bb32175cf8ed3e1b744b7a189521ce211d9e",
+    "evidence/apparel_source_validation_v1/runs/SR-10-0-v4_candidate/result.json": "f6fc25d28a71fbfc2cd4a50b47e61721e9057d1ce30b8f02548a9097d3a484f7",
+    "evidence/apparel_source_validation_v1/runs/SR-10-0-v5_source_review/result.json": "405808d4bef4c95612d83730ebb6f48f21b7a22ed2cdfda041554f4ba72e8c06",
+    "evidence/apparel_source_validation_v1/runs/SR-10-1-v4_candidate/result.json": "bf74878c71e55022753e194b9148adeb120a81ab5fde66fb6be71415aed3e392",
+    "evidence/apparel_source_validation_v1/runs/SR-10-1-v5_source_review/result.json": "e423e5801a1c3b8d6ddf3c0afdf49d50061cad5878d77b2c08567a5ffb78e02b",
+    "evidence/apparel_source_validation_v1/runs/SR-11-0-v4_candidate/result.json": "f6aa59503e07fac8096cd5240d82cbd6260c6ebcd8163a0a4f530db68b34d2bd",
+    "evidence/apparel_source_validation_v1/runs/SR-11-0-v5_source_review/result.json": "e37c7ae6e6aea287366ee72c42ed48fe70ede497ecd45e58ce775799476d25c6",
+    "evidence/apparel_source_validation_v1/runs/SR-11-1-v4_candidate/result.json": "717445137b1c9dbbbb961c07b8431ffba95bc4229a2789ac72f844374308a871",
+    "evidence/apparel_source_validation_v1/runs/SR-11-1-v5_source_review/result.json": "543392cc25da64caf261baaea5e60c0c1851e9940c5432135de5c3443f875e78",
+    "evidence/apparel_source_validation_v1/runs/SR-08-1-v4_candidate/execution.json": "93e4eff658500367197f3dba25dff09a13a350178032a5f5e47abc8c2e159898",
+    "evidence/apparel_source_validation_v1/runs/SR-08-1-v5_source_review/execution.json": "f4778e02dd8319f3d063294abbb6965c2357423c9384583dcb14d06013b6226d",
+    "evidence/apparel_source_validation_v1/runs/SR-02-1-v5_source_review/execution.json": "cd7bbab3f23e26d432b5866eabe2e7f6b460d05e05d275d2dcd33a0a85e73beb",
+    "evidence/apparel_source_validation_v1/runs/SR-02-1-v4_candidate/execution.json": "a691f7721beec7a97944dcab25692924ef9a0736bd6320e5409c5c18241202e7",
+    "evidence/apparel_source_validation_v1/runs/SR-05-0-v4_candidate/execution.json": "c8baddfea336aa0ecf2edfecdaa49e0ce237344cb31937e759b4188d35fb96f9",
+    "evidence/apparel_source_validation_v1/runs/SR-05-0-v5_source_review/execution.json": "e562b9a7c5bd2bfad022beb14ff5743da50184d917d744fa2b3864833f5e7bd3",
+    "evidence/apparel_source_validation_v1/runs/SR-07-1-v5_source_review/execution.json": "1025f350846a746913047d27aa6529416f89803331941112254f5f3b5b58433a",
+    "evidence/apparel_source_validation_v1/runs/SR-07-1-v4_candidate/execution.json": "3911e039597d6f1e9eae62b0f8af30310ae03f81150d8e124df59b9652136f5a",
+    "evidence/apparel_source_validation_v1/runs/SR-01-1-v4_candidate/execution.json": "181bc4b454be015be5221d9dbf0a2461143a7e0d2228b9201677bdd0c9d02957",
+    "evidence/apparel_source_validation_v1/runs/SR-01-1-v5_source_review/execution.json": "7d6054f545d08a0948d45292bee0c8665f5074fa3a490e95d5178a69d8127b4f",
+    "evidence/apparel_source_validation_v1/runs/SR-00-1-v5_source_review/execution.json": "c2271dc3c178086baf814d086682a5633538013fc126f0748c3e90dcd4d3efc3",
+    "evidence/apparel_source_validation_v1/runs/SR-00-1-v4_candidate/execution.json": "026a45baecddc23fd0385b2bad36acaaf13f4016be193a5d4e1fab713030773f",
+    "evidence/apparel_source_validation_v1/runs/SR-02-0-v4_candidate/execution.json": "b3e05934a3ab47b908051ad076fb3eb31b591eaa60766ed050ef97dde5c9fca2",
+    "evidence/apparel_source_validation_v1/runs/SR-02-0-v5_source_review/execution.json": "82ee7c062ee50e802bc6a9223ca25b5630211bbdf5611d33230f58b5757eb6ee",
+    "evidence/apparel_source_validation_v1/runs/SR-10-1-v5_source_review/execution.json": "86fac51d0d9315f5effc772c0b230524b4541c7a77dfd963bac14f03d4406118",
+    "evidence/apparel_source_validation_v1/runs/SR-10-1-v4_candidate/execution.json": "73d003ce54c3a0186675d0f8b5930a159aef30085818601adfcfb988dcffc9d9",
+    "evidence/apparel_source_validation_v1/runs/SR-06-1-v4_candidate/execution.json": "f2ac74357be4b62f44abe6bf799b5b304a1ba5011119df92f69ef7a39c56e739",
+    "evidence/apparel_source_validation_v1/runs/SR-06-1-v5_source_review/execution.json": "2fbf75f051bffbe88e405f45ce1a3b4e6bb02220ddd61366724b0fb4043fb1ed",
+    "evidence/apparel_source_validation_v1/runs/SR-07-0-v5_source_review/execution.json": "b895b34c446f645d31e1104472f4ba0f7a369b6c0d04c84416e73e4df8f2228c",
+    "evidence/apparel_source_validation_v1/runs/SR-07-0-v4_candidate/execution.json": "e6d016abe94945ddc76181988c57400d1bb925b6432c4cff7ee6099429614ee6",
+    "evidence/apparel_source_validation_v1/runs/SR-09-1-v4_candidate/execution.json": "c855679466769508d8ffcb0f528bd6de87a016488a7081d0a9b6949d397b9294",
+    "evidence/apparel_source_validation_v1/runs/SR-09-1-v5_source_review/execution.json": "23d02a006d1fc3e7e122bd6effb3899e4f4ca701c16b6a0f795ebf8676fc5159",
+    "evidence/apparel_source_validation_v1/runs/SR-11-1-v5_source_review/execution.json": "4388bfeb5d167c282fd03ecad5df291f53faac706f4532e7f93b930bfa8f5569",
+    "evidence/apparel_source_validation_v1/runs/SR-11-1-v4_candidate/execution.json": "386f9fc3b4628b506ca49a70833b4cfc54afe8035cff7e3b2a8ae5d3d70b8b1a",
+    "evidence/apparel_source_validation_v1/runs/SR-01-0-v4_candidate/execution.json": "ea088d7d76b2383dde8b2c022548ff49da57f82539b5588eede00a2b6fd3bcd0",
+    "evidence/apparel_source_validation_v1/runs/SR-01-0-v5_source_review/execution.json": "66b55b03cae41b1bb989105fcc79ce27d5a13b8a099c44fada2814dad0348902",
+    "evidence/apparel_source_validation_v1/runs/SR-03-1-v5_source_review/execution.json": "bc2531fef25f39a909f43fab9839c841a7248075cbebfe1bee34edc478d4cbd6",
+    "evidence/apparel_source_validation_v1/runs/SR-03-1-v4_candidate/execution.json": "38b475291be9d9aa9a1b4740ab410326ac1f4748cb9de631384de1b1eec736f3",
+    "evidence/apparel_source_validation_v1/runs/SR-06-0-v4_candidate/execution.json": "618f927078353e60d7d2d8b5159dc25b7a2971bd7d52aa5d77acd6d3f4013669",
+    "evidence/apparel_source_validation_v1/runs/SR-06-0-v5_source_review/execution.json": "260a1db035632c83f42de84c164035f3ef538b0b7e409767731455b0757f7a02",
+    "evidence/apparel_source_validation_v1/runs/SR-08-0-v5_source_review/execution.json": "919c7ba5e9f63e24df4ac9241f76c1a69a133575781cfb6617d93d8434162332",
+    "evidence/apparel_source_validation_v1/runs/SR-08-0-v4_candidate/execution.json": "afe75810b7482b044d147b6ee733a4ed31f52df175cdfc0fa8aa9a5fa47d3023",
+    "evidence/apparel_source_validation_v1/runs/SR-10-0-v4_candidate/execution.json": "64f4692462f4d72e87b23f6bc3dedbdeaee4def3cb90b006b927450238ed8fdf",
+    "evidence/apparel_source_validation_v1/runs/SR-10-0-v5_source_review/execution.json": "fa64689c1a835882d5e706bc368293f3c65ef144bd2874fb7249da5597b97711",
+    "evidence/apparel_source_validation_v1/runs/SR-09-0-v5_source_review/execution.json": "c814d43b5bea50c01de157b4cb436cf2fa51f47095ff1f464ebc26d0c0918c53",
+    "evidence/apparel_source_validation_v1/runs/SR-09-0-v4_candidate/execution.json": "3521c39c714a0a713ccaca2f872d515dcf127bc842df5ae528d102b4654b83e9",
+    "evidence/apparel_source_validation_v1/runs/SR-04-1-v4_candidate/execution.json": "6387e5a992e53a5183d8a6955880dad22b6bc46b58bb58b12c2863aeb84b3533",
+    "evidence/apparel_source_validation_v1/runs/SR-04-1-v5_source_review/execution.json": "f12198fe8d65a07b3f9e4ee1889a7c4bfae3381beaa9e80add808192a74ffa12",
+    "evidence/apparel_source_validation_v1/runs/SR-04-0-v5_source_review/execution.json": "f1c9a695cf06d7fbc1969cf9421f1b6365b3405910d0cf666fb5e339b6944871",
+    "evidence/apparel_source_validation_v1/runs/SR-04-0-v4_candidate/execution.json": "9ca1d11a93f1417fa155c98753f05aa47f247c43c7793e76d3ef833625b15afc",
+    "evidence/apparel_source_validation_v1/runs/SR-00-0-v4_candidate/execution.json": "2a578bbab1ca27d321d54551244456590bb4ce648582e8ef92f813914965ba8d",
+    "evidence/apparel_source_validation_v1/runs/SR-00-0-v5_source_review/execution.json": "e583f17a4a0c4704b03edf24b2143c9c94c364a480cd17d26966eb8a68382c7a",
+    "evidence/apparel_source_validation_v1/runs/SR-03-0-v5_source_review/execution.json": "4b2632d43b27ec95b0b0b7161bbe5ed16c4bea6ce9a21282f7c000645834d882",
+    "evidence/apparel_source_validation_v1/runs/SR-03-0-v4_candidate/execution.json": "40f06c159311e1d2e7c253320482c4573408b05787b0d389a57ba1bc83f7062b",
+    "evidence/apparel_source_validation_v1/runs/SR-11-0-v4_candidate/execution.json": "0fe65dcc58fdaec095ede28f704d8592708fb66ab1f6097391fee26cb0955d9b",
+    "evidence/apparel_source_validation_v1/runs/SR-11-0-v5_source_review/execution.json": "825347919eea0ceb0d5697c4291861de8797b26e25773f1983cf4c0e4bed1689",
+    "evidence/apparel_source_validation_v1/runs/SR-05-1-v5_source_review/execution.json": "c759d0d8213088c409635fc2e90518f78d711adbc025a5f45aba2835edfd2de6",
+    "evidence/apparel_source_validation_v1/runs/SR-05-1-v4_candidate/execution.json": "3501b91da64dc576ed0ab7ab4d615f128ea2f03cf1eee197edde99391c3fc3a5"
+  },
+  "new_model_calls_during_audit": 0,
+  "new_real_users": 0,
+  "deployment_changed": false,
+  "scope": "Raw evidence and exact ledger reconciliation, SQLite state, current material equality and separately implemented itinerary arithmetic.",
+  "limits": [
+    "Known 37-product directory and 12 developer-defined template families, one trajectory per mode/case.",
+    "Material equality confirms recorded exposure and freshness, not comprehension of every sentence or real stock.",
+    "Route arithmetic proves feasibility of returned itineraries, not globally cheapest service or carrier availability.",
+    "Local conservative fees and provider model aliases, not independent weights verification or a supplier invoice."
+  ]
+}

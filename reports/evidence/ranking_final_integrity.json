@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-09-07T17:51:27.275679+00:00",
+  "queries": 14496,
+  "pairs": 336373,
+  "all_registered_query_keys_match": true,
+  "duplicate_query_count": 0,
+  "all_per_query_metrics_recomputed_match": true,
+  "all_locale_macro_means_recomputed_match": true,
+  "query_results_sha256": "c12d6f9deafc4aff04322abcc398b39c49f6220b47e6bc0310a13c29e3fb0628",
+  "summary_sha256": "025beb62c1aec5a633b0b533d45991f2be9d2f50232585d6dd4e1a3850e1d0fa",
+  "original_50_query_prefix_sha256": "f09d3150dd353a3e1878b9ea602f5be26ea322065abb16ff4f8b88cf03174f46",
+  "original_prefix_bytes": 200239,
+  "original_pause_prefix_preserved": true,
+  "scope": "Integrity and independent recalculation from recorded scores; no new model inference, no method or raw-result changes."
+}

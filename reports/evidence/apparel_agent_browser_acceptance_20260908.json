@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-09-08T08:46:59.691885+00:00",
+  "browser": {
+    "browser_id": "2",
+    "tab_id": "1076170112",
+    "url": "http://127.0.0.1:5176/"
+  },
+  "interactive_run": {
+    "path": "evidence/apparel_interactive/AJOB-33addb11ec0b422f896d117395a90904.json",
+    "sha256": "ce19a61138f4d6a93d3ebf4aca9904678a63e9a3e62fddc434605c0052a9864d",
+    "job_id": "AJOB-33addb11ec0b422f896d117395a90904",
+    "draft_id": "APP-a52c5abb47094814ac9cbf8409d45294",
+    "arm": "on_demand",
+    "run_status": "completed",
+    "model_calls": 6,
+    "tool_calls": 4,
+    "latency_seconds": 29.422,
+    "accounted_and_reserved_cny": "0.041857",
+    "decision_status": "ready",
+    "proposal_id": "PROP-9cea8d4db635467c9c1e60199262a38d",
+    "route_cost_usd_cents": 17300,
+    "independent_route_audit_passed": true,
+    "remains_unconfirmed": true
+  },
+  "browser_observations": {
+    "running_message_observed": true,
+    "run_button_disabled_while_running": true,
+    "completed_report_and_cost_visible": true,
+    "valid_proposal_visible": true,
+    "separate_confirmation_button_visible": true,
+    "download_button_clicked": true,
+    "downloaded_full_record_equals_saved_record": true,
+    "all_three_research_rows_and_both_metrics_visible": true,
+    "validation_default_shown": "on_demand"
+  },
+  "gpu_health": {
+    "ready": true,
+    "model": "Qwen/Qwen3-Reranker-0.6B",
+    "instruction": "product"
+  },
+  "final_evidence_receipt_sha256": "5c21f35c11c35ddbe80bf391860616076b5740f4786a7488211b0ec00af37217",
+  "tests": {
+    "passed": 42,
+    "junit": "evidence/apparel_integration_20260908.xml"
+  },
+  "budget": {
+    "currency": "CNY",
+    "calls": 15422,
+    "accounted_and_reserved_cny": "299.050026",
+    "status_counts": {
+      "reserved": 4,
+      "settled": 15147,
+      "uncertain": 271
+    },
+    "halt_reason": null,
+    "note": "Uncertain/reserved calls count at their full bound; estimates are not platform invoices."
+  },
+  "scope": "One non-benchmark UI acceptance after completion of all 324 final runs. No automatic retries, no confirmation or stock deduction, and no Finance experiments."
+}

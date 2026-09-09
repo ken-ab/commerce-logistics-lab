@@ -1,0 +1,350 @@
+{
+  "reviewed_at": "2026-09-09T02:53:35.890366+00:00",
+  "scope": "All five unsupported judgments from the account recovery; no review of every supported, missing or schema-invalid answer.",
+  "reviewer": "Codex with program checks over original evidence; not independent human annotation",
+  "input_sha256": "1cd61432c07dce074441bb7a79819274a077408eb80d3cfd0263e874fcf7b97b",
+  "source_sha256": "5789810ee9e612c7fff7b6fc96f122e96763d0c74e9c469829d6076abc269fae",
+  "original_judge_rows_modified": false,
+  "original_business_scores_modified": false,
+  "records": [
+    {
+      "id": "RL-00-1-v5_on_demand",
+      "classification": "judge_false_positive",
+      "review_note": "Keeping the requested deadline is a constraint, not a claim that the final arrival changed. The air departure changes by 90 minutes, with a shorter downstream wait and the same final arrival before the unchanged deadline.",
+      "source_judge_sha256": "d326932616053a0b19c818ffd4a5ebbfc1e3bab010b6d14e7c3832a4c802f385",
+      "source_judge_row": "evidence/apparel_rationale_account_recovery_v1/rows/RL-00-1-v5_on_demand.json",
+      "original_flagged_claims": [
+        {
+          "segment_id": "S002",
+          "status": "contradicted",
+          "evidence_ids": [
+            "HOST_AFTER",
+            "O-5",
+            "CONTEXT"
+          ],
+          "explanation": "The segment claims v2 was revised per original budget AND deadline. While budget (45000) is met, the final arrival 2028-04-09T20:00Z matches v1; the 90-min delay shifted departure/arrival but did not change the final DE-DC arrival time, so 'revised per deadline' implies a schedule adjustment that evidence does not show. Also, 'pending separate confirmation' is supported (state=pending, confirmation=null), as is 'no order/reservation' (CONTEXT notice).",
+          "quote": "旧提案因未纳入 HK-EU-AIR 的已发布 90 分钟延误而失效；第 2 版已按原预算和交期修订，仍为待单独确认状态，未下单或预留库存。"
+        }
+      ],
+      "deterministic_checks": {
+        "shipping_constraints_unchanged": true,
+        "selections_unchanged": true,
+        "cost_cents": 16065,
+        "constraints": {
+          "budget_cents": 45000,
+          "deadline_at": "2028-04-15T02:00:00Z",
+          "destination": "DE-DC",
+          "ready_at": "2028-04-07T02:00:00Z"
+        },
+        "arrival_at": "2028-04-09T20:00:00Z",
+        "old_air": {
+          "arrival_at": "2028-04-08T10:00:00Z",
+          "cost_cents": 12160,
+          "departure_at": "2028-04-07T16:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-04-07T16:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-04-07T16:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 240.0
+        },
+        "new_air": {
+          "arrival_at": "2028-04-08T11:30:00Z",
+          "cost_cents": 12160,
+          "departure_at": "2028-04-07T17:30:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [
+            "RL-00-1-short"
+          ],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-04-07T16:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-04-07T16:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 330.0
+        },
+        "departure_difference_minutes": 90.0,
+        "old_observed_event_ids": [],
+        "new_observed_event_ids": [
+          "RL-00-1-short"
+        ]
+      }
+    },
+    {
+      "id": "RL-09-0-v5_single",
+      "classification": "judge_false_positive",
+      "review_note": "The 27-hour delay affects the old service. The revision chooses a different, unaffected service 12 hours after the old nominal departure; the reduced transfer wait permits the same final arrival before the original deadline.",
+      "source_judge_sha256": "08c15a802a6f068a2eb2aa01a425e7b86e8951413c841910a07d443e00f72b08",
+      "source_judge_row": "evidence/apparel_rationale_account_recovery_v1/rows/RL-09-0-v5_single.json",
+      "original_flagged_claims": [
+        {
+          "segment_id": "S002",
+          "status": "contradicted",
+          "evidence_ids": [
+            "HOST_AFTER",
+            "O-5",
+            "CONTEXT"
+          ],
+          "explanation": "The claim that the new plan was revised according to the original deadline is contradicted. While the new proposal (PROP-0a2ed7d4c2b5426488929e61b044d563) retains the approved substitution and budget, its arrival time (2028-05-14T20:00:00Z) is identical to the old superseded proposal and does not reflect an adjustment for the published 27-hour delay (RL-09-0-long) on the HK-EU-AIR leg; the schedule merely shifted departure without recovering the lost time relative to the original plan's performance.",
+          "quote": "旧方案因已发布延误而失效；新方案按原预算和交期修订，保留已批准替代品，待单独确认，未下单。"
+        }
+      ],
+      "deterministic_checks": {
+        "shipping_constraints_unchanged": true,
+        "selections_unchanged": true,
+        "cost_cents": 15894,
+        "constraints": {
+          "budget_cents": 45000,
+          "deadline_at": "2028-05-20T02:00:00Z",
+          "destination": "DE-DC",
+          "ready_at": "2028-05-12T02:00:00Z"
+        },
+        "arrival_at": "2028-05-14T20:00:00Z",
+        "old_air": {
+          "arrival_at": "2028-05-13T10:00:00Z",
+          "cost_cents": 12016,
+          "departure_at": "2028-05-12T16:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-12T16:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-12T16:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 240.0
+        },
+        "new_air": {
+          "arrival_at": "2028-05-13T22:00:00Z",
+          "cost_cents": 12016,
+          "departure_at": "2028-05-13T04:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-13T04:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-13T04:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 960.0
+        },
+        "departure_difference_minutes": 720.0,
+        "old_observed_event_ids": [],
+        "new_observed_event_ids": [
+          "RL-09-0-long"
+        ]
+      }
+    },
+    {
+      "id": "RL-09-0-v5_coordinator",
+      "classification": "judge_false_positive",
+      "review_note": "The old stored route has no event evidence and its departure omits the delay. The reported validation errors departure_does_not_include_events and segment_event_evidence_incomplete support the statement that the old proposal had not incorporated the delay.",
+      "source_judge_sha256": "b12af21bfb8256757115fddf01e14ac6f1d1b9cc92e24c6662b9d0945f368f4c",
+      "source_judge_row": "evidence/apparel_rationale_account_recovery_v1/rows/RL-09-0-v5_coordinator.json",
+      "original_flagged_claims": [
+        {
+          "segment_id": "S002",
+          "status": "contradicted",
+          "evidence_ids": [
+            "O-3",
+            "O-9",
+            "O-5",
+            "O-10"
+          ],
+          "explanation": "The claim that the old proposal failed because it did not incorporate the delay is contradicted: O-3 validity shows the old proposal (PROP-dc6ba8c03413432fbe73ef3b947f9f18) was invalid due to 'departure_does_not_include_events' and 'segment_event_evidence_incomplete', not merely missing the delay. The revised proposal times (HK-EU-AIR 2028-05-13T04:00 departure) and other connections are supported by O-5/O-10.",
+          "quote": "旧提案因未纳入已发布的 HK-EU-AIR 延误而失效；修订提案将该航段从原定 2028-05-12 16:00 调整至 2028-05-13 04:00，其他接驳安排保持可行。"
+        }
+      ],
+      "deterministic_checks": {
+        "shipping_constraints_unchanged": true,
+        "selections_unchanged": true,
+        "cost_cents": 15894,
+        "constraints": {
+          "budget_cents": 45000,
+          "deadline_at": "2028-05-20T02:00:00Z",
+          "destination": "DE-DC",
+          "ready_at": "2028-05-12T02:00:00Z"
+        },
+        "arrival_at": "2028-05-14T20:00:00Z",
+        "old_air": {
+          "arrival_at": "2028-05-13T10:00:00Z",
+          "cost_cents": 12016,
+          "departure_at": "2028-05-12T16:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-12T16:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-12T16:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 240.0
+        },
+        "new_air": {
+          "arrival_at": "2028-05-13T22:00:00Z",
+          "cost_cents": 12016,
+          "departure_at": "2028-05-13T04:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-13T04:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-13T04:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 960.0
+        },
+        "departure_difference_minutes": 720.0,
+        "old_observed_event_ids": [],
+        "new_observed_event_ids": [
+          "RL-09-0-long"
+        ]
+      }
+    },
+    {
+      "id": "RL-09-0-v6_coordinator",
+      "classification": "judge_false_positive",
+      "review_note": "A reference to the affected service is not incorporation of its delay into the stored schedule. The old route omits event IDs and actual delayed times; the invalidity explanation agrees with the validity tool.",
+      "source_judge_sha256": "a41396d05b9e325838752d9b14c755433b60d4964554b9b323ae64c3786c1be0",
+      "source_judge_row": "evidence/apparel_rationale_account_recovery_v1/rows/RL-09-0-v6_coordinator.json",
+      "original_flagged_claims": [
+        {
+          "segment_id": "S002",
+          "status": "contradicted",
+          "evidence_ids": [
+            "O-3",
+            "O-5",
+            "HOST_AFTER"
+          ],
+          "explanation": "The claim that version 2 was prepared 'per original budget and deadline' is supported (both proposals have total_cost_cents=15894 within budget_cents=45000 and arrival_at=2028-05-14T20:00:00Z before deadline 2028-05-20). However, the assertion that the old proposal became invalid specifically because it did not incorporate published delays is contradicted: O-3 validity check lists violations 'departure_does_not_include_events' and 'segment_event_evidence_incomplete', indicating missing event evidence rather than failure to account for the delay itself; the old route actually referenced the same service affected by RL-09-0-long.",
+          "quote": "旧提案已因未纳入已发布延误而失效；已按原预算与交期准备版本2。"
+        }
+      ],
+      "deterministic_checks": {
+        "shipping_constraints_unchanged": true,
+        "selections_unchanged": true,
+        "cost_cents": 15894,
+        "constraints": {
+          "budget_cents": 45000,
+          "deadline_at": "2028-05-20T02:00:00Z",
+          "destination": "DE-DC",
+          "ready_at": "2028-05-12T02:00:00Z"
+        },
+        "arrival_at": "2028-05-14T20:00:00Z",
+        "old_air": {
+          "arrival_at": "2028-05-13T10:00:00Z",
+          "cost_cents": 12016,
+          "departure_at": "2028-05-12T16:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-12T16:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-12T16:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 240.0
+        },
+        "new_air": {
+          "arrival_at": "2028-05-13T22:00:00Z",
+          "cost_cents": 12016,
+          "departure_at": "2028-05-13T04:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-13T04:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-13T04:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 960.0
+        },
+        "departure_difference_minutes": 720.0,
+        "old_observed_event_ids": [],
+        "new_observed_event_ids": [
+          "RL-09-0-long"
+        ]
+      }
+    },
+    {
+      "id": "RL-10-1-v6_single",
+      "classification": "judge_false_positive",
+      "review_note": "The judge assigns contradicted while its own explanation concludes Supported. Direct arithmetic confirms the new cost is within the unchanged budget and arrival precedes the unchanged deadline.",
+      "source_judge_sha256": "4fdede66b338ab2feaba1253d51dc02df1079cdb65c52978af9c00767b3a0a2b",
+      "source_judge_row": "evidence/apparel_rationale_account_recovery_v1/rows/RL-10-1-v6_single.json",
+      "original_flagged_claims": [
+        {
+          "segment_id": "S002",
+          "status": "contradicted",
+          "evidence_ids": [
+            "O-4",
+            "O-5",
+            "O-6",
+            "HOST_AFTER"
+          ],
+          "explanation": "While the old plan was invalidated by HK-EU-AIR delay RL-10-1-long (O-4, O-5 validity), the new proposal (PROP-0b385364847c4f7e88537e994a650314 in HOST_AFTER/O-6) has total_cost_cents 24729 and arrival 2028-05-19T20:00:00Z, identical to the old plan's cost and arrival. The claim that it was generated 'within original budget and deadline' is true, but the implication of a revised plan meeting constraints is supported; however, checking precise values: Budget 45000 >= 24729 and Deadline 2028-05-25 > 2028-05-19. Actually, this segment is fully supported regarding constraints. Re-evaluating 'invalidated': O-5 shows old proposal valid=false due to events. Supported.",
+          "quote": "旧方案因已发布的 HK-EU-AIR 延误事件而失效；已在原预算与交期内生成修订方案。"
+        }
+      ],
+      "deterministic_checks": {
+        "shipping_constraints_unchanged": true,
+        "selections_unchanged": true,
+        "cost_cents": 24729,
+        "constraints": {
+          "budget_cents": 45000,
+          "deadline_at": "2028-05-25T02:00:00Z",
+          "destination": "DE-DC",
+          "ready_at": "2028-05-17T02:00:00Z"
+        },
+        "arrival_at": "2028-05-19T20:00:00Z",
+        "old_air": {
+          "arrival_at": "2028-05-18T10:00:00Z",
+          "cost_cents": 19456,
+          "departure_at": "2028-05-17T16:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-17T16:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-17T16:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 240.0
+        },
+        "new_air": {
+          "arrival_at": "2028-05-18T22:00:00Z",
+          "cost_cents": 19456,
+          "departure_at": "2028-05-18T04:00:00Z",
+          "destination": "EU-HUB",
+          "event_ids": [],
+          "evidence_id": "sim-leg:HK-EU-AIR",
+          "leg_id": "HK-EU-AIR",
+          "mode": "air",
+          "nominal_departure": "2028-05-18T04:00:00Z",
+          "origin": "HK-HUB",
+          "service_id": "HK-EU-AIR@2028-05-18T04:00:00Z",
+          "transfer_minutes": 120,
+          "wait_minutes": 960.0
+        },
+        "departure_difference_minutes": 720.0,
+        "old_observed_event_ids": [],
+        "new_observed_event_ids": [
+          "RL-10-1-long"
+        ]
+      }
+    }
+  ]
+}

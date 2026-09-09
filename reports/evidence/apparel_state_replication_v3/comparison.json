@@ -1,0 +1,1191 @@
+{
+  "scope": "new_order_states_known_catalogue",
+  "runs": 144,
+  "groups": {
+    "neither": {
+      "single": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.024525333333333333,
+        "total_accounted_and_reserved_cny": "0.294304",
+        "total_settled_cost_cny": "0.2942880",
+        "avg_latency_seconds": 12.497333333333335,
+        "p95_latency_seconds": 19.054299999999998,
+        "avg_model_calls": 3.1666666666666665,
+        "model_calls": 38,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.0833333333333335,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 149172,
+        "output_tokens_known": 5793,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 1,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 38
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 12.497333333333335,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 0,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 0,
+        "operation_check_reasons": {},
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 10.905999999999999,
+        "reasoning_tokens_known": 740,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 9,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "coordinator": {
+        "scheduled": 12,
+        "task_completed": 11,
+        "task_accuracy": 0.9166666666666666,
+        "business_success": 1.0,
+        "evidence_coverage": 0.9166666666666666,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.05300758333333334,
+        "total_accounted_and_reserved_cny": "0.636091",
+        "total_settled_cost_cny": "0.6360624",
+        "avg_latency_seconds": 31.006333333333334,
+        "p95_latency_seconds": 42.71164999999999,
+        "avg_model_calls": 6.0,
+        "model_calls": 72,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.3333333333333335,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 298449,
+        "output_tokens_known": 16515,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 12,
+        "avg_delegations": 1.5,
+        "report_repair_attempts": 1,
+        "rejected_tool_attempts": 0,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 72
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {
+          "substitution_differences_not_cited": 1
+        },
+        "avg_latency_lower_bound_all_runs": 31.006333333333334,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 0,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 1,
+        "operation_check_reasons": {
+          "staged_substitution_differences_not_supported": 1
+        },
+        "final_operation_check_passed": 11,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 1,
+        "p50_latency_seconds": 30.8515,
+        "reasoning_tokens_known": 2265,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 9,
+        "supplementary_completed": 11,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 11,
+          "completed_report_failure": 1
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "on_demand": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.031973,
+        "total_accounted_and_reserved_cny": "0.383676",
+        "total_settled_cost_cny": "0.3836592",
+        "avg_latency_seconds": 16.343749999999996,
+        "p95_latency_seconds": 23.743349999999996,
+        "avg_model_calls": 4.166666666666667,
+        "model_calls": 50,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.1666666666666665,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 202137,
+        "output_tokens_known": 6275,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 1,
+        "rejected_tool_attempts": 0,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 50
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 16.343749999999996,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 0,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 0,
+        "operation_check_reasons": {},
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 1,
+        "p50_latency_seconds": 15.6565,
+        "reasoning_tokens_known": 857,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 10,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      }
+    },
+    "bootstrap": {
+      "single": {
+        "scheduled": 12,
+        "task_completed": 10,
+        "task_accuracy": 0.8333333333333334,
+        "business_success": 0.9166666666666666,
+        "evidence_coverage": 0.9166666666666666,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.022687,
+        "total_accounted_and_reserved_cny": "0.272244",
+        "total_settled_cost_cny": "0.2722320",
+        "avg_latency_seconds": 11.160083333333334,
+        "p95_latency_seconds": 15.940649999999994,
+        "avg_model_calls": 2.75,
+        "model_calls": 33,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.4166666666666665,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 140607,
+        "output_tokens_known": 4923,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 0,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 33
+        },
+        "failure_reasons": {
+          "decision_status_mismatch": 1
+        },
+        "evidence_gaps": {
+          "specific_order_issue_not_cited": 1
+        },
+        "avg_latency_lower_bound_all_runs": 11.160083333333334,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 12,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 3,
+        "operation_check_reasons": {
+          "current_order_status_not_supported": 1,
+          "infeasible_status_mismatch": 1,
+          "current_blocking_issue_not_supported": 1
+        },
+        "final_operation_check_passed": 9,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 10.898,
+        "reasoning_tokens_known": 704,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 8,
+        "supplementary_completed": 10,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 10,
+          "completed_report_failure": 2
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "coordinator": {
+        "scheduled": 12,
+        "task_completed": 11,
+        "task_accuracy": 0.9166666666666666,
+        "business_success": 1.0,
+        "evidence_coverage": 0.9166666666666666,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.054733416666666666,
+        "total_accounted_and_reserved_cny": "0.656801",
+        "total_settled_cost_cny": "0.6567728",
+        "avg_latency_seconds": 29.549333333333337,
+        "p95_latency_seconds": 40.82165,
+        "avg_model_calls": 5.75,
+        "model_calls": 69,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.4166666666666665,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 314459,
+        "output_tokens_known": 16004,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 12,
+        "avg_delegations": 1.5,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 1,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 69
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {
+          "current_route_arrival_at_not_cited": 1,
+          "current_route_total_cost_cents_not_cited": 1
+        },
+        "avg_latency_lower_bound_all_runs": 29.549333333333337,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 12,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 2,
+        "operation_check_reasons": {
+          "current_route_field_not_supported": 2,
+          "current_order_status_not_supported": 1
+        },
+        "final_operation_check_passed": 10,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 30.5465,
+        "reasoning_tokens_known": 1994,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 8,
+        "supplementary_completed": 11,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 11,
+          "completed_report_failure": 1
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "on_demand": {
+        "scheduled": 12,
+        "task_completed": 11,
+        "task_accuracy": 0.9166666666666666,
+        "business_success": 0.9166666666666666,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.033207499999999994,
+        "total_accounted_and_reserved_cny": "0.398490",
+        "total_settled_cost_cny": "0.3984720",
+        "avg_latency_seconds": 15.149916666666668,
+        "p95_latency_seconds": 21.380499999999998,
+        "avg_model_calls": 3.6666666666666665,
+        "model_calls": 44,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.75,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 210735,
+        "output_tokens_known": 6385,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 0,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 44
+        },
+        "failure_reasons": {
+          "decision_status_mismatch": 1
+        },
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 15.149916666666668,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 12,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 2,
+        "operation_check_reasons": {
+          "infeasible_status_mismatch": 1,
+          "current_order_status_not_supported": 1
+        },
+        "final_operation_check_passed": 10,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 14.375,
+        "reasoning_tokens_known": 938,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 8,
+        "supplementary_completed": 11,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 11,
+          "completed_report_failure": 1
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      }
+    },
+    "guard": {
+      "single": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.025837833333333334,
+        "total_accounted_and_reserved_cny": "0.310054",
+        "total_settled_cost_cny": "0.3100400",
+        "avg_latency_seconds": 16.115916666666667,
+        "p95_latency_seconds": 22.23245,
+        "avg_model_calls": 3.4166666666666665,
+        "model_calls": 41,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.1666666666666665,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 156533,
+        "output_tokens_known": 6207,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 1,
+        "rejected_tool_attempts": 1,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 41
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 16.115916666666667,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 0,
+        "host_completion_checks": 13,
+        "failed_operation_checks": 1,
+        "operation_check_reasons": {
+          "reported_selection_not_current": 1
+        },
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 1,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 16.07,
+        "reasoning_tokens_known": 1034,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 8,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "coordinator": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.05651033333333332,
+        "total_accounted_and_reserved_cny": "0.678124",
+        "total_settled_cost_cny": "0.6780944",
+        "avg_latency_seconds": 31.630333333333336,
+        "p95_latency_seconds": 48.32225,
+        "avg_model_calls": 6.333333333333333,
+        "model_calls": 76,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.3333333333333335,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 321869,
+        "output_tokens_known": 16990,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 12,
+        "avg_delegations": 1.75,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 2,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 76
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 31.630333333333336,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 0,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 0,
+        "operation_check_reasons": {},
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 29.1565,
+        "reasoning_tokens_known": 2338,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 9,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "on_demand": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.03341991666666667,
+        "total_accounted_and_reserved_cny": "0.401039",
+        "total_settled_cost_cny": "0.4010192",
+        "avg_latency_seconds": 15.845166666666666,
+        "p95_latency_seconds": 20.8994,
+        "avg_model_calls": 4.166666666666667,
+        "model_calls": 50,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.3333333333333335,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 209969,
+        "output_tokens_known": 6778,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 1,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 50
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 15.845166666666666,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 0,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 0,
+        "operation_check_reasons": {},
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 15.8595,
+        "reasoning_tokens_known": 942,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 10,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      }
+    },
+    "both": {
+      "single": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.026650999999999998,
+        "total_accounted_and_reserved_cny": "0.319812",
+        "total_settled_cost_cny": "0.3197968",
+        "avg_latency_seconds": 12.943916666666667,
+        "p95_latency_seconds": 22.575599999999998,
+        "avg_model_calls": 3.0,
+        "model_calls": 36,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.6666666666666665,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 166213,
+        "output_tokens_known": 5610,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 1,
+        "rejected_tool_attempts": 0,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 36
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 12.943916666666667,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 12,
+        "host_completion_checks": 13,
+        "failed_operation_checks": 1,
+        "operation_check_reasons": {
+          "current_order_status_not_supported": 1
+        },
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 1,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 11.3675,
+        "reasoning_tokens_known": 832,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 9,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "coordinator": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.0520685,
+        "total_accounted_and_reserved_cny": "0.624822",
+        "total_settled_cost_cny": "0.6247968",
+        "avg_latency_seconds": 28.502750000000002,
+        "p95_latency_seconds": 44.655849999999994,
+        "avg_model_calls": 5.333333333333333,
+        "model_calls": 64,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.3333333333333335,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 299178,
+        "output_tokens_known": 15220,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 12,
+        "avg_delegations": 1.5,
+        "report_repair_attempts": 0,
+        "rejected_tool_attempts": 0,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 64
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 28.502750000000002,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 12,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 0,
+        "operation_check_reasons": {},
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 0,
+        "p50_latency_seconds": 26.797,
+        "reasoning_tokens_known": 1982,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 9,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      },
+      "on_demand": {
+        "scheduled": 12,
+        "task_completed": 12,
+        "task_accuracy": 1.0,
+        "business_success": 1.0,
+        "evidence_coverage": 1.0,
+        "constraint_violation_runs": 0,
+        "avg_cost_cny": 0.032771666666666664,
+        "total_accounted_and_reserved_cny": "0.393260",
+        "total_settled_cost_cny": "0.3932432",
+        "avg_latency_seconds": 15.474250000000003,
+        "p95_latency_seconds": 23.410849999999996,
+        "avg_model_calls": 3.6666666666666665,
+        "model_calls": 44,
+        "model_call_success": 1.0,
+        "avg_tool_calls": 3.5,
+        "tool_call_success": 1.0,
+        "input_tokens_known": 206225,
+        "output_tokens_known": 6592,
+        "calls_without_returned_usage": 0,
+        "delegation_runs": 0,
+        "avg_delegations": 0.0,
+        "report_repair_attempts": 1,
+        "rejected_tool_attempts": 1,
+        "run_status_counts": {
+          "completed": 12
+        },
+        "returned_models": {
+          "gpt-56-luna": 44
+        },
+        "failure_reasons": {},
+        "evidence_gaps": {},
+        "avg_latency_lower_bound_all_runs": 15.474250000000003,
+        "complete_timing_runs": 12,
+        "censored_timing_runs": 0,
+        "host_initial_reads": 12,
+        "host_completion_checks": 12,
+        "failed_operation_checks": 0,
+        "operation_check_reasons": {},
+        "final_operation_check_passed": 12,
+        "contract_repair_attempts": 0,
+        "citation_repair_attempts": 1,
+        "p50_latency_seconds": 15.0785,
+        "reasoning_tokens_known": 887,
+        "reasoning_usage_missing_calls": 0,
+        "original_strict_completed": 10,
+        "supplementary_completed": 12,
+        "runtime_completion_rate": 1.0,
+        "failure_origins": {
+          "completed_task": 12
+        },
+        "completed_reports": 12,
+        "account_refusal_runs": 0
+      }
+    }
+  },
+  "totals": {
+    "neither": {
+      "scheduled": 36,
+      "task_completed": 35,
+      "task_accuracy": 0.9722222222222222,
+      "business_success": 1.0,
+      "evidence_coverage": 0.9722222222222222,
+      "constraint_violation_runs": 0,
+      "avg_cost_cny": 0.03650197222222223,
+      "total_accounted_and_reserved_cny": "1.314071",
+      "total_settled_cost_cny": "1.3140096",
+      "avg_latency_seconds": 19.94913888888889,
+      "p95_latency_seconds": 35.87525,
+      "avg_model_calls": 4.444444444444445,
+      "model_calls": 160,
+      "model_call_success": 1.0,
+      "avg_tool_calls": 3.1944444444444446,
+      "tool_call_success": 1.0,
+      "input_tokens_known": 649758,
+      "output_tokens_known": 28583,
+      "calls_without_returned_usage": 0,
+      "delegation_runs": 12,
+      "avg_delegations": 0.5,
+      "report_repair_attempts": 2,
+      "rejected_tool_attempts": 1,
+      "run_status_counts": {
+        "completed": 36
+      },
+      "returned_models": {
+        "gpt-56-luna": 160
+      },
+      "failure_reasons": {},
+      "evidence_gaps": {
+        "substitution_differences_not_cited": 1
+      },
+      "avg_latency_lower_bound_all_runs": 19.94913888888889,
+      "complete_timing_runs": 36,
+      "censored_timing_runs": 0,
+      "host_initial_reads": 0,
+      "host_completion_checks": 36,
+      "failed_operation_checks": 1,
+      "operation_check_reasons": {
+        "staged_substitution_differences_not_supported": 1
+      },
+      "final_operation_check_passed": 35,
+      "contract_repair_attempts": 0,
+      "citation_repair_attempts": 2,
+      "p50_latency_seconds": 16.719,
+      "reasoning_tokens_known": 3862,
+      "reasoning_usage_missing_calls": 0,
+      "original_strict_completed": 28,
+      "supplementary_completed": 35,
+      "runtime_completion_rate": 1.0,
+      "failure_origins": {
+        "completed_task": 35,
+        "completed_report_failure": 1
+      },
+      "completed_reports": 36,
+      "account_refusal_runs": 0
+    },
+    "bootstrap": {
+      "scheduled": 36,
+      "task_completed": 32,
+      "task_accuracy": 0.8888888888888888,
+      "business_success": 0.9444444444444444,
+      "evidence_coverage": 0.9444444444444444,
+      "constraint_violation_runs": 0,
+      "avg_cost_cny": 0.03687597222222223,
+      "total_accounted_and_reserved_cny": "1.327535",
+      "total_settled_cost_cny": "1.3274768",
+      "avg_latency_seconds": 18.619777777777777,
+      "p95_latency_seconds": 38.23775,
+      "avg_model_calls": 4.055555555555555,
+      "model_calls": 146,
+      "model_call_success": 1.0,
+      "avg_tool_calls": 3.5277777777777777,
+      "tool_call_success": 1.0,
+      "input_tokens_known": 665801,
+      "output_tokens_known": 27312,
+      "calls_without_returned_usage": 0,
+      "delegation_runs": 12,
+      "avg_delegations": 0.5,
+      "report_repair_attempts": 0,
+      "rejected_tool_attempts": 1,
+      "run_status_counts": {
+        "completed": 36
+      },
+      "returned_models": {
+        "gpt-56-luna": 146
+      },
+      "failure_reasons": {
+        "decision_status_mismatch": 2
+      },
+      "evidence_gaps": {
+        "current_route_arrival_at_not_cited": 1,
+        "current_route_total_cost_cents_not_cited": 1,
+        "specific_order_issue_not_cited": 1
+      },
+      "avg_latency_lower_bound_all_runs": 18.619777777777777,
+      "complete_timing_runs": 36,
+      "censored_timing_runs": 0,
+      "host_initial_reads": 36,
+      "host_completion_checks": 36,
+      "failed_operation_checks": 7,
+      "operation_check_reasons": {
+        "current_route_field_not_supported": 2,
+        "current_order_status_not_supported": 3,
+        "infeasible_status_mismatch": 2,
+        "current_blocking_issue_not_supported": 1
+      },
+      "final_operation_check_passed": 29,
+      "contract_repair_attempts": 0,
+      "citation_repair_attempts": 0,
+      "p50_latency_seconds": 14.375,
+      "reasoning_tokens_known": 3636,
+      "reasoning_usage_missing_calls": 0,
+      "original_strict_completed": 24,
+      "supplementary_completed": 32,
+      "runtime_completion_rate": 1.0,
+      "failure_origins": {
+        "completed_task": 32,
+        "completed_report_failure": 4
+      },
+      "completed_reports": 36,
+      "account_refusal_runs": 0
+    },
+    "guard": {
+      "scheduled": 36,
+      "task_completed": 36,
+      "task_accuracy": 1.0,
+      "business_success": 1.0,
+      "evidence_coverage": 1.0,
+      "constraint_violation_runs": 0,
+      "avg_cost_cny": 0.03858936111111111,
+      "total_accounted_and_reserved_cny": "1.389217",
+      "total_settled_cost_cny": "1.3891536",
+      "avg_latency_seconds": 21.197138888888887,
+      "p95_latency_seconds": 40.414249999999996,
+      "avg_model_calls": 4.638888888888889,
+      "model_calls": 167,
+      "model_call_success": 1.0,
+      "avg_tool_calls": 3.2777777777777777,
+      "tool_call_success": 1.0,
+      "input_tokens_known": 688371,
+      "output_tokens_known": 29975,
+      "calls_without_returned_usage": 0,
+      "delegation_runs": 12,
+      "avg_delegations": 0.5833333333333334,
+      "report_repair_attempts": 1,
+      "rejected_tool_attempts": 4,
+      "run_status_counts": {
+        "completed": 36
+      },
+      "returned_models": {
+        "gpt-56-luna": 167
+      },
+      "failure_reasons": {},
+      "evidence_gaps": {},
+      "avg_latency_lower_bound_all_runs": 21.197138888888887,
+      "complete_timing_runs": 36,
+      "censored_timing_runs": 0,
+      "host_initial_reads": 0,
+      "host_completion_checks": 37,
+      "failed_operation_checks": 1,
+      "operation_check_reasons": {
+        "reported_selection_not_current": 1
+      },
+      "final_operation_check_passed": 36,
+      "contract_repair_attempts": 1,
+      "citation_repair_attempts": 0,
+      "p50_latency_seconds": 18.875,
+      "reasoning_tokens_known": 4314,
+      "reasoning_usage_missing_calls": 0,
+      "original_strict_completed": 27,
+      "supplementary_completed": 36,
+      "runtime_completion_rate": 1.0,
+      "failure_origins": {
+        "completed_task": 36
+      },
+      "completed_reports": 36,
+      "account_refusal_runs": 0
+    },
+    "both": {
+      "scheduled": 36,
+      "task_completed": 36,
+      "task_accuracy": 1.0,
+      "business_success": 1.0,
+      "evidence_coverage": 1.0,
+      "constraint_violation_runs": 0,
+      "avg_cost_cny": 0.03716372222222222,
+      "total_accounted_and_reserved_cny": "1.337894",
+      "total_settled_cost_cny": "1.3378368",
+      "avg_latency_seconds": 18.97363888888889,
+      "p95_latency_seconds": 37.19125,
+      "avg_model_calls": 4.0,
+      "model_calls": 144,
+      "model_call_success": 1.0,
+      "avg_tool_calls": 3.5,
+      "tool_call_success": 1.0,
+      "input_tokens_known": 671616,
+      "output_tokens_known": 27422,
+      "calls_without_returned_usage": 0,
+      "delegation_runs": 12,
+      "avg_delegations": 0.5,
+      "report_repair_attempts": 2,
+      "rejected_tool_attempts": 1,
+      "run_status_counts": {
+        "completed": 36
+      },
+      "returned_models": {
+        "gpt-56-luna": 144
+      },
+      "failure_reasons": {},
+      "evidence_gaps": {},
+      "avg_latency_lower_bound_all_runs": 18.97363888888889,
+      "complete_timing_runs": 36,
+      "censored_timing_runs": 0,
+      "host_initial_reads": 36,
+      "host_completion_checks": 37,
+      "failed_operation_checks": 1,
+      "operation_check_reasons": {
+        "current_order_status_not_supported": 1
+      },
+      "final_operation_check_passed": 36,
+      "contract_repair_attempts": 1,
+      "citation_repair_attempts": 1,
+      "p50_latency_seconds": 16.046999999999997,
+      "reasoning_tokens_known": 3701,
+      "reasoning_usage_missing_calls": 0,
+      "original_strict_completed": 28,
+      "supplementary_completed": 36,
+      "runtime_completion_rate": 1.0,
+      "failure_origins": {
+        "completed_task": 36
+      },
+      "completed_reports": 36,
+      "account_refusal_runs": 0
+    }
+  },
+  "factorial_effects": {
+    "scenarios": 12,
+    "complete_timing_scenarios": 12,
+    "arms": [
+      "single",
+      "coordinator",
+      "on_demand"
+    ],
+    "bootstrap_iterations": 5000,
+    "notice": "Exploratory paired scenario bootstrap; known small catalogue, no claim of broad generalization or multiplicity-adjusted significance.",
+    "effects": {
+      "bootstrap_effect": {
+        "task_accuracy": {
+          "difference": -0.041666666666666664,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -0.1111111111111111,
+            0.0
+          ]
+        },
+        "avg_cost_cny": {
+          "difference": -0.0005258194444444441,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -0.002283011458333333,
+            0.0012073381944444435
+          ]
+        },
+        "avg_latency_seconds": {
+          "difference": -1.7764305555555557,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -3.1553055555555556,
+            -0.6447684027777785
+          ]
+        }
+      },
+      "guard_effect": {
+        "task_accuracy": {
+          "difference": 0.06944444444444443,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            0.0,
+            0.15277777777777776
+          ]
+        },
+        "avg_cost_cny": {
+          "difference": 0.0011875694444444442,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -0.0008282291666666672,
+            0.0034897291666666636
+          ]
+        },
+        "avg_latency_seconds": {
+          "difference": 0.8009305555555555,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -0.6957600694444444,
+            2.4296149305555548
+          ]
+        }
+      },
+      "interaction": {
+        "task_accuracy": {
+          "difference": 0.08333333333333333,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            0.0,
+            0.2222222222222222
+          ]
+        },
+        "avg_cost_cny": {
+          "difference": -0.001799638888888887,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -0.0054683875,
+            0.002599563194444435
+          ]
+        },
+        "avg_latency_seconds": {
+          "difference": -0.8941388888888883,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -3.743131944444443,
+            2.190145138888887
+          ]
+        }
+      },
+      "both_minus_neither": {
+        "task_accuracy": {
+          "difference": 0.027777777777777776,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            0.0,
+            0.08333333333333333
+          ]
+        },
+        "avg_cost_cny": {
+          "difference": 0.00066175,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -0.0014117062499999996,
+            0.0032255777777777717
+          ]
+        },
+        "avg_latency_seconds": {
+          "difference": -0.9755000000000001,
+          "paired_scenarios": 12,
+          "paired_scenario_95_interval": [
+            -2.983816666666667,
+            1.1805770833333296
+          ]
+        }
+      }
+    }
+  },
+  "paired_changes": [
+    {
+      "arm": "single",
+      "condition": "bootstrap",
+      "outcomes": {
+        "tied": 10,
+        "regressed": 2
+      },
+      "changed_cases": [
+        {
+          "case_id": "SCREP-shipping_infeasible",
+          "change": "regressed",
+          "left_origin": "completed_task",
+          "right_origin": "completed_report_failure",
+          "both_reports_completed": true
+        },
+        {
+          "case_id": "SCREP-shortage_alternative",
+          "change": "regressed",
+          "left_origin": "completed_task",
+          "right_origin": "completed_report_failure",
+          "both_reports_completed": true
+        }
+      ]
+    },
+    {
+      "arm": "single",
+      "condition": "guard",
+      "outcomes": {
+        "tied": 12
+      },
+      "changed_cases": []
+    },
+    {
+      "arm": "single",
+      "condition": "both",
+      "outcomes": {
+        "tied": 12
+      },
+      "changed_cases": []
+    },
+    {
+      "arm": "coordinator",
+      "condition": "bootstrap",
+      "outcomes": {
+        "tied": 10,
+        "regressed": 1,
+        "improved": 1
+      },
+      "changed_cases": [
+        {
+          "case_id": "SCREP-combined",
+          "change": "regressed",
+          "left_origin": "completed_task",
+          "right_origin": "completed_report_failure",
+          "both_reports_completed": true
+        },
+        {
+          "case_id": "SCREP-shortage_alternative",
+          "change": "improved",
+          "left_origin": "completed_report_failure",
+          "right_origin": "completed_task",
+          "both_reports_completed": true
+        }
+      ]
+    },
+    {
+      "arm": "coordinator",
+      "condition": "guard",
+      "outcomes": {
+        "tied": 11,
+        "improved": 1
+      },
+      "changed_cases": [
+        {
+          "case_id": "SCREP-shortage_alternative",
+          "change": "improved",
+          "left_origin": "completed_report_failure",
+          "right_origin": "completed_task",
+          "both_reports_completed": true
+        }
+      ]
+    },
+    {
+      "arm": "coordinator",
+      "condition": "both",
+      "outcomes": {
+        "tied": 11,
+        "improved": 1
+      },
+      "changed_cases": [
+        {
+          "case_id": "SCREP-shortage_alternative",
+          "change": "improved",
+          "left_origin": "completed_report_failure",
+          "right_origin": "completed_task",
+          "both_reports_completed": true
+        }
+      ]
+    },
+    {
+      "arm": "on_demand",
+      "condition": "bootstrap",
+      "outcomes": {
+        "tied": 11,
+        "regressed": 1
+      },
+      "changed_cases": [
+        {
+          "case_id": "SCREP-shipping_infeasible",
+          "change": "regressed",
+          "left_origin": "completed_task",
+          "right_origin": "completed_report_failure",
+          "both_reports_completed": true
+        }
+      ]
+    },
+    {
+      "arm": "on_demand",
+      "condition": "guard",
+      "outcomes": {
+        "tied": 12
+      },
+      "changed_cases": []
+    },
+    {
+      "arm": "on_demand",
+      "condition": "both",
+      "outcomes": {
+        "tied": 12
+      },
+      "changed_cases": []
+    }
+  ],
+  "cost_cny": "5.368717",
+  "source_summary_sha256": "d05575731c5367dd9ba0dec3ba654de0b55d0ae546f78ed9129ffe417a3e0626",
+  "returned_model_labels": {
+    "gpt-56-luna": 617
+  },
+  "call_status_counts": {
+    "success": 617
+  }
+}

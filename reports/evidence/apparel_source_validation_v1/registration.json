@@ -1,0 +1,365 @@
+{
+  "registered_at": "2026-09-08T20:21:15.372059+00:00",
+  "model": "gpt-5.6-luna",
+  "cases": 24,
+  "runs": 48,
+  "jobs": [
+    [
+      "SR-08-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-08-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-02-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-02-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-05-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-05-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-07-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-07-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-01-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-01-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-00-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-00-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-02-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-02-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-10-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-10-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-06-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-06-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-07-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-07-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-09-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-09-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-11-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-11-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-01-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-01-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-03-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-03-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-06-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-06-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-08-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-08-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-10-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-10-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-09-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-09-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-04-1",
+      "v4_candidate"
+    ],
+    [
+      "SR-04-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-04-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-04-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-00-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-00-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-03-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-03-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-11-0",
+      "v4_candidate"
+    ],
+    [
+      "SR-11-0",
+      "v5_source_review"
+    ],
+    [
+      "SR-05-1",
+      "v5_source_review"
+    ],
+    [
+      "SR-05-1",
+      "v4_candidate"
+    ]
+  ],
+  "cases_sha256": "5e6c2e4d6be999e1303938ca869b0ff7e6b175a6f9b13ded7141b6c102a83ee8",
+  "fixture_sha256": "d54a24a961cc5bb933c750b0ccc608a2d963b59e31b14de60922a640dfbe2771",
+  "initial_sha256": {
+    "initial/SR-00-0/operations.sqlite": "8ccd32fa086a47114669b77b2f8faac9e596db308e3ab0dc18bccbbe953b5bf7",
+    "initial/SR-00-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-00-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-00-0/seed.json": "80e9e754e67a3ca9a82bfdba8cf50fbefa6da9c39b82ceaa8ee9f2a808866214",
+    "initial/SR-00-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-00-1/operations.sqlite": "74b35fc4d8c350db58c832c4c71685037401f40abf761ae604a391b19d687f0a",
+    "initial/SR-00-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-00-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-00-1/seed.json": "eea407f8531e5700ad0242d114b5480aaf78474b40ae216314635421bc055d2e",
+    "initial/SR-00-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-01-0/operations.sqlite": "186ed9118a5d1ad34a76015f2f2932aed7e6c7230e8bb945743acc774fb7b44c",
+    "initial/SR-01-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-01-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-01-0/seed.json": "a55079e267d2ef4bf96f7e23250454b2570fad937220dc0bdcb57c89d6d77f8d",
+    "initial/SR-01-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-01-1/operations.sqlite": "9065c65968716ab823f9b2b2c9dcfc042b73ea6547a042c155255bde9a228eb2",
+    "initial/SR-01-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-01-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-01-1/seed.json": "725459f85b388098478d71bbfb3d6c660b78ff7272e3eca43cf8f6b6bcc2f65c",
+    "initial/SR-01-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-02-0/operations.sqlite": "343b793a370715ec9777599582a2860546b1d3c105aaf5ae50c8d48eae939db5",
+    "initial/SR-02-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-02-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-02-0/seed.json": "33b9142c99c3f79d3297cc2d82b1045e968316986e8ecbf2f0456ab214c24b54",
+    "initial/SR-02-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-02-1/operations.sqlite": "415046710c684e927501f3c41fdefd30f604418275f4f50e1f622a8a50838fdd",
+    "initial/SR-02-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-02-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-02-1/seed.json": "81da384f0d6a99357353d04633f4532f6af4b6d083338ba4b5b6f80beb7b095e",
+    "initial/SR-02-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-03-0/operations.sqlite": "6bd1450043c66ce5c1f3a24ed80980fc1bea8d519aa1d083792c6d9eff526014",
+    "initial/SR-03-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-03-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-03-0/seed.json": "69a08ed851305316ef4658df51f38671a3f414cf2532906b7628bc9b814426b5",
+    "initial/SR-03-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-03-1/operations.sqlite": "91ec561df71f792dfaa2438e07b8554de1ff593d33b7f15bad2e004cc3b697e8",
+    "initial/SR-03-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-03-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-03-1/seed.json": "e12277025e6e0940a400df71c9647d917f1f2efcf5e448b50ae357095d3e03f9",
+    "initial/SR-03-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-04-0/operations.sqlite": "5ee4d4a0f3874948f66e3117dacdb3a4ca1bc6a47363b011ebbe7d4229255304",
+    "initial/SR-04-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-04-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-04-0/seed.json": "0671792d6514345c88ec0e01a38b9965b37f5ae12f9451409978f6898cab75a5",
+    "initial/SR-04-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-04-1/operations.sqlite": "c9337d69eb03a18c843e93558c4bf1ad175122b0b3d14893883d2b8a7ced6125",
+    "initial/SR-04-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-04-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-04-1/seed.json": "b5fa94352827eb73e174df1912dd1fff991e2fbe03a652004c25e69620c1f9d3",
+    "initial/SR-04-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-05-0/operations.sqlite": "59ff180b36364e49293129b4e9eae65a0d5c5f585b836ec1ccaf56cbd898d71b",
+    "initial/SR-05-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-05-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-05-0/seed.json": "d781ec6c5e1bfba2851b8c370a89eccfb7b27b4882fb3acb2a1bb4469dca6644",
+    "initial/SR-05-0/world.json": "e264a8e26dd9f3439c78b5b75166e1d398550b7a14e2d3f4bd7a67740fc5e80c",
+    "initial/SR-05-1/operations.sqlite": "f39b84a6daea6d2a621dbd16b5a793baf9a46496970a431c5684e6029471fd80",
+    "initial/SR-05-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-05-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-05-1/seed.json": "145079d06dd05adba255aeb0cd359a97753fb8e577cfd5f0c042f8b913f7f145",
+    "initial/SR-05-1/world.json": "1dd74778d85572499dfa9f7cdd4e0af590cfbc1035b573878ec835546310ffbe",
+    "initial/SR-06-0/operations.sqlite": "e62da44d56bf2605c434bb5dab689c4c728e0ba213d4a6ded7eab734ebc832ac",
+    "initial/SR-06-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-06-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-06-0/seed.json": "ac9a66722d24e72c2ac0e3a2c6d6ba84fd4698dde72b5697696251b32f3c04d0",
+    "initial/SR-06-0/world.json": "d2f6095a9c4cfb53be6b20066c187aa602d799c878990ca95aec31f4b4924395",
+    "initial/SR-06-1/operations.sqlite": "57fe4036a7c18cc2c701a5c2fcf23fe048693361eed64937ffc3a3c480d9afad",
+    "initial/SR-06-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-06-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-06-1/seed.json": "a7178f2392d6956607d4a562f39aaddb1bbf31f6a62d1a88500c7c077997c9a0",
+    "initial/SR-06-1/world.json": "0e88289b91872032c4bdf3c01893eb57d24bce0025e8c7eacc3926bcf3bcd238",
+    "initial/SR-07-0/operations.sqlite": "5510a3d08a4bf61827882ba404ba0aec10214dba9eb9c6dc02141545b801d1f2",
+    "initial/SR-07-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-07-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-07-0/seed.json": "012a2710da3b0bb2f7bae2f4e92312ac20292239578512a178281f5be63db10e",
+    "initial/SR-07-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-07-1/operations.sqlite": "cfd8965708af9a0c4861a29b3c137448f9b3e543e097d17f990fe3be7434576d",
+    "initial/SR-07-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-07-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-07-1/seed.json": "6dee9729d02e477495a884f53de36d6808bae2572ccc202257c1f12b95516fa4",
+    "initial/SR-07-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-08-0/operations.sqlite": "c36539c4a38d5f0727bd21348631efd523822d8501a2eeb8d0496f9034436475",
+    "initial/SR-08-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-08-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-08-0/seed.json": "7bcbf3fd441a19a9a2f00a0cd33fae4ce15f00d4265bac5152828340d2a8ba63",
+    "initial/SR-08-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-08-1/operations.sqlite": "e4f586dd25d4bd5899f4aacf668e429a1a02583a5b4bd052cabcc9dd069f3998",
+    "initial/SR-08-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-08-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-08-1/seed.json": "958ad380590845601cfe77118aa9a0d0d78fc989592e1c095a74042daf821e3c",
+    "initial/SR-08-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-09-0/operations.sqlite": "e88f94ab735786a4e159356154995e7df526bab1fb6bbaafc5248d2650dc7c07",
+    "initial/SR-09-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-09-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-09-0/seed.json": "4046701e0e7d2cb01a1fe94934a214c3bef53acbdf493b9494f3e2b71538cc99",
+    "initial/SR-09-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-09-1/operations.sqlite": "f06ab910fc740683295e4accf8767c3823c7be0e481464cab74007686b42fff5",
+    "initial/SR-09-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-09-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-09-1/seed.json": "4a10f57a00152e483b0005f2219ab994a3935342b6e8dab2d4c5a6bc001b1d69",
+    "initial/SR-09-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-10-0/operations.sqlite": "2decf0757ac8b18ad55c8852b568556ef4e33dbb0aee4a728d01b78801a8df6d",
+    "initial/SR-10-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-10-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-10-0/seed.json": "78ae98a87e9b18b53370dd12e45fcccdfcb4dcfbcbaacd1b3dcfb7666628cc8d",
+    "initial/SR-10-0/world.json": "e264a8e26dd9f3439c78b5b75166e1d398550b7a14e2d3f4bd7a67740fc5e80c",
+    "initial/SR-10-1/operations.sqlite": "674ee653d70ca749161b4d28ac7a61064adf531911d000073f7cefcef5b82f42",
+    "initial/SR-10-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-10-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-10-1/seed.json": "d541650085729ff5967608b9b0000706478fc0e97e0c7a638ddeb03d943a66ec",
+    "initial/SR-10-1/world.json": "1dd74778d85572499dfa9f7cdd4e0af590cfbc1035b573878ec835546310ffbe",
+    "initial/SR-11-0/operations.sqlite": "184138c91a689ff2e249bed5b4203b148603af5b9907c0c5e6488a89506dc591",
+    "initial/SR-11-0/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-11-0/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-11-0/seed.json": "471cd8139ec12424f1a34fa2ef3c13476a5ef73d5140db0f9a691b712fc48cfb",
+    "initial/SR-11-0/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d",
+    "initial/SR-11-1/operations.sqlite": "857496092aa07526f783e02875a91828e0af0bb04b6767a489275ec917597fdd",
+    "initial/SR-11-1/operations.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "initial/SR-11-1/operations.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "initial/SR-11-1/seed.json": "424ad12de4bdfab655ae30097ed876eae75ad58a4d7f7b059ac077394f87c583",
+    "initial/SR-11-1/world.json": "c65333a04a6cc672573db256453361c4c55de4112e39eeb3565e1aafad42b66d"
+  },
+  "source_sha256": {
+    "apparel_fulfillment/action_contract.py": "fc9010101328d722a845523e675196a1b8fb076adcce1343b40679d79a66e21c",
+    "apparel_fulfillment/agent.py": "db457be82ae57b33aa4b4bf12f823f2724e4c6999cf82bfc8836bffc61ee1016",
+    "apparel_fulfillment/agent_candidate_v4.py": "02ee8b82c3c9314340966d01f3d8866f2f75c214648a1a6e33aab64e96b7d3bd",
+    "apparel_fulfillment/agent_evidence_v2.py": "b1ace833ae3e5733670304df562a0a157e8af87f295b6189ffe2452ae1bad6b3",
+    "apparel_fulfillment/agent_source_v5.py": "1524c8cf2d3064d56af9aa084175c8407958c3e8f5d6c026e800443abaa24e70",
+    "apparel_fulfillment/agent_state_v3.py": "b0507eab3ce493f01c2d7a8d5a65801d39406dda85eb777f076bd923695cb8a9",
+    "apparel_fulfillment/candidate_search.py": "782ee01454114af86dc5e445315461f7572fa31ee4a1c576e8dfbd1500632bbd",
+    "apparel_fulfillment/orders.py": "69c2e1bf6d82cd375669949e4ffb4aa14a9a383bc2d7ab56436e8fada7e09897",
+    "apparel_fulfillment/route_audit.py": "db68c5762e040f333d644d421a6a5d5030033813b2af8a506899ca51d91fb2b3",
+    "apparel_fulfillment/source_review.py": "e39f2237bc2134ce6b609d3d0ba39075173828c2a6bd2cb2de3dcbc66caf2250",
+    "apparel_fulfillment/store.py": "0370ee5932056f103b30cdc5e33c4b646c63cea89335dcf01d126074fca9cde4",
+    "apparel_fulfillment/transport.py": "348189bd8d69d03580f9cfd749a74d8cc5b5f734acbf4dfb01fb99c5657b9daa",
+    "commerce_lab/retrieval.py": "eabb5aacda27a7f9a365b207acbc259f76afe033434aff706a4d31a639920dfc",
+    "data/apparel_corridor_v1.json": "f111d115913aaf3a7f00a423a1869fa5636a7452f1b827886698695004b7c5ef",
+    "data/apparel_fulfillment_v1.json": "51c68c785a90fb9795defa0fb3b1c45614f36c75e5aadb94531fd8960f90cd7c",
+    "delivery_budget.py": "c17a4b9c1a507f192bc8c94fd7f182ffd6c3bf2bdbfafbac78fafe36d8ce4e53",
+    "delivery_budget_policy.json": "9aa0220b866a4670c437e31241d479f32f8ceef07cec9a23d9371abf531b78c7",
+    "research/APPAREL_CANDIDATE_VALIDATION_PROTOCOL.md": "d4c1f5d1a2467e09a1a91ba17669e791cd1ab7ad901dbc6cf52a7ae62c24b028",
+    "research/APPAREL_SOURCE_REVIEW_PROTOCOL.md": "9c22cd9e0bf735acfa4734e8747cce1efdf601a20185e5a5354ff6381b0e3041",
+    "research/apparel_candidate_validation.py": "cab1cb562c4b9300d5ac525ad50187be3ce3b0ed41f42ed7d476e5ba16788127",
+    "research/apparel_source_validation.py": "0c2a2cbd82f5c43dcae871c83ffb544ac2ebfe03467b3e408aaeb69048f4f7db",
+    "research/model_client.py": "ae2563703d4ea9f212cc2b00c7525ddd846e521fd6a90b2e47279b5be48979b2",
+    "research/provider_gate.py": "a877a3945032f9be88e58b30f4676da899afbe8ae78dde0f682a1b1348916629",
+    "research/rate_card.json": "03c5e5dbf42520341a079477cd44e8f8ea43b63282b26af38d183457c759bbf4",
+    "research/tls_transport.py": "35153e09293eb962da2babb5d90bed11f17029a6b485469cb0f6e46214d45aa9",
+    "serving/reranker.py": "f89f7b69121e827c60caffc1c6ac8587749119f192e3ca2ba101ff5e28947b9c",
+    "tests/test_apparel_source_review.py": "ff0ed6289c8579904f5238b3a2a3367fdbacddbfca890b64db46b0ee57d10b63"
+  },
+  "scope": "New quantities, product targets and dates in known catalogue and scenario templates; not unseen merchants or products.",
+  "ledger_before": {
+    "micro_cny": 315114465,
+    "rows": 17048
+  },
+  "estimated_cny": [
+    2,
+    5
+  ],
+  "project_budget_cny": 480,
+  "model_selection_calls": 0,
+  "deployment_changed": false
+}

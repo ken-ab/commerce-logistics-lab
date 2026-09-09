@@ -1,0 +1,8 @@
+{
+  "currency": "CNY",
+  "state": "disabled",
+  "total_limit": 0,
+  "automatic_spend_ceiling": 0,
+  "maximum_per_call_cny": 5,
+  "notice": "Set a personal budget and verify current provider pricing before changing state to ready. No credentials belong in this file. The original operational code also caps spending at CNY 480."
+}
