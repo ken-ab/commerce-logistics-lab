@@ -1,0 +1,42 @@
+{
+  "scope": "Public-directory reproduction of the same designed scenario; not a new independent sample",
+  "independent_scenarios_total": 1,
+  "execution_count": 2,
+  "first_execution": {
+    "test": "test_substitute_cancel_revise_stock_change_and_confirm_once",
+    "timestamp": "2026-09-09T16:48:22.874371+08:00",
+    "suite_seconds": 0.43,
+    "tests": 1,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "public_directory_reproduction": {
+    "test": "test_substitute_cancel_revise_stock_change_and_confirm_once",
+    "timestamp": "2026-09-09T16:56:30.276027+08:00",
+    "suite_seconds": 0.398,
+    "tests": 1,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "first_source_xml_sha256": "83fbe5143213e7b156ce0f2080501c5ee622f43638c34b2ccf28a8d151229733",
+  "reproduction_source_xml_sha256": "c9df783241f5206cefb447687801ac163111f1e46d2ec9742db4be63997731cd",
+  "complete_normalized_http_trace_equal": true,
+  "normalized_http_trace_sha256": "19f53d84d35f9ba1a0b25e6892c4af143c7a9f8bdf0afc926bfa4322cfff4dac",
+  "http_requests_per_execution": 19,
+  "model_calls_total": 0,
+  "new_model_cost_cny": 0,
+  "source_sha256": {
+    "tests/test_apparel_workflow_logic.py": "6d41bfce3d1219a81ef8b9f03889ad63b0da0627076d7680374070432c18e5b8",
+    "apparel_fulfillment/api.py": "d7e56d30ffe1141579f78190ce54deedc3fb4c86a8e90dec4dddb8330a7e34f7",
+    "apparel_fulfillment/orders.py": "69c2e1bf6d82cd375669949e4ffb4aa14a9a383bc2d7ab56436e8fada7e09897",
+    "apparel_fulfillment/store.py": "0370ee5932056f103b30cdc5e33c4b646c63cea89335dcf01d126074fca9cde4",
+    "apparel_fulfillment/transport.py": "348189bd8d69d03580f9cfd749a74d8cc5b5f734acbf4dfb01fb99c5657b9daa",
+    "apparel_fulfillment/route_audit.py": "db68c5762e040f333d644d421a6a5d5030033813b2af8a506899ca51d91fb2b3",
+    "tests/test_apparel_orders.py": "0627033f8b4ed806b72b8404b8ff4f0094fcecec9814f2f7fb97abab2785d8e2",
+    "research/read_workflow_acceptance.py": "d24d7ac66ac898a718d9fcc760073d9836d154b6b54eaef029c62ad2ef2970b8"
+  },
+  "acceptance_json_sha256": "6fd6b8f933836992d34fac362290f9b572645fbe7daa6884e6a2b6afcd12bb28",
+  "comparison_excludes": "Generated identity values and test-run metadata; all HTTP inputs, business responses, status codes, order, clock values and deterministic digests are retained."
+}

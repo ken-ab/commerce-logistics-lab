@@ -18,6 +18,8 @@ The project compares a single agent, a coordinator with specialists, and on-dema
 
 Interactive job recovery now preserves live workers across processes and serializes updated workers sharing one local evidence directory. See the [lifecycle fix and 30 focused checks](reports/APPAREL_JOB_OWNERSHIP.md); the historical model results below are unchanged.
 
+For a concrete order from stock shortage to revised shipping and confirmation, see the [Chinese workflow walkthrough](docs/WORKFLOW_WALKTHROUGH.md) and its [reproducible acceptance record](reports/workflow_logic/acceptance.json). This is one deterministic simulated scenario with 19 HTTP requests and zero model calls; it is separate from the model studies below.
+
 ## Measured results
 
 | Study | Scope | Result | Evidence |

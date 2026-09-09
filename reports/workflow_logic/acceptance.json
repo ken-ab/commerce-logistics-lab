@@ -1,0 +1,3216 @@
+{
+  "schema_version": 1,
+  "scope": "One deterministic HTTP workflow; not an LLM benchmark or customer result",
+  "source_xml_sha256": "83fbe5143213e7b156ce0f2080501c5ee622f43638c34b2ccf28a8d151229733",
+  "execution": {
+    "test": "test_substitute_cancel_revise_stock_change_and_confirm_once",
+    "timestamp": "2026-09-09T16:48:22.874371+08:00",
+    "suite_seconds": 0.43,
+    "tests": 1,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "business_clock": "2026-09-09T08:00:00+00:00",
+  "independent_scenarios": 1,
+  "http_requests": 19,
+  "expected_http_409_responses": 3,
+  "model_calls": 0,
+  "gpu_calls": 0,
+  "new_model_cost_cny": 0,
+  "real_customers": 0,
+  "milestones": [
+    "Original SKU unavailable; alternative exposes its changed brand",
+    "Only the exact approved alternative permits planning; no stock deducted yet",
+    "Cancellation invalidates the old proposal; rejected confirmation does not deduct stock",
+    "Revised transport preserves the approved goods and constraints; later stock loss still blocks confirmation",
+    "Fresh proposal confirms once; repeated request returns the same confirmation with no second deduction",
+    "History retains all versions; confirmed orders cannot be edited or accessed by another session"
+  ],
+  "proposal_versions": [
+    {
+      "version": 1,
+      "air_departure": "2026-09-10T16:00:00Z",
+      "arrival_at": "2026-09-12T20:00:00Z",
+      "total_cost_cents": 17300,
+      "currency": "USD",
+      "selected_quantities": {
+        "B": 20
+      }
+    },
+    {
+      "version": 2,
+      "air_departure": "2026-09-11T04:00:00Z",
+      "arrival_at": "2026-09-12T20:00:00Z",
+      "total_cost_cents": 17300,
+      "currency": "USD",
+      "selected_quantities": {
+        "B": 20
+      }
+    },
+    {
+      "version": 3,
+      "air_departure": "2026-09-11T04:00:00Z",
+      "arrival_at": "2026-09-12T20:00:00Z",
+      "total_cost_cents": 17300,
+      "currency": "USD",
+      "selected_quantities": {
+        "B": 20
+      }
+    }
+  ],
+  "confirmation_trace_events": 1,
+  "final_available_units_B": 0,
+  "normalization": "Replace only generated draft, owner-session, proposal and confirmation IDs with stable aliases; omit XML hostname and local source path.",
+  "normalized_http_trace_sha256": "19f53d84d35f9ba1a0b25e6892c4af143c7a9f8bdf0afc926bfa4322cfff4dac",
+  "normalized_http_trace": [
+    {
+      "input": {
+        "order": {
+          "lines": [
+            {
+              "brand": "BrandA",
+              "category": "t_shirt",
+              "color": "black",
+              "line_id": "one",
+              "quantity": 20,
+              "size": "M",
+              "unit": "piece"
+            }
+          ],
+          "needs_shipping": true,
+          "sales_region": "DE",
+          "shipping": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "wholesale": true
+        }
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts",
+      "response": {
+        "approved_substitutions": [],
+        "confirmation": null,
+        "created_at": "2026-09-09T08:00:00Z",
+        "id": "draft-1",
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [
+            {
+              "code": "select_known_variant",
+              "line_id": "one",
+              "severity": "clarify"
+            }
+          ],
+          "lines": [],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {},
+          "quantities_pieces": {},
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {},
+          "status": "needs_clarification",
+          "substitution_proposals": [],
+          "warehouse": "CN-SZ"
+        },
+        "owner": "test-session-1",
+        "proposals": [],
+        "request": {
+          "lines": [
+            {
+              "brand": "BrandA",
+              "category": "t_shirt",
+              "color": "black",
+              "line_id": "one",
+              "quantity": 20,
+              "size": "M",
+              "unit": "piece"
+            }
+          ],
+          "needs_shipping": true,
+          "sales_region": "DE",
+          "shipping": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "wholesale": true
+        },
+        "revision": 1,
+        "selections": []
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 1,
+        "selections": [
+          {
+            "line_id": "one",
+            "sku": "A"
+          }
+        ]
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/select",
+      "response": {
+        "approved_substitutions": [],
+        "confirmation": null,
+        "created_at": "2026-09-09T08:00:00Z",
+        "id": "draft-1",
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [
+            {
+              "available_catalog_units": 0,
+              "code": "insufficient_stock",
+              "requested_catalog_units": 20,
+              "severity": "unsatisfied",
+              "sku": "A"
+            }
+          ],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "A:brand",
+                "A:category",
+                "A:color",
+                "A:pieces_per_catalog_unit",
+                "A:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "A",
+              "unit_basis": {
+                "evidence_id": "A:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandA",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-A",
+                "title": "A"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "A": 20
+          },
+          "quantities_pieces": {
+            "A": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "A": {
+              "available_catalog_units": 0,
+              "evidence_ids": [
+                "rule:BrandA",
+                "stock:A"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "unfulfillable",
+          "substitution_proposals": [],
+          "warehouse": "CN-SZ"
+        },
+        "owner": "test-session-1",
+        "proposals": [],
+        "request": {
+          "lines": [
+            {
+              "brand": "BrandA",
+              "category": "t_shirt",
+              "color": "black",
+              "line_id": "one",
+              "quantity": 20,
+              "size": "M",
+              "unit": "piece"
+            }
+          ],
+          "needs_shipping": true,
+          "sales_region": "DE",
+          "shipping": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "wholesale": true
+        },
+        "revision": 2,
+        "selections": [
+          {
+            "line_id": "one",
+            "sku": "A"
+          }
+        ]
+      },
+      "status_code": 200
+    },
+    {
+      "input": null,
+      "method": "GET",
+      "path": "/api/apparel/drafts/draft-1/alternatives/one",
+      "response": [
+        {
+          "approval_id": "SUB-374de601c9c77ee1af142af5",
+          "differences": [
+            {
+              "candidate": "BrandB",
+              "field": "brand",
+              "requested": "BrandA"
+            }
+          ],
+          "inventory": {
+            "available_catalog_units": 20,
+            "evidence_ids": [
+              "rule:BrandB",
+              "stock:B"
+            ],
+            "rule_version": 1,
+            "stock_version": 1,
+            "variant_version": 1
+          },
+          "quantity_conversion": {
+            "catalog_units": 20,
+            "evidence_ids": [
+              "B:brand",
+              "B:category",
+              "B:color",
+              "B:pieces_per_catalog_unit",
+              "B:size",
+              "fixture-weight"
+            ],
+            "line_id": "one",
+            "pieces": 20,
+            "sku": "B",
+            "unit_basis": {
+              "evidence_id": "B:pieces_per_catalog_unit"
+            },
+            "variant": {
+              "audience": "men",
+              "brand": "BrandB",
+              "category": "t_shirt",
+              "color": "black",
+              "size": "M",
+              "style_id": "STYLE-B",
+              "title": "B"
+            }
+          },
+          "requires_confirmation": true,
+          "sku": "B",
+          "style_id": "STYLE-B",
+          "title": "B"
+        },
+        {
+          "approval_id": "SUB-ea806bac47485aa6d3c3dca1",
+          "differences": [
+            {
+              "candidate": "white",
+              "field": "color",
+              "requested": "black"
+            },
+            {
+              "candidate": "L",
+              "field": "size",
+              "requested": "M"
+            }
+          ],
+          "inventory": {
+            "available_catalog_units": 20,
+            "evidence_ids": [
+              "rule:BrandA",
+              "stock:C"
+            ],
+            "rule_version": 1,
+            "stock_version": 1,
+            "variant_version": 1
+          },
+          "quantity_conversion": {
+            "catalog_units": 10,
+            "evidence_ids": [
+              "C:brand",
+              "C:category",
+              "C:color",
+              "C:pieces_per_catalog_unit",
+              "C:size",
+              "fixture-weight"
+            ],
+            "line_id": "one",
+            "pieces": 20,
+            "sku": "C",
+            "unit_basis": {
+              "evidence_id": "C:pieces_per_catalog_unit"
+            },
+            "variant": {
+              "audience": "men",
+              "brand": "BrandA",
+              "category": "t_shirt",
+              "color": "white",
+              "size": "L",
+              "style_id": "STYLE-C",
+              "title": "C"
+            }
+          },
+          "requires_confirmation": true,
+          "sku": "C",
+          "style_id": "STYLE-C",
+          "title": "C"
+        }
+      ],
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 2,
+        "selections": [
+          {
+            "line_id": "one",
+            "sku": "B"
+          }
+        ]
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/select",
+      "response": {
+        "approved_substitutions": [],
+        "confirmation": null,
+        "created_at": "2026-09-09T08:00:00Z",
+        "id": "draft-1",
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "code": "substitution_requires_confirmation",
+              "line_id": "one",
+              "severity": "clarify"
+            }
+          ],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "B:brand",
+                "B:category",
+                "B:color",
+                "B:pieces_per_catalog_unit",
+                "B:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "B",
+              "unit_basis": {
+                "evidence_id": "B:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandB",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-B",
+                "title": "B"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "B": 20
+          },
+          "quantities_pieces": {
+            "B": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "B": {
+              "available_catalog_units": 20,
+              "evidence_ids": [
+                "rule:BrandB",
+                "stock:B"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "needs_clarification",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "owner": "test-session-1",
+        "proposals": [],
+        "request": {
+          "lines": [
+            {
+              "brand": "BrandA",
+              "category": "t_shirt",
+              "color": "black",
+              "line_id": "one",
+              "quantity": 20,
+              "size": "M",
+              "unit": "piece"
+            }
+          ],
+          "needs_shipping": true,
+          "sales_region": "DE",
+          "shipping": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "wholesale": true
+        },
+        "revision": 3,
+        "selections": [
+          {
+            "line_id": "one",
+            "sku": "B"
+          }
+        ]
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 3
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals",
+      "response": {
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "code": "substitution_requires_confirmation",
+              "line_id": "one",
+              "severity": "clarify"
+            }
+          ],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "B:brand",
+                "B:category",
+                "B:color",
+                "B:pieces_per_catalog_unit",
+                "B:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "B",
+              "unit_basis": {
+                "evidence_id": "B:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandB",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-B",
+                "title": "B"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "B": 20
+          },
+          "quantities_pieces": {
+            "B": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "B": {
+              "available_catalog_units": 20,
+              "evidence_ids": [
+                "rule:BrandB",
+                "stock:B"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "needs_clarification",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "status": "order_not_ready"
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "approval_id": "not-this-change",
+        "expected_revision": 3
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/approve-substitution",
+      "response": {
+        "detail": "This exact substitution is not proposed by the current selection"
+      },
+      "status_code": 409
+    },
+    {
+      "input": {
+        "approval_id": "SUB-374de601c9c77ee1af142af5",
+        "expected_revision": 3
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/approve-substitution",
+      "response": {
+        "approved_substitutions": [
+          {
+            "approval_id": "SUB-374de601c9c77ee1af142af5",
+            "differences": [
+              {
+                "candidate": "BrandB",
+                "field": "brand",
+                "requested": "BrandA"
+              }
+            ],
+            "line_id": "one",
+            "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+            "sku": "B",
+            "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+          }
+        ],
+        "confirmation": null,
+        "created_at": "2026-09-09T08:00:00Z",
+        "id": "draft-1",
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "B:brand",
+                "B:category",
+                "B:color",
+                "B:pieces_per_catalog_unit",
+                "B:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "B",
+              "unit_basis": {
+                "evidence_id": "B:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandB",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-B",
+                "title": "B"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "B": 20
+          },
+          "quantities_pieces": {
+            "B": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "B": {
+              "available_catalog_units": 20,
+              "evidence_ids": [
+                "rule:BrandB",
+                "stock:B"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "owner": "test-session-1",
+        "proposals": [],
+        "request": {
+          "lines": [
+            {
+              "brand": "BrandA",
+              "category": "t_shirt",
+              "color": "black",
+              "line_id": "one",
+              "quantity": 20,
+              "size": "M",
+              "unit": "piece"
+            }
+          ],
+          "needs_shipping": true,
+          "sales_region": "DE",
+          "shipping": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "wholesale": true
+        },
+        "revision": 4,
+        "selections": [
+          {
+            "line_id": "one",
+            "sku": "B"
+          }
+        ]
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 4
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals",
+      "response": {
+        "created_at": "2026-09-09T08:00:00Z",
+        "draft_id": "draft-1",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "B:brand",
+                "B:category",
+                "B:color",
+                "B:pieces_per_catalog_unit",
+                "B:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "B",
+              "unit_basis": {
+                "evidence_id": "B:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandB",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-B",
+                "title": "B"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "B": 20
+          },
+          "quantities_pieces": {
+            "B": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "B": {
+              "available_catalog_units": 20,
+              "evidence_ids": [
+                "rule:BrandB",
+                "stock:B"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": null,
+        "proposal_id": "proposal-1",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "observed_event_ids": [],
+          "planning_at": "2026-09-09T08:00:00Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-10T06:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-10T00:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-10T00:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 0.0
+            },
+            {
+              "arrival_at": "2026-09-11T10:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-10T16:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-10T16:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 600.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 1320.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+        "state": "pending",
+        "version": 1
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "event_id": "workflow-cancel",
+        "kind": "cancel",
+        "leg_id": "HK-EU-AIR",
+        "nominal_departure": "2026-09-10T16:00:00Z",
+        "published_at": "2026-09-09T08:00:00+00:00"
+      },
+      "method": "POST",
+      "path": "/api/apparel/events",
+      "response": {
+        "duplicate": false,
+        "event": {
+          "delay_minutes": 0,
+          "event_id": "workflow-cancel",
+          "kind": "cancel",
+          "leg_id": "HK-EU-AIR",
+          "nominal_departure": "2026-09-10T16:00:00Z",
+          "published_at": "2026-09-09T08:00:00Z"
+        },
+        "scope": "Simulated corridor event"
+      },
+      "status_code": 200
+    },
+    {
+      "input": null,
+      "method": "GET",
+      "path": "/api/apparel/drafts/draft-1/proposals/proposal-1/validity",
+      "response": {
+        "checked_at": "2026-09-09T08:00:00Z",
+        "proposal_id": "proposal-1",
+        "route_audit": {
+          "assessed": true,
+          "passed": false,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": [
+            "cancelled_departure",
+            "segment_event_evidence_incomplete"
+          ]
+        },
+        "valid": false,
+        "version": 1,
+        "violations": [
+          "cancelled_departure",
+          "segment_event_evidence_incomplete"
+        ]
+      },
+      "status_code": 200
+    },
+    {
+      "input": {},
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals/proposal-1/confirm",
+      "response": {
+        "assessment": {
+          "checked_at": "2026-09-09T08:00:00Z",
+          "proposal_id": "proposal-1",
+          "route_audit": {
+            "assessed": true,
+            "passed": false,
+            "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+            "violations": [
+              "cancelled_departure",
+              "segment_event_evidence_incomplete"
+            ]
+          },
+          "valid": false,
+          "version": 1,
+          "violations": [
+            "cancelled_departure",
+            "segment_event_evidence_incomplete"
+          ]
+        },
+        "status": "rejected"
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 4
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals",
+      "response": {
+        "created_at": "2026-09-09T08:00:00Z",
+        "draft_id": "draft-1",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "B:brand",
+                "B:category",
+                "B:color",
+                "B:pieces_per_catalog_unit",
+                "B:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "B",
+              "unit_basis": {
+                "evidence_id": "B:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandB",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-B",
+                "title": "B"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "B": 20
+          },
+          "quantities_pieces": {
+            "B": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "B": {
+              "available_catalog_units": 20,
+              "evidence_ids": [
+                "rule:BrandB",
+                "stock:B"
+              ],
+              "rule_version": 1,
+              "stock_version": 1,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": "proposal-1",
+        "proposal_id": "proposal-2",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+          "observed_event_ids": [
+            "workflow-cancel"
+          ],
+          "planning_at": "2026-09-09T08:00:00Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-10T06:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-10T00:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-10T00:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 0.0
+            },
+            {
+              "arrival_at": "2026-09-11T22:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-11T04:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-11T04:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 600.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+        "state": "pending",
+        "version": 2
+      },
+      "status_code": 200
+    },
+    {
+      "input": {},
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals/proposal-2/confirm",
+      "response": {
+        "assessment": {
+          "checked_at": "2026-09-09T08:00:00Z",
+          "proposal_id": "proposal-2",
+          "route_audit": {
+            "assessed": true,
+            "passed": false,
+            "violations": [
+              "order_not_ready"
+            ]
+          },
+          "valid": false,
+          "version": 2,
+          "violations": [
+            "inventory_or_rule_snapshot_changed",
+            "order_no_longer_ready",
+            "order_not_ready"
+          ]
+        },
+        "status": "rejected"
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 4
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals",
+      "response": {
+        "created_at": "2026-09-09T08:00:00Z",
+        "draft_id": "draft-1",
+        "independent_route_audit": {
+          "assessed": true,
+          "passed": true,
+          "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+          "violations": []
+        },
+        "order_check": {
+          "dataset_id": "isolated-test-fixture",
+          "issues": [],
+          "lines": [
+            {
+              "catalog_units": 20,
+              "evidence_ids": [
+                "B:brand",
+                "B:category",
+                "B:color",
+                "B:pieces_per_catalog_unit",
+                "B:size",
+                "fixture-weight"
+              ],
+              "line_id": "one",
+              "pieces": 20,
+              "sku": "B",
+              "unit_basis": {
+                "evidence_id": "B:pieces_per_catalog_unit"
+              },
+              "variant": {
+                "audience": "men",
+                "brand": "BrandB",
+                "category": "t_shirt",
+                "color": "black",
+                "size": "M",
+                "style_id": "STYLE-B",
+                "title": "B"
+              }
+            }
+          ],
+          "needs_shipping": true,
+          "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+          "quantities_catalog_units": {
+            "B": 20
+          },
+          "quantities_pieces": {
+            "B": 20
+          },
+          "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+          "source_versions": {
+            "B": {
+              "available_catalog_units": 20,
+              "evidence_ids": [
+                "rule:BrandB",
+                "stock:B"
+              ],
+              "rule_version": 1,
+              "stock_version": 3,
+              "variant_version": 1
+            }
+          },
+          "status": "ready",
+          "substitution_proposals": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "warehouse": "CN-SZ"
+        },
+        "previous_proposal_id": "proposal-2",
+        "proposal_id": "proposal-3",
+        "request_revision": 4,
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+          "observed_event_ids": [
+            "workflow-cancel"
+          ],
+          "planning_at": "2026-09-09T08:00:00Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-10T06:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-10T00:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-10T00:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 0.0
+            },
+            {
+              "arrival_at": "2026-09-11T22:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-11T04:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-11T04:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 600.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+        "state": "pending",
+        "version": 3
+      },
+      "status_code": 200
+    },
+    {
+      "input": {},
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals/proposal-3/confirm",
+      "response": {
+        "assessment": {
+          "checked_at": "2026-09-09T08:00:00Z",
+          "proposal_id": "proposal-3",
+          "route_audit": {
+            "assessed": true,
+            "passed": true,
+            "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+            "violations": []
+          },
+          "valid": true,
+          "version": 3,
+          "violations": []
+        },
+        "confirmation_id": "confirmation-1",
+        "confirmed_at": "2026-09-09T08:00:00Z",
+        "draft_id": "draft-1",
+        "notice": "Local simulation only; no payment, carrier booking or shipment.",
+        "proposal_id": "proposal-3",
+        "proposal_version": 3,
+        "quantities_catalog_units": {
+          "B": 20
+        },
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+          "observed_event_ids": [
+            "workflow-cancel"
+          ],
+          "planning_at": "2026-09-09T08:00:00Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-10T06:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-10T00:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-10T00:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 0.0
+            },
+            {
+              "arrival_at": "2026-09-11T22:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-11T04:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-11T04:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 600.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "status": "confirmed_simulation"
+      },
+      "status_code": 200
+    },
+    {
+      "input": {},
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals/proposal-3/confirm",
+      "response": {
+        "assessment": {
+          "checked_at": "2026-09-09T08:00:00Z",
+          "proposal_id": "proposal-3",
+          "route_audit": {
+            "assessed": true,
+            "passed": true,
+            "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+            "violations": []
+          },
+          "valid": true,
+          "version": 3,
+          "violations": []
+        },
+        "confirmation_id": "confirmation-1",
+        "confirmed_at": "2026-09-09T08:00:00Z",
+        "draft_id": "draft-1",
+        "idempotent_replay": true,
+        "notice": "Local simulation only; no payment, carrier booking or shipment.",
+        "proposal_id": "proposal-3",
+        "proposal_version": 3,
+        "quantities_catalog_units": {
+          "B": 20
+        },
+        "route": {
+          "arrival_at": "2026-09-12T20:00:00Z",
+          "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+          "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+          "currency": "USD",
+          "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+          "observed_event_ids": [
+            "workflow-cancel"
+          ],
+          "planning_at": "2026-09-09T08:00:00Z",
+          "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+          "segments": [
+            {
+              "arrival_at": "2026-09-10T06:00:00Z",
+              "cost_cents": 1900,
+              "departure_at": "2026-09-10T00:00:00Z",
+              "destination": "HK-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:SZ-HK-ROAD",
+              "leg_id": "SZ-HK-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-10T00:00:00Z",
+              "origin": "CN-SZ",
+              "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+              "transfer_minutes": 0,
+              "wait_minutes": 0.0
+            },
+            {
+              "arrival_at": "2026-09-11T22:00:00Z",
+              "cost_cents": 13200,
+              "departure_at": "2026-09-11T04:00:00Z",
+              "destination": "EU-HUB",
+              "event_ids": [],
+              "evidence_id": "sim-leg:HK-EU-AIR",
+              "leg_id": "HK-EU-AIR",
+              "mode": "air",
+              "nominal_departure": "2026-09-11T04:00:00Z",
+              "origin": "HK-HUB",
+              "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+              "transfer_minutes": 120,
+              "wait_minutes": 1320.0
+            },
+            {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "cost_cents": 2200,
+              "departure_at": "2026-09-12T08:00:00Z",
+              "destination": "DE-DC",
+              "event_ids": [],
+              "evidence_id": "sim-leg:EU-DE-ROAD",
+              "leg_id": "EU-DE-ROAD",
+              "mode": "road",
+              "nominal_departure": "2026-09-12T08:00:00Z",
+              "origin": "EU-HUB",
+              "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+              "transfer_minutes": 360,
+              "wait_minutes": 600.0
+            }
+          ],
+          "shipping_constraints": {
+            "budget_cents": 20000,
+            "deadline_at": "2026-09-17T00:00:00Z",
+            "destination": "DE-DC",
+            "ready_at": "2026-09-10T00:00:00Z"
+          },
+          "status": "planned",
+          "total_cost_cents": 17300,
+          "weight_grams": 4000
+        },
+        "status": "confirmed_simulation"
+      },
+      "status_code": 200
+    },
+    {
+      "input": null,
+      "method": "GET",
+      "path": "/api/apparel/drafts/draft-1/records",
+      "response": {
+        "draft": {
+          "approved_substitutions": [
+            {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          ],
+          "confirmation": {
+            "assessment": {
+              "checked_at": "2026-09-09T08:00:00Z",
+              "proposal_id": "proposal-3",
+              "route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "valid": true,
+              "version": 3,
+              "violations": []
+            },
+            "confirmation_id": "confirmation-1",
+            "confirmed_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "notice": "Local simulation only; no payment, carrier booking or shipment.",
+            "proposal_id": "proposal-3",
+            "proposal_version": 3,
+            "quantities_catalog_units": {
+              "B": 20
+            },
+            "route": {
+              "arrival_at": "2026-09-12T20:00:00Z",
+              "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+              "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+              "currency": "USD",
+              "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+              "observed_event_ids": [
+                "workflow-cancel"
+              ],
+              "planning_at": "2026-09-09T08:00:00Z",
+              "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+              "segments": [
+                {
+                  "arrival_at": "2026-09-10T06:00:00Z",
+                  "cost_cents": 1900,
+                  "departure_at": "2026-09-10T00:00:00Z",
+                  "destination": "HK-HUB",
+                  "event_ids": [],
+                  "evidence_id": "sim-leg:SZ-HK-ROAD",
+                  "leg_id": "SZ-HK-ROAD",
+                  "mode": "road",
+                  "nominal_departure": "2026-09-10T00:00:00Z",
+                  "origin": "CN-SZ",
+                  "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                  "transfer_minutes": 0,
+                  "wait_minutes": 0.0
+                },
+                {
+                  "arrival_at": "2026-09-11T22:00:00Z",
+                  "cost_cents": 13200,
+                  "departure_at": "2026-09-11T04:00:00Z",
+                  "destination": "EU-HUB",
+                  "event_ids": [],
+                  "evidence_id": "sim-leg:HK-EU-AIR",
+                  "leg_id": "HK-EU-AIR",
+                  "mode": "air",
+                  "nominal_departure": "2026-09-11T04:00:00Z",
+                  "origin": "HK-HUB",
+                  "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+                  "transfer_minutes": 120,
+                  "wait_minutes": 1320.0
+                },
+                {
+                  "arrival_at": "2026-09-12T20:00:00Z",
+                  "cost_cents": 2200,
+                  "departure_at": "2026-09-12T08:00:00Z",
+                  "destination": "DE-DC",
+                  "event_ids": [],
+                  "evidence_id": "sim-leg:EU-DE-ROAD",
+                  "leg_id": "EU-DE-ROAD",
+                  "mode": "road",
+                  "nominal_departure": "2026-09-12T08:00:00Z",
+                  "origin": "EU-HUB",
+                  "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                  "transfer_minutes": 360,
+                  "wait_minutes": 600.0
+                }
+              ],
+              "shipping_constraints": {
+                "budget_cents": 20000,
+                "deadline_at": "2026-09-17T00:00:00Z",
+                "destination": "DE-DC",
+                "ready_at": "2026-09-10T00:00:00Z"
+              },
+              "status": "planned",
+              "total_cost_cents": 17300,
+              "weight_grams": 4000
+            },
+            "status": "confirmed_simulation"
+          },
+          "created_at": "2026-09-09T08:00:00Z",
+          "id": "draft-1",
+          "order_check": {
+            "dataset_id": "isolated-test-fixture",
+            "issues": [
+              {
+                "available_catalog_units": 0,
+                "code": "insufficient_stock",
+                "requested_catalog_units": 20,
+                "severity": "unsatisfied",
+                "sku": "B"
+              }
+            ],
+            "lines": [
+              {
+                "catalog_units": 20,
+                "evidence_ids": [
+                  "B:brand",
+                  "B:category",
+                  "B:color",
+                  "B:pieces_per_catalog_unit",
+                  "B:size",
+                  "fixture-weight"
+                ],
+                "line_id": "one",
+                "pieces": 20,
+                "sku": "B",
+                "unit_basis": {
+                  "evidence_id": "B:pieces_per_catalog_unit"
+                },
+                "variant": {
+                  "audience": "men",
+                  "brand": "BrandB",
+                  "category": "t_shirt",
+                  "color": "black",
+                  "size": "M",
+                  "style_id": "STYLE-B",
+                  "title": "B"
+                }
+              }
+            ],
+            "needs_shipping": true,
+            "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+            "quantities_catalog_units": {
+              "B": 20
+            },
+            "quantities_pieces": {
+              "B": 20
+            },
+            "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+            "source_versions": {
+              "B": {
+                "available_catalog_units": 0,
+                "evidence_ids": [
+                  "rule:BrandB",
+                  "stock:B"
+                ],
+                "rule_version": 1,
+                "stock_version": 4,
+                "variant_version": 1
+              }
+            },
+            "status": "unfulfillable",
+            "substitution_proposals": [
+              {
+                "approval_id": "SUB-374de601c9c77ee1af142af5",
+                "differences": [
+                  {
+                    "candidate": "BrandB",
+                    "field": "brand",
+                    "requested": "BrandA"
+                  }
+                ],
+                "line_id": "one",
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "sku": "B",
+                "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+              }
+            ],
+            "warehouse": "CN-SZ"
+          },
+          "owner": "test-session-1",
+          "proposals": [
+            {
+              "created_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "independent_route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 1,
+                    "variant_version": 1
+                  }
+                },
+                "status": "ready",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "previous_proposal_id": null,
+              "proposal_id": "proposal-1",
+              "request_revision": 4,
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "observed_event_ids": [],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T10:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-10T16:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-10T16:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 600.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 1320.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+              "state": "superseded",
+              "version": 1
+            },
+            {
+              "created_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "independent_route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 1,
+                    "variant_version": 1
+                  }
+                },
+                "status": "ready",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "previous_proposal_id": "proposal-1",
+              "proposal_id": "proposal-2",
+              "request_revision": 4,
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+                "observed_event_ids": [
+                  "workflow-cancel"
+                ],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T22:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-11T04:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-11T04:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 1320.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 600.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+              "state": "superseded",
+              "version": 2
+            },
+            {
+              "created_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "independent_route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 3,
+                    "variant_version": 1
+                  }
+                },
+                "status": "ready",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "previous_proposal_id": "proposal-2",
+              "proposal_id": "proposal-3",
+              "request_revision": 4,
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+                "observed_event_ids": [
+                  "workflow-cancel"
+                ],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T22:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-11T04:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-11T04:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 1320.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 600.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+              "state": "confirmed",
+              "version": 3
+            }
+          ],
+          "request": {
+            "lines": [
+              {
+                "brand": "BrandA",
+                "category": "t_shirt",
+                "color": "black",
+                "line_id": "one",
+                "quantity": 20,
+                "size": "M",
+                "unit": "piece"
+              }
+            ],
+            "needs_shipping": true,
+            "sales_region": "DE",
+            "shipping": {
+              "budget_cents": 20000,
+              "deadline_at": "2026-09-17T00:00:00Z",
+              "destination": "DE-DC",
+              "ready_at": "2026-09-10T00:00:00Z"
+            },
+            "wholesale": true
+          },
+          "revision": 4,
+          "selections": [
+            {
+              "line_id": "one",
+              "sku": "B"
+            }
+          ]
+        },
+        "traces": [
+          {
+            "actor": "user",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 1,
+            "kind": "order_request",
+            "payload": {
+              "lines": [
+                {
+                  "brand": "BrandA",
+                  "category": "t_shirt",
+                  "color": "black",
+                  "line_id": "one",
+                  "quantity": 20,
+                  "size": "M",
+                  "unit": "piece"
+                }
+              ],
+              "needs_shipping": true,
+              "sales_region": "DE",
+              "shipping": {
+                "budget_cents": 20000,
+                "deadline_at": "2026-09-17T00:00:00Z",
+                "destination": "DE-DC",
+                "ready_at": "2026-09-10T00:00:00Z"
+              },
+              "wholesale": true
+            }
+          },
+          {
+            "actor": "operator",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 2,
+            "kind": "select_variants",
+            "payload": {
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [
+                  {
+                    "available_catalog_units": 0,
+                    "code": "insufficient_stock",
+                    "requested_catalog_units": 20,
+                    "severity": "unsatisfied",
+                    "sku": "A"
+                  }
+                ],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "A:brand",
+                      "A:category",
+                      "A:color",
+                      "A:pieces_per_catalog_unit",
+                      "A:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "A",
+                    "unit_basis": {
+                      "evidence_id": "A:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandA",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-A",
+                      "title": "A"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "A": 20
+                },
+                "quantities_pieces": {
+                  "A": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "A": {
+                    "available_catalog_units": 0,
+                    "evidence_ids": [
+                      "rule:BrandA",
+                      "stock:A"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 1,
+                    "variant_version": 1
+                  }
+                },
+                "status": "unfulfillable",
+                "substitution_proposals": [],
+                "warehouse": "CN-SZ"
+              },
+              "selections": [
+                {
+                  "line_id": "one",
+                  "sku": "A"
+                }
+              ]
+            }
+          },
+          {
+            "actor": "operator",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 3,
+            "kind": "select_variants",
+            "payload": {
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "code": "substitution_requires_confirmation",
+                    "line_id": "one",
+                    "severity": "clarify"
+                  }
+                ],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 1,
+                    "variant_version": 1
+                  }
+                },
+                "status": "needs_clarification",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "selections": [
+                {
+                  "line_id": "one",
+                  "sku": "B"
+                }
+              ]
+            }
+          },
+          {
+            "actor": "planner",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 4,
+            "kind": "proposal_rejected_order_not_ready",
+            "payload": {
+              "dataset_id": "isolated-test-fixture",
+              "issues": [
+                {
+                  "approval_id": "SUB-374de601c9c77ee1af142af5",
+                  "code": "substitution_requires_confirmation",
+                  "line_id": "one",
+                  "severity": "clarify"
+                }
+              ],
+              "lines": [
+                {
+                  "catalog_units": 20,
+                  "evidence_ids": [
+                    "B:brand",
+                    "B:category",
+                    "B:color",
+                    "B:pieces_per_catalog_unit",
+                    "B:size",
+                    "fixture-weight"
+                  ],
+                  "line_id": "one",
+                  "pieces": 20,
+                  "sku": "B",
+                  "unit_basis": {
+                    "evidence_id": "B:pieces_per_catalog_unit"
+                  },
+                  "variant": {
+                    "audience": "men",
+                    "brand": "BrandB",
+                    "category": "t_shirt",
+                    "color": "black",
+                    "size": "M",
+                    "style_id": "STYLE-B",
+                    "title": "B"
+                  }
+                }
+              ],
+              "needs_shipping": true,
+              "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+              "quantities_catalog_units": {
+                "B": 20
+              },
+              "quantities_pieces": {
+                "B": 20
+              },
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "source_versions": {
+                "B": {
+                  "available_catalog_units": 20,
+                  "evidence_ids": [
+                    "rule:BrandB",
+                    "stock:B"
+                  ],
+                  "rule_version": 1,
+                  "stock_version": 1,
+                  "variant_version": 1
+                }
+              },
+              "status": "needs_clarification",
+              "substitution_proposals": [
+                {
+                  "approval_id": "SUB-374de601c9c77ee1af142af5",
+                  "differences": [
+                    {
+                      "candidate": "BrandB",
+                      "field": "brand",
+                      "requested": "BrandA"
+                    }
+                  ],
+                  "line_id": "one",
+                  "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                  "sku": "B",
+                  "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                }
+              ],
+              "warehouse": "CN-SZ"
+            }
+          },
+          {
+            "actor": "user",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 5,
+            "kind": "approve_specific_substitution",
+            "payload": {
+              "approval_id": "SUB-374de601c9c77ee1af142af5",
+              "differences": [
+                {
+                  "candidate": "BrandB",
+                  "field": "brand",
+                  "requested": "BrandA"
+                }
+              ],
+              "line_id": "one",
+              "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+              "sku": "B",
+              "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+            }
+          },
+          {
+            "actor": "planner",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 6,
+            "kind": "proposal_version",
+            "payload": {
+              "created_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "independent_route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 1,
+                    "variant_version": 1
+                  }
+                },
+                "status": "ready",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "previous_proposal_id": null,
+              "proposal_id": "proposal-1",
+              "request_revision": 4,
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "observed_event_ids": [],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T10:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-10T16:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-10T16:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-10T16:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 600.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 1320.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+              "state": "pending",
+              "version": 1
+            }
+          },
+          {
+            "actor": "user",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 7,
+            "kind": "confirmation_rejected",
+            "payload": {
+              "checked_at": "2026-09-09T08:00:00Z",
+              "proposal_id": "proposal-1",
+              "route_audit": {
+                "assessed": true,
+                "passed": false,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": [
+                  "cancelled_departure",
+                  "segment_event_evidence_incomplete"
+                ]
+              },
+              "valid": false,
+              "version": 1,
+              "violations": [
+                "cancelled_departure",
+                "segment_event_evidence_incomplete"
+              ]
+            }
+          },
+          {
+            "actor": "planner",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 8,
+            "kind": "proposal_version",
+            "payload": {
+              "created_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "independent_route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 1,
+                    "variant_version": 1
+                  }
+                },
+                "status": "ready",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "previous_proposal_id": "proposal-1",
+              "proposal_id": "proposal-2",
+              "request_revision": 4,
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+                "observed_event_ids": [
+                  "workflow-cancel"
+                ],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T22:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-11T04:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-11T04:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 1320.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 600.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+              "state": "pending",
+              "version": 2
+            }
+          },
+          {
+            "actor": "user",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 9,
+            "kind": "confirmation_rejected",
+            "payload": {
+              "checked_at": "2026-09-09T08:00:00Z",
+              "proposal_id": "proposal-2",
+              "route_audit": {
+                "assessed": true,
+                "passed": false,
+                "violations": [
+                  "order_not_ready"
+                ]
+              },
+              "valid": false,
+              "version": 2,
+              "violations": [
+                "inventory_or_rule_snapshot_changed",
+                "order_no_longer_ready",
+                "order_not_ready"
+              ]
+            }
+          },
+          {
+            "actor": "planner",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 10,
+            "kind": "proposal_version",
+            "payload": {
+              "created_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "independent_route_audit": {
+                "assessed": true,
+                "passed": true,
+                "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                "violations": []
+              },
+              "order_check": {
+                "dataset_id": "isolated-test-fixture",
+                "issues": [],
+                "lines": [
+                  {
+                    "catalog_units": 20,
+                    "evidence_ids": [
+                      "B:brand",
+                      "B:category",
+                      "B:color",
+                      "B:pieces_per_catalog_unit",
+                      "B:size",
+                      "fixture-weight"
+                    ],
+                    "line_id": "one",
+                    "pieces": 20,
+                    "sku": "B",
+                    "unit_basis": {
+                      "evidence_id": "B:pieces_per_catalog_unit"
+                    },
+                    "variant": {
+                      "audience": "men",
+                      "brand": "BrandB",
+                      "category": "t_shirt",
+                      "color": "black",
+                      "size": "M",
+                      "style_id": "STYLE-B",
+                      "title": "B"
+                    }
+                  }
+                ],
+                "needs_shipping": true,
+                "notice": "Order verification in the simulated merchant environment; no inventory reserved and no order placed.",
+                "quantities_catalog_units": {
+                  "B": 20
+                },
+                "quantities_pieces": {
+                  "B": 20
+                },
+                "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                "source_versions": {
+                  "B": {
+                    "available_catalog_units": 20,
+                    "evidence_ids": [
+                      "rule:BrandB",
+                      "stock:B"
+                    ],
+                    "rule_version": 1,
+                    "stock_version": 3,
+                    "variant_version": 1
+                  }
+                },
+                "status": "ready",
+                "substitution_proposals": [
+                  {
+                    "approval_id": "SUB-374de601c9c77ee1af142af5",
+                    "differences": [
+                      {
+                        "candidate": "BrandB",
+                        "field": "brand",
+                        "requested": "BrandA"
+                      }
+                    ],
+                    "line_id": "one",
+                    "request_digest": "71caf6dbd814a825338451c2e3c85a990633dbf71768b06dbcee66b853f1882b",
+                    "sku": "B",
+                    "variant_digest": "2536934d73174ac08052b217c9d9da7180d357cdab1c81f61bf34f6d54d035b7"
+                  }
+                ],
+                "warehouse": "CN-SZ"
+              },
+              "previous_proposal_id": "proposal-2",
+              "proposal_id": "proposal-3",
+              "request_revision": 4,
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+                "observed_event_ids": [
+                  "workflow-cancel"
+                ],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T22:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-11T04:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-11T04:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 1320.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 600.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "source_snapshot_digest": "07c6d2747c01590d193948994a066d602ddf636417db8fc99ea95470c9be3774",
+              "state": "pending",
+              "version": 3
+            }
+          },
+          {
+            "actor": "user",
+            "created_at": "2026-09-09T08:00:00Z",
+            "draft_id": "draft-1",
+            "id": 11,
+            "kind": "confirm_simulation",
+            "payload": {
+              "assessment": {
+                "checked_at": "2026-09-09T08:00:00Z",
+                "proposal_id": "proposal-3",
+                "route_audit": {
+                  "assessed": true,
+                  "passed": true,
+                  "scope": "Independent itinerary feasibility and arithmetic, not a proof of cost optimality or real carrier availability",
+                  "violations": []
+                },
+                "valid": true,
+                "version": 3,
+                "violations": []
+              },
+              "confirmation_id": "confirmation-1",
+              "confirmed_at": "2026-09-09T08:00:00Z",
+              "draft_id": "draft-1",
+              "notice": "Local simulation only; no payment, carrier booking or shipment.",
+              "proposal_id": "proposal-3",
+              "proposal_version": 3,
+              "quantities_catalog_units": {
+                "B": 20
+              },
+              "route": {
+                "arrival_at": "2026-09-12T20:00:00Z",
+                "corridor_digest": "6a78c67b6ab277c6023adf4b819622d51049677beb7a3d7130baab55c6df7ee6",
+                "corridor_id": "simulated-cn-de-corridor-v1-20260908",
+                "currency": "USD",
+                "events_digest": "7b877742f857af371fff6267be9a17bb09e131e68373fd1d7f6fa9208b129845",
+                "observed_event_ids": [
+                  "workflow-cancel"
+                ],
+                "planning_at": "2026-09-09T08:00:00Z",
+                "provenance": "Research-defined schedules, capacities, handling times and rates; not carrier quotes or tracking data.",
+                "segments": [
+                  {
+                    "arrival_at": "2026-09-10T06:00:00Z",
+                    "cost_cents": 1900,
+                    "departure_at": "2026-09-10T00:00:00Z",
+                    "destination": "HK-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:SZ-HK-ROAD",
+                    "leg_id": "SZ-HK-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-10T00:00:00Z",
+                    "origin": "CN-SZ",
+                    "service_id": "SZ-HK-ROAD@2026-09-10T00:00:00Z",
+                    "transfer_minutes": 0,
+                    "wait_minutes": 0.0
+                  },
+                  {
+                    "arrival_at": "2026-09-11T22:00:00Z",
+                    "cost_cents": 13200,
+                    "departure_at": "2026-09-11T04:00:00Z",
+                    "destination": "EU-HUB",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:HK-EU-AIR",
+                    "leg_id": "HK-EU-AIR",
+                    "mode": "air",
+                    "nominal_departure": "2026-09-11T04:00:00Z",
+                    "origin": "HK-HUB",
+                    "service_id": "HK-EU-AIR@2026-09-11T04:00:00Z",
+                    "transfer_minutes": 120,
+                    "wait_minutes": 1320.0
+                  },
+                  {
+                    "arrival_at": "2026-09-12T20:00:00Z",
+                    "cost_cents": 2200,
+                    "departure_at": "2026-09-12T08:00:00Z",
+                    "destination": "DE-DC",
+                    "event_ids": [],
+                    "evidence_id": "sim-leg:EU-DE-ROAD",
+                    "leg_id": "EU-DE-ROAD",
+                    "mode": "road",
+                    "nominal_departure": "2026-09-12T08:00:00Z",
+                    "origin": "EU-HUB",
+                    "service_id": "EU-DE-ROAD@2026-09-12T08:00:00Z",
+                    "transfer_minutes": 360,
+                    "wait_minutes": 600.0
+                  }
+                ],
+                "shipping_constraints": {
+                  "budget_cents": 20000,
+                  "deadline_at": "2026-09-17T00:00:00Z",
+                  "destination": "DE-DC",
+                  "ready_at": "2026-09-10T00:00:00Z"
+                },
+                "status": "planned",
+                "total_cost_cents": 17300,
+                "weight_grams": 4000
+              },
+              "status": "confirmed_simulation"
+            }
+          }
+        ],
+        "transport_events": [
+          {
+            "delay_minutes": 0,
+            "event_id": "workflow-cancel",
+            "kind": "cancel",
+            "leg_id": "HK-EU-AIR",
+            "nominal_departure": "2026-09-10T16:00:00Z",
+            "published_at": "2026-09-09T08:00:00Z"
+          }
+        ]
+      },
+      "status_code": 200
+    },
+    {
+      "input": {
+        "expected_revision": 4,
+        "selections": []
+      },
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/select",
+      "response": {
+        "detail": "Confirmed research orders cannot be edited; create a new draft"
+      },
+      "status_code": 409
+    },
+    {
+      "input": {},
+      "method": "POST",
+      "path": "/api/apparel/drafts/draft-1/proposals/proposal-3/confirm",
+      "response": {
+        "detail": "Unknown draft in this session"
+      },
+      "status_code": 409
+    }
+  ],
+  "limits": [
+    "One designed scenario; neither 19 independent cases nor a model success rate.",
+    "All brands, stock, rules, transport rates and departures are test fixtures.",
+    "Two explicit simulated stock updates are made by the test outside the HTTP trace.",
+    "Model jobs are forbidden in this test; real model performance remains a separate experiment.",
+    "Host test duration is not agent or model latency."
+  ],
+  "source_sha256": {
+    "tests/test_apparel_workflow_logic.py": "6d41bfce3d1219a81ef8b9f03889ad63b0da0627076d7680374070432c18e5b8",
+    "apparel_fulfillment/api.py": "d7e56d30ffe1141579f78190ce54deedc3fb4c86a8e90dec4dddb8330a7e34f7",
+    "apparel_fulfillment/orders.py": "69c2e1bf6d82cd375669949e4ffb4aa14a9a383bc2d7ab56436e8fada7e09897",
+    "apparel_fulfillment/store.py": "0370ee5932056f103b30cdc5e33c4b646c63cea89335dcf01d126074fca9cde4",
+    "apparel_fulfillment/transport.py": "348189bd8d69d03580f9cfd749a74d8cc5b5f734acbf4dfb01fb99c5657b9daa",
+    "apparel_fulfillment/route_audit.py": "db68c5762e040f333d644d421a6a5d5030033813b2af8a506899ca51d91fb2b3",
+    "tests/test_apparel_orders.py": "0627033f8b4ed806b72b8404b8ff4f0094fcecec9814f2f7fb97abab2785d8e2",
+    "research/read_workflow_acceptance.py": "d24d7ac66ac898a718d9fcc760073d9836d154b6b54eaef029c62ad2ef2970b8"
+  }
+}
